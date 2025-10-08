@@ -1,0 +1,343 @@
+# QA Team Portfolio - Cursor AI Configuration
+# Collaborative development ruleset for multiple team members
+
+You are an expert in TypeScript, React, Next.js, and collaborative software development.
+
+## 🤝 TEAM COLLABORATION SETTINGS
+
+### Git Workflow
+- **Branch Strategy**: Feature branches from main
+- **Naming Convention**: feature/[initials]-[feature-name] (e.g., feature/ar-unified-framework)
+- **Commit Format**: type(scope): description (e.g., feat(dashboard): add metrics display)
+- **PR Required**: All changes via pull request with review
+
+### Code Ownership
+```
+/src/app/projects/unified-framework  -> Team Member 1
+/src/app/projects/code-coverage      -> Team Member 2  
+/src/app/projects/chatbot            -> Team Member 3
+/src/app/projects/dashboards         -> Team Member 4
+/src/components/                     -> Shared (coordinate in team chat)
+```
+
+### File Locking Prevention
+- **No Conflicting Edits**: Each developer works on assigned sections
+- **Shared Components**: Discuss in team before modifying
+- **Styles**: Only modify your section's styles, use component-scoped CSS
+- **Types**: Centralize in /src/lib/types, coordinate changes
+
+### Communication Markers
+When writing code, include:
+```typescript
+// TODO: [initials] - description
+// FIXME: [initials] - issue description  
+// NOTE: [initials] - important note for team
+// BLOCKED: [initials] - waiting on [teammate/component]
+```
+
+## 📁 PROJECT CONTEXT
+
+### Project Description
+**Title**: QA Team Portfolio - 5 Years of Innovation
+**Purpose**: Showcase our QA automation achievements and tools
+**Audience**: Technical recruiters, potential employers, industry peers
+
+### Key Achievements to Showcase
+1. **Unified Testing Framework** 
+   - One codebase for Web, WCTV, Roku, Apple TV, Android
+   - 70% reduction in test development time
+   - Owner: [Assign team member]
+
+2. **Code Coverage Integration**
+   - Automated test selection based on code changes
+   - From 5 hours to 1.5 hours per release
+   - Owner: [Assign team member]
+
+3. **AI-Powered Chatbot** 
+   - Company knowledge consolidation
+   - Test case generation
+   - Owner: [Assign team member]
+
+4. **QA Dashboards**
+   - Real-time monitoring
+   - Automated reporting
+   - Owner: [Assign team member]
+
+## 🛠 TECHNICAL STANDARDS
+
+### Tech Stack (Team Agreement)
+- **Framework**: Next.js 14 with App Router
+- **Language**: TypeScript (strict mode) 
+- **Styling**: Tailwind CSS (no inline styles)
+- **Components**: Radix UI for accessibility
+- **State**: React Context (no Redux unless agreed)
+- **Testing**: Jest + React Testing Library
+- **Linting**: ESLint + Prettier (auto-format on save)
+
+### Folder Structure (Strict Adherence)
+```
+/portfolio
+  /src
+    /app                          # Pages (route-based ownership)
+      /projects
+        /unified-framework        # Owner: Member 1
+        /code-coverage           # Owner: Member 2
+        /chatbot                 # Owner: Member 3
+        /dashboards              # Owner: Member 4
+    /components
+      /shared                    # Team shared components
+      /[feature-name]           # Feature-specific components
+    /lib
+      /types                    # Shared TypeScript types
+      /utils                    # Shared utilities
+      /constants               # Shared constants
+```
+
+### Component Creation Rules
+```typescript
+/**
+ * Component: ComponentName
+ * Author: [Your Initials]
+ * Created: YYYY-MM-DD
+ * Modified: YYYY-MM-DD by [Initials]
+ * Description: Brief description
+ */
+
+interface ComponentProps {
+  // Props must be documented
+  propName: string; // Description of what this does
+}
+
+export function ComponentName({ propName }: ComponentProps) {
+  // Implementation
+}
+```
+
+### Naming Conventions (Team Consistency)
+- **Files**: kebab-case (unified-framework.tsx)
+- **Components**: PascalCase (UnifiedFramework)
+- **Functions**: camelCase (handleSubmit)
+- **Constants**: UPPER_SNAKE_CASE (MAX_RETRIES)
+- **Types/Interfaces**: PascalCase with I/T prefix (IProjectData, TStatus)
+
+### CSS/Styling Rules
+```css
+/* Component-specific styles only */
+/* No global style modifications without team agreement */
+/* Use Tailwind classes, avoid custom CSS unless necessary */
+
+/* If custom CSS needed: */
+.feature-[yourfeature]-[element] {
+  /* Namespace to prevent conflicts */
+}
+```
+
+## 📝 DEVELOPMENT WORKFLOW
+
+### Before Starting Work
+1. Pull latest from main
+2. Create feature branch
+3. Check team board for conflicts
+4. Announce in team chat what you're working on
+
+### While Developing
+1. Follow the assigned sections
+2. Don't modify others' sections without permission
+3. Use TypeScript strictly (no any types)
+4. Add JSDoc comments for public functions
+5. Write tests for your components
+
+### Before Committing
+1. Run linter: `npm run lint`
+2. Run tests: `npm test`
+3. Build check: `npm run build`
+4. Self-review changes
+
+### Code Review Checklist
+- [ ] Follows naming conventions
+- [ ] TypeScript types included
+- [ ] No conflicts with other sections
+- [ ] Tests included/updated
+- [ ] Documentation updated
+- [ ] No console.logs
+- [ ] Accessibility considered
+
+## 🤖 AI ASSISTANT INSTRUCTIONS
+
+When generating code for team members:
+
+### Always Include
+1. Author comment at top of new files
+2. TypeScript interfaces for all props
+3. Error boundaries for new sections
+4. Loading states
+5. Mobile responsiveness
+
+### Never Do
+1. Modify files outside assigned section without noting
+2. Use inline styles
+3. Create global CSS changes
+4. Add dependencies without team discussion
+5. Remove others' TODO/FIXME comments
+
+### Conflict Prevention
+When multiple team members might edit same file:
+```typescript
+// START: [Initials] - Feature Name
+// Your code here
+// END: [Initials] - Feature Name
+```
+
+## 📊 SHARED DATA STRUCTURES
+
+### Project Data Interface (All team members use)
+```typescript
+interface IProject {
+  id: string;
+  slug: string;
+  title: string;
+  owner: string; // Team member responsible
+  summary: string;
+  problem: string;
+  solution: string;
+  techStack: string[];
+  metrics: IMetric[];
+  videoUrl?: string;
+  screenshots: string[];
+  status: 'draft' | 'review' | 'complete';
+}
+
+interface IMetric {
+  label: string;
+  value: string;
+  improvement?: string;
+  impact?: string;
+}
+```
+
+### Shared Constants
+```typescript
+// src/lib/constants/projects.ts
+export const PROJECTS: IProject[] = [
+  // Each team member adds their project data here
+];
+
+// src/lib/constants/team.ts  
+export const TEAM_MEMBERS = {
+  MEMBER_1: { initials: 'AR', section: 'unified-framework' },
+  MEMBER_2: { initials: 'XX', section: 'code-coverage' },
+  // Add all team members
+};
+```
+
+## 🚀 IMPLEMENTATION GUIDANCE GENERATOR
+
+When asked to create implementation guidance, structure as:
+
+### Phase 1: Setup (All Team Members)
+```
+1. Clone repository
+2. Install dependencies: npm install
+3. Create feature branch: git checkout -b feature/[initials]-setup
+4. Copy .env.example to .env.local
+5. Run development server: npm run dev
+```
+
+### Phase 2: Individual Sections (Parallel Work)
+```
+Team Member 1:
+- Create /app/projects/unified-framework/page.tsx
+- Add components in /components/unified-framework/
+- Update PROJECTS constant with your data
+
+Team Member 2:
+- Create /app/projects/code-coverage/page.tsx
+- Add components in /components/code-coverage/
+- Update PROJECTS constant with your data
+
+[Continue for each member...]
+```
+
+### Phase 3: Integration (Team Lead)
+```
+1. Review all PRs
+2. Merge feature branches
+3. Test integrated application
+4. Deploy to staging
+```
+
+## 🔄 CONTINUOUS INTEGRATION
+
+### Pre-commit Hooks (Automatic)
+```json
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": ["eslint --fix", "prettier --write"],
+    "*.css": ["prettier --write"]
+  }
+}
+```
+
+### GitHub Actions (Automatic on PR)
+```yaml
+- Run TypeScript check
+- Run ESLint
+- Run tests
+- Build project
+- Check for conflicts
+```
+
+## 💬 COMMUNICATION PROTOCOLS
+
+### Daily Sync
+- Post in team chat what you're working on
+- Flag any blockers
+- Announce PR reviews needed
+
+### Before Major Changes
+- Discuss in team chat
+- Get consensus on approach
+- Update this ruleset if needed
+
+### Merge Conflicts
+- Communicate immediately
+- Resolve together
+- Document resolution
+
+## 🎯 SUCCESS METRICS
+
+Track and celebrate:
+- Zero merge conflicts
+- All PRs reviewed within 4 hours  
+- 100% TypeScript coverage
+- All sections completed on schedule
+- Consistent code style across project
+
+## Remember
+This is a TEAM project. Success comes from:
+- Clear communication
+- Respecting boundaries
+- Helping teammates
+- Maintaining consistency
+- Celebrating together
+
+When in doubt, ASK THE TEAM!
+
+## 🔐 INTERNAL VS EXTERNAL BUILDS
+
+- Environment flag: `NEXT_PUBLIC_MODE` is either `internal` or `external`.
+- Internal build includes links to GitHub/Confluence/JIRA/NPAW and raw documents.
+- External build redacts sensitive content and links; presents concepts and benefits only.
+
+Sanitization helpers must be used before rendering any project/link/attachment.
+
+## Notes
+
+- Rostislav and Alpin Rostislav refer to the same teammate (AR).
+- Platforms covered include Web, WCTV, Roku, Apple TV, iOS, and Android (mobile/TV).
