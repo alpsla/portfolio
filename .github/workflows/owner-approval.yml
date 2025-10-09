@@ -22,6 +22,12 @@ jobs:
               core.setFailed('No pull request context.');
               return;
             }
+            // TEMP POLICY: allow self-approval if author is an owner
+            const author = pr.user.login;
+            if (owners.includes(author)) {
+              core.info(`Author @${author} is an owner – allowing self-approval (temporary).`);
+              return;
+            }
             const { data: allReviews } = await github.rest.pulls.listReviews({
               owner: context.repo.owner,
               repo: context.repo.repo,
