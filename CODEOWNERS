@@ -1,17 +1,16 @@
 # CODEOWNERS – required reviewers
-# Policy: Only @rostialpin (owner) and @rob1nalex (assistant) are code owners.
-# Others (anilbvi, JuneyJestin, rohitmenonv, mathewdhanya13) have repo access but are not required reviewers.
+# Temporary: only @rostialpin until @rob1nalex accepts invite and has write access.
 
 # Sensitive areas
-/src/lib/constants/projects.ts   @rostialpin @rob1nalex
-/src/lib/utils/safety.ts         @rostialpin @rob1nalex
-/public/assets/**                @rostialpin @rob1nalex
-/internal/**                     @rostialpin @rob1nalex
-/.github/workflows/**            @rostialpin @rob1nalex
+/src/lib/constants/projects.ts   @rostialpin
+/src/lib/utils/safety.ts         @rostialpin
+/public/assets/**                @rostialpin
+/internal/**                     @rostialpin
+/.github/workflows/**            @rostialpin
 
 # Repo governance files
 /CODEOWNERS                         @rostialpin
 /.cursorrules                       @rostialpin
 
 # Catch-all (keep last)
-*                                   @rostialpin @rob1nalex
+*                                   @rostialpin
