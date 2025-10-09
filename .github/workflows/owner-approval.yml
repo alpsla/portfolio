@@ -1,0 +1,42 @@
+name: owner-approval
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  require-owner-approval:
+    name: require-owner-approval
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+      contents: read
+    steps:
+      - name: Check approval from code owners
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owners = ['rostialpin', 'rob1nalex'];
+            const pr = context.payload.pull_request;
+            if (!pr) {
+              core.setFailed('No pull request context.');
+              return;
+            }
+            const { data: allReviews } = await github.rest.pulls.listReviews({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: pr.number,
+              per_page: 100,
+            });
+            // Keep the latest review state per user
+            const latestByUser = new Map();
+            for (const r of allReviews) {
+              latestByUser.set(r.user.login, r.state);
+            }
+            const approvedBy = owners.filter(u => (latestByUser.get(u) === 'APPROVED'));
+            if (approvedBy.length === 0) {
+              core.setFailed('This PR must be approved by @rostialpin or @rob1nalex.');
+            } else {
+              core.info(`Approved by: ${approvedBy.join(', ')}`);
+            }
+
