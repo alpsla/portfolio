@@ -75,7 +75,7 @@ export const PROJECTS: IProject[] = [
       // Slides (internal)
       { kind: 'slide', title: 'QA Transformation Slides', src: '/assets/data-observability/slides/QA_Transformation.pptx', sensitivity: 'internal' },
       // Recordings (internal)
-      { kind: 'video', title: 'Eden Demo Recording (1080p)', src: '/assets/data-observability/recordings/Eden_Demo_2025-10-10_Recording_1080p.mp4', sensitivity: 'internal' },
+      { kind: 'video', title: 'Eden Observability Dashboard (internal)', src: 'https://viacom.sharepoint.com/:v:/r/sites/VIA-Digital-QAConnectedTV/Shared%20Documents/Unified/Presentations/Artifacts/Eden_Observability_Dashboard.mp4?csf=1&web=1&e=MgxqK7', sensitivity: 'internal' },
       { kind: 'video', title: 'From POM to Observability (23 min, audio)', src: '/assets/data-observability/recordings/From_POM_to_Observability_23min.wav', sensitivity: 'internal' },
       { kind: 'video', title: 'Observability Transforms (6 min, audio)', src: '/assets/data-observability/recordings/Observability_Transforms_6min.wav', sensitivity: 'internal' }
     ],
