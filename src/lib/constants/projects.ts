@@ -68,12 +68,16 @@ export const PROJECTS: IProject[] = [
     screenshots: [],
     status: 'draft',
     attachments: [
-      {
-        kind: 'pdf',
-        title: 'Public-Safe Brief',
-        src: '/assets/data-observability/pdfs/data-observability-brief_v1.pdf',
-        sensitivity: 'public'
-      }
+      // PDFs (public-safe)
+      { kind: 'pdf', title: 'Research: From POM to Observability-driven QA', src: '/assets/data-observability/pdfs/RESEARCH_From_POM_to_Observability_driven_QA.pdf', sensitivity: 'public' },
+      { kind: 'pdf', title: 'From POM to Observability-Driven QA (enhanced)', src: '/assets/data-observability/pdfs/From_POM_to_Observability_Driven_QA_enhanced.pdf', sensitivity: 'public' },
+      { kind: 'pdf', title: 'AI-Powered QA Transformation (Enterprise AI/ML)', src: '/assets/data-observability/pdfs/AI_Powered_QA_Transformation_Enterprise_AI_ML_Excellence.pdf', sensitivity: 'public' },
+      // Slides (internal)
+      { kind: 'slide', title: 'QA Transformation Slides', src: '/assets/data-observability/slides/QA_Transformation.pptx', sensitivity: 'internal' },
+      // Recordings (internal)
+      { kind: 'video', title: 'Eden Demo Recording (1080p)', src: '/assets/data-observability/recordings/Eden_Demo_2025-10-10_Recording_1080p.mp4', sensitivity: 'internal' },
+      { kind: 'audio', title: 'From POM to Observability (23 min)', src: '/assets/data-observability/recordings/From_POM_to_Observability_23min.wav', sensitivity: 'internal' },
+      { kind: 'audio', title: 'Observability Transforms (6 min)', src: '/assets/data-observability/recordings/Observability_Transforms_6min.wav', sensitivity: 'internal' }
     ],
     links: [
       { label: 'Confluence Overview (internal)', url: 'https://confluence.example.com/display/QA/Data+Observability', sensitivity: 'internal' },
