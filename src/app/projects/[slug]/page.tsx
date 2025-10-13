@@ -26,6 +26,57 @@ export default function ProjectDetailPage({ params }: Params) {
         <h2 className="text-lg font-semibold">Solution</h2>
         <p className="mt-2">{project.solution}</p>
       </section>
+
+      {project.links && project.links.length > 0 && (
+        <section className="mt-8">
+          <h3 className="text-lg font-semibold">Links</h3>
+          <ul className="mt-3 space-y-2 list-disc list-inside">
+            {project.links.map((l) => (
+              <li key={`${l.label}-${l.url}`}>
+                <a className="text-blue-600 hover:underline" href={l.url} target="_blank" rel="noreferrer">
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {project.attachments && project.attachments.length > 0 && (
+        <section className="mt-8">
+          <h3 className="text-lg font-semibold">Attachments</h3>
+          <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {project.attachments.map((a) => {
+              const icon = a.kind === 'pdf'
+                ? '📄'
+                : a.kind === 'slide'
+                ? '📑'
+                : a.kind === 'video'
+                ? '🎥'
+                : a.kind === 'audio'
+                ? '🎧'
+                : a.kind === 'image'
+                ? '🖼️'
+                : a.kind === 'doc'
+                ? '📃'
+                : '🔗';
+              return (
+                <li key={`${a.kind}-${a.src}`} className="border rounded p-3 flex items-start gap-3">
+                  <span className="text-xl" aria-hidden>{icon}</span>
+                  <div className="flex-1">
+                    <div className="font-medium">{a.title}</div>
+                    <div className="mt-1">
+                      <a className="text-blue-600 hover:underline" href={a.src} download>
+                        View / Download
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
     </main>
   );
 }
