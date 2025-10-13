@@ -76,7 +76,8 @@ export const PROJECTS: IProject[] = [
       }
     ],
     links: [
-      { label: 'Confluence Overview (internal)', url: 'https://confluence.example.com/display/QA/Data+Observability', sensitivity: 'internal' }
+      { label: 'Confluence Overview (internal)', url: 'https://confluence.example.com/display/QA/Data+Observability', sensitivity: 'internal' },
+      { label: 'New Relic Dashboard (internal)', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjExMjc3OTQ2?filters=%28name%20LIKE%20%27BET%2B%20Metrics%27%20OR%20id%20%3D%20%27BET%2B%20Metrics%27%20OR%20domainId%20%3D%20%27BET%2B%20Metrics%27%29&state=c64380e3-2883-5f28-79d9-70cf4d36fa84', sensitivity: 'internal' }
     ],
     tags: [{ key: 'topic:observability', label: 'Observability' }]
   },
