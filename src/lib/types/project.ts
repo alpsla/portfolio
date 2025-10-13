@@ -9,7 +9,7 @@
 export type Sensitivity = 'public' | 'internal' | 'restricted';
 
 export interface IAttachment {
-  kind: 'video' | 'pdf' | 'slide' | 'image' | 'link' | 'doc';
+  kind: 'video' | 'audio' | 'pdf' | 'slide' | 'image' | 'link' | 'doc';
   title: string;
   src: string;
   provider?: 'youtube' | 'vimeo' | 'drive' | 'confluence' | 'github' | 'npaw' | 'jira';

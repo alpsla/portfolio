@@ -76,8 +76,8 @@ export const PROJECTS: IProject[] = [
       { kind: 'slide', title: 'QA Transformation Slides', src: '/assets/data-observability/slides/QA_Transformation.pptx', sensitivity: 'internal' },
       // Recordings (internal)
       { kind: 'video', title: 'Eden Demo Recording (1080p)', src: '/assets/data-observability/recordings/Eden_Demo_2025-10-10_Recording_1080p.mp4', sensitivity: 'internal' },
-      { kind: 'audio', title: 'From POM to Observability (23 min)', src: '/assets/data-observability/recordings/From_POM_to_Observability_23min.wav', sensitivity: 'internal' },
-      { kind: 'audio', title: 'Observability Transforms (6 min)', src: '/assets/data-observability/recordings/Observability_Transforms_6min.wav', sensitivity: 'internal' }
+      { kind: 'video', title: 'From POM to Observability (23 min, audio)', src: '/assets/data-observability/recordings/From_POM_to_Observability_23min.wav', sensitivity: 'internal' },
+      { kind: 'video', title: 'Observability Transforms (6 min, audio)', src: '/assets/data-observability/recordings/Observability_Transforms_6min.wav', sensitivity: 'internal' }
     ],
     links: [
       { label: 'Confluence Overview (internal)', url: 'https://confluence.example.com/display/QA/Data+Observability', sensitivity: 'internal' },
