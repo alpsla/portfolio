@@ -7,16 +7,16 @@ This document tracks who owns each initiative, the canonical slug, and expected 
 
 | Initiative | Slug | Owner | Co-owner |
 |---|---|---|---|
-| Unified Test Case Optimization | unified-test-case-optimization | @rohitmenonv |  |
-| Unified Test Automation Framework | unified-test-automation-framework | @rostialpin |  |
-| Test Manager Bot & EVA | test-manager-bot-eva | @anilbvi |  |
-| DART | dart | @JuneyJestin |  |
-| Onboarding Automation Setup | onboarding-automation-setup | @rob1nalex |  |
-| COPPA - Process & Technology | coppa-process-technology | @mathewdhanya13 |  |
-| New Relic QE OKR - Dashboard | new-relic-qe-okr-dashboard | @rob1nalex |  |
+| Unified Test Case Optimization | unified-test-case-optimization | @rob1nalex |  |
+| Unified Test Automation Framework | unified-test-automation-framework | @rob1nalex |  |
+| Test Manager Bot & EVA | test-manager-bot-eva | @JuneyJestin |  |
+| DART | dart | @rohitmenonv |  |
+| Onboarding Automation Setup | onboarding-automation-setup | @rohitmenonv |  |
+| COPPA - Process & Technology | coppa-process-technology | @rob1nalex |  |
+| New Relic QE OKR - Dashboard | new-relic-qe-okr-dashboard | @anilbvi |  |
 | Report Portal | report-portal | @rohitmenonv |  |
 | NPAW Integration and Testing | npaw-integration-testing | @rostialpin |  |
-| Data Observability (next move) | data-observability | @JuneyJestin |  |
+| Data Observability (next move) | data-observability | @rostialpin |  |
 | Config Comparison | config-comparison | @anilbvi |  |
 
 ## Deliverables per initiative

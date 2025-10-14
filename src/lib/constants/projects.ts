@@ -55,7 +55,36 @@ export const PROJECTS: IProject[] = [
   { id: 'new-relic-qe-okr-dashboard', slug: 'new-relic-qe-okr-dashboard', title: 'New Relic QE OKR - Dashboard', owner: 'rob1nalex', summary: '', problem: '', solution: '', techStack: [], metrics: [], screenshots: [], status: 'draft' },
   { id: 'report-portal', slug: 'report-portal', title: 'Report Portal', owner: 'rohitmenonv', summary: '', problem: '', solution: '', techStack: [], metrics: [], screenshots: [], status: 'draft' },
   { id: 'npaw-integration-testing', slug: 'npaw-integration-testing', title: 'NPAW Integration and Testing', owner: 'rostialpin', summary: '', problem: '', solution: '', techStack: [], metrics: [], screenshots: [], status: 'draft' },
-  { id: 'data-observability', slug: 'data-observability', title: 'Data Observability (Next Move)', owner: 'JuneyJestin', summary: '', problem: '', solution: '', techStack: [], metrics: [], screenshots: [], status: 'draft' },
+  {
+    id: 'data-observability',
+    slug: 'data-observability',
+    title: 'Data Observability (Next Move)',
+    owner: 'rostialpin',
+    summary: 'End-to-end observability of data pipelines to power QA insights and test selection.',
+    problem: 'Limited visibility into data flows and quality issues delayed incident detection and slowed QA feedback.',
+    solution: 'Instrument pipelines, centralize metrics/logs/traces, derive test impact and health signals for faster decisions.',
+    techStack: ['OpenTelemetry', 'Kafka', 'dbt', 'BigQuery'],
+    metrics: [],
+    screenshots: [],
+    status: 'draft',
+    attachments: [
+      // PDFs (public-safe)
+      { kind: 'pdf', title: 'Research: From POM to Observability-driven QA', src: '/assets/data-observability/pdfs/RESEARCH_From_POM_to_Observability_driven_QA.pdf', sensitivity: 'public' },
+      { kind: 'pdf', title: 'From POM to Observability-Driven QA (enhanced)', src: '/assets/data-observability/pdfs/From_POM_to_Observability_Driven_QA_enhanced.pdf', sensitivity: 'public' },
+      { kind: 'pdf', title: 'AI-Powered QA Transformation (Enterprise AI/ML)', src: '/assets/data-observability/pdfs/AI_Powered_QA_Transformation_Enterprise_AI_ML_Excellence.pdf', sensitivity: 'public' },
+      // Slides (internal)
+      { kind: 'slide', title: 'QA Transformation Slides', src: '/assets/data-observability/slides/QA_Transformation.pptx', sensitivity: 'internal' },
+      // Recordings (internal)
+      { kind: 'video', title: 'Eden Observability Dashboard (internal)', src: 'https://viacom.sharepoint.com/:v:/r/sites/VIA-Digital-QAConnectedTV/Shared%20Documents/Unified/Presentations/Artifacts/Eden_Observability_Dashboard.mp4?csf=1&web=1&e=MgxqK7', sensitivity: 'internal' },
+      { kind: 'video', title: 'From POM to Observability (23 min, audio)', src: '/assets/data-observability/recordings/From_POM_to_Observability_23min.wav', sensitivity: 'internal' },
+      { kind: 'video', title: 'Observability Transforms (6 min, audio)', src: '/assets/data-observability/recordings/Observability_Transforms_6min.wav', sensitivity: 'internal' }
+    ],
+    links: [
+      { label: 'Confluence Overview (internal)', url: 'https://confluence.example.com/display/QA/Data+Observability', sensitivity: 'internal' },
+      { label: 'New Relic Dashboard (internal)', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjExMjc3OTQ2?filters=%28name%20LIKE%20%27BET%2B%20Metrics%27%20OR%20id%20%3D%20%27BET%2B%20Metrics%27%20OR%20domainId%20%3D%20%27BET%2B%20Metrics%27%29&state=c64380e3-2883-5f28-79d9-70cf4d36fa84', sensitivity: 'internal' }
+    ],
+    tags: [{ key: 'topic:observability', label: 'Observability' }]
+  },
   { id: 'config-comparison', slug: 'config-comparison', title: 'Config Comparison', owner: 'anilbvi', summary: '', problem: '', solution: '', techStack: [], metrics: [], screenshots: [], status: 'draft' },
 ];
 
