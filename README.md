@@ -55,22 +55,41 @@ portfolio/
 
 ## Getting Started
 
-This repo ships as a scaffold. You can use it as a static project structure or plug into a Next.js 14 app.
+### Quick Start
 
-1) Clone the repository
+1) **Clone the repository**
 
 ```bash
 git clone <repo-url> portfolio
 cd portfolio
 ```
 
-2) Optional: Initialize Next.js 14 + Tailwind (if starting fresh)
+2) **Install dependencies**
 
 ```bash
-npx create-next-app@latest . --ts --eslint --tailwind --app --src-dir --import-alias "@/*"
+npm install
 ```
 
-3) Install QA tooling (optional, can be added later)
+3) **Create environment configuration**
+
+```bash
+# Create .env.local file with build mode
+echo "NEXT_PUBLIC_MODE=internal" > .env.local
+```
+
+4) **Run the development server**
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Detailed Setup
+
+For detailed setup instructions including Node version requirements and troubleshooting, see [SETUP.md](./SETUP.md).
+
+### Optional: QA Tooling
 
 ```bash
 npm i -D husky lint-staged @testing-library/react @testing-library/jest-dom jest jest-environment-jsdom
@@ -148,6 +167,63 @@ Example tags for platforms:
 - This repository contains team-authored descriptions and optionally redacted assets.
 - Do not commit confidential materials to public branches. Use `internal` sensitivity and ensure external builds exclude/obfuscate.
 - External sharing should be reviewed by the team lead.
+
+
+## Troubleshooting
+
+### Port Already in Use
+
+If port 3000 is in use, Next.js will automatically try port 3001:
+
+```
+⚠ Port 3000 is in use, trying 3001 instead.
+- Local: http://localhost:3001
+```
+
+To stop all Next.js dev servers:
+```bash
+pkill -f "next dev"
+```
+
+### Tailwind CSS Not Working
+
+If you see errors about Tailwind CSS or PostCSS:
+
+1. Ensure you have Tailwind v3.4.x installed (not v4):
+```bash
+npm install -D tailwindcss@^3.4.1 postcss autoprefixer
+```
+
+2. Verify configuration files exist:
+   - `tailwind.config.js` (not `.ts`)
+   - `postcss.config.js` (not `.mjs`)
+   - `src/app/globals.css` (with `@tailwind` directives)
+
+3. Restart the dev server after changes:
+```bash
+pkill -f "next dev"
+npm run dev
+```
+
+### Environment Variables Not Loading
+
+If the SafetyBanner doesn't show or environment variables aren't working:
+
+1. Ensure `.env.local` exists in the project root
+2. Restart the dev server to pick up new environment variables
+3. Check the terminal for "Environments: .env.local" or "Reload env: .env.local"
+
+### Missing Configuration Files
+
+If you get build errors, ensure these files exist:
+- `next.config.js` - Next.js configuration
+- `.eslintrc.json` - ESLint configuration
+- `tailwind.config.js` - Tailwind CSS configuration
+- `postcss.config.js` - PostCSS configuration
+- `src/app/layout.tsx` - Root layout component
+- `src/app/globals.css` - Global styles
+
+See [SETUP.md](./SETUP.md) for file templates.
 
 
 ## Roadmap
