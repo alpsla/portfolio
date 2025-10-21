@@ -125,6 +125,10 @@ export const PROJECTS: IProject[] = [
       { label: 'Unified Management Dashboard', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjI1NzQ5Mjg?state=936eaf62-c3ba-0c02-3f1e-09b7335448af', sensitivity: 'internal' },
       { label: 'Unified User Dashboard', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjI2MDg0NTk?state=8cc5cfad-1b03-7934-ba42-8496260c9030', sensitivity: 'internal' },
     ],
+    tags: [
+      { key: 'topic:observability', label: 'Observability' },
+      { key: 'platform:multi', label: 'Multi-Platform' },
+    ],
   },
   {
     id: 'report-portal',
