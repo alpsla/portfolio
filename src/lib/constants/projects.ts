@@ -128,10 +128,10 @@ export const PROJECTS: IProject[] = [
     slug: 'report-portal',
     title: 'Report Portal',
     owner: 'rohitmenonv',
-    summary: '',
-    problem: '',
-    solution: '',
-    techStack: [],
+    summary: 'Centralized execution analytics, flaky detection, and defect triage for automated testing.',
+    problem: 'Limited visibility into test runs and root-cause slowed triage and masking of real defects.',
+    solution: 'Aggregate results, classify failures, highlight maintenance vs product bugs, and surface trends.',
+    techStack: ['ReportPortal', 'TypeScript', 'Playwright', 'Jenkins'],
     metrics: [],
     screenshots: [],
     status: 'draft',
@@ -151,6 +151,10 @@ export const PROJECTS: IProject[] = [
       { kind: 'doc', title: '.gitkeep', src: '/assets/report-portal/videos/.gitkeep', sensitivity: 'public' }
     ],
     links: [],
+    tags: [
+      { key: 'topic:analytics', label: 'Analytics' },
+      { key: 'topic:reporting', label: 'Reporting' },
+    ],
   },
   {
     id: 'npaw-integration-testing',
