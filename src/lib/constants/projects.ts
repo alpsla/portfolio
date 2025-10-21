@@ -67,6 +67,7 @@ export const PROJECTS: IProject[] = [
       { kind: 'pdf', title: 'EVA Deck June 2024', src: '/assets/test-manager-bot-eva/pdfs/EVA Deck June 2024 v3.pdf', sensitivity: 'public' },
       { kind: 'pdf', title: 'EVA Sample Prompts', src: '/assets/test-manager-bot-eva/pdfs/EVA+Sample+Prompts.pdf', sensitivity: 'public' },
       { kind: 'pdf', title: 'Innovation Fest Deck 2024 - Unified', src: '/assets/test-manager-bot-eva/pdfs/Innovation Fest Deck 2024 - Unified - Extended.pdf', sensitivity: 'public' },
+      { kind: 'slide', title: 'EVA - Enterprise Virtual Assistant - AI/ML Conf 2025', src: '/assets/test-manager-bot-eva/slides/EVA - Enterprise Virtual Assistant - AI ML Conf 2025.pptx', sensitivity: 'public' },
       { kind: 'video', title: 'EVA Presentation and Demo', src: '/assets/test-manager-bot-eva/videos/Eva - Presentation and Demo v3.mp4', sensitivity: 'public' },
       { kind: 'video', title: 'Test Manager Bot Presentation', src: '/assets/test-manager-bot-eva/videos/Test Manager Bot Presentation v1.2.mp4', sensitivity: 'public' },
     ],
