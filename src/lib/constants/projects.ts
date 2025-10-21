@@ -135,7 +135,21 @@ export const PROJECTS: IProject[] = [
     metrics: [],
     screenshots: [],
     status: 'draft',
-    attachments: [],
+    attachments: [
+      { kind: 'doc', title: 'README.md', src: '/assets/report-portal/README.md', sensitivity: 'public' },
+      { kind: 'doc', title: '.gitkeep', src: '/assets/report-portal/chats/.gitkeep', sensitivity: 'public' },
+      { kind: 'doc', title: '.gitkeep', src: '/assets/report-portal/images/.gitkeep', sensitivity: 'public' },
+      { kind: 'doc', title: '.gitkeep', src: '/assets/report-portal/pdfs/.gitkeep', sensitivity: 'public' },
+      { kind: 'pdf', title: 'DEV-Report Portal-171025-120300.pdf', src: '/assets/report-portal/pdfs/DEV-Report Portal-171025-120300.pdf', sensitivity: 'public' },
+      { kind: 'pdf', title: 'Report Portal POC Presenation v2.pdf', src: '/assets/report-portal/pdfs/Report Portal POC Presenation v2.pdf', sensitivity: 'public' },
+      { kind: 'pdf', title: 'VCD-Report Portal - Configuration-171025-120405.pdf', src: '/assets/report-portal/pdfs/VCD-Report Portal - Configuration-171025-120405.pdf', sensitivity: 'public' },
+      { kind: 'doc', title: '.gitkeep', src: '/assets/report-portal/recordings/.gitkeep', sensitivity: 'public' },
+      { kind: 'video', title: 'Report Portal POC Presenation v2.mp4', src: '/assets/report-portal/recordings/Report Portal POC Presenation v2.mp4', sensitivity: 'public' },
+      { kind: 'doc', title: '.gitkeep', src: '/assets/report-portal/slides/.gitkeep', sensitivity: 'public' },
+      { kind: 'doc', title: '.gitkeep', src: '/assets/report-portal/source/.gitkeep', sensitivity: 'public' },
+      { kind: 'doc', title: '.gitkeep', src: '/assets/report-portal/transcripts/.gitkeep', sensitivity: 'public' },
+      { kind: 'doc', title: '.gitkeep', src: '/assets/report-portal/videos/.gitkeep', sensitivity: 'public' }
+    ],
     links: [],
   },
   {
