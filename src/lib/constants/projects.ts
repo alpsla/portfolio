@@ -122,8 +122,12 @@ export const PROJECTS: IProject[] = [
     status: 'draft',
     attachments: [],
     links: [
-      { label: 'Unififed Management Dashboard', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjI1NzQ5Mjg?state=936eaf62-c3ba-0c02-3f1e-09b7335448af', sensitivity: 'internal' },
-      { label: 'Unififed User Dashboard', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjI2MDg0NTk?state=8cc5cfad-1b03-7934-ba42-8496260c9030', sensitivity: 'internal' },
+      { label: 'Unified Management Dashboard', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjI1NzQ5Mjg?state=936eaf62-c3ba-0c02-3f1e-09b7335448af', sensitivity: 'internal' },
+      { label: 'Unified User Dashboard', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjI2MDg0NTk?state=8cc5cfad-1b03-7934-ba42-8496260c9030', sensitivity: 'internal' },
+    ],
+    tags: [
+      { key: 'topic:observability', label: 'Observability' },
+      { key: 'platform:multi', label: 'Multi-Platform' },
     ],
   },
   {
@@ -145,6 +149,10 @@ export const PROJECTS: IProject[] = [
       { label: 'Report Portal Configuration', url: 'https://paramount.atlassian.net/wiki/spaces/VCD/pages/302417282/Report+Portal+-+Configuration', sensitivity: 'internal' },
       { label: 'Report Portal Presentation PDF', url: 'https://viacom.sharepoint.com/:b:/s/VIA-Digital-QAConnectedTV/EWsMghRiwbFAkF15Ubog8p8B9TaSr_F69mX8TRvzLjjmEg?e=z0AfKI', sensitivity: 'internal' },
       { label: 'Report Portal Docs', url: 'https://reportportal.io/docs/', sensitivity: 'public' },
+    ],
+    tags: [
+      { key: 'topic:analytics', label: 'Analytics' },
+      { key: 'topic:reporting', label: 'Reporting' },
     ],
   },
   {

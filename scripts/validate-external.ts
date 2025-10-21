@@ -6,7 +6,17 @@
 
 import { PROJECTS } from '../src/lib/constants/projects';
 
-const FORBIDDEN = [/confluence/i, /jira/i, /npaw/i, /internal/i, /viacom/i, /company\.com/i];
+const FORBIDDEN = [
+  /confluence/i,
+  /jira/i,
+  /npaw/i,
+  /internal/i,
+  /viacom/i,
+  /sharepoint/i,
+  /atlassian/i,
+  /paramount/i,
+  /company\.com/i,
+];
 const allowedNonPublic = ['internal', 'restricted'];
 
 function fail(msg: string): never {
