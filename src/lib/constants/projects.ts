@@ -85,7 +85,10 @@ export const PROJECTS: IProject[] = [
     metrics: [],
     screenshots: [],
     status: 'draft',
-    attachments: [],
+    attachments: [
+      // Internal assets for DART remain hidden in external builds
+      // { kind: 'pdf', title: 'Roku Code Coverage', src: '/assets/dart/pdfs/RokuCodeCoverage.pdf', sensitivity: 'internal' },
+    ],
     links: [
       { label: 'Android Code Coverage Analysis', url: 'https://paramount.atlassian.net/wiki/spaces/VCD/pages/207233059/DART+-+Dynamic+Analysis+Routine+Tester+POC+Android', sensitivity: 'internal' },
       { label: 'Deck', url: 'https://viacom.sharepoint.com/:b:/s/VIA-Digital-QAConnectedTV/EfdDTV0GDntDr60MAAmp4DcBUWB0XSf3bXizwVHVrVivHg?e=1zP45G', sensitivity: 'internal' },
