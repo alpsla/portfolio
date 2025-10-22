@@ -165,12 +165,9 @@ export const PROJECTS: IProject[] = [
     slug: 'report-portal',
     title: 'Report Portal',
     owner: 'mathewdhanya13',
-    summary:
-      'ReportPortal is a TestOps service, that provides increased capabilities to speed up results analysis and reporting through the use of built-in analytic features.',
-    problem:
-      'Traditional test reporting workflows are slow, fragmented, and lack actionable insights, making it difficult to analyze results efficiently.',
-    solution:
-      'ReportPortal streamlines test result analysis by centralizing reporting and leveraging built-in analytics to identify flaky tests, accelerate triage, and improve release confidence.',
+    summary: 'ReportPortal is a TestOps service, that provides increased capabilities to speed up results analysis and reporting through the use of built-in analytic features.',
+    problem: 'Traditional test reporting workflows are slow, fragmented, and lack actionable insights, making it difficult to analyze results efficiently.',
+    solution: 'ReportPortal streamlines test result analysis by centralizing reporting and leveraging built-in analytics to identify flaky tests, accelerate triage, and improve release confidence.',
     techStack: ['Java', 'TypeScript', 'REST API', 'React'],
     metrics: [],
     screenshots: [],
