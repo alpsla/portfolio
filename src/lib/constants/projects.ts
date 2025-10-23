@@ -248,7 +248,12 @@ export const PROJECTS: IProject[] = [
     attachments: [
       { kind: 'pdf', title: 'Configuration Validation Automation', src: '/assets/config-comparison/pdfs/Configuration Validation Automation.pdf', sensitivity: 'internal' },
     ],
-    links: [],
+    links: [
+      { label: 'WCTV Config Report Generation Training Video', url: 'https://viacom.sharepoint.com/:v:/r/sites/VIA-Digital-QAConnectedTV/Shared%20Documents/Unified/CTV-Training/WCTV/20240125%20WCTV%20Config%20Report%20Generation%20for%20RC.mp4?csf=1&web=1&e=qiG0Sb', sensitivity: 'internal' },
+    ],
+    tags: [
+      { key: 'platform:wctv', label: 'WCTV' },
+    ],
   },
 ];
 
