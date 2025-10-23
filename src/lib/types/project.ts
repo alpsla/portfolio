@@ -12,7 +12,7 @@ export interface IAttachment {
   kind: 'video' | 'audio' | 'pdf' | 'slide' | 'image' | 'link' | 'doc';
   title: string;
   src: string;
-  provider?: 'youtube' | 'vimeo' | 'drive' | 'confluence' | 'github' | 'npaw' | 'jira';
+  provider?: 'youtube' | 'vimeo' | 'drive' | 'confluence' | 'github' | 'npaw' | 'jira' | 'sharepoint';
   description?: string;
   sensitivity?: Sensitivity;
 }
