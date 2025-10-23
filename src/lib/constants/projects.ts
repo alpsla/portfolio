@@ -21,9 +21,14 @@ export const PROJECTS: IProject[] = [
     metrics: [],
     screenshots: [],
     status: 'draft',
-    attachments: [],
+    attachments: [
+      { kind: 'pdf', title: 'Unified Test Case Suite', src: '/assets/unified-test-case-optimization/pdfs/Unified Test Case Suite.pdf', sensitivity: 'internal' },
+    ],
     links: [],
-    tags: [{ key: 'platform:multi', label: 'Multi-Platform' }],
+    tags: [
+      { key: 'platform:multi', label: 'Multi-Platform' },
+      { key: 'topic:optimization', label: 'Optimization' },
+    ],
   },
   {
     id: 'unified-test-automation-framework',
@@ -37,7 +42,9 @@ export const PROJECTS: IProject[] = [
     metrics: [],
     screenshots: [],
     status: 'draft',
-    attachments: [],
+    attachments: [
+      { kind: 'pdf', title: 'Unified Automation Repo', src: '/assets/unified-test-automation-framework/pdfs/Unified Automation Repo.pdf', sensitivity: 'internal' },
+    ],
     links: [],
     tags: [
       { key: 'platform:web', label: 'Web' },
@@ -88,6 +95,7 @@ export const PROJECTS: IProject[] = [
     attachments: [
       // Internal assets for DART remain hidden in external builds
       // { kind: 'pdf', title: 'Roku Code Coverage', src: '/assets/dart/pdfs/RokuCodeCoverage.pdf', sensitivity: 'internal' },
+      { kind: 'pdf', title: 'Code Coverage', src: '/assets/dart/pdfs/Code Coverage.pdf', sensitivity: 'internal' },
     ],
     links: [
       { label: 'Android Code Coverage Analysis', url: 'https://paramount.atlassian.net/wiki/spaces/VCD/pages/207233059/DART+-+Dynamic+Analysis+Routine+Tester+POC+Android', sensitivity: 'internal' },
@@ -122,6 +130,10 @@ export const PROJECTS: IProject[] = [
     status: 'draft',
     attachments: [],
     links: [],
+    tags: [
+      { key: 'topic:ai', label: 'AI/ML' },
+      { key: 'topic:automation', label: 'Automation' },
+    ],
   },
   {
     id: 'coppa-process-technology',
@@ -135,8 +147,17 @@ export const PROJECTS: IProject[] = [
     metrics: [],
     screenshots: [],
     status: 'draft',
-    attachments: [],
-    links: [],
+    attachments: [
+      { kind: 'pdf', title: 'TechScan - Video Training v2', src: '/assets/coppa-process-technology/pdfs/TechScan - Video Training v2.pdf', sensitivity: 'internal' },
+      { kind: 'pdf', title: 'Tech-Scan Enhancements', src: '/assets/coppa-process-technology/pdfs/Tech-Scan Enhancements.pdf', sensitivity: 'internal' },
+    ],
+    links: [
+      { label: 'COPPA Compliance Documentation', url: 'https://paramount.atlassian.net/wiki/spaces/VCD/pages/49601222/COPPA+Compliance', sensitivity: 'internal' },
+    ],
+    tags: [
+      { key: 'topic:compliance', label: 'Compliance' },
+      { key: 'topic:automation', label: 'Automation' },
+    ],
   },
   {
     id: 'new-relic-qe-okr-dashboard',
@@ -146,11 +167,13 @@ export const PROJECTS: IProject[] = [
     summary: 'New Relic is an observability platform which helps you bring in data from any digital source.',
     problem: 'Relying on multiple disconnected tools for logs, metrics, and traces slows down the incident triage process.',
     solution: 'New Relic provides a unified observability platform that consolidates logs, metrics, and traces, enabling faster triage, real-time insights, and proactive incident response across our software systems.',
-    techStack: ['New Relic', 'NRQL', 'Java', 'Appache HTTP Client'],
+    techStack: ['New Relic', 'NRQL', 'Java', 'Apache HTTP Client'],
     metrics: [],
     screenshots: [],
     status: 'draft',
-    attachments: [],
+    attachments: [
+      { kind: 'pdf', title: 'QE Dashboards', src: '/assets/new-relic-qe-okr-dashboard/pdfs/QE Dashboards.pdf', sensitivity: 'internal' },
+    ],
     links: [
       { label: 'Unified Management Dashboard', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjI1NzQ5Mjg?state=936eaf62-c3ba-0c02-3f1e-09b7335448af', sensitivity: 'internal' },
       { label: 'Unified User Dashboard', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjI2MDg0NTk?state=8cc5cfad-1b03-7934-ba42-8496260c9030', sensitivity: 'internal' },
@@ -229,16 +252,20 @@ export const PROJECTS: IProject[] = [
     summary: 'Compare configuration across different platforms to identify discrepancies and improve consistency.',
     problem: 'Configuration issues in production, that leads to bugs and incidents; which was never seen in QA due to correct configuration in QA.',
     solution: 'Compare configuration across different platforms to create a report, for which all the discrepancies aer reviewed and addressed by Dev leads',
-    techStack: ['Java', 'Appache HTTP Client', 'Excel', "New Relic"],
+    techStack: ['Java', 'Apache HTTP Client', 'Excel', 'New Relic'],
     metrics: [],
     screenshots: [],
     status: 'draft',
-    attachments: [],
+    attachments: [
+      { kind: 'pdf', title: 'Configuration Validation Automation', src: '/assets/config-comparison/pdfs/Configuration Validation Automation.pdf', sensitivity: 'internal' },
+    ],
     links: [
       { label: 'WCTV Config Report Generation Training Video', url: 'https://viacom.sharepoint.com/:v:/r/sites/VIA-Digital-QAConnectedTV/Shared%20Documents/Unified/CTV-Training/WCTV/20240125%20WCTV%20Config%20Report%20Generation%20for%20RC.mp4?csf=1&web=1&e=qiG0Sb', sensitivity: 'internal' },
     ],
     tags: [
       { key: 'platform:wctv', label: 'WCTV' },
+      { key: 'topic:automation', label: 'Automation' },
+      { key: 'topic:validation', label: 'Validation' },
     ],
   },
 ];

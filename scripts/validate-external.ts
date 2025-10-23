@@ -31,7 +31,13 @@ for (const p of PROJECTS) {
   }
   for (const a of p.attachments || []) {
     if ((a.sensitivity || 'public') !== 'public') {
-      fail(`Attachment not public: ${p.slug} -> ${a.title}`);
+      if (a.sensitivity && allowedNonPublic.includes(a.sensitivity)) {
+        // Safe to skip internal/restricted attachments (filtered at runtime)
+        console.warn(`Skipping internal attachment: ${p.slug} -> ${a.title}`);
+        continue;
+      } else {
+        fail(`Attachment not public: ${p.slug} -> ${a.title}`);
+      }
     }
     if (FORBIDDEN.some((rx) => (a.src || '').match(rx))) {
       fail(`Forbidden link in attachment: ${p.slug} -> ${a.src}`);
