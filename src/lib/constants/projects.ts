@@ -213,10 +213,8 @@ export const PROJECTS: IProject[] = [
     metrics: [],
     screenshots: [],
     status: 'draft',
-    attachments: [
-      { kind: 'video', title: 'Config Report Generation for WCTV', src: 'https://viacom.sharepoint.com/:v:/r/sites/VIA-Digital-QAConnectedTV/Shared%20Documents/Unified/CTV-Training/WCTV/20240125%20WCTV%20Config%20Report%20Generation%20for%20RC.mp4?csf=1&web=1&e=qiG0Sb', provider: 'sharepoint', sensitivity: 'internal' },
-    ],
-    links: [],
+    attachments: [],
+    links: [{ label: 'WCTV Config Report Generation Training Video', url: 'https://viacom.sharepoint.com/:v:/r/sites/VIA-Digital-QAConnectedTV/Shared%20Documents/Unified/CTV-Training/WCTV/20240125%20WCTV%20Config%20Report%20Generation%20for%20RC.mp4?csf=1&web=1&e=qiG0Sb', sensitivity: 'internal' },],
     tags: [
       { key: 'platform:wctv', label: 'WCTV' },
     ],
