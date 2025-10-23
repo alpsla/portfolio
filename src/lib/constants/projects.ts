@@ -25,7 +25,10 @@ export const PROJECTS: IProject[] = [
       { kind: 'pdf', title: 'Unified Test Case Suite', src: '/assets/unified-test-case-optimization/pdfs/Unified Test Case Suite.pdf', sensitivity: 'internal' },
     ],
     links: [],
-    tags: [{ key: 'platform:multi', label: 'Multi-Platform' }],
+    tags: [
+      { key: 'platform:multi', label: 'Multi-Platform' },
+      { key: 'topic:optimization', label: 'Optimization' },
+    ],
   },
   {
     id: 'unified-test-automation-framework',
@@ -127,6 +130,10 @@ export const PROJECTS: IProject[] = [
     status: 'draft',
     attachments: [],
     links: [],
+    tags: [
+      { key: 'topic:ai', label: 'AI/ML' },
+      { key: 'topic:automation', label: 'Automation' },
+    ],
   },
   {
     id: 'coppa-process-technology',
@@ -147,6 +154,10 @@ export const PROJECTS: IProject[] = [
     links: [
       { label: 'COPPA Compliance Documentation', url: 'https://paramount.atlassian.net/wiki/spaces/VCD/pages/49601222/COPPA+Compliance', sensitivity: 'internal' },
     ],
+    tags: [
+      { key: 'topic:compliance', label: 'Compliance' },
+      { key: 'topic:automation', label: 'Automation' },
+    ],
   },
   {
     id: 'new-relic-qe-okr-dashboard',
@@ -156,7 +167,7 @@ export const PROJECTS: IProject[] = [
     summary: 'New Relic is an observability platform which helps you bring in data from any digital source.',
     problem: 'Relying on multiple disconnected tools for logs, metrics, and traces slows down the incident triage process.',
     solution: 'New Relic provides a unified observability platform that consolidates logs, metrics, and traces, enabling faster triage, real-time insights, and proactive incident response across our software systems.',
-    techStack: ['New Relic', 'NRQL', 'Java', 'Appache HTTP Client'],
+    techStack: ['New Relic', 'NRQL', 'Java', 'Apache HTTP Client'],
     metrics: [],
     screenshots: [],
     status: 'draft',
@@ -241,7 +252,7 @@ export const PROJECTS: IProject[] = [
     summary: 'Compare configuration across different platforms to identify discrepancies and improve consistency.',
     problem: 'Configuration issues in production, that leads to bugs and incidents; which was never seen in QA due to correct configuration in QA.',
     solution: 'Compare configuration across different platforms to create a report, for which all the discrepancies aer reviewed and addressed by Dev leads',
-    techStack: ['Java', 'Appache HTTP Client', 'Excel', "New Relic"],
+    techStack: ['Java', 'Apache HTTP Client', 'Excel', 'New Relic'],
     metrics: [],
     screenshots: [],
     status: 'draft',
@@ -253,6 +264,8 @@ export const PROJECTS: IProject[] = [
     ],
     tags: [
       { key: 'platform:wctv', label: 'WCTV' },
+      { key: 'topic:automation', label: 'Automation' },
+      { key: 'topic:validation', label: 'Validation' },
     ],
   },
 ];
