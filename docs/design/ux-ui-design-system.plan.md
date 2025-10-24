@@ -10,59 +10,152 @@
 
 ---
 
-## DESIGN OPTIONS DOCUMENT FOR TEAM REVIEW
+## SELECTED DESIGN: Option B - Neon Chartreuse + Deep Blue ✅
 
-### Color Palette Options (Team Vote Required)
+### Color Palette (Team Voted)
 
-**OPTION A: "Testing Green + Coral Alert"** (QA traffic light system)
-
-```css
---primary: 152 76% 45%        /* Success Green #22c55e */
---accent: 14 90% 62%          /* Coral Red #fb7185 */
---highlight: 48 96% 53%       /* Amber #fbbf24 */
-```
-
-- **Vibe**: QA-specific (green=tests passing, coral=critical, amber=warnings)
-- **Best for**: Professional internal presentations, QA-focused audience
-- **Personality**: Reliable, systematic, data-driven
-
-**OPTION B: "Neon Chartreuse + Deep Blue"** (Terminal/CLI aesthetic)
+**"Terminal Green + Royal Blue"** - Automation-focused, cutting-edge
 
 ```css
 --primary: 84 81% 44%         /* Electric Lime #84cc16 */
 --accent: 217 91% 60%         /* Royal Blue #3b82f6 */
 --highlight: 173 80% 40%      /* Teal #14b8a6 */
+--background: 222 47% 11%     /* Dark Navy #0f172a */
+--text: 0 0% 98%              /* Near White #fafafa */
 ```
 
-- **Vibe**: Terminal green, Matrix-inspired, automation-focused
-- **Best for**: Developer audience, technical recruiters, hackathon vibe
-- **Personality**: Experimental, cutting-edge, highly technical
+**Design Rationale:**
+- ✅ **Terminal aesthetic**: Resonates with automation/testing background
+- ✅ **High contrast**: Lime on dark blue = excellent readability
+- ✅ **Modern QA vibe**: Tech-forward, not corporate
+- ✅ **LinkedIn-friendly**: Professional yet distinctive
 
-**OPTION C: "Warm Orange + Teal"** (Innovation + Trust)
+**Full palette documentation**: See `docs/design/DESIGN-OPTIONS.md`
 
-```css
---primary: 25 95% 53%         /* Vibrant Orange #f97316 */
---accent: 185 84% 44%         /* Ocean Teal #0891b2 */
---highlight: 338 90% 60%      /* Hot Pink #f43f5e */
+---
+
+## PROJECT DETAIL PAGES - NARRATIVE-FIRST APPROACH
+
+### New Philosophy: Story Over Documents
+
+**Previous Approach (❌ Document Dump):**
+- List of files with no context
+- "Here's EVA. Here are 10 PDFs. Good luck."
+- Viewer doesn't know what to click or why
+
+**New Approach (✅ Story-Driven):**
+- Hero section with custom image + tagline
+- Three-part narrative: Challenge → Approach → Impact
+- Contextualized resources (cards with descriptions)
+- Metrics that tell a story
+- Optional timeline & testimonials
+
+### Enhanced Project Structure
+
+```typescript
+interface IProjectEnhanced {
+  // Core identification
+  id: string;
+  slug: string;
+  title: string;
+  owner: string;
+  
+  // NEW: Hero & Visual Identity
+  hero: {
+    image: string;              // Custom hero image (not just screenshot)
+    tagline: string;            // One-liner hook
+    videoUrl?: string;          // Optional hero video
+    demoUrl?: string;           // Live demo link if available
+  };
+  
+  // NEW: Narrative Structure
+  narrative: {
+    challenge: string;          // What problem existed? (2-3 paragraphs)
+    approach: string;           // How did we solve it? (2-4 paragraphs)
+    impact: string;             // What changed? (2-3 paragraphs)
+    
+    // Optional: Story enrichment
+    timeline?: Array<{
+      date: string;
+      milestone: string;
+      description: string;
+    }>;
+    
+    testimonials?: Array<{
+      author: string;
+      role: string;
+      quote: string;
+    }>;
+  };
+  
+  // ENHANCED: Metrics with context
+  metrics: Array<{
+    label: string;
+    value: string;
+    improvement?: string;
+    context?: string;           // NEW: "What does this mean?"
+    icon?: string;              // NEW: Visual icon
+  }>;
+  
+  techStack: string[];
+  
+  // REORGANIZED: Resources with descriptions
+  resources: {
+    featured?: IAttachment;      // Main showcase (video, deck)
+    documentation: Array<{
+      kind: 'pdf' | 'slide' | 'video' | 'image';
+      title: string;             // Descriptive, not filename
+      description: string;       // NEW: What will I learn?
+      src: string;
+      pages?: number;            // For PDFs
+      slides?: number;           // For presentations
+      duration?: string;         // For videos
+      sensitivity: Sensitivity;
+    }>;
+    external: ILink[];           // Public resources
+    internal: ILink[];           // Company-only
+  };
+  
+  tags: ITag[];
+  status: 'draft' | 'review' | 'complete';
+}
 ```
 
-- **Vibe**: Energetic yet trustworthy, warm + cool balance
-- **Best for**: LinkedIn, external portfolios, startup-friendly
-- **Personality**: Innovative, approachable, modern
+### Page Layout Structure
 
-**OPTION D: "Monochrome + Electric Magenta"** (Minimalist brutalism)
+See `docs/design/PROJECT-DETAIL-NARRATIVE.md` for full visual layouts.
 
-```css
---primary: 0 0% 98%           /* Near-white #fafafa */
---accent: 340 82% 52%         /* Electric Magenta #e11d48 */
---highlight: 47 100% 50%      /* Pure Yellow #ffed00 */
+**Key Sections:**
+1. **Hero** - Custom image, tagline, CTA buttons
+2. **Three-Part Narrative** - Challenge, Approach, Impact (with visuals)
+3. **Metrics** - Numbers with context ("90% faster" + "from 2hrs to 12s")
+4. **Featured Showcase** - Main demo video or presentation
+5. **Supporting Materials** - Resource cards (not lists)
+6. **Optional** - Timeline, testimonials, related projects
+
+### Resource Cards (Not Lists)
+
+Instead of:
+```
+PDFs:
+- file1.pdf
+- file2.pdf
 ```
 
-- **Vibe**: Ultra-minimal grayscale with shocking accents
-- **Best for**: Editorial portfolios, design-forward companies
-- **Personality**: Bold, experimental, avant-garde
+We show:
+```
+┌──────────────────────────────┐
+│ 📊 EVA Tech Stack Overview  │
+│                               │
+│ Architecture diagram and      │
+│ component breakdown           │
+│                               │
+│ 4 pages • PDF • 2.1MB         │
+│ [View] [Download]             │
+└──────────────────────────────┘
+```
 
-**Team Decision Point**: Which palette best represents your team's identity?
+**Full implementation guide**: See `docs/design/PROJECT-DETAIL-NARRATIVE.md`
 
 ---
 
