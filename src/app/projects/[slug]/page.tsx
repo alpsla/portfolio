@@ -33,14 +33,74 @@ export default function ProjectDetailPage({ params }: Params) {
 
       <h1 className="text-2xl font-bold">{project.title}</h1>
       <p className="text-gray-700 mt-2">{project.summary}</p>
+
+      {/* Problem Section */}
+      {project.problem && (
+        <section className="mt-6">
+          <h2 className="text-lg font-semibold">Problem</h2>
+          <p className="mt-2 text-gray-700">{project.problem}</p>
+        </section>
+      )}
+
+      {/* Solution Section */}
       <section className="mt-6">
         <h2 className="text-lg font-semibold">Solution</h2>
-        <p className="mt-2">{project.solution}</p>
+        <p className="mt-2 text-gray-700">{project.solution}</p>
       </section>
 
+      {/* Tech Stack */}
+      {project.techStack && project.techStack.length > 0 && (
+        <section className="mt-6">
+          <h2 className="text-lg font-semibold">Tech Stack</h2>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {project.techStack.map((tech) => (
+              <span key={tech} className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Metrics */}
+      {project.metrics && project.metrics.length > 0 && (
+        <section className="mt-6">
+          <h2 className="text-lg font-semibold">Key Metrics</h2>
+          <div className="mt-3 grid gap-4 sm:grid-cols-2">
+            {project.metrics.map((metric) => (
+              <div key={metric.label} className="border rounded-lg p-4">
+                <div className="font-semibold text-gray-900">{metric.label}</div>
+                <div className="text-2xl font-bold text-blue-600 mt-1">{metric.value}</div>
+                {metric.improvement && (
+                  <div className="text-sm text-gray-600 mt-2">{metric.improvement}</div>
+                )}
+                {metric.impact && (
+                  <div className="text-sm text-green-700 mt-1">{metric.impact}</div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Tags */}
+      {project.tags && project.tags.length > 0 && (
+        <section className="mt-6">
+          <h2 className="text-lg font-semibold">Tags</h2>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {project.tags.map((tag) => (
+              <span key={tag.key} className="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">
+                {tag.label}
+              </span>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Links Section */}
       {project.links && project.links.length > 0 && (
         <section className="mt-8">
-          <h3 className="text-lg font-semibold">Links</h3>
+          <h2 className="text-lg font-semibold">Links</h2>
           <ul className="mt-3 space-y-2 list-disc list-inside">
             {project.links.map((l) => (
               <li key={`${l.label}-${l.url}`}>
@@ -53,9 +113,10 @@ export default function ProjectDetailPage({ params }: Params) {
         </section>
       )}
 
+      {/* Attachments Section */}
       {project.attachments && project.attachments.length > 0 && (
         <section className="mt-8">
-          <h3 className="text-lg font-semibold">Attachments</h3>
+          <h2 className="text-lg font-semibold">Attachments</h2>
           <ul className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {project.attachments.map((a) => {
               const icon = a.kind === 'pdf'
