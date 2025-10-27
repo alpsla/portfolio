@@ -179,7 +179,7 @@ export const PROJECTS: IProject[] = [
     id: 'new-relic-qe-okr-dashboard',
     slug: 'new-relic-qe-okr-dashboard',
     title: 'New Relic QE OKR - Dashboard',
-    owner: 'anilbvi',
+    owner: 'rob1nalex',
     summary: 'New Relic is an observability platform which helps you bring in data from any digital source.',
     problem: 'Relying on multiple disconnected tools for logs, metrics, and traces slows down the incident triage process.',
     solution: 'New Relic provides a unified observability platform that consolidates logs, metrics, and traces, enabling faster triage, real-time insights, and proactive incident response across our software systems.',

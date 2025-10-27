@@ -17,10 +17,10 @@ export const TEAM_MEMBERS = {
 
 // Optional curated slugs per teammate for profile filtering
 export const PROFILE_PROJECTS: Record<string, string[]> = {
-  robin: ['unified-test-case-optimization', 'unified-test-automation-framework', 'coppa-process-technology'],
+  robin: ['unified-test-case-optimization', 'unified-test-automation-framework', 'coppa-process-technology', 'new-relic-qe-okr-dashboard'],
   rostislav: ['npaw-integration-testing', 'data-observability'],
   rohit: ['dart', 'onboarding-automation-setup'],
-  bobby: ['new-relic-qe-okr-dashboard', 'config-comparison'],
+  bobby: ['config-comparison'],
   juney: ['test-manager-bot-eva', 'report-portal'],
   dhanya: ['coppa-process-technology'],
 };
