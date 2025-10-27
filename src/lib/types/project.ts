@@ -39,6 +39,7 @@ export interface IProject {
   id: string;
   slug: string;
   title: string;
+  heroImage?: string;
   owner: string;
   summary: string;
   problem: string;

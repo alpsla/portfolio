@@ -20,6 +20,17 @@ export default function ProjectDetailPage({ params }: Params) {
 
   return (
     <main className="container mx-auto p-6">
+      {/* Hero Image */}
+      {project.heroImage && (
+        <div className="mb-8 rounded-lg overflow-hidden">
+          <img 
+            src={project.heroImage} 
+            alt={`${project.title} - Architecture Diagram`}
+            className="w-full h-auto"
+          />
+        </div>
+      )}
+
       <h1 className="text-2xl font-bold">{project.title}</h1>
       <p className="text-gray-700 mt-2">{project.summary}</p>
       <section className="mt-6">
@@ -65,9 +76,21 @@ export default function ProjectDetailPage({ params }: Params) {
                   <span className="text-xl" aria-hidden>{icon}</span>
                   <div className="flex-1">
                     <div className="font-medium">{a.title}</div>
-                    <div className="mt-1">
-                      <a className="text-blue-600 hover:underline" href={a.src} download>
-                        View / Download
+                    <div className="mt-1 flex gap-3">
+                      <a 
+                        className="text-blue-600 hover:underline" 
+                        href={a.src} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        View
+                      </a>
+                      <a 
+                        className="text-blue-600 hover:underline" 
+                        href={a.src} 
+                        download
+                      >
+                        Download
                       </a>
                     </div>
                   </div>
