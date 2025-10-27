@@ -22,11 +22,11 @@ export default function ProjectDetailPage({ params }: Params) {
     <main className="container mx-auto p-6">
       {/* Hero Image */}
       {project.heroImage && (
-        <div className="mb-8 rounded-lg overflow-hidden">
+        <div className="mb-8 rounded-lg overflow-hidden max-w-4xl mx-auto">
           <img 
             src={project.heroImage} 
             alt={`${project.title} - Architecture Diagram`}
-            className="w-full h-auto"
+            className="w-full h-auto shadow-lg"
           />
         </div>
       )}
