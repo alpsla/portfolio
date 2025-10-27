@@ -121,11 +121,15 @@ export const PROJECTS: IProject[] = [
     slug: 'onboarding-automation-setup',
     title: 'Onboarding Automation Setup',
     owner: 'rob1nalex',
-    summary: '',
-    problem: '',
-    solution: '',
-    techStack: [],
-    metrics: [],
+    summary: 'Automated onboarding workflows that provision access, repositories, dashboards, and project docs in minutes with consistent guardrails.',
+    problem: 'Manual onboarding across tools (GitHub, Confluence, New Relic, CI) caused delays, inconsistencies, and access gaps. New teammates waited on ticket backlogs, and standards (linting, CI, security) were applied unevenly.',
+    solution: 'Orchestrated an end-to-end onboarding pipeline: templated repo bootstrap (PR templates, CI, lint), auto-provisioned dashboards and channels, and one-click project scaffolding with privacy/safety checks. Added checklists and validators to ensure policy alignment.',
+    techStack: ['TypeScript', 'Node.js', 'GitHub Actions', 'Confluence API', 'JIRA API', 'New Relic API'],
+    metrics: [
+      { label: 'Setup Time', value: '↓ 70%', improvement: 'From days to hours via automation', impact: 'Faster team productivity' },
+      { label: 'Policy Compliance', value: '↑ 100%', improvement: 'Guardrails auto-applied on bootstrap', impact: 'Consistent quality and safety' },
+      { label: 'Ticket Backlog', value: '↓ 50%', improvement: 'Reduced manual access/config tickets', impact: 'Lower ops overhead' }
+    ],
     screenshots: [],
     status: 'draft',
     attachments: [],
@@ -241,9 +245,13 @@ export const PROJECTS: IProject[] = [
       // PDFs (public-safe only)
       { kind: 'pdf', title: 'Research: From POM to Observability-driven QA', src: '/assets/data-observability/pdfs/RESEARCH_From_POM_to_Observability_driven_QA.pdf', sensitivity: 'public' },
       { kind: 'pdf', title: 'From POM to Observability-Driven QA (enhanced)', src: '/assets/data-observability/pdfs/From_POM_to_Observability_Driven_QA_enhanced.pdf', sensitivity: 'public' },
-      { kind: 'pdf', title: 'AI-Powered QA Transformation (Enterprise AI/ML)', src: '/assets/data-observability/pdfs/AI_Powered_QA_Transformation_Enterprise_AI_ML_Excellence.pdf', sensitivity: 'public' }
+      { kind: 'pdf', title: 'AI-Powered QA Transformation (Enterprise AI/ML)', src: '/assets/data-observability/pdfs/AI_Powered_QA_Transformation_Enterprise_AI_ML_Excellence.pdf', sensitivity: 'public' },
+      // Recording (internal)
+      { kind: 'video', title: 'Eden Observability Dashboard (internal)', src: 'https://viacom.sharepoint.com/:v:/r/sites/VIA-Digital-QAConnectedTV/Shared%20Documents/Unified/Presentations/Artifacts/Eden_Observability_Dashboard.mp4?csf=1&web=1&e=MgxqK7', sensitivity: 'internal' }
     ],
-    links: [],
+    links: [
+      { label: 'New Relic Dashboard (internal)', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjExMjc3OTQ2?filters=%28name%20LIKE%20%27BET%2B%20Metrics%27%20OR%20id%20%3D%20%27BET%2B%20Metrics%27%20OR%20domainId%20%3D%20%27BET%2B%20Metrics%27%29&state=c64380e3-2883-5f28-79d9-70cf4d36fa84', sensitivity: 'internal' }
+    ],
     tags: [{ key: 'topic:observability', label: 'Observability' }]
   },
   {
