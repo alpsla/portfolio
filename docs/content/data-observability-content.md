@@ -37,11 +37,146 @@ We need a **custom-designed hero image** (not just a screenshot).
 
 **Options**:
 1. **I have an image ready**: _[Path to file or attach here]_
-2. [x] **I need help designing one**: _Data pipeline visualization with telemetry flows converging into test selection engine, showing real-time signal correlation (logs → metrics → traces → test impact)_
+2. [x] **I need help designing one**: _Clean minimalist data flow visualization_
 3. **Use a screenshot as placeholder**: _[We'll design something better later]_
 
+**Aspect Ratio**: 16:9 landscape  
+**Style**: Minimalist/clean, modern SaaS product illustration  
+**Text**: Self-descriptive visual (no text overlay needed)  
+**Animation**: Yes - subtle data flow animations to enhance storytelling
+
+---
+
+## **HERO IMAGE DESIGN SPECIFICATION**
+
+### **Visual Concept: "Intelligent Pipeline Flow"**
+Minimalist 3-section composition showing data transformation journey from chaos to clarity.
+
+### **Composition Layout (16:9)**
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  [Platform Icons]  →  [Pipeline Layer]  →  [Intelligence]  │
+│   Multi-source         Observability       Smart Decisions   │
+│   Data Streams        Processing           Test Selection    │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### **Section Breakdown**
+
+**LEFT (30%): Data Sources**
+- 6 minimalist platform icons arranged in 2 columns:
+  - Web, WCTV, Roku (left column)
+  - Apple TV, iOS, Android (right column)
+- Each icon: simple line-art style, 24×24px equivalent
+- Colored data streams flowing right from each icon:
+  - Thin glowing lines (2-3px)
+  - 3 colors: cyan (logs), green (metrics), orange (traces)
+  - Streams converge as they flow toward center
+
+**CENTER (40%): Observability Pipeline**
+- Large central node: circular hub with OpenTelemetry icon
+- Streams enter from left, flow through hub
+- Below hub: 3 processing stages (simplified icons):
+  - Kafka (streaming ingestion)
+  - dbt (transformation)
+  - BigQuery (storage/analysis)
+- Visual treatment:
+  - Soft glow effect on active nodes
+  - Subtle connecting lines between stages
+  - Data particles flowing along paths (animation target)
+
+**RIGHT (30%): Intelligent Output**
+- Minimalist dashboard representation:
+  - Clean rectangular frame (thin border)
+  - Grid of test boxes inside (5×4 grid):
+    - 30% highlighted (bright cyan/green) = "Run"
+    - 70% dimmed (gray) = "Skip"
+  - Single prominent metric: "70% ↓" in large text
+- Below dashboard: thin horizontal gauge
+  - Left side: green (healthy)
+  - Subtle glow at healthy end
+
+### **Color Palette**
+```
+Background:     #0A1628 (deep navy)
+Data streams:   #00D9FF (cyan), #00FF88 (green), #FF6B35 (orange)
+Active nodes:   #00D9FF with 20% opacity glow
+Inactive:       #2D3748 (dark gray)
+Text/UI:        #F0F4F8 (off-white)
+Accents:        #7C3AED (purple for highlights)
+```
+
+### **Animation Specifications**
+
+**Animated Elements** (for web implementation):
+1. **Data particle flow** (left → center → right):
+   - Small dots traveling along stream paths
+   - Speed: 2-3 seconds full journey
+   - Easing: ease-in-out
+   - Continuous loop with staggered starts
+
+2. **Node pulse** (center hub):
+   - Subtle scale pulse: 1.0 → 1.05 → 1.0
+   - Duration: 2 seconds
+   - Opacity glow: 0.6 → 1.0 → 0.6
+
+3. **Test grid highlight** (right dashboard):
+   - Occasional flicker on selected tests (simulating real-time selection)
+   - Random test boxes light up briefly
+   - Duration: 0.5s fade in/out
+
+4. **Metric counter** (70% reduction):
+   - Gentle count-up animation on page load
+   - Duration: 1.5 seconds
+
+**Implementation**: CSS animations + SVG for static, Lottie/Canvas for complex flows
+
+---
+
+## **AI IMAGE GENERATION PROMPTS**
+
+### **Option A: Midjourney/DALL-E Prompt**
+```
+Minimalist tech illustration, 16:9 landscape, dark navy blue background (#0A1628). 
+Three-section horizontal flow: LEFT - six simple line-art platform icons (web, tv, mobile) 
+emitting thin glowing data streams (cyan, green, orange) flowing rightward. 
+CENTER - large circular OpenTelemetry hub node with soft glow, three smaller processing 
+nodes below (Kafka, dbt, BigQuery icons), streams flowing through hub. 
+RIGHT - clean rectangular dashboard with 5x4 grid of test boxes, 30% highlighted bright 
+cyan/green, 70% dimmed gray, large "70%" text above. Modern SaaS product style, 
+clean lines, minimal detail, professional, no text labels, glowing accent effects, 
+data visualization aesthetic, enterprise software design. 
+--ar 16:9 --style clean minimal --v 6
+```
+
+### **Option B: Stable Diffusion Prompt**
+```
+minimalist data pipeline visualization, dark mode interface, 16:9 composition, 
+three sections: platform icons with glowing data streams on left, central processing 
+hub with observability nodes, smart dashboard with test grid on right, 
+navy blue background, cyan and green accent colors, modern tech illustration, 
+clean geometric shapes, soft glow effects, no text, professional software product design, 
+enterprise dashboard aesthetic, negative prompt: cluttered, photorealistic, people, 
+screenshots, complex details, gradients
+```
+
+### **Option C: Designer Brief** (for human designer)
+```
+Create a minimalist hero image for a Data Observability platform (16:9).
+- Style: Clean modern SaaS product illustration, dark theme
+- Layout: 3-panel horizontal flow (sources → pipeline → output)
+- Color: Navy background with cyan/green/orange accents
+- Elements: Platform icons, data streams, processing nodes, test grid dashboard
+- Mood: Intelligent, automated, modern, enterprise-grade
+- Animation-ready: Design with SVG layers for web animation
+- Reference: Think Datadog/New Relic marketing pages, but more minimal
+```
+
+---
+
 **Image description** (what should it show?):
-_Diagram showing streaming data pipelines on the left (Kafka, logs, metrics), an observability layer in the center (OpenTelemetry, correlation engine), and QA outcomes on the right (intelligent test selection, early defect detection, deployment gates). Use visual cues: data flows as animated streams, highlighted risk signals, test suite heat map._
+_Clean minimalist visualization of data flowing from multiple platforms through an observability pipeline into intelligent test selection. Self-descriptive through visual flow: sources → processing → smart decisions. Designed for subtle animation on web (flowing particles, pulsing nodes)._
 
 ### Optional Hero Assets
 
