@@ -188,6 +188,8 @@ export const PROJECTS: IProject[] = [
     screenshots: [],
     status: 'draft',
     attachments: [
+      { kind: 'pdf', title: 'New Relic Integration Public Document', src: '/assets/new-relic-qe-okr-dashboard/pdfs/New Relic Integration Public Document.pdf', sensitivity: 'public' },
+      { kind: 'pdf', title: 'New Relic Integration - Technical Guide - Internal Document', src: '/assets/new-relic-qe-okr-dashboard/pdfs/New Relic Integration - Technical Guide - Internal Document.pdf', sensitivity: 'internal' },
       { kind: 'pdf', title: 'QE Dashboards', src: '/assets/new-relic-qe-okr-dashboard/pdfs/QE Dashboards.pdf', sensitivity: 'internal' },
     ],
     links: [
