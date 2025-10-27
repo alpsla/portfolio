@@ -286,27 +286,95 @@ Style: Modern SaaS product design, clean geometric shapes, minimal details, prof
 
 ### For Google Gemini (Imagen) ⭐ RECOMMENDED
 
-**Base Prompt (all versions share this foundation):**
+## 🔥 COMPLETE PROMPT (VERSION A - Your Actual Stack)
 
-Create a minimalist technical illustration for a data observability platform, 16:9 landscape format.
-
-**Left section (Data Sources)**: Display six small, simple platform icons arranged in two vertical columns (web browser, connected TV, Roku device, Apple TV, iOS phone, Android device). From each icon, draw thin glowing lines in three colors - cyan for logs, bright green for metrics, and orange for traces - all flowing smoothly toward the center.
-
-**Right section (Intelligence Output)**: Display a clean white/light rectangular dashboard mockup with a 5-by-4 grid of small rounded squares inside (20 tests total). Color-code the test results clearly:
-- 6 squares BRIGHT GREEN with tiny checkmarks (passed tests)
-- 2 squares RED with small X marks (caught failures)
-- 1 square ORANGE/AMBER with warning symbol (alerts/flaky tests)
-- 11 squares LIGHT GRAY or dimmed (intelligently skipped tests)
-
-Arrange colors naturally throughout the grid - don't group same colors together. Above the grid, prominently display "70%" in large white text with a downward arrow. Below the dashboard, add a thin horizontal progress bar: left 30% bright green (tests executed), right 70% dark gray (tests skipped), clean separation.
-
-**Visual style**: Modern SaaS product design with dark navy blue background (#0A1628). Clean geometric shapes, minimal details, soft glowing effects on data streams and central hub. Dashboard pops against dark background. Professional, enterprise-grade software visualization, focus on data flow and intelligent automation. No text labels except "70%" metric. No people, no photographs, no realistic textures - pure vector illustration.
+**Copy this entire prompt to Gemini:**
 
 ---
 
-**VERSION A (Your Actual Stack: Kafka → Snowflake → Monte Carlo)** ⭐ RECOMMENDED:
+Create a minimalist technical illustration for a data observability platform in 16:9 landscape format with a dark navy blue background (#0A1628).
 
-**Center section (Processing Pipeline)**: Feature a large circular node with subtle glow representing the OpenTelemetry hub where colored streams converge. Below this hub, show three circular nodes in vertical arrangement: top node "Kafka" (streaming ingestion) with subtle icon, middle node "Snowflake" (data warehouse) with snowflake icon and medium glow, bottom node "Monte Carlo" (observability analysis platform) with prominent glow showing it's the intelligence layer. Connect all three with thin lines showing data flowing downward through the pipeline. This shows your real architecture: data flows through Kafka into Snowflake for storage, Monte Carlo queries Snowflake to perform observability analysis.
+**LEFT SECTION - DATA SOURCES (30% of width):**
+
+Display 6 platform icons in 2 vertical columns:
+- Column 1: Connected TV, TV/Roku, Logs/Media player  
+- Column 2: TV, iPhone, Android
+
+From each icon, draw thin glowing curved lines flowing rightward:
+- CYAN lines (logs)
+- BRIGHT GREEN lines (metrics)
+- ORANGE lines (traces)
+
+Add legend: Green circle + "Metrics", Orange circle + "Traces"
+
+**CENTER SECTION - PROCESSING PIPELINE (40% of width):**
+
+**Top**: Large circular "OpenTelemetry" hub node with glowing ring where all colored streams converge (hourglass/funnel shape).
+
+**Below OpenTelemetry - 3 nodes VERTICALLY stacked** (critical - one below the other):
+
+1. **KAFKA** (top): Small circular node, dark blue with white "K" icon, label "Kafka"
+
+2. **SNOWFLAKE** (middle): ⚠️ ONLY ONE SNOWFLAKE NODE
+   - Medium circular node
+   - BRIGHT GREEN/CYAN circle with white snowflake ❄️ icon
+   - Label "Snowflake" below
+   - Subtle glow effect
+   - DO NOT duplicate this node!
+
+3. **MONTE CARLO** (bottom): 
+   - Medium-large circular node
+   - ORANGE circle with "MC" icon
+   - Label "Monte Carlo"
+   - Subtitle: "Observability analysis platform"
+   - Strong glow effect (most prominent)
+
+Connect with curved lines showing data flow: OpenTelemetry → Kafka → Snowflake → Monte Carlo. Place inside rounded rectangle frame labeled "Processing Pipeline".
+
+**RIGHT SECTION - INTELLIGENCE OUTPUT (30% of width):**
+
+Header: "Intelligence Output"
+
+White rectangular dashboard panel with rounded corners containing:
+
+**Test Results Grid** (CRITICAL):
+- 5 columns × 4 rows = 20 small rounded square boxes
+- Color-code EXACTLY (distribute naturally, don't group):
+  * **6 squares**: BRIGHT GREEN (#00FF88) with white checkmark ✓
+  * **2 squares**: BRIGHT RED (#FF4444) with white X mark ✗
+  * **1 square**: ORANGE (#FF6B35) with white warning ⚠
+  * **11 squares**: LIGHT GRAY (#555555) - dimmed, no symbols
+- ⚠️ DO NOT make dashboard plain gray - must show these colored boxes!
+
+**Above grid**: "70%" in large text with downward arrow ↓
+
+**Below grid**: Thin horizontal progress bar:
+- Left 30%: BRIGHT GREEN (#00FF88)
+- Right 70%: DARK GRAY (#2D3748)
+- Clean separation between sections
+
+**VISUAL STYLE:**
+- Dark navy blue background (#0A1628)
+- Modern SaaS design with soft glowing effects on nodes and streams
+- White dashboard pops against dark background
+- Clean geometric shapes, minimal text
+- Professional enterprise visualization
+- NO photos, NO people, pure vector style
+
+**CRITICAL REQUIREMENTS:**
+1. ⚠️ ONLY ONE Snowflake node (not two!)
+2. ⚠️ Dashboard MUST have colored test boxes (6 green ✓, 2 red ✗, 1 orange ⚠, 11 gray)
+3. ⚠️ Center nodes arranged VERTICALLY (Kafka → Snowflake → Monte Carlo)
+
+Aspect ratio: 16:9 landscape, minimum 1920×1080 pixels
+
+---
+
+**If result has issues, use these follow-up prompts:**
+
+- **Duplicate Snowflake**: "Remove the duplicate Snowflake label. Only ONE Snowflake node between Kafka and Monte Carlo."
+- **Plain gray dashboard**: "Add colored test boxes to the dashboard grid: 6 bright green with checkmarks, 2 red with X marks, 1 orange with warning, 11 light gray."
+- **Wrong layout**: "Stack center pipeline vertically: OpenTelemetry top, then Kafka, then Snowflake, then Monte Carlo bottom."
 
 ---
 
