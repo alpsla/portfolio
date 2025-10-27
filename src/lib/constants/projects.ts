@@ -244,13 +244,20 @@ export const PROJECTS: IProject[] = [
   {
     id: 'data-observability',
     slug: 'data-observability',
-    title: 'Data Observability (Next Move)',
+    title: 'Data Observability for QA - Streaming Insights & Test Intelligence',
+    heroImage: '/assets/data-observability/hero/d0_hero.png',
     owner: 'rostialpin',
-    summary: 'End-to-end observability of data pipelines to power QA insights and test selection.',
-    problem: 'Limited visibility into data flows and quality issues delayed incident detection and slowed QA feedback.',
-    solution: 'Instrument pipelines, centralize metrics/logs/traces, derive test impact and health signals for faster decisions.',
-    techStack: ['OpenTelemetry', 'Kafka', 'dbt', 'BigQuery'],
-    metrics: [],
+    summary: 'From reactive testing to predictive quality: Observability-driven QA that detects risks before deployment. Initiative to slash test execution 50-70%, compress bug identification from days to minutes, and improve quality through intelligent test selection powered by real-time telemetry.',
+    problem: 'QA operates at massive scale: thousands of automated tests every two weeks across real devices, multiple clouds, and all platforms (Web, WCTV, Roku, Apple TV, iOS, Android). Teams are constantly maintaining existing suites, developing new tests, and validating releases—all racing against tight deadlines. The reactive posture causes overload: engineers spend days triaging failures and manually reproducing issues. When bugs slip to production, root-cause analysis stretches from days into weeks. Without real-time observability into data flows and test impact, we firefight instead of preventing fires—expensive cloud costs, high maintenance overhead, and late-detected critical issues erode user trust.',
+    solution: 'Data Observability flips the script: instrument services and pipelines with OpenTelemetry to emit rich telemetry (logs, metrics, traces) in real time. Signals flow through Kafka for streaming ingestion, land in BigQuery via dbt for analysis, and feed a test impact correlation engine. By mapping telemetry to historical coverage, we predict which tests catch regressions for each code change—enabling selective execution that cuts runs 50-70% while maintaining defect detection. Correlated traces accelerate bug triage from days to minutes. New Relic dashboards provide real-time error budgets and deployment risk scoring. Built on open standards (OpenTelemetry, Kafka, dbt), scalable, future-proof, and designed to reduce QA toil while improving quality. Currently in Q4 2025 preparing PoC and executive proposal to secure pilot funding.',
+    techStack: ['OpenTelemetry', 'Kafka', 'Snowflake', 'Monte Carlo', 'dbt', 'BigQuery', 'New Relic', 'Python', 'TypeScript', 'Playwright'],
+    metrics: [
+      { label: 'Test Execution Reduction', value: '50-70%', improvement: 'Selective execution via observability-driven test impact analysis', impact: 'Projected: Lower cloud costs, faster CI/CD cycles' },
+      { label: 'Bug Identification Time', value: 'Minutes (vs. Days/Weeks)', improvement: 'Real-time trace/metric correlation vs. manual log hunting', impact: 'Projected: Faster MTTR, fewer emergency patches' },
+      { label: 'Production Issue Detection', value: 'Earlier (Pre-Deployment)', improvement: 'Shift-left defect detection via continuous observability signals', impact: 'Projected: Reduced customer-facing incidents, predictable releases' },
+      { label: 'QA Team Capacity Freed', value: '30-40%', improvement: 'Reduced maintenance overhead and faster triage', impact: 'Projected: More time for feature work and innovation' },
+      { label: 'Cost Savings', value: 'Significant (TBD)', improvement: '50-70% fewer test runs + faster resolution', impact: 'Projected: Direct cloud savings + productivity gains (to be validated in pilot)' }
+    ],
     screenshots: [],
     status: 'draft',
     attachments: [
@@ -264,7 +271,14 @@ export const PROJECTS: IProject[] = [
     links: [
       { label: 'New Relic Dashboard (internal)', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjExMjc3OTQ2?filters=%28name%20LIKE%20%27BET%2B%20Metrics%27%20OR%20id%20%3D%20%27BET%2B%20Metrics%27%20OR%20domainId%20%3D%20%27BET%2B%20Metrics%27%29&state=c64380e3-2883-5f28-79d9-70cf4d36fa84', sensitivity: 'internal' }
     ],
-    tags: [{ key: 'topic:observability', label: 'Observability' }]
+    tags: [
+      { key: 'platform:multi', label: 'Multi-Platform' },
+      { key: 'topic:observability', label: 'Observability' },
+      { key: 'topic:ai-ml', label: 'AI/ML' },
+      { key: 'topic:automation', label: 'Automation' },
+      { key: 'topic:testing', label: 'Testing' },
+      { key: 'topic:analytics', label: 'Analytics' }
+    ]
   },
   {
     id: 'config-comparison',
