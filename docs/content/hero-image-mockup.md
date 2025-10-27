@@ -9,54 +9,74 @@
 
 ---
 
-## ASCII Layout Preview
+## ASCII Layout Preview (UPDATED with Clearer Colors)
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                                                                              │
 │  ◉ Web      ════╗                                                           │
 │  ◉ WCTV         ║         ╔═══════════╗                  ┌─────────────┐   │
-│  ◉ Roku         ╠════════▶║     ⊙     ║═══════▶          │ ░ ░ ■ ■ ░   │   │
-│                 ║         ║  OpenTel  ║                  │ ■ ░ ░ ■ ░   │   │
-│  ◉ AppleTV      ║         ╚═════╤═════╝                  │ ░ ■ ░ ░ ■   │   │
-│  ◉ iOS          ║               │                        │ ■ ■ ░ ░ ░   │   │
+│  ◉ Roku         ╠════════▶║     ⊙     ║═══════▶          │ ✓ ✓ ✗ ░ ░   │   │
+│                 ║         ║  OpenTel  ║                  │ ✓ ░ ⚠ ✓ ░   │   │
+│  ◉ AppleTV      ║         ╚═════╤═════╝                  │ ░ ✗ ░ ✓ ░   │   │
+│  ◉ iOS          ║               │                        │ ✓ ░ ░ ░ ░   │   │
 │  ◉ Android  ════╝               │                        │                 │
 │                            [Kafka]                       │     70% ↓       │
 │                               ↓                          │                 │
 │                            [dbt]                         └─────────────┘   │
-│                               ↓                          ═══════════════   │
-│                          [BigQuery]                        [Gauge: ▓▓▒░]  │
+│                               ↓                          ▓▓▓▓▓▓▓░░░░░░░   │
+│                          [BigQuery]                      30%│  70% Skip   │
 │                                                                              │
 └──────────────────────────────────────────────────────────────────────────────┘
 
        DATA SOURCES          OBSERVABILITY PIPELINE         INTELLIGENT OUTPUT
-       (Multi-platform)      (Processing Layer)             (Test Selection)
+       (Multi-platform)      (Processing Layer)             (Test Results)
 ```
 
-**Legend**:
+**Legend** (Updated for Clarity):
 - `◉` = Platform icons (Web, TV, Mobile)
 - `═══▶` = Glowing data streams (cyan/green/orange)
 - `⊙` = OpenTelemetry hub (pulsing glow)
-- `■` = Selected tests (bright cyan/green)
-- `░` = Skipped tests (dimmed gray)
-- `▓▓▒░` = Health gauge (green to gray gradient)
+- **`✓` = Passed tests (bright green) - 6 tests**
+- **`✗` = Failed tests caught (red) - 2 tests**
+- **`⚠` = Warning/flaky tests (orange) - 1 test**
+- **`░` = Skipped tests (light gray) - 11 tests**
+- `▓▓▓` = Tests executed (green portion of gauge = 30%)
+- `░░░` = Tests skipped (gray portion of gauge = 70%)
 
 ---
 
-## Color Reference Card
+## Color Reference Card (UPDATED)
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│  Background:    ▓▓▓▓▓▓  #0A1628 (Deep Navy)            │
-│  Cyan Stream:   ▓▓▓▓▓▓  #00D9FF (Logs)                 │
-│  Green Stream:  ▓▓▓▓▓▓  #00FF88 (Metrics)              │
-│  Orange Stream: ▓▓▓▓▓▓  #FF6B35 (Traces)               │
-│  Active Nodes:  ▓▓▓▓▓▓  #00D9FF + glow                 │
-│  Inactive:      ▓▓▓▓▓▓  #2D3748 (Dark Gray)            │
-│  Text/UI:       ▓▓▓▓▓▓  #F0F4F8 (Off-White)            │
-│  Accent:        ▓▓▓▓▓▓  #7C3AED (Purple)               │
-└─────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────┐
+│  BACKGROUND & LAYOUT                                         │
+│  Background:      ▓▓▓▓▓▓  #0A1628 (Deep Navy)              │
+│  Text/UI:         ▓▓▓▓▓▓  #F0F4F8 (Off-White)              │
+│                                                              │
+│  DATA STREAMS                                                │
+│  Cyan Stream:     ▓▓▓▓▓▓  #00D9FF (Logs)                   │
+│  Green Stream:    ▓▓▓▓▓▓  #00FF88 (Metrics)                │
+│  Orange Stream:   ▓▓▓▓▓▓  #FF6B35 (Traces)                 │
+│  Active Nodes:    ▓▓▓▓▓▓  #00D9FF + glow                   │
+│                                                              │
+│  TEST RESULTS (Right Dashboard) ⭐ NEW                       │
+│  ✓ Passed Tests:  ▓▓▓▓▓▓  #00FF88 (Bright Green) - 6      │
+│  ✗ Failed Tests:  ▓▓▓▓▓▓  #FF4444 (Red) - 2               │
+│  ⚠ Warnings:      ▓▓▓▓▓▓  #FF6B35 (Amber/Orange) - 1      │
+│  ░ Skipped:       ▓▓▓▓▓▓  #555555 (Light Gray) - 11       │
+│                                                              │
+│  GAUGE BAR                                                   │
+│  Executed:        ▓▓▓▓▓▓  #00FF88 (Green 30%)              │
+│  Skipped:         ▓▓▓▓▓▓  #2D3748 (Dark Gray 70%)          │
+└──────────────────────────────────────────────────────────────┘
 ```
+
+**Color Logic Explained:**
+- **Green (✓)**: Quality maintained - tests passed ✅
+- **Red (✗)**: Early detection working - caught failures before production 🎯
+- **Orange (⚠)**: Intelligent monitoring - flagged flaky/warning tests 📊
+- **Gray (░)**: Efficiency gains - 70% reduction in execution ⚡
 
 ---
 
@@ -133,12 +153,111 @@ export function HeroImage({ projectSlug }) {
 
 ---
 
+## 🎨 IMPROVED COLOR SCHEME (Clearer Visual Story)
+
+### Dashboard Test Grid - Revised Logic
+
+**Problem with original**: Too many colors (cyan, green, orange, gray) made it confusing  
+**Solution**: Clear color-coded test results that tell a story
+
+**New Color Scheme (20 tests in 5×4 grid):**
+- **6 tests = BRIGHT GREEN** ✓ (30% selected & passed - healthy)
+- **2 tests = RED** ✗ (10% critical failures caught early - key wins!)
+- **1 test = ORANGE/AMBER** ⚠ (5% warnings/flaky tests)
+- **11 tests = LIGHT GRAY** (55% intelligently skipped - efficiency)
+
+**Visual Impact:**
+- Green majority shows "quality maintained"
+- Red tests show "early detection works" (better than production bugs!)
+- Orange shows "intelligent monitoring" 
+- Gray shows "70% reduction in execution"
+
+This tells the story: *"Run fewer tests, catch critical issues early, maintain quality"*
+
+---
+
+## 🏗️ Architecture Options (Kafka/BigQuery vs Monte Carlo)
+
+### **Current Design: DIY Stack**
+**Center Pipeline Shows:**
+- **Kafka** (streaming ingestion) → **dbt** (transformation) → **BigQuery** (warehouse)
+- Represents: Custom-built, full control, infrastructure investment
+
+### **Alternative: Monte Carlo SaaS**
+**If using Monte Carlo:**
+- **OpenTelemetry** → **Monte Carlo** → **Insights**
+- Represents: Managed service, faster time-to-value, less infrastructure
+
+### **Hybrid Approach (Recommended for flexibility):**
+- **OpenTelemetry** → **Kafka** → **Monte Carlo** → **BigQuery/New Relic**
+- Represents: Best of both (streaming + managed observability + existing analytics)
+
+---
+
+## 💡 Hero Image Recommendation
+
+**For this project (in proposal/PoC phase):**
+
+**Option A: Show the Vision (DIY Stack)** ⭐ RECOMMENDED
+- Keep: Kafka → dbt → BigQuery in center
+- Why: Shows technical depth, demonstrates architectural thinking
+- Message: "We designed a comprehensive solution"
+
+**Option B: Show Monte Carlo (If that's the direction)**
+- Replace center with: Single "Monte Carlo" node
+- Add small "Kafka" node before it (data ingestion)
+- Why: Cleaner, emphasizes observability platform choice
+- Message: "We leverage best-in-class tools"
+
+**Option C: Show Both (Flexible Architecture)**
+- Center: Kafka → "Observability Platform" (generic) → Analytics
+- Small badge: "Monte Carlo / Custom Stack"
+- Why: Platform-agnostic, shows you evaluated options
+- Message: "We choose the right tool for the job"
+
+---
+
+## 🤔 Which to Use?
+
+**Ask yourself:**
+1. **Is Monte Carlo already approved/purchased?** → Use Option B (show Monte Carlo)
+2. **Is this a proposal to build custom?** → Use Option A (show DIY stack)
+3. **Still evaluating options?** → Use Option C (generic "Observability Platform")
+4. **Want to show technical expertise?** → Use Option A (detailed tech stack)
+
+**My recommendation for YOUR situation (Q4 2025 PoC phase):**
+- **Use Option C**: Generic "Observability Platform" node
+- Keeps the hero image flexible as you finalize tools
+- Shows the concept without committing to specific vendors
+- Update to specific logos once architecture is finalized
+
+---
+
 ## AI Generation Prompts (Ready to Use)
+
+### 🔧 Choose Your Architecture Version:
+
+**VERSION A: DIY Stack (Kafka → dbt → BigQuery)** - Shows technical depth  
+**VERSION B: Monte Carlo Platform** - Shows vendor selection expertise  
+**VERSION C: Generic "Observability Platform"** - Flexible, vendor-agnostic ⭐ RECOMMENDED
+
+---
 
 ### For Midjourney
 
+**VERSION A (DIY Stack):**
 ```
-Minimalist tech illustration, 16:9 landscape, dark navy blue background (#0A1628). Three-section horizontal flow: LEFT - six simple line-art platform icons (web, tv, mobile) emitting thin glowing data streams (cyan, green, orange) flowing rightward. CENTER - large circular OpenTelemetry hub node with soft glow, three smaller processing nodes below (Kafka, dbt, BigQuery icons), streams flowing through hub. RIGHT - clean rectangular dashboard with 5x4 grid of test boxes, 30% highlighted bright cyan/green, 70% dimmed gray, large "70%" text above. Modern SaaS product style, clean lines, minimal detail, professional, no text labels, glowing accent effects, data visualization aesthetic, enterprise software design. --ar 16:9 --style clean minimal --v 6
+Minimalist tech illustration, 16:9 landscape, dark navy blue background (#0A1628). Three-section horizontal flow: LEFT - six simple line-art platform icons (web, tv, mobile) emitting thin glowing data streams (cyan, green, orange) flowing rightward. CENTER - large circular OpenTelemetry hub node with soft glow, three smaller processing nodes below (Kafka, dbt, BigQuery icons), streams flowing through hub. RIGHT - clean rectangular dashboard with 5x4 grid of test boxes: 6 boxes bright green with checkmarks (passed tests), 2 boxes red with X marks (caught failures), 1 box amber/orange with warning symbol, 11 boxes light gray (skipped tests). Large "70% ↓" text above grid. Below grid: thin horizontal gauge, left 30% bright green, right 70% dark gray. Modern SaaS product style, clean lines, minimal detail, professional, glowing accent effects, data visualization aesthetic, enterprise software design. --ar 16:9 --style clean minimal --v 6
+```
+
+**VERSION B (Monte Carlo):**
+```
+Minimalist tech illustration, 16:9 landscape, dark navy blue background (#0A1628). Three-section horizontal flow: LEFT - six simple line-art platform icons (web, tv, mobile) emitting thin glowing data streams (cyan, green, orange) flowing rightward. CENTER - large circular OpenTelemetry hub node with soft glow, two smaller processing nodes below: first node labeled "Kafka" for streaming ingestion, second larger node labeled "Monte Carlo" (data observability platform) with prominent glow, streams flowing through nodes. RIGHT - clean rectangular dashboard with 5x4 grid of test boxes: 6 boxes bright green with checkmarks (passed tests), 2 boxes red with X marks (caught failures), 1 box amber/orange with warning symbol, 11 boxes light gray (skipped tests). Large "70% ↓" text above grid. Below grid: thin horizontal gauge, left 30% bright green, right 70% dark gray. Modern SaaS product style, clean lines, minimal detail, professional, glowing accent effects, data visualization aesthetic, enterprise software design. --ar 16:9 --style clean minimal --v 6
+```
+
+**VERSION C (Generic/Flexible):** ⭐ RECOMMENDED FOR POC PHASE
+```
+Minimalist tech illustration, 16:9 landscape, dark navy blue background (#0A1628). Three-section horizontal flow: LEFT - six simple line-art platform icons (web, tv, mobile) emitting thin glowing data streams (cyan, green, orange) flowing rightward. CENTER - large circular OpenTelemetry hub node with soft glow, two nodes below: "Streaming Pipeline" and "Observability Platform" (generic labels, no specific vendor logos), streams flowing through hub. RIGHT - clean rectangular dashboard with 5x4 grid of test boxes: 6 boxes bright green with checkmarks (passed tests), 2 boxes red with X marks (caught failures), 1 box amber/orange with warning symbol, 11 boxes light gray (skipped tests). Large "70% ↓" text above grid. Below grid: thin horizontal gauge, left 30% bright green, right 70% dark gray. Modern SaaS product style, clean lines, minimal detail, professional, glowing accent effects, data visualization aesthetic, enterprise software design. --ar 16:9 --style clean minimal --v 6
 ```
 
 ### For DALL-E 3
@@ -150,26 +269,53 @@ LEFT (30%): Six simple platform icons (web browser, TV, mobile devices) in a ver
 
 CENTER (40%): A large circular node representing OpenTelemetry with a soft glow, receiving all the streams. Below it, three smaller circular nodes labeled with icons for Kafka, dbt, and BigQuery, connected by subtle lines.
 
-RIGHT (30%): A clean rectangular dashboard frame containing a 5x4 grid of small squares. 30% of squares are bright cyan/green (highlighted), 70% are dark gray (dimmed). Above the grid, display "70%" in large text with a down arrow.
+RIGHT (30%): A clean rectangular dashboard frame containing a 5x4 grid of small squares (20 total). Arrange them as follows:
+- 6 squares in bright green (#00FF88) with small checkmarks - representing passed tests
+- 2 squares in bright red (#FF4444) with X marks - representing caught failures  
+- 1 square in orange/amber (#FF6B35) with warning icon - representing alerts
+- 11 squares in light gray (#555) - representing skipped tests
+Distribute colors naturally across the grid. Above the grid, display "70%" in large white text with a downward arrow. Below the dashboard, show a thin horizontal progress bar: left 30% bright green, right 70% dark gray.
 
 Style: Modern SaaS product design, clean geometric shapes, minimal details, professional enterprise software aesthetic, glowing effects on active elements, no photorealism, no people, pure data visualization style.
 ```
 
-### For Google Gemini (Imagen)
+### For Google Gemini (Imagen) ⭐ RECOMMENDED
 
-```
+**Base Prompt (all versions share this foundation):**
+
 Create a minimalist technical illustration for a data observability platform, 16:9 landscape format.
 
-Composition: Divide the image into three equal horizontal sections showing data flow from left to right:
+**Left section (Data Sources)**: Display six small, simple platform icons arranged in two vertical columns (web browser, connected TV, Roku device, Apple TV, iOS phone, Android device). From each icon, draw thin glowing lines in three colors - cyan for logs, bright green for metrics, and orange for traces - all flowing smoothly toward the center.
 
-Left section (Data Sources): Display six small, simple platform icons arranged in two vertical columns (web browser, connected TV, Roku device, Apple TV, iOS phone, Android device). From each icon, draw thin glowing lines in three colors - cyan for logs, bright green for metrics, and orange for traces - all flowing smoothly toward the center.
+**Right section (Intelligence Output)**: Display a clean white/light rectangular dashboard mockup with a 5-by-4 grid of small rounded squares inside (20 tests total). Color-code the test results clearly:
+- 6 squares BRIGHT GREEN with tiny checkmarks (passed tests)
+- 2 squares RED with small X marks (caught failures)
+- 1 square ORANGE/AMBER with warning symbol (alerts/flaky tests)
+- 11 squares LIGHT GRAY or dimmed (intelligently skipped tests)
 
-Center section (Processing Pipeline): Feature a large circular node with a subtle glow representing the OpenTelemetry hub where all the colored streams converge. Below this central hub, show three smaller circles in a vertical arrangement representing Kafka, dbt, and BigQuery, connected by thin lines showing the data transformation flow downward.
+Arrange colors naturally throughout the grid - don't group same colors together. Above the grid, prominently display "70%" in large white text with a downward arrow. Below the dashboard, add a thin horizontal progress bar: left 30% bright green (tests executed), right 70% dark gray (tests skipped), clean separation.
 
-Right section (Intelligence Output): Display a clean rectangular dashboard mockup with a 5-by-4 grid of small squares inside. Make 6 squares bright cyan or green (representing selected tests), and 14 squares dark gray (representing skipped tests). Above this grid, prominently show "70%" with a downward arrow. Below the dashboard, add a thin horizontal progress bar that's green on the left side fading to gray on the right.
+**Visual style**: Modern SaaS product design with dark navy blue background (#0A1628). Clean geometric shapes, minimal details, soft glowing effects on data streams and central hub. Dashboard pops against dark background. Professional, enterprise-grade software visualization, focus on data flow and intelligent automation. No text labels except "70%" metric. No people, no photographs, no realistic textures - pure vector illustration.
 
-Visual style: Modern SaaS product design with a dark navy blue background (#0A1628). Use clean geometric shapes, minimal details, and soft glowing effects on the active data streams and central hub. The overall aesthetic should be professional, enterprise-grade software visualization with a focus on data flow and intelligent automation. No text labels except the "70%" metric. No people, no photographs, no realistic textures - pure vector-style illustration.
-```
+---
+
+**VERSION C (Generic/Flexible)** ⭐ BEST FOR POC PHASE:
+
+**Center section (Processing Pipeline)**: Feature a large circular node with subtle glow representing the OpenTelemetry hub where colored streams converge. Below this hub, show two medium-sized circular nodes in vertical arrangement: top one labeled "Streaming Pipeline" and bottom one labeled "Observability Platform" (use generic geometric icons, no vendor logos), connected by thin lines showing data flow downward. Keep it abstract and platform-agnostic.
+
+---
+
+**VERSION B (Monte Carlo Platform)** - If using specific vendor:
+
+**Center section (Processing Pipeline)**: Feature a large circular node with subtle glow representing the OpenTelemetry hub where colored streams converge. Below this hub, show two circular nodes: smaller "Kafka" node for streaming ingestion, then larger "Monte Carlo" node (the main data observability platform) with prominent glow, connected by thin lines showing data transformation flow downward.
+
+---
+
+**VERSION A (DIY Stack)** - If showing technical depth:
+
+**Center section (Processing Pipeline)**: Feature a large circular node with subtle glow representing the OpenTelemetry hub where colored streams converge. Below this hub, show three smaller circles in vertical arrangement: "Kafka" (streaming), "dbt" (transformation), and "BigQuery" (storage), connected by thin lines showing data flow downward.
+
+---
 
 **Tips for Gemini:**
 - Gemini excels at understanding detailed natural language descriptions
@@ -177,13 +323,14 @@ Visual style: Modern SaaS product design with a dark navy blue background (#0A16
 - Specify colors by name and hex code for accuracy
 - Use phrases like "professional SaaS design" to set the right style
 - If first result is too complex, emphasize "minimal" and "clean geometric shapes"
+- **Start with VERSION C** (generic) since you're evaluating Monte Carlo vs custom build
 
 ### For Stable Diffusion
 
 ```
-Positive: minimalist data pipeline visualization, dark mode interface, 16:9 composition, three horizontal sections, platform icons with glowing data streams on left, central processing hub with observability nodes, smart dashboard with test grid on right, navy blue background (#0A1628), cyan (#00D9FF) and green (#00FF88) accent colors, modern tech illustration, clean geometric shapes, soft glow effects, professional software product design, enterprise dashboard aesthetic, vector art style
+Positive: minimalist data pipeline visualization, dark mode interface, 16:9 composition, three horizontal sections, platform icons with glowing data streams on left, central processing hub with observability nodes, test results dashboard with color-coded grid on right, navy blue background (#0A1628), bright green passed tests, red failed tests, orange warning tests, gray skipped tests, cyan and green data streams, modern tech illustration, clean geometric shapes, soft glow effects, professional software product design, enterprise dashboard aesthetic, vector art style, checkmarks and X marks on test boxes
 
-Negative: cluttered, photorealistic, people, photographs, screenshots, complex details, busy composition, text labels, realistic textures, 3D rendering
+Negative: cluttered, photorealistic, people, photographs, screenshots, complex details, busy composition, excessive text labels, realistic textures, 3D rendering, gradients, all tests same color, confusing color scheme
 ```
 
 ---
