@@ -176,60 +176,65 @@ This tells the story: *"Run fewer tests, catch critical issues early, maintain q
 
 ---
 
-## 🏗️ Architecture Options (Kafka/BigQuery vs Monte Carlo)
+## 🏗️ Architecture Options (Your Actual Stack: Snowflake + Monte Carlo)
 
-### **Current Design: DIY Stack**
+### **YOUR ACTUAL ARCHITECTURE** ⭐
 **Center Pipeline Shows:**
-- **Kafka** (streaming ingestion) → **dbt** (transformation) → **BigQuery** (warehouse)
-- Represents: Custom-built, full control, infrastructure investment
+- **Kafka** (streaming ingestion) → **Snowflake** (data warehouse) → **Monte Carlo** (observability analysis)
+- Represents: Snowflake stores test telemetry, Monte Carlo analyzes it for anomalies/insights
+- **How it works**: Monte Carlo connects to Snowflake, queries data, performs ML-based observability analysis
 
-### **Alternative: Monte Carlo SaaS**
-**If using Monte Carlo:**
-- **OpenTelemetry** → **Monte Carlo** → **Insights**
-- Represents: Managed service, faster time-to-value, less infrastructure
+### **Alternative: Full DIY Stack** (for comparison)
+**If building everything custom:**
+- **Kafka** → **dbt** (transformation) → **BigQuery** (warehouse) → **Custom Analytics**
+- Represents: Full control, higher infrastructure cost, more maintenance
 
-### **Hybrid Approach (Recommended for flexibility):**
-- **OpenTelemetry** → **Kafka** → **Monte Carlo** → **BigQuery/New Relic**
-- Represents: Best of both (streaming + managed observability + existing analytics)
+### **Simplified View** (Generic/Flexible):
+- **Streaming Pipeline** → **Data Warehouse** → **Observability Platform**
+- Represents: Platform-agnostic, shows concept without vendor lock-in
 
 ---
 
-## 💡 Hero Image Recommendation
+## 💡 Hero Image Recommendation (Updated for Your Stack)
 
-**For this project (in proposal/PoC phase):**
+**For this project (Q4 2025 PoC phase with Snowflake + Monte Carlo):**
 
-**Option A: Show the Vision (DIY Stack)** ⭐ RECOMMENDED
-- Keep: Kafka → dbt → BigQuery in center
-- Why: Shows technical depth, demonstrates architectural thinking
-- Message: "We designed a comprehensive solution"
+**Option A: Show Your Actual Architecture** ⭐ RECOMMENDED
+- Center: **Kafka** → **Snowflake** → **Monte Carlo**
+- Why: Accurate, shows real technology decisions, demonstrates modern stack
+- Message: "We use industry-leading tools (Snowflake + Monte Carlo)"
+- Best for: Demonstrating that you've evaluated and chosen proven platforms
 
-**Option B: Show Monte Carlo (If that's the direction)**
-- Replace center with: Single "Monte Carlo" node
-- Add small "Kafka" node before it (data ingestion)
-- Why: Cleaner, emphasizes observability platform choice
-- Message: "We leverage best-in-class tools"
+**Option B: Generic/Flexible (Platform-Agnostic)**
+- Center: **Streaming Pipeline** → **Data Warehouse** → **Observability Platform**
+- Why: Focuses on concepts over vendors, future-proof if stack changes
+- Message: "We understand observability architecture patterns"
+- Best for: Portfolio presentations where vendor names distract from achievements
 
-**Option C: Show Both (Flexible Architecture)**
-- Center: Kafka → "Observability Platform" (generic) → Analytics
-- Small badge: "Monte Carlo / Custom Stack"
-- Why: Platform-agnostic, shows you evaluated options
-- Message: "We choose the right tool for the job"
+**Option C: DIY Comparison (Show What You Avoided)**
+- Center: Show your actual stack (Snowflake + Monte Carlo) with subtle note
+- Add small comparison: "vs building custom (Kafka→dbt→BigQuery→Custom)"
+- Why: Demonstrates thoughtful vendor selection, cost/benefit analysis
+- Message: "We make smart build vs buy decisions"
 
 ---
 
 ## 🤔 Which to Use?
 
-**Ask yourself:**
-1. **Is Monte Carlo already approved/purchased?** → Use Option B (show Monte Carlo)
-2. **Is this a proposal to build custom?** → Use Option A (show DIY stack)
-3. **Still evaluating options?** → Use Option C (generic "Observability Platform")
-4. **Want to show technical expertise?** → Use Option A (detailed tech stack)
+**My recommendation for YOUR situation:**
 
-**My recommendation for YOUR situation (Q4 2025 PoC phase):**
-- **Use Option C**: Generic "Observability Platform" node
-- Keeps the hero image flexible as you finalize tools
-- Shows the concept without committing to specific vendors
-- Update to specific logos once architecture is finalized
+**Use Option A (Snowflake + Monte Carlo)** for these reasons:
+
+1. ✅ **It's your actual architecture** - be authentic
+2. ✅ **Shows modern data stack expertise** - Snowflake is industry standard
+3. ✅ **Monte Carlo demonstrates tool evaluation** - you didn't just build everything custom
+4. ✅ **Easier to explain to recruiters** - "We use Snowflake for data, Monte Carlo for observability"
+5. ✅ **POC phase is perfect time** - show what you're proposing/building
+
+**When to use Option B instead:**
+- If you think Monte Carlo might change (unlikely since you already have Snowflake integration)
+- If presenting to external portfolio where vendor names matter
+- If focusing on concepts over implementation details
 
 ---
 
@@ -237,27 +242,27 @@ This tells the story: *"Run fewer tests, catch critical issues early, maintain q
 
 ### 🔧 Choose Your Architecture Version:
 
-**VERSION A: DIY Stack (Kafka → dbt → BigQuery)** - Shows technical depth  
-**VERSION B: Monte Carlo Platform** - Shows vendor selection expertise  
-**VERSION C: Generic "Observability Platform"** - Flexible, vendor-agnostic ⭐ RECOMMENDED
+**VERSION A: Your Actual Stack (Kafka → Snowflake → Monte Carlo)** ⭐ RECOMMENDED - Shows real architecture  
+**VERSION B: Generic/Flexible (Data Warehouse → Observability Platform)** - Platform-agnostic  
+**VERSION C: DIY Comparison (for reference only)** - Shows what you didn't build custom
 
 ---
 
 ### For Midjourney
 
-**VERSION A (DIY Stack):**
+**VERSION A (Your Actual Stack: Kafka → Snowflake → Monte Carlo):** ⭐ RECOMMENDED
+```
+Minimalist tech illustration, 16:9 landscape, dark navy blue background (#0A1628). Three-section horizontal flow: LEFT - six simple line-art platform icons (web, tv, mobile) emitting thin glowing data streams (cyan, green, orange) flowing rightward. CENTER - large circular OpenTelemetry hub node with soft glow, three smaller processing nodes below in vertical arrangement: "Kafka" (streaming ingestion) at top, "Snowflake" (data warehouse) in middle with snowflake icon, "Monte Carlo" (observability analysis) at bottom with prominent glow, streams flowing through nodes top to bottom. RIGHT - clean rectangular dashboard with 5x4 grid of test boxes: 6 boxes bright green with checkmarks (passed tests), 2 boxes red with X marks (caught failures), 1 box amber/orange with warning symbol, 11 boxes light gray (skipped tests). Large "70% ↓" text above grid. Below grid: thin horizontal gauge, left 30% bright green, right 70% dark gray. Modern SaaS product style, clean lines, minimal detail, professional, glowing accent effects, data visualization aesthetic, enterprise software design. --ar 16:9 --style clean minimal --v 6
+```
+
+**VERSION B (Generic/Platform-Agnostic):**
+```
+Minimalist tech illustration, 16:9 landscape, dark navy blue background (#0A1628). Three-section horizontal flow: LEFT - six simple line-art platform icons (web, tv, mobile) emitting thin glowing data streams (cyan, green, orange) flowing rightward. CENTER - large circular OpenTelemetry hub node with soft glow, two medium nodes below: "Data Warehouse" (top) and "Observability Platform" (bottom) with generic labels and abstract icons, no specific vendor logos, streams flowing through hub downward. RIGHT - clean rectangular dashboard with 5x4 grid of test boxes: 6 boxes bright green with checkmarks (passed tests), 2 boxes red with X marks (caught failures), 1 box amber/orange with warning symbol, 11 boxes light gray (skipped tests). Large "70% ↓" text above grid. Below grid: thin horizontal gauge, left 30% bright green, right 70% dark gray. Modern SaaS product style, clean lines, minimal detail, professional, glowing accent effects, data visualization aesthetic, enterprise software design. --ar 16:9 --style clean minimal --v 6
+```
+
+**VERSION C (DIY Stack - for comparison reference only):**
 ```
 Minimalist tech illustration, 16:9 landscape, dark navy blue background (#0A1628). Three-section horizontal flow: LEFT - six simple line-art platform icons (web, tv, mobile) emitting thin glowing data streams (cyan, green, orange) flowing rightward. CENTER - large circular OpenTelemetry hub node with soft glow, three smaller processing nodes below (Kafka, dbt, BigQuery icons), streams flowing through hub. RIGHT - clean rectangular dashboard with 5x4 grid of test boxes: 6 boxes bright green with checkmarks (passed tests), 2 boxes red with X marks (caught failures), 1 box amber/orange with warning symbol, 11 boxes light gray (skipped tests). Large "70% ↓" text above grid. Below grid: thin horizontal gauge, left 30% bright green, right 70% dark gray. Modern SaaS product style, clean lines, minimal detail, professional, glowing accent effects, data visualization aesthetic, enterprise software design. --ar 16:9 --style clean minimal --v 6
-```
-
-**VERSION B (Monte Carlo):**
-```
-Minimalist tech illustration, 16:9 landscape, dark navy blue background (#0A1628). Three-section horizontal flow: LEFT - six simple line-art platform icons (web, tv, mobile) emitting thin glowing data streams (cyan, green, orange) flowing rightward. CENTER - large circular OpenTelemetry hub node with soft glow, two smaller processing nodes below: first node labeled "Kafka" for streaming ingestion, second larger node labeled "Monte Carlo" (data observability platform) with prominent glow, streams flowing through nodes. RIGHT - clean rectangular dashboard with 5x4 grid of test boxes: 6 boxes bright green with checkmarks (passed tests), 2 boxes red with X marks (caught failures), 1 box amber/orange with warning symbol, 11 boxes light gray (skipped tests). Large "70% ↓" text above grid. Below grid: thin horizontal gauge, left 30% bright green, right 70% dark gray. Modern SaaS product style, clean lines, minimal detail, professional, glowing accent effects, data visualization aesthetic, enterprise software design. --ar 16:9 --style clean minimal --v 6
-```
-
-**VERSION C (Generic/Flexible):** ⭐ RECOMMENDED FOR POC PHASE
-```
-Minimalist tech illustration, 16:9 landscape, dark navy blue background (#0A1628). Three-section horizontal flow: LEFT - six simple line-art platform icons (web, tv, mobile) emitting thin glowing data streams (cyan, green, orange) flowing rightward. CENTER - large circular OpenTelemetry hub node with soft glow, two nodes below: "Streaming Pipeline" and "Observability Platform" (generic labels, no specific vendor logos), streams flowing through hub. RIGHT - clean rectangular dashboard with 5x4 grid of test boxes: 6 boxes bright green with checkmarks (passed tests), 2 boxes red with X marks (caught failures), 1 box amber/orange with warning symbol, 11 boxes light gray (skipped tests). Large "70% ↓" text above grid. Below grid: thin horizontal gauge, left 30% bright green, right 70% dark gray. Modern SaaS product style, clean lines, minimal detail, professional, glowing accent effects, data visualization aesthetic, enterprise software design. --ar 16:9 --style clean minimal --v 6
 ```
 
 ### For DALL-E 3
@@ -299,21 +304,21 @@ Arrange colors naturally throughout the grid - don't group same colors together.
 
 ---
 
-**VERSION C (Generic/Flexible)** ⭐ BEST FOR POC PHASE:
+**VERSION A (Your Actual Stack: Kafka → Snowflake → Monte Carlo)** ⭐ RECOMMENDED:
 
-**Center section (Processing Pipeline)**: Feature a large circular node with subtle glow representing the OpenTelemetry hub where colored streams converge. Below this hub, show two medium-sized circular nodes in vertical arrangement: top one labeled "Streaming Pipeline" and bottom one labeled "Observability Platform" (use generic geometric icons, no vendor logos), connected by thin lines showing data flow downward. Keep it abstract and platform-agnostic.
-
----
-
-**VERSION B (Monte Carlo Platform)** - If using specific vendor:
-
-**Center section (Processing Pipeline)**: Feature a large circular node with subtle glow representing the OpenTelemetry hub where colored streams converge. Below this hub, show two circular nodes: smaller "Kafka" node for streaming ingestion, then larger "Monte Carlo" node (the main data observability platform) with prominent glow, connected by thin lines showing data transformation flow downward.
+**Center section (Processing Pipeline)**: Feature a large circular node with subtle glow representing the OpenTelemetry hub where colored streams converge. Below this hub, show three circular nodes in vertical arrangement: top node "Kafka" (streaming ingestion) with subtle icon, middle node "Snowflake" (data warehouse) with snowflake icon and medium glow, bottom node "Monte Carlo" (observability analysis platform) with prominent glow showing it's the intelligence layer. Connect all three with thin lines showing data flowing downward through the pipeline. This shows your real architecture: data flows through Kafka into Snowflake for storage, Monte Carlo queries Snowflake to perform observability analysis.
 
 ---
 
-**VERSION A (DIY Stack)** - If showing technical depth:
+**VERSION B (Generic/Platform-Agnostic)** - If keeping flexible:
 
-**Center section (Processing Pipeline)**: Feature a large circular node with subtle glow representing the OpenTelemetry hub where colored streams converge. Below this hub, show three smaller circles in vertical arrangement: "Kafka" (streaming), "dbt" (transformation), and "BigQuery" (storage), connected by thin lines showing data flow downward.
+**Center section (Processing Pipeline)**: Feature a large circular node with subtle glow representing the OpenTelemetry hub where colored streams converge. Below this hub, show two medium-sized circular nodes in vertical arrangement: top one labeled "Data Warehouse" with abstract database icon, bottom one labeled "Observability Platform" with abstract analytics icon (use generic geometric shapes, no vendor logos), connected by thin lines showing data flow downward. Keep it abstract and platform-agnostic to represent the concept without committing to specific vendors.
+
+---
+
+**VERSION C (DIY Stack - for comparison only)** - Shows alternative approach:
+
+**Center section (Processing Pipeline)**: Feature a large circular node with subtle glow representing the OpenTelemetry hub where colored streams converge. Below this hub, show three smaller circles in vertical arrangement: "Kafka" (streaming), "dbt" (transformation), and "BigQuery" (storage), connected by thin lines showing data flow downward. This represents a fully custom-built stack as comparison point.
 
 ---
 
@@ -323,14 +328,24 @@ Arrange colors naturally throughout the grid - don't group same colors together.
 - Specify colors by name and hex code for accuracy
 - Use phrases like "professional SaaS design" to set the right style
 - If first result is too complex, emphasize "minimal" and "clean geometric shapes"
-- **Start with VERSION C** (generic) since you're evaluating Monte Carlo vs custom build
+- **Start with VERSION A** (Kafka → Snowflake → Monte Carlo) - your actual architecture!
+- The Snowflake icon (snowflake symbol) is recognizable and adds visual interest
+- Make Monte Carlo node slightly more prominent to show it's the intelligence/analysis layer
 
 ### For Stable Diffusion
 
+**VERSION A (Kafka → Snowflake → Monte Carlo):**
 ```
-Positive: minimalist data pipeline visualization, dark mode interface, 16:9 composition, three horizontal sections, platform icons with glowing data streams on left, central processing hub with observability nodes, test results dashboard with color-coded grid on right, navy blue background (#0A1628), bright green passed tests, red failed tests, orange warning tests, gray skipped tests, cyan and green data streams, modern tech illustration, clean geometric shapes, soft glow effects, professional software product design, enterprise dashboard aesthetic, vector art style, checkmarks and X marks on test boxes
+Positive: minimalist data pipeline visualization, dark mode interface, 16:9 composition, three horizontal sections, platform icons with glowing data streams on left, central processing hub with Kafka Snowflake Monte Carlo nodes vertically arranged, snowflake icon visible, test results dashboard with color-coded grid on right, navy blue background (#0A1628), bright green passed tests with checkmarks, red failed tests with X marks, orange warning tests, gray skipped tests, cyan and green data streams, modern tech illustration, clean geometric shapes, soft glow effects, professional software product design, enterprise data warehouse and observability stack, vector art style
 
-Negative: cluttered, photorealistic, people, photographs, screenshots, complex details, busy composition, excessive text labels, realistic textures, 3D rendering, gradients, all tests same color, confusing color scheme
+Negative: cluttered, photorealistic, people, photographs, screenshots, complex details, busy composition, excessive text labels, realistic textures, 3D rendering, heavy gradients, all tests same color, confusing color scheme, BigQuery, dbt
+```
+
+**VERSION B (Generic):**
+```
+Positive: minimalist data pipeline visualization, dark mode interface, 16:9 composition, three horizontal sections, platform icons with glowing data streams on left, central processing hub with abstract data warehouse and observability platform nodes, test results dashboard with color-coded grid on right, navy blue background (#0A1628), bright green passed tests, red failed tests, orange warning tests, gray skipped tests, cyan and green data streams, modern tech illustration, clean geometric shapes, soft glow effects, professional software product design, enterprise dashboard aesthetic, vector art style, checkmarks and X marks on test boxes
+
+Negative: cluttered, photorealistic, people, photographs, screenshots, complex details, busy composition, excessive text labels, realistic textures, 3D rendering, gradients, all tests same color, confusing color scheme, specific vendor logos
 ```
 
 ---
