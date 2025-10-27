@@ -239,9 +239,13 @@ export const PROJECTS: IProject[] = [
       // PDFs (public-safe only)
       { kind: 'pdf', title: 'Research: From POM to Observability-driven QA', src: '/assets/data-observability/pdfs/RESEARCH_From_POM_to_Observability_driven_QA.pdf', sensitivity: 'public' },
       { kind: 'pdf', title: 'From POM to Observability-Driven QA (enhanced)', src: '/assets/data-observability/pdfs/From_POM_to_Observability_Driven_QA_enhanced.pdf', sensitivity: 'public' },
-      { kind: 'pdf', title: 'AI-Powered QA Transformation (Enterprise AI/ML)', src: '/assets/data-observability/pdfs/AI_Powered_QA_Transformation_Enterprise_AI_ML_Excellence.pdf', sensitivity: 'public' }
+      { kind: 'pdf', title: 'AI-Powered QA Transformation (Enterprise AI/ML)', src: '/assets/data-observability/pdfs/AI_Powered_QA_Transformation_Enterprise_AI_ML_Excellence.pdf', sensitivity: 'public' },
+      // Recording (internal)
+      { kind: 'video', title: 'Eden Observability Dashboard (internal)', src: 'https://viacom.sharepoint.com/:v:/r/sites/VIA-Digital-QAConnectedTV/Shared%20Documents/Unified/Presentations/Artifacts/Eden_Observability_Dashboard.mp4?csf=1&web=1&e=MgxqK7', sensitivity: 'internal' }
     ],
-    links: [],
+    links: [
+      { label: 'New Relic Dashboard (internal)', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjExMjc3OTQ2?filters=%28name%20LIKE%20%27BET%2B%20Metrics%27%20OR%20id%20%3D%20%27BET%2B%20Metrics%27%20OR%20domainId%20%3D%20%27BET%2B%20Metrics%27%29&state=c64380e3-2883-5f28-79d9-70cf4d36fa84', sensitivity: 'internal' }
+    ],
     tags: [{ key: 'topic:observability', label: 'Observability' }]
   },
   {
