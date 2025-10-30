@@ -285,11 +285,16 @@ export const PROJECTS: IProject[] = [
     slug: 'config-comparison',
     title: 'Config Comparison',
     owner: 'anilbvi',
-    summary: 'Compare configuration across different platforms to identify discrepancies and improve consistency.',
-    problem: 'Configuration issues in production, that leads to bugs and incidents; which was never seen in QA due to correct configuration in QA.',
-    solution: 'Compare configuration across different platforms to create a report, for which all the discrepancies aer reviewed and addressed by Dev leads',
-    techStack: ['Java', 'Apache HTTP Client', 'Excel', 'New Relic'],
-    metrics: [],
+    summary: 'Automated configuration validation system that proactively detects and prevents configuration discrepancies across multiple platforms and brands before production deployment, achieving zero configuration-related production issues through fast validation and comprehensive change detection.',
+    problem: 'Configuration discrepancies were causing critical application issues in production that were never detected in QA environments due to environment-specific settings. Manual configuration validation was time-consuming, error-prone, and couldn\'t scale across multiple platforms (Android, iOS, Apple TV, Android TV, Fire TV, Roku, Web Connected TVs) and brands. Teams lacked visibility into configuration changes between releases, leading to unexpected production failures and lengthy incident resolution times.',
+    solution: 'Implemented comprehensive automated configuration validation using dual approaches: (1) UI-Based validation - launches applications and captures actual configuration from proxy logs during app load, then validates against expected baselines; (2) API-Based validation - directly fetches configuration from Neutron API endpoints for instant validation without device deployment. The system maintains baselined expected configurations, compares them against actual values using configurable match types (exact, regex, optional), and generates detailed comparison reports. Integrated into CI/CD pipelines for continuous validation, with automated email notifications highlighting only configuration changes (not full configs) for efficient review. Supports environment comparison (RC vs Production) with visual dashboards and historical tracking.',
+    techStack: ['Java', 'Apache HTTP Client', 'TestNG', 'New Relic', 'Synergy Platform', 'Neutron API', 'AWS S3'],
+    metrics: [
+      { label: 'Production Config Issues', value: '0', improvement: 'Eliminated all configuration-related production issues', impact: 'Zero config-related incidents and improved release confidence' },
+      { label: 'Validation Speed', value: 'Seconds', improvement: 'Configuration validation completed in seconds vs hours of manual checks', impact: 'Faster feedback cycles and accelerated release velocity' },
+      { label: 'Change Detection', value: '100%', improvement: 'Detects all configuration changes from last release', impact: 'Complete visibility and Dev approval before deployment' },
+      { label: 'Platform Coverage', value: '12+ Platforms', improvement: 'Validates across Android, iOS, Apple TV, Android TV, Fire TV, Roku, and 6 WCTV platforms', impact: 'Consistent configuration quality across entire platform ecosystem' }
+    ],
     screenshots: [],
     status: 'draft',
     attachments: [
