@@ -294,9 +294,14 @@ export const PROJECTS: IProject[] = [
     status: 'draft',
     attachments: [
       { kind: 'pdf', title: 'Configuration Validation Automation', src: '/assets/config-comparison/pdfs/Configuration Validation Automation.pdf', sensitivity: 'internal' },
+      { kind: 'pdf', title: 'Config Comparison Internal Document', src: '/assets/config-comparison/pdfs/App Config Test - Technical Implementation Guide - Internal.pdf', sensitivity: 'internal' },
+      { kind: 'pdf', title: 'Config Comparison Public Document', src: '/assets/config-comparison/pdfs/App Config Test - User Guide - Public.pdf', sensitivity: 'public' },
     ],
     links: [
       { label: 'WCTV Config Report Generation Training Video', url: 'https://viacom.sharepoint.com/:v:/r/sites/VIA-Digital-QAConnectedTV/Shared%20Documents/Unified/CTV-Training/WCTV/20240125%20WCTV%20Config%20Report%20Generation%20for%20RC.mp4?csf=1&web=1&e=qiG0Sb', sensitivity: 'internal' },
+      { label: 'Apple and Android (TV & Mobile) Config Validation and Process', url: 'https://paramount.atlassian.net/wiki/spaces/VCD/pages/49653379/Apple+and+Android+TV+Mobile+Config+Validation+and+Process', sensitivity: 'internal' },
+      { label: 'Roku Config Validation and Process', url: 'https://paramount.atlassian.net/wiki/spaces/VCD/pages/49657193/Roku+Config+Validation+and+Process', sensitivity: 'internal' },
+      { label: 'Github Application Config Test', url: 'https://github.com/viacomcbs/mqe-unified-oao-tests/blob/master/mqe-unified-platform-brand-tests/src/test/java/com/viacom/unified/tests/application/AppConfigTest.java', sensitivity: 'internal' },
     ],
     tags: [
       { key: 'platform:wctv', label: 'WCTV' },
