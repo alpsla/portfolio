@@ -21,6 +21,9 @@ export function Header() {
     return pathname?.startsWith(path);
   };
 
+  // Don't show logout button on auth pages
+  const isAuthPage = pathname?.startsWith('/auth');
+
   return (
     <header className="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 shadow-sm">
       <nav className="container mx-auto px-6 py-4">
@@ -78,15 +81,17 @@ export function Header() {
               <span className="sm:hidden">📧</span>
             </Link>
 
-            {/* Logout Button - Always visible for convenience */}
-            <button
-              onClick={() => signOut({ callbackUrl: '/auth/signin' })}
-              className="px-4 py-2 rounded-lg font-medium transition-all duration-300 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 border-2 border-red-200 dark:border-red-800"
-              title="Sign Out"
-            >
-              <span className="hidden sm:inline">Logout</span>
-              <span className="sm:hidden">🚪</span>
-            </button>
+            {/* Logout Button - Hide on auth pages */}
+            {!isAuthPage && (
+              <button
+                onClick={() => signOut({ callbackUrl: '/auth/signin' })}
+                className="px-4 py-2 rounded-lg font-medium transition-all duration-300 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 border-2 border-red-200 dark:border-red-800"
+                title="Sign Out"
+              >
+                <span className="hidden sm:inline">Logout</span>
+                <span className="sm:hidden">🚪</span>
+              </button>
+            )}
           </div>
         </div>
       </nav>
