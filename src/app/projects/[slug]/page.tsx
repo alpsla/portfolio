@@ -2,15 +2,15 @@
  * Page: Project Detail
  * Author: AR
  * Created: 2025-10-08
- * Modified: 2025-11-01 by AR - Force dynamic rendering for auth middleware
+ * Modified: 2025-11-02 by AR - Add client-side auth guard
  * Description: Detail view for a project by slug with enhanced animations and icons.
  */
 
+'use client';
+
 import { PROJECTS } from '../../../lib/constants/projects';
 import { sanitizeAllProjects } from '../../../lib/utils/safety';
-
-// Force dynamic rendering so middleware can protect this page
-export const dynamic = 'force-dynamic';
+import { AuthGuard } from '../../../components/shared/AuthGuard';
 
 interface Params {
   params: { slug: string };
@@ -22,7 +22,8 @@ export default function ProjectDetailPage({ params }: Params) {
   if (!project) return <div className="p-6">Project not found.</div>;
 
   return (
-    <main className="container mx-auto p-6 max-w-7xl pt-8">
+    <AuthGuard>
+      <main className="container mx-auto p-6 max-w-7xl pt-8">
       {/* Hero Image */}
       {project.heroImage && (
         <div className="mb-10 rounded-xl overflow-hidden max-w-6xl mx-auto shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] transform">
@@ -218,6 +219,7 @@ export default function ProjectDetailPage({ params }: Params) {
         </section>
       )}
     </main>
+    </AuthGuard>
   );
 }
 

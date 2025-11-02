@@ -2,7 +2,7 @@
  * Page: Home
  * Author: AR
  * Created: 2025-10-08
- * Modified: 2025-11-01 by AR - Force dynamic rendering for auth middleware
+ * Modified: 2025-11-02 by AR - Add client-side auth guard
  * Description: Enhanced home page showcasing team achievements and major projects.
  */
 
@@ -12,11 +12,9 @@ import { PROJECTS } from '../lib/constants/projects';
 import { sanitizeAllProjects } from '../lib/utils/safety';
 import { ProjectCard } from '../components/shared/ProjectCard';
 import { SafetyBanner } from '../components/shared/SafetyBanner';
+import { AuthGuard } from '../components/shared/AuthGuard';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-
-// Force dynamic rendering so middleware can protect this page
-export const dynamic = 'force-dynamic';
 
 export default function HomePage() {
   const data = sanitizeAllProjects(PROJECTS);
@@ -57,8 +55,9 @@ export default function HomePage() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
-      <SafetyBanner />
+    <AuthGuard>
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
+        <SafetyBanner />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
@@ -275,6 +274,7 @@ export default function HomePage() {
         </div>
       </section>
     </main>
+    </AuthGuard>
   );
 }
 

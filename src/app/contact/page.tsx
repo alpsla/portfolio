@@ -2,20 +2,21 @@
  * Page: Contact
  * Author: AR
  * Created: 2025-10-09
- * Modified: 2025-11-01 by AR - Force dynamic rendering for auth middleware
+ * Modified: 2025-11-02 by AR - Add client-side auth guard
  * Description: Contact details for the team.
  */
 
+'use client';
+
 import { SafetyBanner } from '../../components/shared/SafetyBanner';
 import { TEAM_MEMBERS } from '../../lib/constants/team';
-
-// Force dynamic rendering so middleware can protect this page
-export const dynamic = 'force-dynamic';
+import { AuthGuard } from '../../components/shared/AuthGuard';
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 pt-8">
-      <SafetyBanner />
+    <AuthGuard>
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 pt-8">
+        <SafetyBanner />
 
       {/* Hero Section */}
       <section className="container mx-auto px-6 py-16">
@@ -114,6 +115,7 @@ export default function ContactPage() {
         </div>
       </section>
     </main>
+    </AuthGuard>
   );
 }
 
