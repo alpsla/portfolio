@@ -233,3 +233,4 @@ See [SETUP.md](./SETUP.md) for file templates.
 - Add CI (type check, ESLint, tests, build), Vercel previews
 
 
+# Deployment trigger
