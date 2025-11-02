@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; max-width: 100%;">
+  <!-- Definitions for gradients and filters -->
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1f2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d3748;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Red/Orange gradient for fragmented state -->
+    <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fb923c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Blue gradient for collaborative process -->
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Green gradient for unified state -->
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ade80;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22c55e;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Drop shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+    
+    <!-- Animations -->
+    <style>
+      @keyframes pulse {
+        0%, 100% { opacity: 0.8; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.1); }
+      }
+      .pulsingWarning {
+        animation: pulse 2s ease-in-out infinite;
+        transform-origin: center;
+      }
+      @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .rotating {
+        animation: rotate 20s linear infinite;
+        transform-origin: center;
+      }
+      @keyframes flow {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -40; }
+      }
+      .flowingArrow {
+        stroke-dasharray: 10 30;
+        animation: flow 3s linear infinite;
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      .floating {
+        animation: float 3s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGradient)"/>
+  
+  <!-- Grid pattern -->
+  <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.03"/>
+  </pattern>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  
+  <!-- Top Banner -->
+  <rect x="0" y="0" width="1920" height="80" fill="#000000" opacity="0.4"/>
+  <text x="960" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Unified Test Case Optimization | Cross-Platform &amp; Cross-Application
+  </text>
+  <text x="960" y="60" font-family="Arial, sans-serif" font-size="16" fill="#60a5fa" text-anchor="middle">
+    MTV • VH1 • Comedy Central • Nickelodeon • Paramount • BET
+  </text>
+  
+  <!-- LEFT PANEL: Before - Fragmented -->
+  <g id="beforePanel">
+    <rect x="50" y="120" width="500" height="850" rx="20" fill="#000000" opacity="0.2"/>
+    <rect x="50" y="120" width="500" height="70" rx="20" fill="url(#redGradient)"/>
+    <text x="300" y="155" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      Before - Fragmented Chaos
+    </text>
+    <text x="300" y="178" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5" text-anchor="middle">
+      8 Platforms × 6 Apps = 48 Separate Test Suites!
+    </text>
+    
+    <!-- Platform Icons Scattered -->
+    <!-- iOS -->
+    <g transform="translate(100, 230)" class="floating">
+      <rect width="80" height="80" rx="15" fill="#ffffff" opacity="0.1"/>
+      <circle cx="40" cy="40" r="25" fill="url(#orangeGradient)"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">iOS</text>
+      <rect x="60" y="10" width="40" height="50" rx="3" fill="#fbbf24" opacity="0.6"/>
+      <text x="80" y="35" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">Tests</text>
+      <text x="95" y="20" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ef4444" text-anchor="middle">✗</text>
+    </g>
+    
+    <!-- Android -->
+    <g transform="translate(250, 280)">
+      <rect width="80" height="80" rx="15" fill="#ffffff" opacity="0.1"/>
+      <circle cx="40" cy="40" r="25" fill="url(#orangeGradient)"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Android</text>
+      <rect x="60" y="10" width="40" height="50" rx="3" fill="#fbbf24" opacity="0.6"/>
+      <text x="80" y="35" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">Tests</text>
+      <text x="95" y="20" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f59e0b" text-anchor="middle" class="pulsingWarning">⚠</text>
+    </g>
+    
+    <!-- Apple TV -->
+    <g transform="translate(380, 250)" class="floating">
+      <rect width="80" height="80" rx="15" fill="#ffffff" opacity="0.1"/>
+      <circle cx="40" cy="40" r="25" fill="url(#orangeGradient)"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">AppleTV</text>
+      <rect x="60" y="10" width="40" height="50" rx="3" fill="#fbbf24" opacity="0.6"/>
+      <text x="80" y="35" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">Tests</text>
+      <text x="95" y="20" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#6b7280" text-anchor="middle">?</text>
+    </g>
+    
+    <!-- Fire TV -->
+    <g transform="translate(150, 380)">
+      <rect width="80" height="80" rx="15" fill="#ffffff" opacity="0.1"/>
+      <circle cx="40" cy="40" r="25" fill="url(#orangeGradient)"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">FireTV</text>
+      <rect x="60" y="10" width="40" height="50" rx="3" fill="#fbbf24" opacity="0.6"/>
+      <text x="80" y="35" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">Tests</text>
+      <text x="95" y="20" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ef4444" text-anchor="middle">✗</text>
+    </g>
+    
+    <!-- Roku -->
+    <g transform="translate(320, 380)" class="floating">
+      <rect width="80" height="80" rx="15" fill="#ffffff" opacity="0.1"/>
+      <circle cx="40" cy="40" r="25" fill="url(#orangeGradient)"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Roku</text>
+      <rect x="60" y="10" width="40" height="50" rx="3" fill="#fbbf24" opacity="0.6"/>
+      <text x="80" y="35" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">Tests</text>
+      <text x="95" y="20" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#6b7280" text-anchor="middle">?</text>
+    </g>
+    
+    <!-- Web -->
+    <g transform="translate(100, 500)">
+      <rect width="80" height="80" rx="15" fill="#ffffff" opacity="0.1"/>
+      <circle cx="40" cy="40" r="25" fill="url(#orangeGradient)"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Web</text>
+      <rect x="60" y="10" width="40" height="50" rx="3" fill="#fbbf24" opacity="0.6"/>
+      <text x="80" y="35" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">Tests</text>
+      <text x="95" y="20" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f59e0b" text-anchor="middle" class="pulsingWarning">⚠</text>
+    </g>
+    
+    <!-- Samsung TV -->
+    <g transform="translate(250, 500)" class="floating">
+      <rect width="80" height="80" rx="15" fill="#ffffff" opacity="0.1"/>
+      <circle cx="40" cy="40" r="25" fill="url(#orangeGradient)"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Samsung</text>
+      <rect x="60" y="10" width="40" height="50" rx="3" fill="#fbbf24" opacity="0.6"/>
+      <text x="80" y="35" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">Tests</text>
+      <text x="95" y="20" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ef4444" text-anchor="middle">✗</text>
+    </g>
+    
+    <!-- Xbox -->
+    <g transform="translate(380, 480)">
+      <rect width="80" height="80" rx="15" fill="#ffffff" opacity="0.1"/>
+      <circle cx="40" cy="40" r="25" fill="url(#orangeGradient)"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Xbox</text>
+      <rect x="60" y="10" width="40" height="50" rx="3" fill="#fbbf24" opacity="0.6"/>
+      <text x="80" y="35" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">Tests</text>
+      <text x="95" y="20" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#6b7280" text-anchor="middle">?</text>
+    </g>
+    
+    <!-- Broken Links Visualization -->
+    <path d="M 140 270 L 290 320" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+    <path d="M 420 290 L 190 420" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+    <path d="M 140 540 L 290 540" stroke="#ef4444" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+    
+    <!-- Warning Labels -->
+    <g transform="translate(100, 650)">
+      <rect width="160" height="40" rx="20" fill="#ef4444" opacity="0.2"/>
+      <text x="10" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ef4444">✗ Outdated</text>
+    </g>
+    
+    <g transform="translate(280, 650)">
+      <rect width="180" height="40" rx="20" fill="#f59e0b" opacity="0.2"/>
+      <text x="10" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b">⚠ Partially Changed</text>
+    </g>
+    
+    <g transform="translate(100, 710)">
+      <rect width="160" height="40" rx="20" fill="#6b7280" opacity="0.2"/>
+      <text x="10" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#9ca3af">? Duplicates?</text>
+    </g>
+    
+    <!-- Application Multiplication Chaos -->
+    <g transform="translate(280, 710)">
+      <rect width="180" height="40" rx="20" fill="#dc2626" opacity="0.3"/>
+      <text x="10" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fca5a5">× 6 Apps Each!</text>
+    </g>
+    
+    <!-- Metrics -->
+    <g transform="translate(150, 780)">
+      <rect width="250" height="120" rx="15" fill="#000000" opacity="0.3"/>
+      <text x="125" y="30" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ef4444" text-anchor="middle">30% Redundancy</text>
+      <text x="125" y="60" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#f59e0b" text-anchor="middle">No Coordination</text>
+      <text x="125" y="90" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#fca5a5" text-anchor="middle">48 Test Suites!</text>
+    </g>
+  </g>
+  
+  <!-- CENTER PANEL: Collaborative Review Process -->
+  <g id="centerPanel">
+    <rect x="610" y="120" width="700" height="850" rx="20" fill="#000000" opacity="0.2"/>
+    <rect x="610" y="120" width="700" height="70" rx="20" fill="url(#blueGradient)"/>
+    <text x="960" y="155" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      Collaborative Review Process
+    </text>
+    <text x="960" y="178" font-family="Arial, sans-serif" font-size="14" fill="#93c5fd" text-anchor="middle">
+      One Test Suite → All Platforms → All Applications
+    </text>
+    
+    <!-- Common Features Badge -->
+    <g transform="translate(780, 220)">
+      <rect width="360" height="45" rx="22" fill="#fbbf24" opacity="0.9"/>
+      <text x="180" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#000000" text-anchor="middle">
+        70-80% Same Test Cases Across All Apps
+      </text>
+      <text x="180" y="38" font-family="Arial, sans-serif" font-size="12" fill="#000000" text-anchor="middle">
+        Search • Login • Homepage • Navigation • Player
+      </text>
+    </g>
+    
+    <!-- Central Repository -->
+    <g transform="translate(860, 380)">
+      <circle cx="100" cy="100" r="85" fill="url(#blueGradient)" opacity="0.3" filter="url(#glow)"/>
+      <circle cx="100" cy="100" r="65" fill="url(#blueGradient)" opacity="0.5"/>
+      <rect x="70" y="75" width="60" height="50" rx="5" fill="#ffffff" opacity="0.9"/>
+      <text x="100" y="95" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3b82f6" text-anchor="middle">Unified</text>
+      <text x="100" y="112" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3b82f6" text-anchor="middle">Test Cases</text>
+    </g>
+    
+    <!-- Application Brands Around Center -->
+    <g transform="translate(960, 300)" opacity="0.5">
+      <text x="-120" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#60a5fa">MTV</text>
+      <text x="-60" y="-20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#60a5fa">VH1</text>
+      <text x="20" y="-25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#60a5fa">Comedy</text>
+      <text x="100" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#60a5fa">Nick</text>
+      <text x="-100" y="280" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#60a5fa">Paramount</text>
+      <text x="80" y="280" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#60a5fa">BET</text>
+    </g>
+    
+    <!-- 5 Circular Phases -->
+    <!-- Review -->
+    <g transform="translate(820, 320)">
+      <circle cx="0" cy="0" r="40" fill="#60a5fa" opacity="0.3"/>
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Review</text>
+    </g>
+    
+    <!-- Optimize -->
+    <g transform="translate(750, 430)">
+      <circle cx="0" cy="0" r="40" fill="#60a5fa" opacity="0.3"/>
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Optimize</text>
+    </g>
+    
+    <!-- Generalize -->
+    <g transform="translate(810, 550)">
+      <circle cx="0" cy="0" r="40" fill="#60a5fa" opacity="0.3"/>
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Generalize</text>
+    </g>
+    
+    <!-- Dry-Run -->
+    <g transform="translate(1110, 550)">
+      <circle cx="0" cy="0" r="40" fill="#60a5fa" opacity="0.3"/>
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Dry-Run</text>
+    </g>
+    
+    <!-- Maintain -->
+    <g transform="translate(1170, 430)">
+      <circle cx="0" cy="0" r="40" fill="#60a5fa" opacity="0.3"/>
+      <text x="0" y="5" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Maintain</text>
+    </g>
+    
+    <!-- Creator Avatar -->
+    <g transform="translate(920, 310)">
+      <circle cx="40" cy="40" r="28" fill="#4ade80" filter="url(#shadow)"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">👤</text>
+      <rect x="72" y="28" width="70" height="25" rx="12" fill="#4ade80" opacity="0.8"/>
+      <text x="107" y="45" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">Creating</text>
+      <circle cx="40" cy="68" r="5" fill="#4ade80" class="pulsingWarning"/>
+    </g>
+    
+    <!-- Reviewer Avatars -->
+    <!-- Reviewer 1 -->
+    <g transform="translate(1080, 310)">
+      <circle cx="40" cy="40" r="23" fill="#60a5fa"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">👤</text>
+      <circle cx="58" cy="22" r="10" fill="#4ade80"/>
+      <text x="58" y="27" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+    </g>
+    
+    <!-- Reviewer 2 -->
+    <g transform="translate(720, 480)">
+      <circle cx="40" cy="40" r="23" fill="#60a5fa"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">👤</text>
+      <circle cx="58" cy="22" r="10" fill="#4ade80"/>
+      <text x="58" y="27" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+    </g>
+    
+    <!-- Reviewer 3 -->
+    <g transform="translate(1160, 510)">
+      <circle cx="40" cy="40" r="23" fill="#60a5fa"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="16" text-anchor="middle">👤</text>
+      <circle cx="58" cy="22" r="10" fill="#4ade80"/>
+      <text x="58" y="27" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+    </g>
+    
+    <!-- Workflow Arrows -->
+    <path d="M 850 360 Q 900 400, 950 440" stroke="#60a5fa" stroke-width="2" fill="none" marker-end="url(#arrowhead)" opacity="0.6"/>
+    <path d="M 790 460 Q 840 480, 890 510" stroke="#60a5fa" stroke-width="2" fill="none" marker-end="url(#arrowhead)" opacity="0.6"/>
+    
+    <!-- Badge: Min 3 Approvers -->
+    <g transform="translate(820, 620)">
+      <rect width="280" height="42" rx="21" fill="#3b82f6" filter="url(#shadow)"/>
+      <text x="140" y="28" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        Min. 3 Approvers from Different Platforms
+      </text>
+    </g>
+    
+    <!-- Features -->
+    <g transform="translate(710, 690)">
+      <rect width="480" height="100" rx="15" fill="#000000" opacity="0.3"/>
+      <text x="240" y="28" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#60a5fa" text-anchor="middle">Features</text>
+      <text x="90" y="55" font-family="Arial, sans-serif" font-size="15" fill="#93c5fd">• Platform-Neutral</text>
+      <text x="90" y="77" font-family="Arial, sans-serif" font-size="15" fill="#93c5fd">• App-Neutral</text>
+      <text x="280" y="55" font-family="Arial, sans-serif" font-size="15" fill="#93c5fd">• Generalized Flows</text>
+      <text x="280" y="77" font-family="Arial, sans-serif" font-size="15" fill="#93c5fd">• Collaborative Review</text>
+    </g>
+    
+    <!-- Single Source of Truth Badge -->
+    <g transform="translate(840, 830)">
+      <rect width="200" height="40" rx="20" fill="#fbbf24"/>
+      <text x="100" y="27" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#000000" text-anchor="middle">
+        Single Source of Truth
+      </text>
+    </g>
+  </g>
+  
+  <!-- RIGHT PANEL: After - Unified & Shared -->
+  <g id="afterPanel">
+    <rect x="1370" y="120" width="500" height="850" rx="20" fill="#000000" opacity="0.2"/>
+    <rect x="1370" y="120" width="500" height="70" rx="20" fill="url(#greenGradient)"/>
+    <text x="1620" y="155" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      After - Unified &amp; Shared
+    </text>
+    <text x="1620" y="178" font-family="Arial, sans-serif" font-size="14" fill="#86efac" text-anchor="middle">
+      1 Test Suite → 48 Deployments (8×6)
+    </text>
+    
+    <!-- Matrix Visualization -->
+    <g transform="translate(1400, 210)">
+      <rect width="440" height="60" rx="10" fill="#065f46" opacity="0.2"/>
+      <text x="220" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#4ade80" text-anchor="middle">Application Matrix</text>
+      <!-- App logos/names -->
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="11" fill="#86efac">MTV</text>
+      <text x="100" y="45" font-family="Arial, sans-serif" font-size="11" fill="#86efac">VH1</text>
+      <text x="160" y="45" font-family="Arial, sans-serif" font-size="11" fill="#86efac">Comedy</text>
+      <text x="240" y="45" font-family="Arial, sans-serif" font-size="11" fill="#86efac">Nick</text>
+      <text x="320" y="45" font-family="Arial, sans-serif" font-size="11" fill="#86efac">Paramount</text>
+      <text x="400" y="45" font-family="Arial, sans-serif" font-size="11" fill="#86efac">BET</text>
+    </g>
+    
+    <!-- Central Repository Hub -->
+    <g transform="translate(1570, 420)">
+      <circle cx="50" cy="50" r="60" fill="url(#greenGradient)" opacity="0.4" filter="url(#glow)"/>
+      <circle cx="50" cy="50" r="45" fill="url(#greenGradient)" opacity="0.6"/>
+      <rect x="25" y="25" width="50" height="50" rx="5" fill="#ffffff"/>
+      <text x="50" y="45" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#22c55e" text-anchor="middle">Unified</text>
+      <text x="50" y="60" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#22c55e" text-anchor="middle">Tests</text>
+      <!-- Multiplication indicator -->
+      <text x="50" y="110" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fbbf24" text-anchor="middle">×48</text>
+    </g>
+    
+    <!-- Platform Icons in Organized Circle -->
+    <!-- iOS -->
+    <g transform="translate(1550, 300)">
+      <circle cx="40" cy="40" r="30" fill="#22c55e" opacity="0.3"/>
+      <circle cx="40" cy="40" r="22" fill="#ffffff"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#22c55e" text-anchor="middle">iOS</text>
+      <circle cx="60" cy="20" r="10" fill="#4ade80"/>
+      <text x="60" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+    </g>
+    
+    <!-- Android -->
+    <g transform="translate(1660, 330)">
+      <circle cx="40" cy="40" r="30" fill="#22c55e" opacity="0.3"/>
+      <circle cx="40" cy="40" r="22" fill="#ffffff"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#22c55e" text-anchor="middle">Android</text>
+      <circle cx="60" cy="20" r="10" fill="#4ade80"/>
+      <text x="60" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+    </g>
+    
+    <!-- Apple TV -->
+    <g transform="translate(1710, 420)">
+      <circle cx="40" cy="40" r="30" fill="#22c55e" opacity="0.3"/>
+      <circle cx="40" cy="40" r="22" fill="#ffffff"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#22c55e" text-anchor="middle">AppleTV</text>
+      <circle cx="60" cy="20" r="10" fill="#4ade80"/>
+      <text x="60" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+    </g>
+    
+    <!-- Fire TV -->
+    <g transform="translate(1690, 530)">
+      <circle cx="40" cy="40" r="30" fill="#22c55e" opacity="0.3"/>
+      <circle cx="40" cy="40" r="22" fill="#ffffff"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#22c55e" text-anchor="middle">FireTV</text>
+      <circle cx="60" cy="20" r="10" fill="#4ade80"/>
+      <text x="60" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+    </g>
+    
+    <!-- Roku -->
+    <g transform="translate(1600, 590)">
+      <circle cx="40" cy="40" r="30" fill="#22c55e" opacity="0.3"/>
+      <circle cx="40" cy="40" r="22" fill="#ffffff"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#22c55e" text-anchor="middle">Roku</text>
+      <circle cx="60" cy="20" r="10" fill="#4ade80"/>
+      <text x="60" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+    </g>
+    
+    <!-- Web -->
+    <g transform="translate(1490, 560)">
+      <circle cx="40" cy="40" r="30" fill="#22c55e" opacity="0.3"/>
+      <circle cx="40" cy="40" r="22" fill="#ffffff"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#22c55e" text-anchor="middle">Web</text>
+      <circle cx="60" cy="20" r="10" fill="#4ade80"/>
+      <text x="60" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+    </g>
+    
+    <!-- Samsung -->
+    <g transform="translate(1430, 470)">
+      <circle cx="40" cy="40" r="30" fill="#22c55e" opacity="0.3"/>
+      <circle cx="40" cy="40" r="22" fill="#ffffff"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#22c55e" text-anchor="middle">Samsung</text>
+      <circle cx="60" cy="20" r="10" fill="#4ade80"/>
+      <text x="60" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+    </g>
+    
+    <!-- Xbox -->
+    <g transform="translate(1450, 370)">
+      <circle cx="40" cy="40" r="30" fill="#22c55e" opacity="0.3"/>
+      <circle cx="40" cy="40" r="22" fill="#ffffff"/>
+      <text x="40" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#22c55e" text-anchor="middle">Xbox</text>
+      <circle cx="60" cy="20" r="10" fill="#4ade80"/>
+      <text x="60" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">✓</text>
+    </g>
+    
+    <!-- Connection Lines to Central Hub -->
+    <line x1="1580" y1="340" x2="1600" y2="420" stroke="#4ade80" stroke-width="2" opacity="0.6"/>
+    <line x1="1680" y1="370" x2="1640" y2="430" stroke="#4ade80" stroke-width="2" opacity="0.6"/>
+    <line x1="1730" y1="460" x2="1650" y2="470" stroke="#4ade80" stroke-width="2" opacity="0.6"/>
+    <line x1="1710" y1="570" x2="1640" y2="500" stroke="#4ade80" stroke-width="2" opacity="0.6"/>
+    <line x1="1620" y1="620" x2="1620" y2="510" stroke="#4ade80" stroke-width="2" opacity="0.6"/>
+    <line x1="1520" y1="590" x2="1580" y2="500" stroke="#4ade80" stroke-width="2" opacity="0.6"/>
+    <line x1="1470" y1="500" x2="1570" y2="480" stroke="#4ade80" stroke-width="2" opacity="0.6"/>
+    <line x1="1490" y1="400" x2="1570" y2="430" stroke="#4ade80" stroke-width="2" opacity="0.6"/>
+    
+    <!-- One Creates, All Reuse Label -->
+    <g transform="translate(1500, 650)">
+      <rect width="240" height="50" rx="25" fill="#4ade80" filter="url(#shadow)"/>
+      <text x="120" y="33" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        One Creates, All Reuse
+      </text>
+    </g>
+    
+    <!-- Free Reuse Arrows -->
+    <g transform="translate(1540, 720)">
+      <text x="80" y="20" font-family="Arial, sans-serif" font-size="16" font-style="italic" fill="#4ade80" text-anchor="middle">Free Reuse</text>
+      <path d="M 20 30 L 10 50" stroke="#4ade80" stroke-width="2" marker-end="url(#greenArrow)"/>
+      <path d="M 80 30 L 80 50" stroke="#4ade80" stroke-width="2" marker-end="url(#greenArrow)"/>
+      <path d="M 140 30 L 150 50" stroke="#4ade80" stroke-width="2" marker-end="url(#greenArrow)"/>
+    </g>
+    
+    <!-- Success Metrics -->
+    <g transform="translate(1420, 780)">
+      <rect width="400" height="120" rx="15" fill="#000000" opacity="0.3"/>
+      <text x="200" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#4ade80" text-anchor="middle">Success Metrics</text>
+      <text x="100" y="65" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#4ade80">30% Reduction</text>
+      <text x="300" y="65" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#4ade80">60% Faster</text>
+      <rect x="50" y="80" width="300" height="35" rx="17" fill="#fbbf24"/>
+      <text x="200" y="103" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#000000" text-anchor="middle">
+        Foundation for 90% Code Reuse
+      </text>
+    </g>
+  </g>
+  
+  <!-- Transformation Arrows -->
+  <g id="transformationFlow">
+    <!-- Left to Center -->
+    <path d="M 550 500 Q 580 450, 610 500" stroke="#60a5fa" stroke-width="4" fill="none" class="flowingArrow" opacity="0.7"/>
+    <polygon points="605,498 615,500 605,502" fill="#60a5fa"/>
+    
+    <!-- Center to Right -->
+    <path d="M 1310 500 Q 1340 450, 1370 500" stroke="#4ade80" stroke-width="4" fill="none" class="flowingArrow" opacity="0.7"/>
+    <polygon points="1365,498 1375,500 1365,502" fill="#4ade80"/>
+    
+    <!-- Document Flow Animation -->
+    <g class="floating">
+      <rect x="570" y="480" width="25" height="30" rx="2" fill="#fbbf24" opacity="0.8"/>
+      <rect x="585" y="475" width="25" height="30" rx="2" fill="#fbbf24" opacity="0.6"/>
+      <rect x="600" y="470" width="25" height="30" rx="2" fill="#fbbf24" opacity="0.4"/>
+    </g>
+    
+    <g class="floating">
+      <rect x="1330" y="480" width="30" height="35" rx="2" fill="#4ade80" opacity="0.8"/>
+    </g>
+  </g>
+  
+  <!-- Arrow Markers Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#60a5fa"/>
+    </marker>
+    <marker id="greenArrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4ade80"/>
+    </marker>
+  </defs>
+  
+  <!-- Bottom Metrics Bar -->
+  <rect x="0" y="1000" width="1920" height="80" fill="#000000" opacity="0.4"/>
+  <text x="960" y="1035" font-family="Arial, sans-serif" font-size="19" fill="#a0aec0" text-anchor="middle">
+    48 Test Suites → 1 Unified Suite | 70-80% Same Tests | 8 Platforms × 6 Apps | 90% Code Reuse
+  </text>
+  <text x="960" y="1060" font-family="Arial, sans-serif" font-size="16" fill="#60a5fa" text-anchor="middle">
+    MTV • VH1 • Comedy Central • Nickelodeon • Paramount • BET
+  </text>
+</svg>

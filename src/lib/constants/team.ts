@@ -1,28 +1,144 @@
 /**
- * Constants: team mapping
+ * Constants: team members
  * Author: AR
- * Created: 2025-10-08
- * Modified: 2025-10-08 by AR
- * Description: Team member routes; Rostislav == Alpin Rostislav (AR).
+ * Created: 2025-10-31
+ * Modified: 2025-10-31 by AR
+ * Description: Team member information for the QA Innovation Hub.
  */
 
-export const TEAM_MEMBERS = {
-  ROBIN: { initials: 'RB', section: 'profiles/robin' },
-  ROSTISLAV: { initials: 'AR', section: 'profiles/rostislav' },
-  ROHIT: { initials: 'RH', section: 'profiles/rohit' },
-  BOBBY: { initials: 'BB', section: 'profiles/bobby' },
-  JUNEY: { initials: 'JY', section: 'profiles/juney' },
-  DHANYA: { initials: 'DN', section: 'profiles/dhanya' },
-} as const;
+export interface TeamMember {
+  id: string;
+  name: string;
+  email: string;
+  role: string;
 
-// Optional curated slugs per teammate for profile filtering
-export const PROFILE_PROJECTS: Record<string, string[]> = {
-  robin: ['unified-test-case-optimization', 'unified-test-automation-framework', 'coppa-process-technology', 'new-relic-qe-okr-dashboard'],
-  rostislav: ['npaw-integration-testing', 'data-observability'],
-  rohit: ['dart', 'onboarding-automation-setup'],
-  bobby: ['config-comparison'],
-  juney: ['test-manager-bot-eva', 'report-portal'],
-  dhanya: ['coppa-process-technology'],
-};
+  // Professional Background
+  yearsOfExperience?: number;
+  background?: string; // Brief background/journey
 
+  // Projects & Skills
+  projectsParticipated?: string[]; // List of project IDs or names
+  keySkills?: string[]; // Top 3-5 sellable skills
 
+  // Interests
+  professionalInterests?: string[]; // Areas of professional interest
+  hobbies?: string[]; // Personal hobbies (optional)
+
+  // Legacy fields
+  bio?: string; // Replaced by background, but kept for backward compatibility
+  avatar?: string;
+  linkedIn?: string;
+  github?: string;
+}
+
+export const TEAM_MEMBERS: TeamMember[] = [
+  {
+    id: 'rostialpin',
+    name: 'Rostislav Alpin',
+    email: 'rostislav.alpin@paramount.com',
+    role: 'Manager',
+
+    // TEMPLATE - Please fill out the sections below:
+
+    yearsOfExperience: undefined, // e.g., 8
+    background: undefined,
+    /* Example:
+    "Started as a QA Engineer in 2015, progressed through automation and leadership roles.
+    Passionate about building scalable testing solutions and mentoring teams to achieve excellence."
+    */
+
+    projectsParticipated: undefined,
+    /* Example:
+    ['data-observability', 'config-comparison', 'device-farm', 'playwright-framework']
+    */
+
+    keySkills: undefined,
+    /* Example:
+    ['Test Automation Architecture', 'Team Leadership', 'CI/CD Pipeline Design',
+     'Cross-platform Testing', 'Mentoring & Training']
+    */
+
+    professionalInterests: undefined,
+    /* Example:
+    ['AI-powered testing', 'Performance optimization', 'DevOps integration',
+     'Test data management']
+    */
+
+    hobbies: undefined, // Optional
+    /* Example:
+    ['Photography', 'Hiking', 'Chess', 'Reading sci-fi']
+    */
+  },
+  {
+    id: 'krishnachaitanya',
+    name: 'Krishna Chaitanya',
+    email: 'Krishna.Chaitanya@paramount.com',
+    role: 'Senior QA Engineer',
+    yearsOfExperience: undefined,
+    background: undefined,
+    projectsParticipated: undefined,
+    keySkills: undefined,
+    professionalInterests: undefined,
+    hobbies: undefined,
+  },
+  {
+    id: 'rob1nalex',
+    name: 'Robin Alex',
+    email: 'robin.alex@paramount.com',
+    role: 'Senior QA Engineer',
+    yearsOfExperience: undefined,
+    background: undefined,
+    projectsParticipated: undefined,
+    keySkills: undefined,
+    professionalInterests: undefined,
+    hobbies: undefined,
+  },
+  {
+    id: 'anilbvi',
+    name: 'Bobby Anil Alex',
+    email: 'bobby.anil@paramount.com',
+    role: 'QA Engineer',
+    yearsOfExperience: undefined,
+    background: undefined,
+    projectsParticipated: undefined,
+    keySkills: undefined,
+    professionalInterests: undefined,
+    hobbies: undefined,
+  },
+  {
+    id: 'JuneyJestin',
+    name: 'Juney Jestin',
+    email: 'juney.jestin@paramount.com',
+    role: 'QA Engineer',
+    yearsOfExperience: undefined,
+    background: undefined,
+    projectsParticipated: undefined,
+    keySkills: undefined,
+    professionalInterests: undefined,
+    hobbies: undefined,
+  },
+  {
+    id: 'dhanyamathew',
+    name: 'Dhanya Mathew',
+    email: 'dhanya.mathew@paramount.com',
+    role: 'QA Engineer',
+    yearsOfExperience: undefined,
+    background: undefined,
+    projectsParticipated: undefined,
+    keySkills: undefined,
+    professionalInterests: undefined,
+    hobbies: undefined,
+  },
+  {
+    id: 'rohitmenonv',
+    name: 'Rohit Menon',
+    email: 'rohit.menon@paramount.com',
+    role: 'QA Engineer',
+    yearsOfExperience: undefined,
+    background: undefined,
+    projectsParticipated: undefined,
+    keySkills: undefined,
+    professionalInterests: undefined,
+    hobbies: undefined,
+  },
+];

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- Definitions for gradients and filters -->
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1f2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d3748;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Orange gradient for sources -->
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff8c42;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6b1a;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Blue gradient for New Relic -->
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#357abd;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Green gradient for management dashboard -->
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ade80;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22c55e;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Purple gradient for platform dashboard -->
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Animation for flowing data -->
+    <style>
+      @keyframes flow {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -30; }
+      }
+      .flowingData {
+        stroke-dasharray: 10 20;
+        animation: flow 2s linear infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+      .pulsingDot {
+        animation: pulse 2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGradient)"/>
+  
+  <!-- Grid pattern for tech feel -->
+  <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.05"/>
+  </pattern>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  
+  <!-- Top Banner -->
+  <rect x="0" y="0" width="1920" height="80" fill="#000000" opacity="0.3"/>
+  <text x="960" y="50" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    New Relic QE OKR Dashboard | Unified QA Intelligence
+  </text>
+  
+  <!-- LEFT SECTION: QA Data Sources -->
+  <g id="dataSources">
+    <rect x="50" y="150" width="400" height="700" rx="15" fill="#000000" opacity="0.2"/>
+    <rect x="50" y="150" width="400" height="60" rx="15" fill="url(#orangeGradient)"/>
+    <text x="250" y="190" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      QA Data Sources
+    </text>
+    
+    <!-- Source 1: TestRail -->
+    <g transform="translate(80, 250)">
+      <rect width="340" height="120" rx="10" fill="#ffffff" opacity="0.1"/>
+      <circle cx="50" cy="60" r="30" fill="url(#orangeGradient)"/>
+      <text x="50" y="65" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">TR</text>
+      <text x="100" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ff8c42">TestRail</text>
+      <text x="100" y="75" font-family="Arial, sans-serif" font-size="16" fill="#a0aec0">Test Management</text>
+    </g>
+    
+    <!-- Source 2: JIRA -->
+    <g transform="translate(80, 390)">
+      <rect width="340" height="120" rx="10" fill="#ffffff" opacity="0.1"/>
+      <circle cx="50" cy="60" r="30" fill="url(#orangeGradient)"/>
+      <text x="50" y="65" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">JR</text>
+      <text x="100" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ff8c42">JIRA</text>
+      <text x="100" y="75" font-family="Arial, sans-serif" font-size="16" fill="#a0aec0">Bug Tracking</text>
+    </g>
+    
+    <!-- Source 3: Report Portal -->
+    <g transform="translate(80, 530)">
+      <rect width="340" height="120" rx="10" fill="#ffffff" opacity="0.1"/>
+      <circle cx="50" cy="60" r="30" fill="url(#orangeGradient)"/>
+      <text x="50" y="65" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">RP</text>
+      <text x="100" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ff8c42">Report Portal</text>
+      <text x="100" y="75" font-family="Arial, sans-serif" font-size="16" fill="#a0aec0">Test Execution</text>
+    </g>
+    
+    <!-- Source 4: CI/CD -->
+    <g transform="translate(80, 670)">
+      <rect width="340" height="120" rx="10" fill="#ffffff" opacity="0.1"/>
+      <circle cx="50" cy="60" r="30" fill="url(#orangeGradient)"/>
+      <text x="50" y="65" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">CI</text>
+      <text x="100" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ff8c42">CI/CD</text>
+      <text x="100" y="75" font-family="Arial, sans-serif" font-size="16" fill="#a0aec0">Automation Reports</text>
+    </g>
+  </g>
+  
+  <!-- CENTER SECTION: New Relic Platform -->
+  <g id="newRelicPlatform">
+    <rect x="700" y="250" width="520" height="580" rx="20" fill="#000000" opacity="0.3" filter="url(#glow)"/>
+    <rect x="700" y="250" width="520" height="80" rx="20" fill="url(#blueGradient)"/>
+    <text x="960" y="300" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      New Relic Platform
+    </text>
+    
+    <!-- Brain/AI Icon -->
+    <circle cx="960" cy="420" r="60" fill="url(#blueGradient)" opacity="0.8" filter="url(#glow)"/>
+    <path d="M 920 420 Q 940 400, 960 420 T 1000 420" fill="none" stroke="#ffffff" stroke-width="3"/>
+    <path d="M 920 420 Q 940 440, 960 420 T 1000 420" fill="none" stroke="#ffffff" stroke-width="3"/>
+    <text x="960" y="510" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#4a90e2" text-anchor="middle">
+      Smart Processing
+    </text>
+    
+    <!-- Features -->
+    <g transform="translate(750, 550)">
+      <rect width="420" height="50" rx="25" fill="#ffffff" opacity="0.1"/>
+      <text x="210" y="32" font-family="Arial, sans-serif" font-size="16" fill="#4a90e2" text-anchor="middle">
+        Pattern Detection | Bug Matching | Real-Time Analysis
+      </text>
+    </g>
+    
+    <!-- NRQL Query Visualization -->
+    <g transform="translate(750, 620)">
+      <rect width="420" height="80" rx="10" fill="#000000" opacity="0.4"/>
+      <text x="20" y="30" font-family="monospace" font-size="14" fill="#4ade80">SELECT</text>
+      <text x="80" y="30" font-family="monospace" font-size="14" fill="#ffffff">count(*)</text>
+      <text x="160" y="30" font-family="monospace" font-size="14" fill="#4ade80">FROM</text>
+      <text x="210" y="30" font-family="monospace" font-size="14" fill="#ffffff">QAMetrics</text>
+      <text x="20" y="55" font-family="monospace" font-size="14" fill="#4ade80">WHERE</text>
+      <text x="80" y="55" font-family="monospace" font-size="14" fill="#ffffff">bugSeverity = 'critical'</text>
+      <circle cx="15" cy="25" r="3" fill="#4ade80" class="pulsingDot"/>
+    </g>
+    
+    <!-- Real-Time Indicator -->
+    <g transform="translate(920, 740)">
+      <rect width="80" height="30" rx="15" fill="#ef4444"/>
+      <text x="40" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        LIVE
+      </text>
+      <circle cx="65" cy="15" r="4" fill="#ffffff" class="pulsingDot"/>
+    </g>
+  </g>
+  
+  <!-- RIGHT SECTION: Dual Dashboard Outputs -->
+  <!-- Management Dashboard (Top) -->
+  <g id="managementDashboard">
+    <rect x="1420" y="150" width="450" height="380" rx="15" fill="#000000" opacity="0.2"/>
+    <rect x="1420" y="150" width="450" height="60" rx="15" fill="url(#greenGradient)"/>
+    <text x="1645" y="190" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      Unified Management Dashboard
+    </text>
+    
+    <!-- Mini Charts -->
+    <g transform="translate(1450, 240)">
+      <!-- Bar Chart -->
+      <rect x="10" y="80" width="30" height="60" fill="#4ade80" opacity="0.8"/>
+      <rect x="50" y="60" width="30" height="80" fill="#4ade80" opacity="0.8"/>
+      <rect x="90" y="40" width="30" height="100" fill="#4ade80" opacity="0.8"/>
+      <rect x="130" y="50" width="30" height="90" fill="#4ade80" opacity="0.8"/>
+      <text x="85" y="170" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">
+        Bugs Found
+      </text>
+      
+      <!-- Progress Bars -->
+      <g transform="translate(200, 20)">
+        <text x="0" y="15" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Team Progress</text>
+        <rect x="0" y="25" width="180" height="10" rx="5" fill="#ffffff" opacity="0.1"/>
+        <rect x="0" y="25" width="140" height="10" rx="5" fill="#4ade80"/>
+        <text x="190" y="35" font-family="Arial, sans-serif" font-size="12" fill="#4ade80">78%</text>
+        
+        <text x="0" y="60" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Tests Automated</text>
+        <rect x="0" y="70" width="180" height="10" rx="5" fill="#ffffff" opacity="0.1"/>
+        <rect x="0" y="70" width="160" height="10" rx="5" fill="#4ade80"/>
+        <text x="190" y="80" font-family="Arial, sans-serif" font-size="12" fill="#4ade80">89%</text>
+        
+        <text x="0" y="105" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Cross-Team Sync</text>
+        <rect x="0" y="115" width="180" height="10" rx="5" fill="#ffffff" opacity="0.1"/>
+        <rect x="0" y="115" width="130" height="10" rx="5" fill="#4ade80"/>
+        <text x="190" y="125" font-family="Arial, sans-serif" font-size="12" fill="#4ade80">72%</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Platform Dashboard (Bottom) -->
+  <g id="platformDashboard">
+    <rect x="1420" y="550" width="450" height="380" rx="15" fill="#000000" opacity="0.2"/>
+    <rect x="1420" y="550" width="450" height="60" rx="15" fill="url(#purpleGradient)"/>
+    <text x="1645" y="590" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      Platform-Specific User Dashboard
+    </text>
+    
+    <!-- Metrics Grid -->
+    <g transform="translate(1450, 640)">
+      <!-- Metric Cards -->
+      <g transform="translate(0, 0)">
+        <rect width="130" height="80" rx="10" fill="#ffffff" opacity="0.05"/>
+        <text x="65" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#a855f7" text-anchor="middle">87%</text>
+        <text x="65" y="55" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Pass Rate</text>
+      </g>
+      
+      <g transform="translate(150, 0)">
+        <rect width="130" height="80" rx="10" fill="#ffffff" opacity="0.05"/>
+        <text x="65" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#a855f7" text-anchor="middle">15</text>
+        <text x="65" y="55" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Smart Bug Match</text>
+      </g>
+      
+      <g transform="translate(300, 0)">
+        <rect width="130" height="80" rx="10" fill="#ffffff" opacity="0.05"/>
+        <text x="65" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ef4444" text-anchor="middle">8</text>
+        <text x="65" y="55" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Flaky Tests</text>
+      </g>
+      
+      <g transform="translate(0, 100)">
+        <rect width="130" height="80" rx="10" fill="#ffffff" opacity="0.05"/>
+        <text x="65" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#a855f7" text-anchor="middle">75%</text>
+        <text x="65" y="55" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Regression</text>
+      </g>
+      
+      <g transform="translate(150, 100)">
+        <rect width="280" height="80" rx="10" fill="#ffffff" opacity="0.05"/>
+        <text x="140" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#f59e0b" text-anchor="middle">12</text>
+        <text x="140" y="55" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Infrastructure Issues</text>
+      </g>
+      
+      <!-- Error Pattern Visualization -->
+      <g transform="translate(0, 200)">
+        <text x="0" y="15" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">Error Pattern Detection</text>
+        <rect x="0" y="25" width="390" height="40" rx="5" fill="#ffffff" opacity="0.05"/>
+        <circle cx="30" cy="45" r="8" fill="#ef4444"/>
+        <circle cx="60" cy="45" r="8" fill="#f59e0b"/>
+        <circle cx="90" cy="45" r="8" fill="#a855f7"/>
+        <circle cx="120" cy="45" r="8" fill="#a855f7"/>
+        <circle cx="150" cy="45" r="8" fill="#ef4444"/>
+        <text x="200" y="50" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0">Pattern: Memory Leak</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Data Flow Arrows -->
+  <!-- From Sources to New Relic -->
+  <g id="dataFlowLeft">
+    <path d="M 450 310 L 700 420" stroke="#4a90e2" stroke-width="3" fill="none" class="flowingData" opacity="0.8"/>
+    <path d="M 450 450 L 700 480" stroke="#4a90e2" stroke-width="3" fill="none" class="flowingData" opacity="0.8"/>
+    <path d="M 450 590 L 700 540" stroke="#4a90e2" stroke-width="3" fill="none" class="flowingData" opacity="0.8"/>
+    <path d="M 450 730 L 700 600" stroke="#4a90e2" stroke-width="3" fill="none" class="flowingData" opacity="0.8"/>
+    
+    <!-- Arrow heads -->
+    <polygon points="695,418 705,420 695,422" fill="#4a90e2"/>
+    <polygon points="695,478 705,480 695,482" fill="#4a90e2"/>
+    <polygon points="695,538 705,540 695,542" fill="#4a90e2"/>
+    <polygon points="695,598 705,600 695,602" fill="#4a90e2"/>
+  </g>
+  
+  <!-- From New Relic to Dashboards -->
+  <g id="dataFlowRight">
+    <!-- To Management Dashboard -->
+    <path d="M 1220 420 L 1420 340" stroke="#4ade80" stroke-width="3" fill="none" class="flowingData" opacity="0.8"/>
+    <polygon points="1415,338 1425,340 1415,342" fill="#4ade80"/>
+    
+    <!-- To Platform Dashboard -->
+    <path d="M 1220 600 L 1420 740" stroke="#a855f7" stroke-width="3" fill="none" class="flowingData" opacity="0.8"/>
+    <polygon points="1415,738 1425,740 1415,742" fill="#a855f7"/>
+    
+    <!-- AI Bug Detection Badge -->
+    <g transform="translate(1270, 680)">
+      <rect width="140" height="35" rx="17" fill="#ef4444" opacity="0.9"/>
+      <text x="70" y="23" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        AI Bug Detection
+      </text>
+    </g>
+  </g>
+  
+  <!-- Bottom Metrics Bar -->
+  <rect x="0" y="1000" width="1920" height="80" fill="#000000" opacity="0.3"/>
+  <text x="960" y="1050" font-family="Arial, sans-serif" font-size="20" fill="#a0aec0" text-anchor="middle">
+    4 Data Sources | AI-Powered | All Teams | Real-Time
+  </text>
+  
+  <!-- Decorative Elements -->
+  <g id="decorativeElements">
+    <!-- Floating particles for tech feel -->
+    <circle cx="100" cy="900" r="2" fill="#4a90e2" opacity="0.6" class="pulsingDot"/>
+    <circle cx="500" cy="950" r="2" fill="#ff8c42" opacity="0.6" class="pulsingDot"/>
+    <circle cx="1400" cy="100" r="2" fill="#4ade80" opacity="0.6" class="pulsingDot"/>
+    <circle cx="1800" cy="980" r="2" fill="#a855f7" opacity="0.6" class="pulsingDot"/>
+  </g>
+</svg>

@@ -13,15 +13,18 @@ export const PROJECTS: IProject[] = [
     id: 'unified-test-case-optimization',
     slug: 'unified-test-case-optimization',
     title: 'Unified Test Case Optimization',
+    heroImage: '/assets/unified-test-case-optimization/hero/test_optimization_hero.svg',
     owner: 'rob1nalex',
-    summary: 'Comprehensive test suite optimization initiative that reduced redundant test cases across platforms and brands through flow optimization, generalized steps, and efficient execution distribution.',
-    problem: 'Redundant test cases were maintained across multiple platforms and brands with repeated test flows and steps. The maintenance burden was significant as teams had to manage duplicate tests that differed by only one or more steps, creating a risk of inconsistencies and making it difficult to avoid creating additional newer duplicate tests.',
-    solution: 'Implemented a systematic 5-phase approach: (1) Reviewed test cases across all projects to identify redundancies, (2) Created optimized regression scenarios with streamlined flows, (3) Added generalized steps that could be mapped to various brands and platforms, (4) Conducted dry-runs and execution optimization across brands with the Run Team, and (5) Established regular maintenance through a review and approval process. This approach also enabled transitioning Progression/Feature tests into Regression tests for better suite optimization.',
+    summary: 'Foundation initiative that enabled the Unified Test Automation Framework by designing platform-neutral and app-neutral test case structures. Created a collaborative maintenance process where test cases are shared across all platform teams (11-13 applications on 8+ platforms), allowing one team to create or update tests that all other teams can reuse for free. Reduced redundant test cases by 30% and execution time by 60% through flow optimization, generalized steps, and cross-team collaboration with a rigorous review and approval process.',
+    problem: 'Before the unified automation framework could work, teams faced fundamental test case structure challenges across multiple similar applications on different platforms (Apple TV, iOS, Android Mobile/Tablet, Android TV, Fire TV, Roku, WCTV, Web). Test cases were not neutral - they were tightly coupled to specific apps and platforms, making reuse impossible. Each platform team maintained redundant test cases with repeated test flows and steps that differed by only one or two variations. The maintenance burden was crushing: constant updates, bug fixes, and new requirements meant existing tests quickly became outdated or partially changed. Without coordination, teams risked creating duplicate tests as they could not easily determine what already existed across other platform teams. The fragmentation made it difficult to avoid inconsistencies and duplication, and teams had no efficient way to share test improvements across platforms.',
+    solution: 'Designed and implemented a revolutionary test case structure built on platform-neutrality and app-neutrality, creating the foundation that later enabled the Unified Test Automation Framework to achieve 90% code reuse. Implemented a systematic 5-phase approach: (1) Reviewed test cases across all projects to identify redundancies, (2) Created optimized regression scenarios with streamlined flows, (3) Added generalized steps that could be mapped to various brands and platforms, (4) Conducted dry-runs and execution optimization across brands with the Run Team, and (5) Established regular maintenance through a rigorous review and approval process. The key innovation was the collaborative maintenance model: when someone from one platform team creates or updates a test, all other teams can reuse it for free without duplicating effort. To ensure quality and cross-platform applicability, every test change requires review and approval from a minimum of 3 approvers from different platforms, guaranteeing that tests work universally. This approach also enabled transitioning Progression/Feature tests into Regression tests for better suite optimization, and eliminated the constant risk of duplication by creating a single source of truth for test cases across all platforms.',
     techStack: ['TestRail', 'JIRA'],
     metrics: [
       { label: 'Test Reduction', value: '30%', improvement: 'Optimization on flows and validation', impact: 'Reduced maintenance overhead and faster test suite updates' },
       { label: 'Execution Time Reduction', value: '60%', improvement: 'Efficient distribution across brands and platforms', impact: 'Faster feedback cycles and increased testing capacity' },
       { label: 'Test Suite Optimization', value: 'Progressive to Regression', improvement: 'Transitioned feature tests into regression suite', impact: 'Better test coverage and reusability' },
+      { label: 'Cross-Team Collaboration', value: '3+ Approvers', improvement: 'Minimum 3 approvers from different platforms ensure universal test quality', impact: 'One team creates/updates, all teams reuse for free - eliminates duplicate effort' },
+      { label: 'Foundation for Automation', value: 'Enabled 90% Code Reuse', improvement: 'Platform-neutral structure enabled the Unified Automation Framework', impact: 'Created the foundation that later allowed 90%+ code reuse across all platforms' },
     ],
     screenshots: [],
     status: 'draft',
@@ -38,15 +41,18 @@ export const PROJECTS: IProject[] = [
     id: 'unified-test-automation-framework',
     slug: 'unified-test-automation-framework',
     title: 'Unified Test Automation Framework',
+    heroImage: '/assets/unified-test-automation-framework/hero/unified_framework_hero.png',
     owner: 'rob1nalex',
-    summary: 'Unified automation repository enabling cross-platform and cross-brand test reusability for Web, WCTV, Roku, Apple TV, iOS, and Android with high readability and efficient maintenance through smart abstractions.',
-    problem: 'Redundant test cases were maintained across multiple platforms and brands with repeated test flows and steps. Each platform required separate test implementations, leading to code duplication, increased maintenance effort, and slower delivery cycles across the testing organization.',
-    solution: 'Implemented a 3-phase unified automation approach: (1) Developed a suite definition using properties files for common page elements, enabling centralized element management, (2) Created an externalized UI layer to support multi-platform modules with shared abstractions, and (3) Built platform-specific adapters for drivers, selectors, and fixtures while maintaining a common test structure. Established regular pipeline executions and weekly smoke test runs to ensure continuous validation across all platforms.',
-    techStack: ['TypeScript', 'Playwright', 'Appium'],
+    summary: 'Revolutionary unified automation framework that enables 90%+ code reuse across 11-13 applications and all CTV/mobile platforms (Apple TV, iOS, Android Mobile/Tablet, Android TV, Fire TV, Roku, WCTV, Web). Build tests once for one platform, then adapt to other platforms with just 10% additional effort, dramatically reducing development time and maintenance burden while ensuring consistent quality across the entire platform ecosystem.',
+    problem: 'The team supports QA for all CTV and mobile platforms (Apple TV, iOS, Android phones/tablets, Android TV, Fire TV, Roku, WCTV, Web), testing 11-13 applications across each platform. Using traditional Selenium-Appium and company frameworks, each platform required completely separate test implementations due to platform-specific automation differences (element locators, navigation patterns, input methods like remote control vs clicks/taps). This created massive code duplication - essentially writing the same tests 6+ times for each application across platforms. The maintenance burden was enormous, and developing new test coverage meant multiplying effort across all platforms, severely limiting testing capacity and release velocity.',
+    solution: 'Built a sophisticated unified automation framework that abstracts platform differences while maximizing code reuse across both applications and platforms. The framework uses intelligent adapters and platform-specific modules to handle differences in element locators, navigation patterns (mobile/tablet vs TV), and input methods (remote control vs clicks/taps). Test logic is written once and shared across platforms, with only small configuration tweaks needed for platform specifics. The key breakthrough: develop tests for one platform (e.g., Roku), then adapt to any other platform with only 10% additional effort. This approach dramatically reduces lines of code, slashes maintenance burden, and enables rapid test development - what used to take weeks across 6+ platforms now takes days.',
+    techStack: ['TypeScript', 'Java', 'Playwright', 'Appium', 'Selenium', 'Synergy Platform', 'Platform-Specific Adapters', 'Smart Abstractions'],
     metrics: [
-      { label: 'Cross-Platform Reusability', value: '50-80%', improvement: 'Shared test logic across Web, TV, and Mobile platforms', impact: 'Reduced development time and maintenance effort across platforms' },
-      { label: 'Cross-Brand Reusability', value: '80-100%', improvement: 'Unified test suite across multiple brands', impact: 'Eliminated brand-specific test duplication' },
-      { label: 'Code Maintainability', value: 'High', improvement: 'Efficient abstraction with improved readability', impact: 'Faster onboarding and easier test updates' },
+      { label: 'Development Efficiency', value: '90%', improvement: 'Build for one platform, adapt to others with only 10% additional effort', impact: 'What took weeks across 6 platforms now takes days' },
+      { label: 'Code Reuse', value: '90%+', improvement: 'Shared test logic across all CTV and mobile platforms', impact: 'Eliminated massive code duplication - no longer writing same tests 5-6 times' },
+      { label: 'Application Coverage', value: '11-13 Apps', improvement: 'Single framework supports entire application portfolio across all platforms', impact: 'Unified testing approach across complete product ecosystem' },
+      { label: 'Platform Support', value: '8+ Platforms', improvement: 'Apple TV, iOS, Android Mobile/Tablet, Android TV, Fire TV, Roku, WCTV, Web - all from one codebase', impact: 'Complete platform ecosystem coverage with minimal platform-specific code' },
+      { label: 'Maintenance Burden', value: 'Slashed', improvement: 'Fix once, deploy everywhere - no more platform-by-platform updates', impact: 'Dramatically reduced ongoing maintenance and faster test updates' },
     ],
     screenshots: [],
     status: 'draft',
@@ -67,12 +73,44 @@ export const PROJECTS: IProject[] = [
     id: 'test-manager-bot-eva',
     slug: 'test-manager-bot-eva',
     title: 'Test Manager Bot & EVA',
+    heroImage: '/assets/test-manager-bot-eva/hero/eva_hero.png',
     owner: 'JuneyJestin',
-    summary: 'EVA designed to address queries from Scrum team and answer them.',
-    problem: 'Scrum team has to manually search for information in various systems like JIRA, Confluence, etc. This is time-consuming.',
-    solution: 'EVA is a bot that can answer questions from Scrum team.',
+    summary: 'EVA (Enterprise Virtual Assistant) - The company\'s first AI-powered chatbot that unifies knowledge from internal documentation systems (Confluence, JIRA, GitHub) through automated data collection and intelligent RAG (Retrieval Augmented Generation). Built to revolutionize team productivity, EVA assists QA engineers with test creation and duplicate identification, helps clarify requirements across agile processes, and serves as an intelligent knowledge hub for Product Owners and Developers. Features extensive onboarding and training support through a comprehensive recording library, marking one of the first major AI initiatives in the company.',
+    problem: 'Development teams faced critical knowledge fragmentation and information retrieval challenges across multiple disconnected systems. QA engineers, Product Owners, and Developers spent excessive time manually searching through Confluence documentation, JIRA tickets, GitHub repositories, and various other internal sources to find answers to common questions. This manual information hunting was especially problematic in agile environments where compiled data from different sources is essential for decision-making. New team members faced steep onboarding curves without centralized access to tribal knowledge, best practices, and training materials. Test creation was inefficient as engineers had to manually verify if similar tests already existed, leading to duplicate test creation and wasted effort. Requirement ambiguities required lengthy back-and-forth conversations to clarify, slowing down sprint velocity. The lack of a unified knowledge assistant meant every team member had to become an expert in navigating multiple systems just to do their daily work.',
+    solution: 'Built EVA as an enterprise-grade AI chatbot leveraging RAG (Retrieval Augmented Generation) architecture to create a unified knowledge assistant for the entire engineering organization. EVA automatically collects and indexes data from Confluence, JIRA, GitHub, and other internal systems on a scheduled basis, ensuring the knowledge base stays current without manual intervention. The system uses vector embeddings to understand natural language queries and retrieve relevant information across all connected sources, providing compiled answers that would normally require searching multiple systems. For QA Engineers: EVA assists in creating new tests by understanding requirements and providing templates/examples, identifies duplicate tests in existing storage to prevent redundant work, and helps clarify ambiguous requirements by pulling relevant context from JIRA stories, Confluence specs, and GitHub discussions. For Product Owners and Developers: EVA serves as an intelligent documentation assistant, answering technical questions, retrieving specifications, and providing historical context on features and decisions. For Onboarding and Training: EVA provides instant access to a comprehensive library of training recordings, documentation, and best practices, dramatically accelerating new team member productivity. As one of the company\'s first AI initiatives, EVA demonstrated the transformative potential of LLM-powered tools in enterprise environments, paving the way for broader AI adoption.',
     techStack: ['RAG (Retrieval Augmented Generation)', 'LLM', 'Vector Database', 'Python', 'Confluence API', 'JIRA API', 'TestRail API', 'GitHub API', 'Embeddings'],
-    metrics: [],
+    metrics: [
+      {
+        label: 'Data Source Integration',
+        value: '4+ Systems',
+        improvement: 'Unified knowledge from Confluence, JIRA, GitHub, and TestRail',
+        impact: 'Single AI-powered interface for all internal documentation and project data'
+      },
+      {
+        label: 'User Base Expansion',
+        value: 'Multi-Role',
+        improvement: 'Adopted by QA Engineers, Product Owners, and Developers',
+        impact: 'Cross-functional knowledge assistant serving entire engineering organization'
+      },
+      {
+        label: 'Duplicate Prevention',
+        value: 'Automated',
+        improvement: 'Identifies existing tests before creation, preventing redundant work',
+        impact: 'Reduced test suite bloat and eliminated duplicate test development effort'
+      },
+      {
+        label: 'Onboarding Acceleration',
+        value: 'Training Library',
+        improvement: 'Instant access to comprehensive recording library and documentation',
+        impact: 'Faster new team member ramp-up and reduced onboarding overhead'
+      },
+      {
+        label: 'AI Innovation',
+        value: 'First in Company',
+        improvement: 'Pioneering AI chatbot demonstrating enterprise LLM capabilities',
+        impact: 'Established foundation for company-wide AI adoption and innovation'
+      },
+    ],
     screenshots: [],
     status: 'draft',
     attachments: [
@@ -92,12 +130,44 @@ export const PROJECTS: IProject[] = [
     id: 'dart',
     slug: 'dart',
     title: 'DART - Dynamic Analysis Routine Tester',
+    heroImage: '/assets/dart/hero/dart_hero.webp',
     owner: 'rohitmenonv',
-    summary: 'DART (Dynamic Analysis Routine Tester) provides comprehensive code coverage analysis across multiple platforms including Android and Roku, enabling method-level visibility into test coverage gaps and automated reporting for improved test effectiveness.',
-    problem: 'Multi-platform applications (Android, Roku) lacked unified code coverage visibility, making it difficult to identify untested code paths and assess test quality across different architectures. Traditional coverage tools were platform-specific and insufficient for component-based architectures, leading to coverage gaps and reduced confidence in releases.',
-    solution: 'Implemented DART (Dynamic Analysis Routine Tester) with method-level code coverage analysis across multiple platforms. Integrated with Jenkins, New Relic dashboards, and GitHub workflow to provide automated coverage reporting, enabling precise identification of untested code paths and improving overall test quality across Android and Roku platforms.',
+    summary: 'Intelligent test selection and optimization system that analyzes code changes and automatically determines which tests to execute, which to skip, and which new tests to create. DART maps test coverage to code at the method level across Android and Roku platforms, reducing regression testing from days to hours while ensuring comprehensive coverage of modified code.',
+    problem: 'Running complete test suites for every build was extremely time-consuming and resource-intensive, often taking several days per regression cycle. Teams had no systematic way to determine which tests were actually relevant to code changes, leading to wasted effort testing unchanged functionality. Additionally, there was no automated mechanism to identify test coverage gaps for newly added code, resulting in missed edge cases and inconsistent test coverage across platforms.',
+    solution: 'Built DART as an intelligent test selection and optimization system that revolutionizes QA efficiency. For each build, DART collects code coverage data from multiple platforms (Roku, Android), then maps all automated and manual tests to specific classes, methods, and branches. When code changes are detected, DART analyzes the impact and automatically determines: (1) which existing tests must run to cover modified code, (2) which tests can be safely skipped, and (3) which new tests need to be created for uncovered methods. Additionally, DART identifies dead code - classes and methods that are never executed in the final application - enabling developers to clean up outdated code and reduce technical debt. This intelligent approach reduces regression testing from days to hours while maintaining comprehensive coverage and ensuring no critical tests are missed.',
     techStack: ['Ruby', 'RVM', 'GitHub Actions', 'Jenkins', 'New Relic', 'Android SDK', 'Roku SDK', 'BrightScript', 'Coverage Analysis', 'Roku Test Framework', 'Roku Debugger', 'Roku Profiler', 'GitHub API', 'Confluence API', 'JIRA API'],
-    metrics: [],
+    metrics: [
+      {
+        label: 'Time Reduction',
+        value: 'Days → Hours',
+        improvement: 'Regression testing reduced from several days to just hours per build',
+        impact: 'Enables rapid feedback cycles and faster release velocity'
+      },
+      {
+        label: 'Test Optimization',
+        value: '47 of 1,200',
+        improvement: 'Intelligent selection runs only relevant tests based on code changes',
+        impact: 'Saves engineering resources while maintaining comprehensive coverage'
+      },
+      {
+        label: 'Coverage Analysis',
+        value: 'Method-Level',
+        improvement: 'Maps every test to specific classes, methods, and branches across platforms',
+        impact: 'Automatically identifies coverage gaps and suggests new tests for uncovered code'
+      },
+      {
+        label: 'Platform Support',
+        value: '2+',
+        improvement: 'Currently supports Android and Roku with extensible architecture',
+        impact: 'Unified test intelligence across multiple platform architectures'
+      },
+      {
+        label: 'Dead Code Detection',
+        value: 'Automated',
+        improvement: 'Identifies unused classes and methods never executed in production',
+        impact: 'Enables code cleanup, reduces technical debt, and improves maintainability'
+      }
+    ],
     screenshots: [],
     status: 'draft',
     attachments: [
@@ -179,12 +249,44 @@ export const PROJECTS: IProject[] = [
     id: 'new-relic-qe-okr-dashboard',
     slug: 'new-relic-qe-okr-dashboard',
     title: 'New Relic QE OKR - Dashboard',
+    heroImage: '/assets/new-relic-qe-okr-dashboard/hero/qe_dashboard_hero.svg',
     owner: 'rob1nalex',
-    summary: 'New Relic is an observability platform which helps you bring in data from any digital source.',
-    problem: 'Relying on multiple disconnected tools for logs, metrics, and traces slows down the incident triage process.',
-    solution: 'New Relic provides a unified observability platform that consolidates logs, metrics, and traces, enabling faster triage, real-time insights, and proactive incident response across our software systems.',
-    techStack: ['New Relic', 'NRQL', 'Java', 'Apache HTTP Client'],
-    metrics: [],
+    summary: 'Comprehensive QA intelligence dashboards that aggregate data from multiple sources (TestRail, automated test reports, JIRA, Report Portal) into unified New Relic dashboards, providing real-time visibility into testing progress, smart bug detection, failure pattern analysis, and quality metrics across all platform teams. Two dashboard views: Management (whole team comparison) and Platform-Specific (detailed team insights with AI-powered bug matching).',
+    problem: 'QA teams lacked unified visibility into testing progress and quality metrics across multiple platforms and tools. Critical data was scattered across disconnected systems: TestRail for test management, JIRA for bug tracking, Report Portal for test execution results, and various CI/CD pipelines for automation reports. This fragmentation made it impossible to get a comprehensive view of team progress, compare performance across platforms, identify patterns in test failures, detect flaky tests, or make data-driven decisions about testing priorities. Leadership had no single source of truth for QA metrics, and teams spent significant time manually aggregating data from multiple sources to answer basic questions about test coverage and quality.',
+    solution: 'Built two comprehensive New Relic dashboards that integrate data from all QA tools and provide actionable intelligence. The system pulls data from TestRail (test management), automated test reports, JIRA (bug tracking), and Report Portal (test execution analytics) into unified visualizations. Dashboard 1 - Unified Management Dashboard: Shows whole team progress with cross-team comparisons of bugs found, automated tests developed, pending tests, manual-only tests, all presented in comparative charts for leadership visibility. Dashboard 2 - Platform-Specific User Dashboard: Provides detailed team insights based on selected platform and app, including issues per pipeline (smoke, regression), pass rates, error descriptions for failed tests with pattern detection to identify multiple tests with similar errors, smart bug detection using Report Portal AI to match new test failures against patterns from previously found bugs, regression completion tracking showing remaining tests to execute, infrastructure failure classification (network issues, Synergy platform issues vs. actual test failures), and flaky test identification. The platform-specific dashboard enables teams to quickly diagnose issues, identify known bugs automatically, and focus efforts on real problems rather than infrastructure noise.',
+    techStack: ['New Relic', 'NRQL', 'TestRail API', 'JIRA API', 'Report Portal API', 'Java', 'Apache HTTP Client'],
+    metrics: [
+      {
+        label: 'Data Source Integration',
+        value: '4 Systems',
+        improvement: 'Unified data from TestRail, JIRA, Report Portal, and automation pipelines',
+        impact: 'Single source of truth for all QA metrics and testing progress'
+      },
+      {
+        label: 'Smart Bug Detection',
+        value: 'AI-Powered',
+        improvement: 'Report Portal patterns automatically match new failures to known bugs',
+        impact: 'Eliminates duplicate bug reports and accelerates failure triage'
+      },
+      {
+        label: 'Platform Coverage',
+        value: 'All Teams',
+        improvement: 'Dashboards support all platform teams with app-specific views',
+        impact: 'Each team gets tailored insights for their platform and applications'
+      },
+      {
+        label: 'Failure Classification',
+        value: 'Automated',
+        improvement: 'Separates test failures from infrastructure issues (network, Synergy)',
+        impact: 'Teams focus on real test failures, not environmental noise'
+      },
+      {
+        label: 'Test Progress Visibility',
+        value: 'Real-Time',
+        improvement: 'Live tracking of regression completion and remaining test execution',
+        impact: 'Clear visibility into release readiness and testing bottlenecks'
+      },
+    ],
     screenshots: [],
     status: 'draft',
     attachments: [
@@ -225,21 +327,6 @@ export const PROJECTS: IProject[] = [
       { key: 'topic:analytics', label: 'Analytics' },
       { key: 'topic:reporting', label: 'Reporting' },
     ],
-  },
-  {
-    id: 'npaw-integration-testing',
-    slug: 'npaw-integration-testing',
-    title: 'NPAW Integration and Testing',
-    owner: 'rostialpin',
-    summary: '',
-    problem: '',
-    solution: '',
-    techStack: [],
-    metrics: [],
-    screenshots: [],
-    status: 'draft',
-    attachments: [],
-    links: [],
   },
   {
     id: 'data-observability',
@@ -284,12 +371,18 @@ export const PROJECTS: IProject[] = [
     id: 'config-comparison',
     slug: 'config-comparison',
     title: 'Config Comparison',
+    heroImage: '/assets/config-comparison/hero/cc_hero.png',
     owner: 'anilbvi',
-    summary: 'Compare configuration across different platforms to identify discrepancies and improve consistency.',
-    problem: 'Configuration issues in production, that leads to bugs and incidents; which was never seen in QA due to correct configuration in QA.',
-    solution: 'Compare configuration across different platforms to create a report, for which all the discrepancies aer reviewed and addressed by Dev leads',
-    techStack: ['Java', 'Apache HTTP Client', 'Excel', 'New Relic'],
-    metrics: [],
+    summary: 'Automated configuration validation system that proactively detects and prevents configuration discrepancies across multiple platforms and brands before production deployment, achieving zero configuration-related production issues through fast validation and comprehensive change detection.',
+    problem: "Configuration discrepancies were causing critical application issues in production that were never detected in QA environments due to environment-specific settings. Manual configuration validation was time-consuming, error-prone, and couldn't scale across multiple platforms (Android, iOS, Apple TV, Android TV, Fire TV, Roku, Web Connected TVs) and brands. Teams lacked visibility into configuration changes between releases, leading to unexpected production failures and lengthy incident resolution times.",
+    solution: 'Implemented comprehensive automated configuration validation using dual approaches: (1) UI-Based validation - launches applications and captures actual configuration from proxy logs during app load, then validates against expected baselines; (2) API-Based validation - directly fetches configuration from Neutron API endpoints for instant validation without device deployment. The system maintains baselined expected configurations, compares them against actual values using configurable match types (exact, regex, optional), and generates detailed comparison reports. Integrated into CI/CD pipelines for continuous validation, with automated email notifications highlighting only configuration changes (not full configs) for efficient review. Supports environment comparison (RC vs Production) with visual dashboards and historical tracking.',
+    techStack: ['Java', 'Apache HTTP Client', 'TestNG', 'New Relic', 'Synergy Platform', 'Neutron API', 'AWS S3'],
+    metrics: [
+      { label: 'Production Config Issues', value: '0', improvement: 'Eliminated all configuration-related production issues', impact: 'Zero config-related incidents and improved release confidence' },
+      { label: 'Validation Speed', value: '20s', improvement: 'Configuration validation completed in 20 seconds vs hours of manual checks', impact: 'Faster feedback cycles and accelerated release velocity' },
+      { label: 'Change Detection', value: '100%', improvement: 'Detects all configuration changes from last release', impact: 'Complete visibility and Dev approval before deployment' },
+      { label: 'Platform Coverage', value: '12+ Platforms', improvement: 'Validates across Android, iOS, Apple TV, Android TV, Fire TV, Roku, and 6 WCTV platforms', impact: 'Consistent configuration quality across entire platform ecosystem' }
+    ],
     screenshots: [],
     status: 'draft',
     attachments: [

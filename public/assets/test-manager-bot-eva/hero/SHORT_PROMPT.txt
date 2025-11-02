@@ -1,0 +1,62 @@
+EVA - ENTERPRISE VIRTUAL ASSISTANT - SHORT PROMPT
+=================================================
+
+COPY THIS (for ChatGPT DALL-E, Claude, or similar):
+
+Create a professional AI chatbot visualization in 16:9 landscape format showing an intelligent knowledge assistant that unifies enterprise information into a conversational interface.
+
+DATA FLOW (Left to Right):
+
+LEFT: "Fragmented Knowledge" (Orange theme)
+- 4 disconnected sources stacked:
+  1. Confluence - "Documentation"
+  2. JIRA - "Tickets"
+  3. GitHub - "Code"
+  4. TestRail - "Tests"
+- Scattered appearance with broken links
+- Question marks indicating confusion
+
+CENTER: "EVA Chatbot" (Blue theme)
+- Large chatbot interface with conversation
+- AI brain/RAG architecture icon
+- User question: "Show me similar tests"
+- EVA response with compiled answer
+- Vector database visualization
+- Features: "RAG", "Auto-Sync", "NLP", "Duplicate Detection"
+- "First Company AI Bot" badge
+- Glowing with knowledge streams
+
+RIGHT: "Multi-Role Benefits" (Three personas)
+
+TOP Persona (Green) - QA Engineer:
+- Icon: 🧪
+- "Test Creation", "Duplicate Detection", "Requirements"
+- Mini chat showing test assistance
+
+MIDDLE Persona (Purple) - Product Owner:
+- Icon: 📋
+- "Specs Retrieval", "Feature History", "Technical Q&A"
+- Mini chat showing feature context
+
+BOTTOM Persona (Teal) - Developer:
+- Icon: 💻
+- "Documentation", "Code Context", "Decisions"
+- Mini chat showing architecture help
+
+CONNECTING LINES:
+- Flowing blue knowledge streams from sources through EVA to users
+- Animated data particles
+- "24/7 Access" indicator
+- Vector embeddings flowing
+
+TOP BANNER: "EVA - Enterprise Virtual Assistant | Company's First AI Chatbot"
+
+BOTTOM METRICS: "4+ Sources Unified | RAG-Powered | QA/PO/Dev Support | Training Library"
+
+Dark gradient background (#1a1f2e to #2d3748), modern conversational AI interface, flowing knowledge streams, professional chatbot aesthetic, 16:9 landscape.
+
+=============================================
+
+ULTRA-SHORT VERSION:
+
+AI chatbot visualization: 4 scattered enterprise systems (Confluence, JIRA, GitHub, TestRail) on left in orange with confusion indicators, flowing through central blue EVA chatbot interface with AI brain and RAG architecture showing Q&A conversation, outputting to three user personas on right (QA Engineer in green, Product Owner in purple, Developer in teal) each with role-specific benefits and mini chat examples. Flowing blue knowledge streams with particles, vector database visualization, dark gradient background, modern conversational AI aesthetic, 16:9 landscape. Banner: "Company's First AI Chatbot". Metrics: 4+ sources, RAG-powered, multi-role.

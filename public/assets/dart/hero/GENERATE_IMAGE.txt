@@ -1,0 +1,48 @@
+===========================================
+DART HERO IMAGE - IMAGE GENERATOR PROMPT
+===========================================
+
+Copy and paste this into DALL-E, Midjourney, or similar image generation tools:
+
+---
+
+A professional technical infographic showing an intelligent software testing workflow in 4 connected panels, modern dark tech aesthetic, 16:9 aspect ratio, landscape orientation.
+
+Panel 1 (left, orange theme): "Code Changes Detected" - Git branch icon, text "Build #247 - 15 files changed", file names "PaymentProcessor.java", "UserAuth.java", "VideoPlayer.java", Android and Roku platform logos at bottom
+
+Panel 2 (center-left, blue theme): "Coverage Mapping" - Brain/AI network icon, text "342 methods analyzed", "Test-to-code mapping active", visual network of connecting lines between code and tests, "87%" in large green text, "23 unused methods" in small orange text
+
+Panel 3 (center-right, green theme): "Intelligent Test Selection" - Checkmark filter icon, text "Tests to Run: 47 of 1,200" in green, "Tests to Create: 8 new" in yellow, "Tests Skipped: 1,153" crossed out in gray, time comparison "2-3 days → 4-6 hours" with downward arrow, "90%+ reduction" gauge meter
+
+Panel 4 (right, purple theme): "Automated Execution" - Rocket automation icon, text "Regression: 47 tests queued", "New Tests: 8 created", Jenkins and GitHub Actions badge icons, "Ready in hours vs days"
+
+Design elements: flowing arrows connecting each panel from left to right, subtle data flow lines between sections, top banner with "DART - Dynamic Analysis Routine Tester" and subtitle "Intelligent Test Selection & Optimization", bottom metrics bar showing "Time Saved: Days → Hours", "Coverage: Method-Level", "Platforms: Android + Roku", "Dead Code: Auto-detected"
+
+Background: dark blue-gray gradient (#1a1f2e to #2d3748), subtle circuit board pattern overlay, professional software development aesthetic, clean modern sans-serif typography, soft glow effects around panels for depth, smooth color transitions
+
+Color palette: orange/amber (#f59e0b) for panel 1, electric blue (#3b82f6) for panel 2, green (#10b981) for panel 3, purple (#8b5cf6) for panel 4, white and light gray text, dark professional background
+
+Style: technical infographic, modern UI/UX design, data visualization, professional software tool marketing image, clean and uncluttered, enterprise software aesthetic, high contrast for readability
+
+---
+
+ALTERNATIVE SIMPLER VERSION (if above is too complex):
+
+A modern dark-themed dashboard showing software testing intelligence. Center display: large circular gauge showing "87%" code coverage in gradient green to blue. Above: "DART - Dynamic Analysis Routine Tester" logo. Left side: Android and Roku platform icons. Right side: three metric boxes displaying "Tests Run: 47 of 1,200" (green), "Time: Days → Hours" (orange), "Dead Code: 23 detected" (gray). Bottom row: Jenkins, GitHub Actions, and New Relic integration badges. Background: dark blue gradient (#1a1f2e to #2d3748) with subtle code pattern overlay. Visual style: professional technical dashboard, modern software tool interface, clean data visualization, enterprise quality.
+
+---
+
+MIDJOURNEY-SPECIFIC PARAMETERS (if using Midjourney):
+
+professional technical infographic, intelligent testing workflow, 4 connected panels, code changes detection, AI coverage mapping, test selection optimization, automated execution, Android Roku logos, dark blue gradient background, circuit board pattern, modern UI design, enterprise software aesthetic, data visualization, dashboard style --ar 16:9 --v 6 --style raw --s 250
+
+---
+
+TIPS FOR BEST RESULTS:
+1. If the tool generates text incorrectly, you may need to add the text in post-processing using design tools
+2. Focus on getting the layout, colors, and overall visual structure correct
+3. May need 2-3 iterations to get the perfect result
+4. Save as PNG, 1920x1080px resolution
+5. Ensure final file size is under 500KB for web optimization
+
+===========================================
