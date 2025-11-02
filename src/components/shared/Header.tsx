@@ -78,17 +78,15 @@ export function Header() {
               <span className="sm:hidden">📧</span>
             </Link>
 
-            {/* Logout Button - Only show if authenticated */}
-            {session && (
-              <button
-                onClick={() => signOut({ callbackUrl: '/auth/signin' })}
-                className="px-4 py-2 rounded-lg font-medium transition-all duration-300 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 border-2 border-red-200 dark:border-red-800"
-                title="Sign Out"
-              >
-                <span className="hidden sm:inline">Logout</span>
-                <span className="sm:hidden">🚪</span>
-              </button>
-            )}
+            {/* Logout Button - Always visible for convenience */}
+            <button
+              onClick={() => signOut({ callbackUrl: '/auth/signin' })}
+              className="px-4 py-2 rounded-lg font-medium transition-all duration-300 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 border-2 border-red-200 dark:border-red-800"
+              title="Sign Out"
+            >
+              <span className="hidden sm:inline">Logout</span>
+              <span className="sm:hidden">🚪</span>
+            </button>
           </div>
         </div>
       </nav>
