@@ -44,7 +44,12 @@ EMAIL_SERVER_PASSWORD=your-app-specific-password
 EMAIL_FROM=noreply@qa-portfolio.com
 
 # Allowed Email Domains (comma-separated)
+# Server-side validation
 ALLOWED_EMAIL_DOMAINS=paramount.com
+
+# Client-side validation (must match ALLOWED_EMAIL_DOMAINS)
+# NEXT_PUBLIC_ prefix makes it available to client-side code
+NEXT_PUBLIC_ALLOWED_EMAIL_DOMAINS=paramount.com
 
 # Optional: Whitelist specific emails for contractors/vendors
 # ALLOWED_EMAILS=contractor@otherdomain.com,vendor@example.com
@@ -129,6 +134,7 @@ git push origin main
      - `EMAIL_SERVER_PASSWORD` = `your-sendgrid-api-key`
      - `EMAIL_FROM` = `noreply@yourdomain.com`
      - `ALLOWED_EMAIL_DOMAINS` = `paramount.com`
+     - `NEXT_PUBLIC_ALLOWED_EMAIL_DOMAINS` = `paramount.com`
 6. Click "Deploy"
 
 ### Step 3: Test Authentication
@@ -144,11 +150,24 @@ git push origin main
 ## 🔒 Security Features
 
 ✅ **Passwordless** - No passwords to steal or forget  
-✅ **Domain Whitelisting** - Only `@paramount.com` emails allowed  
+✅ **Domain Whitelisting** - Only `@paramount.com` emails allowed (exact match)  
 ✅ **Magic Links** - Secure, time-limited authentication tokens  
 ✅ **Email Verification** - Users must have access to their email account  
 ✅ **JWT Sessions** - Secure, stateless session management  
 ✅ **Automatic Expiry** - Links expire after 24 hours  
+✅ **Dual Validation** - Both client-side (UX) and server-side (security) validation with exact domain matching
+
+### Domain Validation Security
+
+Both client and server perform **exact domain matching** to prevent spoofing:
+
+❌ **Blocked:** `fakeparamount.com`, `paramount.com.evil.com`, `myparamount.com`  
+✅ **Allowed:** `user@paramount.com` only
+
+**Why both client and server validation?**
+- **Client-side:** Immediate feedback to users (better UX)
+- **Server-side:** True security barrier (cannot be bypassed)
+- **Exact match:** Prevents subdomain and look-alike domain attacks  
 
 ---
 

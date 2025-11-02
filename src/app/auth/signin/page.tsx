@@ -24,9 +24,11 @@ function SignInForm() {
     setError('');
     setLoading(true);
 
-    // Validate email domain before sending
+    // Validate email domain before sending (exact match)
     const emailDomain = email.toLowerCase().split('@')[1];
-    if (!emailDomain || !emailDomain.includes('paramount.com')) {
+    const allowedDomains = (process.env.NEXT_PUBLIC_ALLOWED_EMAIL_DOMAINS || 'paramount.com').split(',');
+    
+    if (!emailDomain || !allowedDomains.includes(emailDomain)) {
       setError('Only @paramount.com email addresses are authorized. Please contact your manager for access.');
       setLoading(false);
       return;
