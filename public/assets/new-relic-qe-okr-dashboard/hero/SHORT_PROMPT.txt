@@ -1,0 +1,54 @@
+NEW RELIC QE OKR DASHBOARD - SHORT PROMPT
+===========================================
+
+COPY THIS (for ChatGPT DALL-E, Claude, or similar):
+
+Create a professional BI dashboard visualization in 16:9 landscape format showing a QA data aggregation system flowing from multiple sources to unified dashboards.
+
+DATA FLOW (Left to Right):
+
+LEFT: "QA Data Sources" (Orange theme)
+- 4 source icons stacked:
+  1. TestRail - "Test Management"
+  2. JIRA - "Bug Tracking"
+  3. Report Portal - "Test Execution"
+  4. CI/CD - "Automation Reports"
+- Data flow arrows pointing right
+
+CENTER: "New Relic Platform" (Blue theme)
+- New Relic logo/icon
+- Brain/AI icon for "Smart Processing"
+- Features: Pattern Detection, Bug Matching, Real-Time Analysis
+- NRQL query visualization
+- Glowing with data streams
+
+RIGHT: "Dual Dashboard Outputs" (Split view)
+
+TOP Dashboard (Green) - Management View:
+- Title: "Unified Management Dashboard"
+- Mini dashboard with bar charts
+- Metrics: "Bugs Found", "Tests Automated", "Team Progress"
+- Cross-team comparison charts
+
+BOTTOM Dashboard (Purple) - Platform View:
+- Title: "Platform-Specific User Dashboard"
+- Mini dashboard with detailed metrics
+- Shows: "Pass Rate 87%", "Smart Bug Match: 15", "Flaky Tests: 8", "Regression: 75%", "Infrastructure Issues: 12"
+- Error pattern visualization
+
+CONNECTING LINES:
+- Flowing blue data streams with animated dots
+- "AI Bug Detection" badge on stream to platform dashboard
+- "Real-Time" indicator
+
+TOP BANNER: "New Relic QE OKR Dashboard | Unified QA Intelligence"
+
+BOTTOM METRICS: "4 Data Sources | AI-Powered | All Teams | Real-Time"
+
+Dark gradient background (#1a1f2e to #2d3748), modern analytics/BI visualization style, flowing data streams, professional dashboard aesthetic.
+
+=============================================
+
+ULTRA-SHORT VERSION:
+
+Data flow diagram: 4 source systems (TestRail, JIRA, Report Portal, CI/CD) on left in orange, flowing through central blue New Relic platform with AI brain icon, outputting to two dashboard previews on right (management dashboard in green showing team comparisons, platform dashboard in purple showing detailed metrics with pass rate and bug detection). Flowing blue data streams, dark gradient background, modern BI dashboard aesthetic, 16:9 landscape. Metrics: 4 sources, AI-powered, real-time.

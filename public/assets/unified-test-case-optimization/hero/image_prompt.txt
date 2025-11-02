@@ -1,0 +1,143 @@
+UNIFIED TEST CASE OPTIMIZATION - HERO IMAGE PROMPT
+==================================================
+
+Create a professional test case collaboration visualization (1920x1080px, 16:9) showing the transformation from fragmented platform-specific test cases to unified, platform-neutral test cases shared across all teams through collaborative review.
+
+LAYOUT - BEFORE/PROCESS/AFTER TRANSFORMATION (Left to Right):
+
+LEFT SECTION (30%): "Before - Fragmented Test Cases"
+- Title: "Fragmented & Duplicated"
+- 8 platform icons arranged in scattered chaos:
+  * Apple TV
+  * iOS
+  * Android Mobile
+  * Android Tablet
+  * Android TV
+  * Fire TV
+  * Roku
+  * Web/WCTV
+- Each platform has its own test case documents (showing duplication)
+- Visual indicators of problems:
+  * Red X marks for "Outdated"
+  * Warning symbols for "Partially Changed"
+  * Question marks for "Duplicates?"
+  * Disconnected/broken links between platforms
+- Test case icons specific to each platform (no sharing)
+- Color: Red/Orange (#ef4444 to #f59e0b) for "problems"
+- Labels: "30% Redundancy", "No Coordination", "Platform-Locked"
+
+CENTER SECTION (40%): "Collaborative Review Process"
+- Title: "Unified Test Case Structure"
+- Large central repository/database icon showing unified test cases
+- Platform-neutral test case document at center
+- Features highlighted:
+  * "Platform-Neutral Steps"
+  * "App-Neutral Structure"
+  * "Generalized Flows"
+- Collaborative review workflow visualization:
+  * One team member creating/updating test (highlighted)
+  * Arrows pointing to 3+ reviewer avatars from different platforms
+  * Approval checkmarks from each reviewer
+  * "Min. 3 Approvers" badge
+  * "Different Platforms" indicator
+- 5-Phase approach shown as circular workflow:
+  1. "Review & Identify"
+  2. "Optimize Flows"
+  3. "Generalize Steps"
+  4. "Dry-Run & Execute"
+  5. "Maintain & Approve"
+- Color: Blue (#3b82f6) for "collaboration"
+- Flowing connection lines showing test case sharing
+
+RIGHT SECTION (30%): "After - Unified & Shared"
+- Title: "One Creates, All Reuse"
+- Same 8 platform icons, but now organized in unified circle
+- All platforms connected to central test repository
+- Green checkmarks everywhere showing:
+  * "30% Reduction"
+  * "60% Faster Execution"
+  * "Universal Quality"
+  * "No Duplication"
+- Visual flow: One team creates → 3+ approve → All teams access
+- Arrows showing "Free Reuse" from central repository to all platforms
+- Badge: "Foundation for 90% Code Reuse"
+- Color: Green (#10b981) for "success"
+- Connected/unified appearance with strong links
+
+CONNECTING ELEMENTS:
+- Transformation arrows from left to center to right
+- Before/After comparison emphasis
+- Data flow showing test cases moving from fragmented to unified
+- Collaboration icons (people working together)
+- Review/approval workflow with checkmarks
+- "Single Source of Truth" badge in center
+
+TOP BANNER:
+- "Unified Test Case Optimization"
+- "Foundation for Cross-Platform Test Automation"
+
+BOTTOM METRICS BAR:
+- "30% Test Reduction"
+- "60% Faster Execution"
+- "8+ Platforms Unified"
+- "3+ Platform Approvers Required"
+- "Enabled 90% Code Reuse Framework"
+
+VISUAL STYLE:
+- Background: Dark blue-gray gradient (#1a1f2e to #2d3748)
+- Before section: Red/orange tones showing problems
+- Center section: Blue collaborative workspace
+- After section: Green success indicators
+- Platform icons: Modern, colorful, recognizable
+- Test case documents: Paper/file icons
+- Collaboration: People/avatar icons working together
+- Professional software development/QA aesthetic
+- Emphasis on transformation and collaboration
+
+ALTERNATE SIMPLER CONCEPT - 3-PANEL TRANSFORMATION:
+
+LEFT PANEL (Red/Orange): "Before - Chaos"
+- 8 scattered platform icons
+- Each with duplicate test documents
+- Red X marks, warning symbols
+- "30% Redundancy" label
+- "Outdated tests"
+- "No coordination"
+- Broken/disconnected links
+
+CENTER PANEL (Blue): "Collaborative Process"
+- Central test case repository
+- One person creating/updating (highlighted)
+- 3 reviewers from different platforms approving
+- "Min. 3 Approvers" badge
+- 5 circular phases around center
+- "Platform-Neutral Structure" label
+- Workflow arrows showing review process
+
+RIGHT PANEL (Green): "After - Unified"
+- 8 platforms in organized circle
+- All connected to center
+- "One Creates, All Reuse" label
+- Green checkmarks
+- "60% Faster" metric
+- "Foundation for Automation" badge
+- Strong unified connections
+
+KEY MESSAGE TO CONVEY:
+- Foundation that enabled the Unified Test Automation Framework
+- Transformation from fragmented to unified test case structure
+- Platform-neutral and app-neutral test design
+- Collaborative maintenance: one team creates, all reuse for free
+- Rigorous quality through 3+ approvers from different platforms
+- Eliminated 30% redundancy and 60% execution time
+- Created single source of truth across all platforms
+- Enabled the later 90% code reuse in automation framework
+
+Technical Requirements:
+- 1920x1080px, 16:9 aspect ratio
+- PNG or WebP format
+- Under 500KB optimized
+- Readable when scaled to 800px
+- Professional QA/software development workflow aesthetic
+- Clear before/after transformation visual
+- Emphasis on collaboration and review process

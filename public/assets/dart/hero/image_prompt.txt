@@ -1,0 +1,68 @@
+Create a professional hero image (1920x1080px) for DART - an intelligent test selection system that analyzes code changes and automatically determines which tests to run. Modern workflow visualization with dark tech aesthetic.
+
+WORKFLOW VISUALIZATION (Left to Right):
+
+STEP 1 (LEFT - 25%): "Code Changes Detected"
+- Git diff icon showing code changes
+- Display: "Build #247 - 15 files changed"
+- Highlight changed classes/methods:
+  * PaymentProcessor.java (modified)
+  * UserAuth.java (new)
+  * VideoPlayer.java (modified)
+- Platform badges: Android + Roku logos
+- Color: Orange/amber (#f59e0b) for "changes"
+
+STEP 2 (CENTER-LEFT - 25%): "Coverage Mapping"
+- Brain/AI icon indicating intelligent analysis
+- Show coverage mapping visualization:
+  * "342 methods analyzed"
+  * "Test-to-code mapping active"
+  * Visual representation of tests linked to code (connecting lines)
+- Code coverage percentage: "87%" in green
+- Dead code identified: "23 unused methods" in orange/gray
+- Color: Blue (#3b82f6) for "analysis"
+
+STEP 3 (CENTER-RIGHT - 25%): "Intelligent Test Selection"
+- Checkmark/filter icon
+- Display test optimization results:
+  * "Tests to Run: 47 of 1,200" (green)
+  * "Tests to Create: 8 new" (yellow)
+  * "Tests Skipped: 1,153" (gray, crossed out)
+- Show time savings: "2-3 days → 4-6 hours" with downward arrow
+- Resource meter showing "90%+ reduction"
+- Color: Green (#10b981) for "optimization"
+
+STEP 4 (RIGHT - 25%): "Automated Execution"
+- Rocket/automation icon
+- Execution dashboard showing:
+  * "Regression: 47 tests queued"
+  * "New Tests: 8 created"
+  * Jenkins + GitHub Actions badges
+  * "Next Build: Ready in hours vs days"
+- Success indicator: "Resource Optimized ✓"
+- Color: Purple (#8b5cf6) for "automation"
+
+CONNECTING ELEMENTS:
+- Flowing arrows between each step (left to right)
+- Data flow lines connecting the panels
+- "DART Intelligence Engine" label on center connector
+
+TOP BANNER:
+- "DART - Dynamic Analysis Routine Tester"
+- Subtitle: "Intelligent Test Selection & Optimization"
+
+BOTTOM METRICS BAR:
+- Time Saved: "Days → Hours per build"
+- Coverage: "Method-Level Mapping"
+- Platforms: "2 (Android, Roku)"
+- Dead Code: "Auto-detected & removed"
+
+VISUAL STYLE:
+- Background: Dark gradient (#1a1f2e to #2d3748) with subtle circuit board pattern
+- Accent colors: Orange (#f59e0b), Blue (#3b82f6), Green (#10b981), Purple (#8b5cf6)
+- Modern sans-serif typography
+- Clean icons with glow effects
+- Data visualization with smooth gradients
+- Professional tech aesthetic
+
+Technical: 1920x1080px, PNG, under 500KB, readable at 800px width

@@ -1,0 +1,118 @@
+NEW RELIC QE OKR DASHBOARD - HERO IMAGE PROMPT
+================================================
+
+Create a professional technical infographic (1920x1080px, 16:9) showing a QA intelligence dashboard system that aggregates data from multiple sources into unified dashboards.
+
+LAYOUT - DATA FLOW VISUALIZATION (Left to Right):
+
+LEFT SECTION (25%): "Data Sources"
+- Title: "QA Data Sources"
+- 4 source systems stacked vertically:
+  1. TestRail icon - "Test Management"
+  2. JIRA icon - "Bug Tracking"
+  3. Report Portal icon - "Test Execution"
+  4. CI/CD pipeline icon - "Automation Reports"
+- Data flow arrows pointing right toward center
+- Color: Orange (#f59e0b) for "data input"
+
+CENTER SECTION (25%): "New Relic Platform"
+- Large New Relic logo/icon
+- Title: "Data Aggregation & Intelligence"
+- Brain/AI icon indicating smart processing
+- NRQL query visualization
+- Features listed:
+  * "Pattern Detection"
+  * "Smart Bug Matching"
+  * "Real-Time Analysis"
+- Glowing center with data streams flowing in and out
+- Color: Blue (#3b82f6) for "processing"
+
+RIGHT SECTION (50%): "Dual Dashboard Outputs"
+Split into two dashboard previews:
+
+TOP DASHBOARD (Management View):
+- Title: "Unified Management Dashboard"
+- Icon: 📊 Management/Leadership icon
+- Mini dashboard preview showing:
+  * Bar charts comparing teams
+  * "Bugs Found" metric
+  * "Tests Automated" metric
+  * "Team Progress" comparison
+  * Cross-team analytics
+- Color: Green (#10b981) for "leadership insights"
+
+BOTTOM DASHBOARD (Platform View):
+- Title: "Platform-Specific User Dashboard"
+- Icon: 🎯 Team/User icon
+- Mini dashboard preview showing:
+  * "Pass Rate: 87%"
+  * "Smart Bug Match: 15 known bugs"
+  * "Flaky Tests: 8 identified"
+  * "Regression: 75% complete"
+  * "Infrastructure Issues: 12"
+  * Error pattern visualization
+- Color: Purple (#8b5cf6) for "team insights"
+
+CONNECTING ELEMENTS:
+- Flowing data streams from sources through New Relic to dashboards
+- Animated data packets moving along the flow
+- "AI Bug Detection" badge on the flow to platform dashboard
+- "Real-Time" indicator on data streams
+
+TOP BANNER:
+- "New Relic QE OKR Dashboard"
+- "Unified QA Intelligence Across All Platforms"
+
+BOTTOM METRICS BAR:
+- "4 Data Sources Integrated"
+- "AI-Powered Bug Detection"
+- "All Platform Teams"
+- "Real-Time Visibility"
+
+VISUAL STYLE:
+- Background: Dark blue-gray gradient (#1a1f2e to #2d3748)
+- Data flow lines: Flowing blue (#3b82f6) with animated dots
+- Source icons: Full color on dark backgrounds
+- Dashboard previews: Mini screenshots/wireframes with clean charts
+- Modern software analytics aesthetic
+- Professional BI/dashboard visualization style
+- Emphasis on data flow and intelligence
+
+ALTERNATE SIMPLER CONCEPT:
+
+3-Panel Layout:
+
+LEFT PANEL (Orange): "Scattered Data"
+- 4 disconnected tool icons
+- Red X or broken links
+- "Data Silos" label
+- "Manual aggregation"
+
+CENTER PANEL (Blue): "New Relic Intelligence"
+- New Relic platform
+- AI brain icon
+- "Unified" label
+- Data streams connecting
+
+RIGHT PANEL (Green/Purple): "Actionable Dashboards"
+- Two dashboard icons stacked
+- Management Dashboard (top) - charts icon
+- Platform Dashboard (bottom) - detailed metrics icon
+- "Smart Insights" label
+- Green checkmarks
+
+Bottom metrics same as above.
+
+KEY MESSAGE TO CONVEY:
+- Multiple disconnected QA tools unified into one platform
+- Two different dashboard views for different audiences
+- AI-powered bug detection and pattern matching
+- Real-time visibility into testing progress
+- Eliminates manual data aggregation
+
+Technical Requirements:
+- 1920x1080px, 16:9 aspect ratio
+- PNG or WebP format
+- Under 500KB optimized
+- Readable when scaled to 800px
+- Modern BI/analytics dashboard aesthetic

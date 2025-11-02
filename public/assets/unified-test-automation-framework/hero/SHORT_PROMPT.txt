@@ -1,0 +1,40 @@
+UNIFIED TEST AUTOMATION FRAMEWORK - SHORT PROMPT
+==================================================
+
+COPY THIS (for ChatGPT DALL-E, Claude, or similar):
+
+Create a professional technical diagram in 16:9 landscape format showing a unified test automation framework connecting one codebase to multiple platforms.
+
+CENTER HUB: "Unified Framework Core"
+- Large glowing central hub icon
+- "Write Once, Run Everywhere"
+- Code icon with "90% Reusable" badge
+- Bright blue/white glow (#3b82f6)
+
+8 PLATFORMS RADIATING FROM CENTER (in circle):
+Connected with flowing blue data lines showing "10% adaptation" on each
+
+1. Apple TV (top-right) - Apple TV icon, green checkmark
+2. iOS (right) - iPhone icon, green checkmark
+3. Android Mobile (bottom-right) - Phone/tablet icons, green checkmark
+4. Android TV (bottom) - Android TV icon, green checkmark
+5. Fire TV (bottom-left) - Fire TV icon, green checkmark
+6. Roku (left) - Roku logo, green checkmark
+7. WCTV (top-left) - Connected TV icon, green checkmark
+8. Web (top) - Browser icon, green checkmark
+
+COMPARISON BOXES:
+Left (Red/crossed out): "Traditional: 6+ separate codebases, write tests 6× times, weeks of work"
+Right (Green/highlighted): "Unified: One codebase, 90% reuse, 10% adaptation, days instead of weeks"
+
+TOP BANNER: "Unified Test Automation Framework | One Codebase. All Platforms. 11-13 Applications."
+
+BOTTOM METRICS: "90% Code Reuse | 8+ Platforms | 11-13 Apps | Weeks → Days"
+
+Dark gradient background (#1a1f2e to #2d3748), flowing animated data lines, modern software architecture visualization, hub-and-spoke design, professional enterprise aesthetic.
+
+===================================================
+
+ULTRA-SHORT VERSION (for strict limits):
+
+Technical hub-and-spoke architecture diagram: central glowing blue framework hub connected to 8 platform icons (Apple TV, iOS, Android Mobile/Tablet, Android TV, Fire TV, Roku, WCTV, Web) via flowing data lines. Each line labeled "10% adaptation". Comparison boxes showing "before: 6+ codebases" vs "after: one codebase, 90% reuse". Dark gradient background, modern software tool aesthetic, 16:9 landscape. Metrics: 90% reuse, 8+ platforms, 11-13 apps, weeks to days.

@@ -1,0 +1,136 @@
+EVA - ENTERPRISE VIRTUAL ASSISTANT - HERO IMAGE PROMPT
+======================================================
+
+Create a professional AI/chatbot visualization (1920x1080px, 16:9) showing an intelligent knowledge assistant that unifies information from multiple enterprise systems into a single conversational interface.
+
+LAYOUT - KNOWLEDGE UNIFICATION FLOW (Left to Right):
+
+LEFT SECTION (25%): "Fragmented Knowledge Sources"
+- Title: "Scattered Information"
+- 4 disconnected data sources stacked vertically:
+  1. Confluence icon - "Documentation"
+  2. JIRA icon - "Tickets & Stories"
+  3. GitHub icon - "Code & Repos"
+  4. TestRail icon - "Test Cases"
+- Disconnected appearance with scattered documents/icons
+- Color: Orange (#f59e0b) for "fragmented data"
+- Visual indicators of disconnection (broken links, question marks)
+
+CENTER SECTION (35%): "EVA - AI Knowledge Assistant"
+- Large EVA chatbot interface/icon
+- Title: "EVA - Enterprise Virtual Assistant"
+- AI brain/neural network icon indicating RAG architecture
+- Chatbot conversation bubbles showing:
+  * User question: "Show me similar tests for login flow"
+  * EVA response with compiled answer
+- Features listed:
+  * "RAG Architecture"
+  * "Automated Data Collection"
+  * "Natural Language Understanding"
+  * "Smart Duplicate Detection"
+- Glowing center with knowledge streams flowing in from left
+- Vector database visualization (embeddings/vectors)
+- Color: Blue (#3b82f6) for "AI intelligence"
+- "First Company AI Chatbot" badge
+
+RIGHT SECTION (40%): "Multi-Role Benefits"
+Split into three user personas:
+
+TOP (QA Engineer):
+- Icon: 🧪 Test tube/engineer icon
+- Title: "QA Engineer"
+- Benefits shown:
+  * "Test Creation Assistance"
+  * "Duplicate Detection"
+  * "Requirement Clarification"
+- Mini chat showing EVA helping identify existing test
+- Color: Green (#10b981) for "QA productivity"
+
+MIDDLE (Product Owner):
+- Icon: 📋 Product/planning icon
+- Title: "Product Owner"
+- Benefits shown:
+  * "Specification Retrieval"
+  * "Feature History"
+  * "Technical Q&A"
+- Mini chat showing EVA retrieving feature context
+- Color: Purple (#8b5cf6) for "product insights"
+
+BOTTOM (Developer):
+- Icon: 💻 Code/developer icon
+- Title: "Developer"
+- Benefits shown:
+  * "Documentation Access"
+  * "Code Context"
+  * "Historical Decisions"
+- Mini chat showing EVA explaining architecture
+- Color: Teal (#14b8a6) for "developer support"
+
+CONNECTING ELEMENTS:
+- Flowing knowledge streams from sources through EVA to users
+- Data packets/nodes moving along the flow
+- "Automated Sync" indicator on data streams
+- "24/7 Knowledge Access" badge
+- Vector embeddings visualization flowing from sources to EVA
+
+TOP BANNER:
+- "EVA - Enterprise Virtual Assistant"
+- "Company's First AI Chatbot | Unified Knowledge Access"
+
+BOTTOM METRICS BAR:
+- "4+ Data Sources Unified"
+- "RAG-Powered Intelligence"
+- "Multi-Role Support: QA, PO, Dev"
+- "Automated Training Library"
+
+VISUAL STYLE:
+- Background: Dark blue-gray gradient (#1a1f2e to #2d3748)
+- Knowledge flow lines: Flowing blue (#3b82f6) with animated particles
+- Data source icons: Full color on dark backgrounds
+- EVA chatbot: Modern conversational UI with glowing AI elements
+- User persona cards: Mini screenshots with role-specific benefits
+- Modern AI/chatbot aesthetic with conversational interface
+- Emphasis on knowledge unification and multi-role accessibility
+
+ALTERNATE SIMPLER CONCEPT - 3-PANEL BEFORE/AFTER:
+
+LEFT PANEL (Orange): "Before EVA"
+- Multiple scattered tools
+- Person with question marks, frustrated
+- Manual searching across systems
+- "Hours of searching" label
+- Red X indicators
+
+CENTER PANEL (Blue): "EVA Intelligence"
+- Large chatbot interface
+- AI brain with RAG architecture
+- User asking question
+- EVA providing instant answer
+- "Automated knowledge retrieval" label
+- Vector database visualization
+
+RIGHT PANEL (Green/Purple): "After EVA"
+- Three happy user personas (QA, PO, Dev)
+- Quick answers with checkmarks
+- "Minutes to answers" label
+- "Training library access" badge
+- "Duplicate prevention" indicator
+- Green checkmarks everywhere
+
+KEY MESSAGE TO CONVEY:
+- First AI chatbot in the company, pioneering AI adoption
+- Unifies fragmented knowledge from multiple enterprise systems
+- Serves multiple roles: QA Engineers, Product Owners, Developers
+- RAG architecture for intelligent information retrieval
+- Automated data collection keeps knowledge current
+- Helps with test creation, duplicate detection, requirement clarification
+- Comprehensive training library for onboarding
+- Transforms scattered manual searching into instant AI-powered answers
+
+Technical Requirements:
+- 1920x1080px, 16:9 aspect ratio
+- PNG or WebP format
+- Under 500KB optimized
+- Readable when scaled to 800px
+- Modern AI/chatbot conversational interface aesthetic
+- Show RAG architecture and multi-role benefits clearly

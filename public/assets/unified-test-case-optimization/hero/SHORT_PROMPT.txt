@@ -1,0 +1,54 @@
+UNIFIED TEST CASE OPTIMIZATION - SHORT PROMPT
+=============================================
+
+COPY THIS (for ChatGPT DALL-E, Claude, or similar):
+
+Create a professional before/after transformation diagram in 16:9 landscape format showing the evolution from fragmented platform-specific test cases to unified, collaborative test case management across 8 platforms.
+
+3-PANEL LAYOUT (Left to Right):
+
+LEFT: "Before - Fragmented" (Red/Orange theme)
+- 8 scattered platform icons (Apple TV, iOS, Android, Fire TV, Roku, Web, etc.)
+- Each platform with duplicate test case documents
+- Red X marks for "Outdated"
+- Warning symbols for "Partially Changed"
+- Question marks for "Duplicates?"
+- Broken/disconnected links
+- Labels: "30% Redundancy", "No Coordination"
+
+CENTER: "Collaborative Review Process" (Blue theme)
+- Large central repository icon with unified test cases
+- Platform-neutral test document at center
+- One team member creating/updating (highlighted)
+- 3 reviewer avatars from different platforms with approval checkmarks
+- "Min. 3 Approvers from Different Platforms" badge
+- 5 circular phases around center: Review → Optimize → Generalize → Dry-Run → Maintain
+- Features: "Platform-Neutral", "App-Neutral", "Generalized Flows"
+- Arrows showing collaborative workflow
+
+RIGHT: "After - Unified & Shared" (Green theme)
+- Same 8 platform icons organized in unified circle
+- All connected to central repository with strong links
+- Green checkmarks everywhere
+- "One Creates, All Reuse" prominent label
+- Arrows showing "Free Reuse" from center to all platforms
+- Metrics: "30% Reduction", "60% Faster"
+- Badge: "Foundation for 90% Code Reuse"
+
+CONNECTING ELEMENTS:
+- Transformation arrows from left → center → right
+- Test case documents flowing from fragmented to unified
+- Collaboration/review workflow icons
+- "Single Source of Truth" badge
+
+TOP BANNER: "Unified Test Case Optimization | Foundation for Cross-Platform Automation"
+
+BOTTOM METRICS: "30% Test Reduction | 60% Faster Execution | 8+ Platforms | 3+ Approvers | Enabled 90% Code Reuse"
+
+Dark gradient background (#1a1f2e to #2d3748), professional QA/development workflow aesthetic, clear transformation visualization, 16:9 landscape.
+
+=============================================
+
+ULTRA-SHORT VERSION:
+
+Before/after transformation diagram: Left panel shows 8 scattered platform icons (Apple TV, iOS, Android, Fire TV, Roku, Web) in red/orange with duplicate test documents marked "Outdated" and disconnected. Center panel in blue shows unified test repository with one person creating, 3 reviewers from different platforms approving, 5-phase circular workflow, "Min. 3 Approvers" badge, platform-neutral structure. Right panel in green shows same 8 platforms unified in circle, all connected to center, "One Creates, All Reuse" label, green checkmarks, "60% Faster" metric. Transformation arrows connecting panels, dark gradient background, professional QA workflow aesthetic, 16:9 landscape. Metrics: 30% reduction, 3+ approvers, foundation for 90% code reuse.

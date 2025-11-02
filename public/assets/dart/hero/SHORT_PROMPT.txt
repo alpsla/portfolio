@@ -1,0 +1,21 @@
+DART HERO IMAGE - SHORT PROMPT
+================================
+
+COPY THIS (works best with ChatGPT DALL-E, Claude, or similar):
+
+Create a professional technical infographic in landscape 16:9 format showing a 4-step intelligent software testing workflow.
+
+Step 1 (orange): "Code Changes" - Git icon, "Build #247, 15 files", Android + Roku logos
+Step 2 (blue): "Coverage Mapping" - Brain/AI icon, "342 methods analyzed", network visualization, "87%", "23 unused methods"
+Step 3 (green): "Test Selection" - Filter icon, "47 of 1,200 tests", "2-3 days → 4-6 hours", gauge showing 90% reduction
+Step 4 (purple): "Execution" - Rocket icon, Jenkins + GitHub badges, "Ready in hours"
+
+Connect panels with flowing arrows left to right. Top: "DART - Intelligent Test Selection". Bottom metrics: "Days→Hours | Method-Level | Android+Roku | Dead Code Detected"
+
+Dark gradient background (#1a1f2e to #2d3748), circuit pattern, modern software dashboard style, professional enterprise aesthetic, clean typography, soft glows.
+
+================================
+
+ULTRA-SHORT VERSION (for tools with strict limits):
+
+Modern dark tech infographic, 4 connected panels showing software testing workflow: code changes (orange), AI coverage mapping (blue), intelligent test selection (green), automated execution (purple). Dark gradient background, circuit pattern, flowing arrows, metrics dashboard, Android and Roku logos, professional enterprise style, 16:9 landscape --v 6

@@ -1,0 +1,128 @@
+UNIFIED TEST AUTOMATION FRAMEWORK - HERO IMAGE PROMPT
+=======================================================
+
+Create a professional technical infographic (1920x1080px, 16:9) showing a unified automation framework that connects one codebase to multiple platforms.
+
+LAYOUT - CENTER HUB WITH RADIATING CONNECTIONS:
+
+CENTER (30%): "Unified Framework Core"
+- Large central hub/engine icon representing the unified framework
+- Title: "Unified Test Automation"
+- Subtitle: "Write Once, Run Everywhere"
+- Code icon showing TypeScript/test code with "90% Reusable" badge
+- Glowing center with energy radiating outward
+- Color: Bright white/blue glow (#3b82f6)
+
+RADIATING PLATFORMS (6 platforms in circle around center):
+Each platform connected to center hub with flowing data lines
+
+1. APPLE TV (top-right, 12 o'clock position)
+   - Apple TV icon/logo
+   - "Apple TV" label
+   - Green checkmark
+
+2. iOS (2 o'clock position)
+   - iPhone icon
+   - "iOS Mobile" label
+   - Green checkmark
+
+3. ANDROID (4 o'clock position)
+   - Android robot icon + tablet/phone icons
+   - "Android (Mobile, Tablet, TV, Fire TV)" label
+   - Green checkmark
+
+4. ROKU (6 o'clock position)
+   - Roku logo
+   - "Roku" label
+   - Green checkmark
+
+5. WCTV (8 o'clock position)
+   - Connected TV icon
+   - "WCTV" label
+   - Green checkmark
+
+6. WEB (10 o'clock position)
+   - Browser/globe icon
+   - "Web" label
+   - Green checkmark
+
+CONNECTING ELEMENTS:
+- Animated flowing lines from center hub to each platform
+- Data packets/dots moving along the lines
+- Each connection line labeled with "10% adaptation"
+- Visual emphasis on code flowing from center to all platforms
+
+TOP BANNER:
+- "Unified Test Automation Framework"
+- "One Codebase. All Platforms. 11-13 Applications."
+
+BOTTOM METRICS:
+- "90% Code Reuse" with reuse icon
+- "6 Platforms" with checkmarks
+- "11-13 Apps" with app grid icon
+- "Weeks → Days" with time reduction arrow
+
+LEFT SIDE HIGHLIGHT BOX:
+"Traditional Approach" (in red/gray, crossed out)
+- 6 separate codebases icon
+- "Write tests 6× for each platform"
+- "Massive duplication"
+
+RIGHT SIDE HIGHLIGHT BOX:
+"Unified Approach" (in green, highlighted)
+- Single codebase icon
+- "Write once + 10% adaptation"
+- "90% reuse across platforms"
+
+VISUAL STYLE:
+- Background: Dark blue gradient (#1a1f2e to #2d3748)
+- Central hub: Bright glowing blue/white (#3b82f6 to #ffffff)
+- Platform icons: Full color logos on dark backgrounds
+- Connection lines: Flowing animated blue (#3b82f6)
+- Data flow: Small moving dots/packets along lines
+- Success indicators: Green checkmarks (#10b981)
+- Modern, clean, technical aesthetic
+- Emphasis on "hub and spoke" architecture
+- Professional software tool visualization
+
+ALTERNATE CONCEPT (if circular layout too complex):
+
+Linear 3-step workflow:
+
+STEP 1 (Left - Orange): "Before"
+- Stack of 6 platform icons piled up
+- Text: "6 Separate Codebases"
+- "Same tests written 6× "
+- Red X icon
+- "Weeks of development"
+
+STEP 2 (Center - Blue): "Unified Framework"
+- Large framework hub icon
+- Code snippet showing unified test
+- "Write Once" badge
+- Intelligent adapter icons
+- Brain/AI icon
+
+STEP 3 (Right - Green): "After"
+- One codebase branching to 6 platforms
+- "90% Reuse" badge
+- "10% Adaptation per platform"
+- Green checkmarks on all platforms
+- "Days instead of weeks"
+
+Bottom metrics bar same as above
+
+Technical Requirements:
+- 1920x1080px, 16:9 aspect ratio
+- PNG or WebP format
+- Under 500KB optimized
+- Readable when scaled to 800px
+- Modern software tool aesthetic
+- High contrast for visibility
+
+KEY MESSAGE TO CONVEY:
+- One unified framework connects to all platforms
+- 90% code reuse with only 10% platform-specific adaptation
+- Dramatic time savings (weeks → days)
+- Supports 11-13 applications across 6 platforms
+- Revolutionary approach vs traditional separate implementations

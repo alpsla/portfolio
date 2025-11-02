@@ -98,3 +98,135 @@ npm run validate:external
 - Ensure both CI checks pass:
   - `external-safety / validate-external`
   - `owner-approval / require-owner-approval`
+
+---
+
+## How to Add/Update Your Team Member Profile
+
+Your profile appears on the **About** page. Follow these steps to add your information.
+
+### Where to Update
+**File:** `src/lib/constants/team.ts`
+
+Find your entry in the `TEAM_MEMBERS` array and replace `undefined` values with your information.
+
+### What to Fill Out
+
+#### 1. **Years of Experience** (Required)
+Total years in QA/Testing
+```typescript
+yearsOfExperience: 8
+```
+
+#### 2. **Background** (Required)
+Your professional journey in 2-3 sentences
+```typescript
+background: "Started as a QA Engineer in 2015, progressed through automation and leadership roles. Passionate about building scalable testing solutions and mentoring teams to achieve excellence."
+```
+
+#### 3. **Projects Participated** (Optional)
+Project IDs you've worked on from our portfolio
+```typescript
+projectsParticipated: ['data-observability', 'config-comparison', 'device-farm', 'playwright-framework']
+```
+
+**Available Project IDs:**
+`data-observability`, `config-comparison`, `test-execution-dashboard`, `appium-framework`, `device-farm`, `playwright-framework`, `unified-config`, `migration-tools`, `api-automation`, `performance-testing`, `ci-cd-integration`
+
+#### 4. **Key Skills** (Required)
+Your top 3-5 most valuable skills
+```typescript
+keySkills: [
+  'Test Automation Architecture',
+  'Team Leadership',
+  'CI/CD Pipeline Design',
+  'Cross-platform Testing',
+  'Playwright/Appium Expertise'
+]
+```
+
+#### 5. **Professional Interests** (Required)
+Areas you're passionate about professionally
+```typescript
+professionalInterests: [
+  'AI-powered testing',
+  'Performance optimization',
+  'DevOps integration',
+  'Test observability'
+]
+```
+
+#### 6. **Hobbies** (Optional)
+Personal interests - makes you relatable!
+```typescript
+hobbies: ['Photography', 'Hiking', 'Chess', 'Reading sci-fi']
+```
+
+#### 7. **Profile Picture** (Optional)
+When you have a professional photo:
+
+**Step 1: Prepare your photo**
+- Professional headshot or casual professional photo
+- Square aspect ratio (400x400px minimum recommended)
+- JPG or PNG format
+- Keep file size under 500KB
+
+**Step 2: Save photo to the repository**
+- Navigate to: `public/assets/team/` folder in the repository
+- Name your file using your team ID (from team.ts):
+  - If your ID is `rostialpin` → save as `rostialpin.jpg`
+  - If your ID is `krishnachaitanya` → save as `krishnachaitanya.jpg`
+  - If your ID is `rob1nalex` → save as `rob1nalex.jpg`
+- Full path example: `public/assets/team/rostialpin.jpg`
+
+**Step 3: Update your entry in team.ts**
+Add the `avatar` field pointing to your photo:
+```typescript
+avatar: '/assets/team/rostialpin.jpg'  // Use YOUR team ID
+```
+
+**Where to find your team ID:**
+Open `src/lib/constants/team.ts` and look for the `id` field in your entry.
+
+**Example file structure:**
+```
+portfolio/
+├── public/
+│   └── assets/
+│       └── team/
+│           ├── rostialpin.jpg       ← Your photo goes here
+│           ├── krishnachaitanya.jpg
+│           └── rob1nalex.jpg
+└── src/
+    └── lib/
+        └── constants/
+            └── team.ts              ← Update avatar field here
+```
+
+### Full Example
+
+```typescript
+{
+  id: 'rostialpin',
+  name: 'Rostislav Alpin',
+  email: 'rostislav.alpin@paramount.com',
+  role: 'Manager',
+
+  yearsOfExperience: 8,
+  background: "Started as a QA Engineer in 2015, progressed through automation and leadership roles. Passionate about building scalable testing solutions and mentoring teams to achieve excellence.",
+  projectsParticipated: ['data-observability', 'config-comparison', 'device-farm'],
+  keySkills: ['Test Automation Architecture', 'Team Leadership', 'CI/CD Pipeline Design', 'Cross-platform Testing'],
+  professionalInterests: ['AI-powered testing', 'Performance optimization', 'DevOps integration'],
+  hobbies: ['Photography', 'Hiking', 'Chess'],
+  avatar: '/assets/team/rostialpin.jpg',
+},
+```
+
+### How to Submit
+1. Update your entry in `src/lib/constants/team.ts`
+2. (Optional) Add your photo to `public/assets/team/`
+3. Create a PR with your changes
+4. Your profile will appear on the About page once merged!
+
+### Questions?
+Contact Rostislav or refer to `TEAM_INFO_TEMPLATE.md` for detailed guidance.
