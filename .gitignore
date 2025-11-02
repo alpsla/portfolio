@@ -47,3 +47,5 @@ coverage/
 # Hosting
 .vercel/
 .vercel
+
+/generated/prisma
