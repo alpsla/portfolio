@@ -2,7 +2,7 @@
  * Component: Header
  * Author: AR
  * Created: 2025-10-31
- * Modified: 2025-10-31 by AR
+ * Modified: 2025-11-02 by AR - Add logout button
  * Description: Global navigation header with logo and links.
  */
 
@@ -10,9 +10,11 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useSession, signOut } from 'next-auth/react';
 
 export function Header() {
   const pathname = usePathname();
+  const { data: session } = useSession();
 
   const isActive = (path: string) => {
     if (path === '/') return pathname === '/';
@@ -75,6 +77,18 @@ export function Header() {
               <span className="hidden sm:inline">Contact</span>
               <span className="sm:hidden">📧</span>
             </Link>
+
+            {/* Logout Button - Only show if authenticated */}
+            {session && (
+              <button
+                onClick={() => signOut({ callbackUrl: '/auth/signin' })}
+                className="px-4 py-2 rounded-lg font-medium transition-all duration-300 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 border-2 border-red-200 dark:border-red-800"
+                title="Sign Out"
+              >
+                <span className="hidden sm:inline">Logout</span>
+                <span className="sm:hidden">🚪</span>
+              </button>
+            )}
           </div>
         </div>
       </nav>
