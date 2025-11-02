@@ -2,12 +2,15 @@
  * Page: Project Detail
  * Author: AR
  * Created: 2025-10-08
- * Modified: 2025-10-31 by AR
+ * Modified: 2025-11-01 by AR - Force dynamic rendering for auth middleware
  * Description: Detail view for a project by slug with enhanced animations and icons.
  */
 
 import { PROJECTS } from '../../../lib/constants/projects';
 import { sanitizeAllProjects } from '../../../lib/utils/safety';
+
+// Force dynamic rendering so middleware can protect this page
+export const dynamic = 'force-dynamic';
 
 interface Params {
   params: { slug: string };

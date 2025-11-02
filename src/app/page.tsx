@@ -2,7 +2,7 @@
  * Page: Home
  * Author: AR
  * Created: 2025-10-08
- * Modified: 2025-10-31 by AR
+ * Modified: 2025-11-01 by AR - Force dynamic rendering for auth middleware
  * Description: Enhanced home page showcasing team achievements and major projects.
  */
 
@@ -14,6 +14,9 @@ import { ProjectCard } from '../components/shared/ProjectCard';
 import { SafetyBanner } from '../components/shared/SafetyBanner';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+
+// Force dynamic rendering so middleware can protect this page
+export const dynamic = 'force-dynamic';
 
 export default function HomePage() {
   const data = sanitizeAllProjects(PROJECTS);

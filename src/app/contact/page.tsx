@@ -2,12 +2,15 @@
  * Page: Contact
  * Author: AR
  * Created: 2025-10-09
- * Modified: 2025-10-31 by AR
+ * Modified: 2025-11-01 by AR - Force dynamic rendering for auth middleware
  * Description: Contact details for the team.
  */
 
 import { SafetyBanner } from '../../components/shared/SafetyBanner';
 import { TEAM_MEMBERS } from '../../lib/constants/team';
+
+// Force dynamic rendering so middleware can protect this page
+export const dynamic = 'force-dynamic';
 
 export default function ContactPage() {
   return (
