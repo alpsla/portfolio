@@ -19,7 +19,14 @@ interface Params {
 export default function ProjectDetailPage({ params }: Params) {
   const data = sanitizeAllProjects(PROJECTS);
   const project = data.find((p) => p.slug === params.slug);
-  if (!project) return <div className="p-6">Project not found.</div>;
+  
+  if (!project) {
+    return (
+      <AuthGuard>
+        <div className="p-6">Project not found.</div>
+      </AuthGuard>
+    );
+  }
 
   return (
     <AuthGuard>
