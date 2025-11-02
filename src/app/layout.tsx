@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "../components/shared/Header";
+import { SessionProvider } from "../components/shared/SessionProvider";
 
 export const metadata: Metadata = {
   title: "QA Team Portfolio - Unified QA Innovations",
@@ -15,8 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <Header />
-        {children}
+        <SessionProvider>
+          <Header />
+          {children}
+        </SessionProvider>
       </body>
     </html>
   );
