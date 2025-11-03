@@ -37,7 +37,7 @@ export default function ProjectDetailPage({ params }: Params) {
           <img
             src={project.heroImage}
             alt={`${project.title} - Architecture Diagram`}
-            className="w-full h-auto max-h-[85vh] object-contain"
+            className="w-full h-auto max-h-[50vh] object-contain"
           />
         </div>
       )}
