@@ -201,17 +201,20 @@ export default function ProjectDetailPage({ params }: Params) {
                     </div>
                   </div>
                   <div className="flex gap-3 mt-auto">
+                    {/* Show View button only for PDFs and images that can be viewed in browser */}
+                    {(a.kind === 'pdf' || a.kind === 'image') && (
+                      <a
+                        className="flex-1 text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2"
+                        href={a.src}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span>👁️</span>
+                        <span>View</span>
+                      </a>
+                    )}
                     <a
-                      className="flex-1 text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2"
-                      href={a.src}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span>👁️</span>
-                      <span>View</span>
-                    </a>
-                    <a
-                      className="flex-1 text-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2"
+                      className={`${a.kind === 'pdf' || a.kind === 'image' ? 'flex-1' : 'w-full'} text-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2`}
                       href={a.src}
                       download
                     >
