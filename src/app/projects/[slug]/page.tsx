@@ -31,25 +31,27 @@ export default function ProjectDetailPage({ params }: Params) {
   return (
     <AuthGuard>
       <main className="container mx-auto p-6 max-w-7xl pt-8">
-      {/* Hero Image */}
+      {/* Title - Always show for consistency */}
+      <div className="mb-8">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent text-center">
+          {project.title}
+        </h1>
+      </div>
+
+      {/* Hero Image - Larger size to fill space */}
       {project.heroImage && (
         <div className="mb-10 rounded-xl overflow-hidden max-w-6xl mx-auto shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] transform">
           <img
             src={project.heroImage}
             alt={`${project.title} - Architecture Diagram`}
-            className="w-full h-auto max-h-[40vh] object-contain"
+            className="w-full h-auto max-h-[70vh] object-contain"
           />
         </div>
       )}
 
-      {/* Title & Summary - Only show title if no hero image */}
-      <div className="mb-10">
-        {!project.heroImage && (
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-            {project.title}
-          </h1>
-        )}
-        <p className="text-gray-700 dark:text-gray-200 text-xl leading-relaxed">{project.summary}</p>
+      {/* Summary */}
+      <div className="mb-10 max-w-5xl mx-auto">
+        <p className="text-gray-700 dark:text-gray-200 text-xl leading-relaxed text-center">{project.summary}</p>
       </div>
 
       {/* Problem Section */}
