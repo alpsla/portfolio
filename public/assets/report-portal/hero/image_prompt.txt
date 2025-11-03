@@ -1,0 +1,124 @@
+REPORT PORTAL - HERO IMAGE PROMPT
+==================================
+
+Create a professional technical infographic (1920x1080px, 16:9) showing a TestOps reporting platform that centralizes test results from multiple frameworks into unified analytics dashboards.
+
+LAYOUT - DATA FLOW VISUALIZATION (Left to Right):
+
+LEFT SECTION (25%): "Test Execution Sources"
+- Title: "Test Frameworks"
+- Multiple test framework icons stacked vertically:
+  1. Java icon - "Unit Tests"
+  2. Playwright icon - "E2E Tests"
+  3. Selenium icon - "Web Tests"
+  4. API/Postman icon - "Integration Tests"
+  5. Cypress icon - "UI Tests"
+- Test result data streams flowing right toward center
+- Color: Blue (#3b82f6) for "test execution"
+
+CENTER SECTION (25%): "Report Portal Platform"
+- Large Report Portal logo/icon
+- Title: "Centralized Test Reporting & Analytics"
+- Analytics engine icon/brain
+- Key features listed:
+  * "Flaky Test Detection"
+  * "Pattern Recognition"
+  * "Historical Trend Analysis"
+  * "Real-Time Reporting"
+- Glowing center with test result streams flowing in and out
+- Data aggregation visualization
+- Color: Purple (#8b5cf6) for "analytics processing"
+
+RIGHT SECTION (50%): "Dual Dashboard Outputs"
+Split into two dashboard previews:
+
+TOP DASHBOARD (Test Results View):
+- Title: "Unified Test Dashboard"
+- Icon: 📊 Test Execution icon
+- Mini dashboard preview showing:
+  * Test execution bar chart
+  * "Pass Rate: 92%"
+  * "Tests Executed: 1,247"
+  * "Flaky Tests: 12 identified"
+  * Test status breakdown (pass/fail/skip)
+  * Recent test run timeline
+- Color: Green (#10b981) for "test execution"
+
+BOTTOM DASHBOARD (Analytics View):
+- Title: "Trend Analysis & Insights"
+- Icon: 📈 Analytics icon
+- Mini dashboard preview showing:
+  * Historical trend chart
+  * "Release Confidence: 85%"
+  * "Triage Time Saved: 60%"
+  * "Failure Pattern Detection: 8 patterns"
+  * Flaky test identification highlights
+  * Failure pattern visualization
+- Color: Orange (#f59e0b) for "analytics insights"
+
+CONNECTING ELEMENTS:
+- Flowing data streams from test frameworks through Report Portal to dashboards
+- Animated test result packets moving along the flow
+- "Flaky Detection" badge on the flow to analytics dashboard
+- "Real-Time" indicator on data streams
+- "Pattern Recognition" label on analytics stream
+
+TOP BANNER:
+- "Report Portal"
+- "Centralized Test Reporting & Analytics Platform"
+
+BOTTOM METRICS BAR:
+- "Multi-Framework Support"
+- "Flaky Test Detection"
+- "Accelerated Triage"
+- "Historical Trend Analysis"
+
+VISUAL STYLE:
+- Background: Dark blue-purple gradient (#1a1f2e to #3d2f5e)
+- Data flow lines: Flowing purple-blue (#8b5cf6) with animated dots
+- Framework icons: Full color on dark backgrounds
+- Dashboard previews: Mini screenshots/wireframes with clean charts
+- Modern TestOps/analytics aesthetic
+- Professional test reporting visualization style
+- Emphasis on data centralization and analytics
+
+ALTERNATE SIMPLER CONCEPT:
+
+3-Panel Layout:
+
+LEFT PANEL (Blue): "Scattered Test Results"
+- Multiple disconnected test framework icons
+- Red X or broken links
+- "Fragmented Reporting" label
+- "Manual analysis required"
+
+CENTER PANEL (Purple): "Report Portal Centralization"
+- Report Portal platform
+- Analytics engine icon
+- "Unified" label
+- Test result streams connecting
+
+RIGHT PANEL (Green/Orange): "Actionable Dashboards"
+- Two dashboard icons stacked
+- Test Results Dashboard (top) - execution metrics icon
+- Analytics Dashboard (bottom) - trends and insights icon
+- "Smart Insights" label
+- Green checkmarks
+
+Bottom metrics same as above.
+
+KEY MESSAGE TO CONVEY:
+- Multiple test frameworks unified into one reporting platform
+- Two different dashboard views: test execution and analytics
+- Automated flaky test detection and pattern recognition
+- Accelerated triage through centralized analytics
+- Historical trend analysis for release confidence
+- Eliminates manual test result aggregation
+
+Technical Requirements:
+- 1920x1080px, 16:9 aspect ratio
+- SVG format preferred (or PNG/WebP)
+- Under 500KB optimized
+- Readable when scaled to 800px
+- Modern TestOps/analytics dashboard aesthetic
+

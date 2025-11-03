@@ -307,25 +307,63 @@ export const PROJECTS: IProject[] = [
     id: 'report-portal',
     slug: 'report-portal',
     title: 'Report Portal',
-    owner: 'JuneyJestin',
+    heroImage: '/assets/report-portal/hero/report_portal_hero.svg',
+    owner: 'dhanyamathew',
     summary: 'ReportPortal is a TestOps service, that provides increased capabilities to speed up results analysis and reporting through the use of built-in analytic features.',
     problem: 'Traditional test reporting workflows are slow, fragmented, and lack actionable insights, making it difficult to analyze results efficiently.',
     solution: 'ReportPortal streamlines test result analysis by centralizing reporting and leveraging built-in analytics to identify flaky tests, accelerate triage, and improve release confidence.',
     techStack: ['Java', 'TypeScript', 'REST API', 'React'],
-    metrics: [],
+    metrics: [
+      {
+        label: 'Centralized Test Reporting',
+        value: 'Unified Dashboard',
+        improvement: 'Aggregates test results from multiple frameworks and tools into single view',
+        impact: 'Eliminates context switching between systems, reduces time spent gathering test data'
+      },
+      {
+        label: 'Flaky Test Detection',
+        value: 'Automated Identification',
+        improvement: 'Built-in analytics automatically identify and flag unstable tests',
+        impact: 'Teams can prioritize fixing unreliable tests, reducing false positives and wasted investigation time'
+      },
+      {
+        label: 'Test Result Analysis Speed',
+        value: 'Accelerated Triage',
+        improvement: 'Advanced filtering, search, and analytics reduce manual analysis time',
+        impact: 'Engineers spend less time digging through logs and more time fixing issues'
+      },
+      {
+        label: 'Historical Trend Analysis',
+        value: 'Pattern Recognition',
+        improvement: 'Track test execution trends, failure patterns, and quality metrics over time',
+        impact: 'Data-driven decisions on test stability, coverage gaps, and release readiness'
+      },
+      {
+        label: 'Release Confidence',
+        value: 'Improved Visibility',
+        improvement: 'Real-time dashboards show test execution status and quality metrics',
+        impact: 'Better release decisions with clear visibility into test coverage and failure rates'
+      },
+    ],
     screenshots: [],
     status: 'draft',
-    attachments: [],
+    attachments: [
+      { kind: 'pdf', title: 'Report Portal', src: '/assets/report-portal/pdfs/Report Portal', sensitivity: 'internal' },
+      { kind: 'pdf', title: 'Report Portal - User Guide', src: '/assets/report-portal/pdfs/Report Portal - User Guide.pdf', sensitivity: 'internal' },
+      { kind: 'pdf', title: 'Report Portal - Overview & Capabilities', src: '/assets/report-portal/pdfs/Report Portal - Overview and Capabilities.pdf', sensitivity: 'internal' },
+    ],
     links: [
-      { label: 'Report Portal', url: 'https://paramount.atlassian.net/wiki/spaces/DEV/pages/301334529/Report+Portal', sensitivity: 'internal' },
+      { label: 'What is Report Portal? - Video', url: 'https://youtu.be/Xci19TAiO50', sensitivity: 'public' },
       { label: 'Report Portal Training Video', url: 'https://viacom.sharepoint.com/:v:/s/VIA-Digital-QAConnectedTV/EZjSHbRIFqtHs9mxEhwleiABLmih2s2xu4cBSyfE3a_gXA?e=fnjBxC', sensitivity: 'internal' },
-      { label: 'Report Portal Configuration', url: 'https://paramount.atlassian.net/wiki/spaces/VCD/pages/302417282/Report+Portal+-+Configuration', sensitivity: 'internal' },
-      { label: 'Report Portal Presentation PDF', url: 'https://viacom.sharepoint.com/:b:/s/VIA-Digital-QAConnectedTV/EWsMghRiwbFAkF15Ubog8p8B9TaSr_F69mX8TRvzLjjmEg?e=z0AfKI', sensitivity: 'internal' },
+      { label: 'Report Portal Tutorial', url: 'https://reportportal.io/docs/tutorial/', sensitivity: 'public' },
       { label: 'Report Portal Docs', url: 'https://reportportal.io/docs/', sensitivity: 'public' },
     ],
     tags: [
       { key: 'topic:analytics', label: 'Analytics' },
-      { key: 'topic:reporting', label: 'Reporting' },
+      { key: 'topic:reporting', label: 'Reporting' }, 
+      { key: 'topic:testing', label: 'Testing' },
+      { key: 'platform:multi', label: 'Multi-Platform' },
+      { key: 'topic:automation', label: 'Automation' },
     ],
   },
   {
