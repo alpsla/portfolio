@@ -41,7 +41,7 @@ export const PROJECTS: IProject[] = [
     id: 'unified-test-automation-framework',
     slug: 'unified-test-automation-framework',
     title: 'Unified Test Automation Framework',
-    heroImage: '/assets/unified-test-automation-framework/hero/unified_framework_hero.png',
+    heroImage: '/assets/unified-test-automation-framework/hero/unified_framework_hero.svg',
     owner: 'rob1nalex',
     summary: 'Revolutionary unified automation framework that enables 90%+ code reuse across 11-13 applications and all CTV/mobile platforms (Apple TV, iOS, Android Mobile/Tablet, Android TV, Fire TV, Roku, WCTV, Web). Build tests once for one platform, then adapt to other platforms with just 10% additional effort, dramatically reducing development time and maintenance burden while ensuring consistent quality across the entire platform ecosystem.',
     problem: 'The team supports QA for all CTV and mobile platforms (Apple TV, iOS, Android phones/tablets, Android TV, Fire TV, Roku, WCTV, Web), testing 11-13 applications across each platform. Using traditional Selenium-Appium and company frameworks, each platform required completely separate test implementations due to platform-specific automation differences (element locators, navigation patterns, input methods like remote control vs clicks/taps). This created massive code duplication - essentially writing the same tests 6+ times for each application across platforms. The maintenance burden was enormous, and developing new test coverage meant multiplying effort across all platforms, severely limiting testing capacity and release velocity.',
