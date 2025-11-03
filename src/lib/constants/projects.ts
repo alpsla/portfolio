@@ -389,6 +389,7 @@ export const PROJECTS: IProject[] = [
       { kind: 'pdf', title: 'Configuration Validation Automation', src: '/assets/config-comparison/pdfs/Configuration Validation Automation.pdf', sensitivity: 'internal' },
       { kind: 'pdf', title: 'Config Comparison Internal Document', src: '/assets/config-comparison/pdfs/App Config Test - Technical Implementation Guide - Internal.pdf', sensitivity: 'internal' },
       { kind: 'pdf', title: 'Config Comparison Public Document', src: '/assets/config-comparison/pdfs/App Config Test - User Guide - Public.pdf', sensitivity: 'public' },
+      { kind: 'doc', title: 'WCTV Config Comparison Report', src: '/assets/config-comparison/spreadsheets/WCTV-ConfigValidation-ProdVsRc-20251023.xlsx', sensitivity: 'internal' },
     ],
     links: [
       { label: 'WCTV Config Report Generation Training Video', url: 'https://viacom.sharepoint.com/:v:/r/sites/VIA-Digital-QAConnectedTV/Shared%20Documents/Unified/CTV-Training/WCTV/20240125%20WCTV%20Config%20Report%20Generation%20for%20RC.mp4?csf=1&web=1&e=qiG0Sb', sensitivity: 'internal' },
