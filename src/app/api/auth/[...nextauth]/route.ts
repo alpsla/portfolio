@@ -103,20 +103,8 @@ const authOptions: NextAuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
   // Enable debug mode in development for better error messages
   debug: process.env.NODE_ENV === 'development',
-  // Cookie settings to ensure proper session handling
-  cookies: {
-    sessionToken: {
-      name: `__Secure-next-auth.session-token`,
-      options: {
-        httpOnly: true,
-        sameSite: 'lax',
-        path: '/',
-        secure: true,
-      },
-    },
-  },
-  // Ensure NEXTAUTH_URL is used for callbacks
-  useSecureCookies: true,
+  // Trust Vercel forwarded host headers for correct callback URLs
+  trustHost: true,
 };
 
 // Email HTML body
