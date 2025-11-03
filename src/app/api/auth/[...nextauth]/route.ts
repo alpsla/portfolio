@@ -12,6 +12,10 @@ import { PrismaAdapter } from '@auth/prisma-adapter';
 import { prisma } from '../../../../lib/prisma';
 import nodemailer from 'nodemailer';
 
+// Ensure Node.js runtime and no caching for this route
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+
 // Whitelist of allowed company email domains
 const ALLOWED_DOMAINS = process.env.ALLOWED_EMAIL_DOMAINS?.split(',') || ['paramount.com'];
 
