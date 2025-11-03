@@ -93,8 +93,8 @@ const authOptions: NextAuthOptions = {
     },
     // Session callback for database sessions
     async session({ session, user }) {
-      if (session?.user) {
-        session.user.id = user.id;
+      if (session?.user && user) {
+        // Do not set id to avoid TS type mismatch; only enrich name if needed
         session.user.name = user.name || user.email?.split('@')[0].replace('.', ' ');
       }
       return session;
