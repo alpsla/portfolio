@@ -46,9 +46,11 @@ const authOptions: NextAuthOptions = {
       },
     }),
   ],
+  // Use database sessions instead of JWT - this is required for magic links with adapters
   session: {
-    strategy: 'jwt',
+    strategy: 'database',
     maxAge: 30 * 24 * 60 * 60, // 30 days
+    updateAge: 24 * 60 * 60, // 24 hours
   },
   pages: {
     signIn: '/auth/signin',
@@ -78,22 +80,18 @@ const authOptions: NextAuthOptions = {
       console.log('Unauthorized email domain attempt:', email);
       return `/auth/error?error=AccessDenied`;
     },
-    async jwt({ token, user }) {
-      if (user) {
-        token.email = user.email;
-        token.name = user.name || user.email?.split('@')[0].replace('.', ' ');
-      }
-      return token;
-    },
-    async session({ session, token }) {
-      if (token && session.user) {
-        session.user.email = token.email as string;
-        session.user.name = token.name as string;
+    // Session callback for database sessions
+    async session({ session, user }) {
+      if (session?.user) {
+        session.user.id = user.id;
+        session.user.name = user.name || user.email?.split('@')[0].replace('.', ' ');
       }
       return session;
     },
   },
   secret: process.env.NEXTAUTH_SECRET,
+  // Enable debug mode in development for better error messages
+  debug: process.env.NODE_ENV === 'development',
 };
 
 // Email HTML body
