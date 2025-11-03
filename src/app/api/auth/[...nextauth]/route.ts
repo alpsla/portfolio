@@ -12,6 +12,10 @@ import { PrismaAdapter } from '@auth/prisma-adapter';
 import { prisma } from '../../../../lib/prisma';
 import nodemailer from 'nodemailer';
 
+// Ensure Node.js runtime and no caching for this route
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+
 // Whitelist of allowed company email domains
 const ALLOWED_DOMAINS = process.env.ALLOWED_EMAIL_DOMAINS?.split(',') || ['paramount.com'];
 
@@ -31,24 +35,33 @@ const authOptions: NextAuthOptions = {
         },
       },
       from: process.env.EMAIL_FROM || 'noreply@qa-portfolio.com',
-      // Customize the email sent
+      // Customize the email sent: route via /auth/verify to avoid email scanners consuming token
       sendVerificationRequest: async ({ identifier: email, url, provider }) => {
-        const { host } = new URL(url);
+        const parsed = new URL(url);
+        const host = parsed.host;
         const transport = nodemailer.createTransport(provider.server);
+        // Build verify URL from the callback's origin to avoid env mismatches
+        const baseOrigin = `${parsed.protocol}//${parsed.host}`;
+        // Wrap the NextAuth callback URL in a human-confirm page to prevent link scanners
+        const verifyUrl = `${baseOrigin}/auth/verify?next=${encodeURIComponent(url)}`;
+
+        console.log('[auth] sendVerificationRequest', { baseOrigin, host, verifyUrl });
         
         await transport.sendMail({
           to: email,
           from: provider.from,
           subject: `Sign in to QA Team Portfolio`,
-          text: text({ url, host }),
-          html: html({ url, host, email }),
+          text: text({ url: verifyUrl, host }),
+          html: html({ url: verifyUrl, host, email }),
         });
       },
     }),
   ],
+  // Use database sessions instead of JWT - this is required for magic links with adapters
   session: {
-    strategy: 'jwt',
+    strategy: 'database',
     maxAge: 30 * 24 * 60 * 60, // 30 days
+    updateAge: 24 * 60 * 60, // 24 hours
   },
   pages: {
     signIn: '/auth/signin',
@@ -78,22 +91,18 @@ const authOptions: NextAuthOptions = {
       console.log('Unauthorized email domain attempt:', email);
       return `/auth/error?error=AccessDenied`;
     },
-    async jwt({ token, user }) {
-      if (user) {
-        token.email = user.email;
-        token.name = user.name || user.email?.split('@')[0].replace('.', ' ');
-      }
-      return token;
-    },
-    async session({ session, token }) {
-      if (token && session.user) {
-        session.user.email = token.email as string;
-        session.user.name = token.name as string;
+    // Session callback for database sessions
+    async session({ session, user }) {
+      if (session?.user && user) {
+        // Do not set id to avoid TS type mismatch; only enrich name if needed
+        session.user.name = user.name || user.email?.split('@')[0].replace('.', ' ');
       }
       return session;
     },
   },
   secret: process.env.NEXTAUTH_SECRET,
+  // Enable debug mode in development for better error messages
+  debug: process.env.NODE_ENV === 'development',
 };
 
 // Email HTML body
@@ -126,14 +135,14 @@ function html({ url, host, email }: { url: string; host: string; email: string }
         <table width="100%" cellpadding="0" cellspacing="0">
           <tr>
             <td align="center" style="padding: 20px 0;">
-              <a href="${url}" target="_blank" style="background: linear-gradient(135deg, ${brandColor} 0%, #8b5cf6 100%); color: white; text-decoration: none; padding: 16px 40px; border-radius: 8px; font-size: 16px; font-weight: 600; display: inline-block; box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);">
-                Sign In to ${escapedHost}
+              <a href="${url}" target="_blank" rel="noopener noreferrer" style="background: linear-gradient(135deg, ${brandColor} 0%, #8b5cf6 100%); color: white; text-decoration: none; padding: 16px 40px; border-radius: 8px; font-size: 16px; font-weight: 600; display: inline-block; box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);">
+                Confirm and Sign In
               </a>
             </td>
           </tr>
         </table>
         <p style="margin: 30px 0 0; color: #6b7280; font-size: 14px; line-height: 1.6;">
-          Or copy and paste this URL into your browser:<br>
+          If the button doesn't work, copy and paste this URL into your browser:<br>
           <a href="${url}" style="color: ${brandColor}; word-break: break-all;">${url}</a>
         </p>
         <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">

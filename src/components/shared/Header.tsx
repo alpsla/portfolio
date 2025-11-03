@@ -10,7 +10,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useSession, signOut } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
+import { signOutUser } from '../../lib/auth-utils';
 
 export function Header() {
   const pathname = usePathname();
@@ -82,9 +83,9 @@ export function Header() {
             </Link>
 
             {/* Logout Button - Hide on auth pages */}
-            {!isAuthPage && (
+            {!isAuthPage && session && (
               <button
-                onClick={() => signOut({ callbackUrl: '/auth/signin' })}
+                onClick={() => signOutUser()}
                 className="px-4 py-2 rounded-lg font-medium transition-all duration-300 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 border-2 border-red-200 dark:border-red-800"
                 title="Sign Out"
               >
