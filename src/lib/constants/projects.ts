@@ -409,7 +409,7 @@ export const PROJECTS: IProject[] = [
     id: 'config-comparison',
     slug: 'config-comparison',
     title: 'Config Comparison',
-    heroImage: '/assets/config-comparison/hero/cc_hero.png',
+    heroImage: '/assets/config-comparison/hero/cc_hero.svg',
     owner: 'anilbvi',
     summary: 'Automated configuration validation system that proactively detects and prevents configuration discrepancies across multiple platforms and brands before production deployment, achieving zero configuration-related production issues through fast validation and comprehensive change detection.',
     problem: "Configuration discrepancies were causing critical application issues in production that were never detected in QA environments due to environment-specific settings. Manual configuration validation was time-consuming, error-prone, and couldn't scale across multiple platforms (Android, iOS, Apple TV, Android TV, Fire TV, Roku, Web Connected TVs) and brands. Teams lacked visibility into configuration changes between releases, leading to unexpected production failures and lengthy incident resolution times.",
