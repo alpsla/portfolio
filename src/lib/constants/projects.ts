@@ -370,7 +370,7 @@ export const PROJECTS: IProject[] = [
     id: 'data-observability',
     slug: 'data-observability',
     title: 'Data Observability for QA - Streaming Insights & Test Intelligence',
-    heroImage: '/assets/data-observability/hero/d0_hero.png',
+    heroImage: '/assets/data-observability/hero/d0_hero.svg',
     owner: 'rostialpin',
     summary: 'From reactive testing to predictive quality: Observability-driven QA that detects risks before deployment. Initiative to slash test execution 50-70%, compress bug identification from days to minutes, and improve quality through intelligent test selection powered by real-time telemetry.',
     problem: 'QA operates at massive scale: thousands of automated tests every two weeks across real devices, multiple clouds, and all platforms (Web, WCTV, Roku, Apple TV, iOS, Android). Teams are constantly maintaining existing suites, developing new tests, and validating releases—all racing against tight deadlines. The reactive posture causes overload: engineers spend days triaging failures and manually reproducing issues. When bugs slip to production, root-cause analysis stretches from days into weeks. Without real-time observability into data flows and test impact, we firefight instead of preventing fires—expensive cloud costs, high maintenance overhead, and late-detected critical issues erode user trust.',
