@@ -18,6 +18,19 @@ export function middleware(request: NextRequest) {
     return new NextResponse(null, { status: 204 });
   }
 
+  // Force human confirmation: redirect raw GET clicks on callback to /auth/verify
+  if (method === 'GET' && nextUrl.pathname.startsWith('/api/auth/callback/email')) {
+    const hasHumanFlag = nextUrl.searchParams.get('h') === '1';
+    if (!hasHumanFlag) {
+      const original = nextUrl.toString();
+      const callbackUrl = new URL(original);
+      callbackUrl.searchParams.set('h', '1');
+      const verifyUrl = new URL('/auth/verify', nextUrl.origin);
+      verifyUrl.searchParams.set('next', callbackUrl.toString());
+      return NextResponse.redirect(verifyUrl);
+    }
+  }
+
   return NextResponse.next();
 }
 

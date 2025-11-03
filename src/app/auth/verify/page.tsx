@@ -18,8 +18,14 @@ function VerifyContent() {
   const handleContinue = () => {
     if (!nextUrl) return;
     setPending(true);
-    // Only navigate on explicit user action
-    window.location.href = nextUrl;
+    // Ensure human flag present to bypass middleware redirect loop
+    try {
+      const u = new URL(nextUrl);
+      u.searchParams.set('h', '1');
+      window.location.href = u.toString();
+    } catch {
+      window.location.href = nextUrl;
+    }
   };
 
   return (
