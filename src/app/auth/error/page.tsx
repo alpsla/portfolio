@@ -9,11 +9,20 @@
 
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
+import { signOut } from 'next-auth/react';
 
 function AuthErrorContent() {
   const searchParams = useSearchParams();
   const error = searchParams.get('error');
+
+  // Clear session on Verification error to prevent session conflicts
+  useEffect(() => {
+    if (error === 'Verification') {
+      // Clear any stale session data
+      signOut({ redirect: false }).catch(console.error);
+    }
+  }, [error]);
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900 flex items-center justify-center px-6 py-12">
@@ -31,6 +40,7 @@ function AuthErrorContent() {
         <p className="text-gray-600 dark:text-gray-400 mb-8">
           {error === 'AccessDenied' && 'Your email domain is not authorized to access this application.'}
           {error === 'Configuration' && 'There is a problem with the server configuration.'}
+          {error === 'Verification' && 'The magic link verification failed. This can happen if the link expired or was already used. Please request a new magic link.'}
           {!error && 'An authentication error occurred.'}
         </p>
 
