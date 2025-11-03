@@ -165,12 +165,12 @@ export default function ProjectDetailPage({ params }: Params) {
 
       {/* Attachments Section */}
       {project.attachments && project.attachments.length > 0 && (
-        <section className="mt-10 mb-12 max-w-5xl mx-auto">
+        <section className="mt-10 mb-12 max-w-7xl mx-auto">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center justify-center gap-3">
             <span className="text-3xl">📎</span>
             <span>Resources & Documentation</span>
           </h2>
-          <ul className={`grid gap-6 ${project.attachments.length === 1 ? 'sm:grid-cols-1 max-w-md mx-auto' : 'sm:grid-cols-2 lg:grid-cols-3'}`}>
+          <ul className={`grid gap-6 ${project.attachments.length === 1 ? 'sm:grid-cols-1 max-w-md mx-auto' : 'sm:grid-cols-2 lg:grid-cols-4'}`}>
             {project.attachments.map((a) => {
               const icon = a.kind === 'pdf'
                 ? '📄'
