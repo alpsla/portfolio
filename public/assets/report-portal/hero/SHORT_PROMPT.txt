@@ -1,0 +1,56 @@
+REPORT PORTAL - SHORT PROMPT
+=============================
+
+COPY THIS (for ChatGPT DALL-E, Claude, or similar):
+
+Create a professional TestOps dashboard visualization in 16:9 landscape format showing a centralized test reporting platform that aggregates test results from multiple frameworks into unified analytics.
+
+DATA FLOW (Left to Right):
+
+LEFT: "Test Execution Sources" (Blue theme)
+- Multiple test framework icons stacked:
+  1. Java - "Unit Tests"
+  2. Playwright - "E2E Tests"
+  3. Selenium - "Web Tests"
+  4. API Tests - "Integration Tests"
+- Test results flowing as data streams
+
+CENTER: "Report Portal Platform" (Purple/Blue theme)
+- Report Portal logo/icon
+- Central processing hub with analytics engine
+- Features: Flaky Test Detection, Pattern Recognition, Historical Trends, Real-Time Analysis
+- Data aggregation visualization
+- Glowing with test result streams
+
+RIGHT: "Analytics Dashboard Output" (Split view)
+
+TOP Dashboard (Green) - Test Results View:
+- Title: "Unified Test Dashboard"
+- Mini dashboard with test execution charts
+- Metrics: "Pass Rate: 92%", "Tests Executed: 1,247", "Flaky Tests: 12"
+- Test status visualization (pass/fail/skip)
+
+BOTTOM Dashboard (Orange) - Analytics View:
+- Title: "Trend Analysis & Insights"
+- Mini dashboard with analytics
+- Shows: "Historical Trends", "Failure Patterns", "Release Confidence: 85%", "Triage Time Saved: 60%"
+- Flaky test identification visualization
+- Pattern detection highlights
+
+CONNECTING LINES:
+- Flowing purple/blue data streams with animated test result packets
+- "Flaky Detection" badge on stream
+- "Real-Time Analytics" indicator
+
+TOP BANNER: "Report Portal | Centralized Test Reporting & Analytics"
+
+BOTTOM METRICS: "Multi-Framework Support | Flaky Test Detection | Accelerated Triage | Historical Trends"
+
+Dark gradient background (#1a1f2e to #3d2f5e), modern TestOps/analytics visualization style, flowing test data streams, professional dashboard aesthetic.
+
+==============================
+
+ULTRA-SHORT VERSION:
+
+Data flow diagram: Multiple test frameworks (Java, Playwright, Selenium, API) on left in blue, flowing through central purple Report Portal platform with analytics engine, outputting to two dashboard previews on right (test results dashboard in green showing execution metrics, analytics dashboard in orange showing trends and flaky test detection). Flowing purple data streams, dark gradient background, modern TestOps dashboard aesthetic, 16:9 landscape. Metrics: Multi-framework, flaky detection, accelerated triage.
+

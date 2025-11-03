@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <!-- Definitions for gradients and filters -->
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1f2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3d2f5e;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Blue gradient for test frameworks -->
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90e2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#357abd;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Purple gradient for Report Portal -->
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Green gradient for test results dashboard -->
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ade80;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22c55e;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Orange gradient for analytics dashboard -->
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Animation for flowing data -->
+    <style>
+      @keyframes flow {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: -30; }
+      }
+      .flowingData {
+        stroke-dasharray: 10 20;
+        animation: flow 2s linear infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+      .pulsingDot {
+        animation: pulse 2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bgGradient)"/>
+  
+  <!-- Grid pattern for tech feel -->
+  <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.05"/>
+  </pattern>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  
+  <!-- Top Banner -->
+  <rect x="0" y="0" width="1920" height="80" fill="#000000" opacity="0.3"/>
+  <text x="960" y="50" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Report Portal | Centralized Test Reporting &amp; Analytics
+  </text>
+  
+  <!-- LEFT SECTION: Test Execution Sources -->
+  <g id="testFrameworks">
+    <rect x="50" y="150" width="400" height="700" rx="15" fill="#000000" opacity="0.2"/>
+    <rect x="50" y="150" width="400" height="60" rx="15" fill="url(#blueGradient)"/>
+    <text x="250" y="190" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      Test Frameworks
+    </text>
+    
+    <!-- Source 1: Java -->
+    <g transform="translate(80, 250)">
+      <rect width="340" height="120" rx="10" fill="#ffffff" opacity="0.1"/>
+      <circle cx="50" cy="60" r="30" fill="url(#blueGradient)"/>
+      <text x="50" y="65" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">J</text>
+      <text x="100" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#4a90e2">Java</text>
+      <text x="100" y="75" font-family="Arial, sans-serif" font-size="16" fill="#a0aec0">Unit Tests</text>
+    </g>
+    
+    <!-- Source 2: Playwright -->
+    <g transform="translate(80, 390)">
+      <rect width="340" height="120" rx="10" fill="#ffffff" opacity="0.1"/>
+      <circle cx="50" cy="60" r="30" fill="url(#blueGradient)"/>
+      <text x="50" y="65" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">PW</text>
+      <text x="100" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#4a90e2">Playwright</text>
+      <text x="100" y="75" font-family="Arial, sans-serif" font-size="16" fill="#a0aec0">E2E Tests</text>
+    </g>
+    
+    <!-- Source 3: Selenium -->
+    <g transform="translate(80, 530)">
+      <rect width="340" height="120" rx="10" fill="#ffffff" opacity="0.1"/>
+      <circle cx="50" cy="60" r="30" fill="url(#blueGradient)"/>
+      <text x="50" y="65" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">SE</text>
+      <text x="100" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#4a90e2">Selenium</text>
+      <text x="100" y="75" font-family="Arial, sans-serif" font-size="16" fill="#a0aec0">Web Tests</text>
+    </g>
+    
+    <!-- Source 4: API Tests -->
+    <g transform="translate(80, 670)">
+      <rect width="340" height="120" rx="10" fill="#ffffff" opacity="0.1"/>
+      <circle cx="50" cy="60" r="30" fill="url(#blueGradient)"/>
+      <text x="50" y="65" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">API</text>
+      <text x="100" y="50" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#4a90e2">API Tests</text>
+      <text x="100" y="75" font-family="Arial, sans-serif" font-size="16" fill="#a0aec0">Integration Tests</text>
+    </g>
+  </g>
+  
+  <!-- CENTER SECTION: Report Portal Platform -->
+  <g id="reportPortalPlatform">
+    <rect x="700" y="250" width="520" height="580" rx="20" fill="#000000" opacity="0.3" filter="url(#glow)"/>
+    <rect x="700" y="250" width="520" height="80" rx="20" fill="url(#purpleGradient)"/>
+    <text x="960" y="300" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      Report Portal Platform
+    </text>
+    
+    <!-- Analytics Engine Icon -->
+    <circle cx="960" cy="420" r="60" fill="url(#purpleGradient)" opacity="0.8" filter="url(#glow)"/>
+    <!-- Chart/Analytics icon -->
+    <path d="M 940 400 L 940 440 L 960 430 L 980 440 L 980 400 Z" fill="#ffffff" opacity="0.9"/>
+    <circle cx="950" cy="415" r="3" fill="#8b5cf6"/>
+    <circle cx="960" cy="410" r="3" fill="#8b5cf6"/>
+    <circle cx="970" cy="415" r="3" fill="#8b5cf6"/>
+    <text x="960" y="510" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#8b5cf6" text-anchor="middle">
+      Analytics Engine
+    </text>
+    
+    <!-- Features -->
+    <g transform="translate(750, 550)">
+      <rect width="420" height="120" rx="25" fill="#ffffff" opacity="0.1"/>
+      <text x="210" y="32" font-family="Arial, sans-serif" font-size="16" fill="#8b5cf6" text-anchor="middle">
+        Flaky Test Detection
+      </text>
+      <text x="210" y="55" font-family="Arial, sans-serif" font-size="16" fill="#8b5cf6" text-anchor="middle">
+        Pattern Recognition
+      </text>
+      <text x="210" y="78" font-family="Arial, sans-serif" font-size="16" fill="#8b5cf6" text-anchor="middle">
+        Historical Trends | Real-Time Analysis
+      </text>
+    </g>
+    
+    <!-- Test Result Visualization -->
+    <g transform="translate(750, 690)">
+      <rect width="420" height="80" rx="10" fill="#000000" opacity="0.4"/>
+      <text x="20" y="30" font-family="monospace" font-size="14" fill="#4ade80">Tests:</text>
+      <text x="80" y="30" font-family="monospace" font-size="14" fill="#ffffff">1247</text>
+      <text x="20" y="55" font-family="monospace" font-size="14" fill="#4ade80">Status:</text>
+      <text x="90" y="55" font-family="monospace" font-size="14" fill="#4ade80">Pass: </text>
+      <text x="135" y="55" font-family="monospace" font-size="14" fill="#4ade80">1147</text>
+      <text x="180" y="55" font-family="monospace" font-size="14" fill="#ef4444">Fail: </text>
+      <text x="225" y="55" font-family="monospace" font-size="14" fill="#ef4444">88</text>
+      <text x="270" y="55" font-family="monospace" font-size="14" fill="#f59e0b">Flaky: </text>
+      <text x="320" y="55" font-family="monospace" font-size="14" fill="#f59e0b">12</text>
+      <circle cx="15" cy="25" r="3" fill="#4ade80" class="pulsingDot"/>
+    </g>
+    
+    <!-- Real-Time Indicator -->
+    <g transform="translate(920, 810)">
+      <rect width="80" height="30" rx="15" fill="#ef4444"/>
+      <text x="40" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        LIVE
+      </text>
+      <circle cx="65" cy="15" r="4" fill="#ffffff" class="pulsingDot"/>
+    </g>
+  </g>
+  
+  <!-- RIGHT SECTION: Dual Dashboard Outputs -->
+  <!-- Test Results Dashboard (Top) -->
+  <g id="testResultsDashboard">
+    <rect x="1420" y="150" width="450" height="380" rx="15" fill="#000000" opacity="0.2"/>
+    <rect x="1420" y="150" width="450" height="60" rx="15" fill="url(#greenGradient)"/>
+    <text x="1645" y="190" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      Unified Test Dashboard
+    </text>
+    
+    <!-- Test Execution Metrics -->
+    <g transform="translate(1450, 240)">
+      <!-- Pass Rate -->
+      <g transform="translate(0, 0)">
+        <rect width="130" height="80" rx="10" fill="#ffffff" opacity="0.05"/>
+        <text x="65" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#4ade80" text-anchor="middle">92%</text>
+        <text x="65" y="60" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Pass Rate</text>
+      </g>
+      
+      <!-- Tests Executed -->
+      <g transform="translate(150, 0)">
+        <rect width="130" height="80" rx="10" fill="#ffffff" opacity="0.05"/>
+        <text x="65" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#4ade80" text-anchor="middle">1,247</text>
+        <text x="65" y="60" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Tests Executed</text>
+      </g>
+      
+      <!-- Flaky Tests -->
+      <g transform="translate(300, 0)">
+        <rect width="130" height="80" rx="10" fill="#ffffff" opacity="0.05"/>
+        <text x="65" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#f59e0b" text-anchor="middle">12</text>
+        <text x="65" y="60" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Flaky Tests</text>
+      </g>
+      
+      <!-- Test Status Chart -->
+      <g transform="translate(0, 100)">
+        <text x="0" y="15" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">Test Status</text>
+        <rect x="0" y="25" width="30" height="80" fill="#4ade80" rx="3"/>
+        <rect x="40" y="45" width="30" height="60" fill="#ef4444" rx="3"/>
+        <rect x="80" y="85" width="30" height="20" fill="#f59e0b" rx="3"/>
+        <text x="115" y="50" font-family="Arial, sans-serif" font-size="14" fill="#4ade80">Pass</text>
+        <text x="115" y="75" font-family="Arial, sans-serif" font-size="14" fill="#ef4444">Fail</text>
+        <text x="115" y="100" font-family="Arial, sans-serif" font-size="14" fill="#f59e0b">Flaky</text>
+      </g>
+      
+      <!-- Recent Runs Timeline -->
+      <g transform="translate(200, 100)">
+        <text x="0" y="15" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">Recent Runs</text>
+        <rect x="0" y="25" width="180" height="80" rx="5" fill="#ffffff" opacity="0.05"/>
+        <line x1="20" y1="90" x2="20" y2="70" stroke="#4ade80" stroke-width="3"/>
+        <line x1="60" y1="90" x2="60" y2="50" stroke="#4ade80" stroke-width="3"/>
+        <line x1="100" y1="90" x2="100" y2="65" stroke="#4ade80" stroke-width="3"/>
+        <line x1="140" y1="90" x2="140" y2="75" stroke="#4ade80" stroke-width="3"/>
+        <text x="20" y="95" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">-3</text>
+        <text x="60" y="95" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">-2</text>
+        <text x="100" y="95" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">-1</text>
+        <text x="140" y="95" font-family="Arial, sans-serif" font-size="10" fill="#a0aec0" text-anchor="middle">Now</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Analytics Dashboard (Bottom) -->
+  <g id="analyticsDashboard">
+    <rect x="1420" y="550" width="450" height="380" rx="15" fill="#000000" opacity="0.2"/>
+    <rect x="1420" y="550" width="450" height="60" rx="15" fill="url(#orangeGradient)"/>
+    <text x="1645" y="590" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      Trend Analysis &amp; Insights
+    </text>
+    
+    <!-- Analytics Metrics -->
+    <g transform="translate(1450, 640)">
+      <!-- Release Confidence -->
+      <g transform="translate(0, 0)">
+        <rect width="130" height="80" rx="10" fill="#ffffff" opacity="0.05"/>
+        <text x="65" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#f59e0b" text-anchor="middle">85%</text>
+        <text x="65" y="60" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Release Confidence</text>
+      </g>
+      
+      <!-- Triage Time Saved -->
+      <g transform="translate(150, 0)">
+        <rect width="130" height="80" rx="10" fill="#ffffff" opacity="0.05"/>
+        <text x="65" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#f59e0b" text-anchor="middle">60%</text>
+        <text x="65" y="60" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Triage Time Saved</text>
+      </g>
+      
+      <!-- Failure Patterns -->
+      <g transform="translate(300, 0)">
+        <rect width="130" height="80" rx="10" fill="#ffffff" opacity="0.05"/>
+        <text x="65" y="35" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ef4444" text-anchor="middle">8</text>
+        <text x="65" y="60" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Failure Patterns</text>
+      </g>
+      
+      <!-- Historical Trend Chart -->
+      <g transform="translate(0, 100)">
+        <text x="0" y="15" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">Historical Trend</text>
+        <rect x="0" y="25" width="390" height="60" rx="5" fill="#ffffff" opacity="0.05"/>
+        <!-- Trend line -->
+        <polyline points="20,75 60,65 100,70 140,60 180,65 220,55 260,58 300,52 340,50 380,48" fill="none" stroke="#f59e0b" stroke-width="3"/>
+        <text x="200" y="95" font-family="Arial, sans-serif" font-size="12" fill="#a0aec0" text-anchor="middle">Improving Quality Trend</text>
+      </g>
+      
+      <!-- Flaky Test Identification -->
+      <g transform="translate(0, 200)">
+        <text x="0" y="15" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">Flaky Test Detection</text>
+        <rect x="0" y="25" width="390" height="40" rx="5" fill="#ffffff" opacity="0.05"/>
+        <circle cx="30" cy="45" r="8" fill="#f59e0b"/>
+        <circle cx="70" cy="45" r="8" fill="#f59e0b"/>
+        <circle cx="110" cy="45" r="8" fill="#4ade80"/>
+        <circle cx="150" cy="45" r="8" fill="#f59e0b"/>
+        <circle cx="190" cy="45" r="8" fill="#4ade80"/>
+        <text x="230" y="50" font-family="Arial, sans-serif" font-size="14" fill="#a0aec0">3 Flaky Tests Identified</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Data Flow Arrows -->
+  <!-- From Test Frameworks to Report Portal -->
+  <g id="dataFlowLeft">
+    <path d="M 450 310 L 700 380" stroke="#8b5cf6" stroke-width="3" fill="none" class="flowingData" opacity="0.8"/>
+    <path d="M 450 450 L 700 450" stroke="#8b5cf6" stroke-width="3" fill="none" class="flowingData" opacity="0.8"/>
+    <path d="M 450 590 L 700 520" stroke="#8b5cf6" stroke-width="3" fill="none" class="flowingData" opacity="0.8"/>
+    <path d="M 450 730 L 700 590" stroke="#8b5cf6" stroke-width="3" fill="none" class="flowingData" opacity="0.8"/>
+    
+    <!-- Arrow heads -->
+    <polygon points="695,378 705,380 695,382" fill="#8b5cf6"/>
+    <polygon points="695,448 705,450 695,452" fill="#8b5cf6"/>
+    <polygon points="695,518 705,520 695,522" fill="#8b5cf6"/>
+    <polygon points="695,588 705,590 695,592" fill="#8b5cf6"/>
+  </g>
+  
+  <!-- From Report Portal to Dashboards -->
+  <g id="dataFlowRight">
+    <!-- To Test Results Dashboard -->
+    <path d="M 1220 450 L 1420 340" stroke="#4ade80" stroke-width="3" fill="none" class="flowingData" opacity="0.8"/>
+    <polygon points="1415,338 1425,340 1415,342" fill="#4ade80"/>
+    
+    <!-- To Analytics Dashboard -->
+    <path d="M 1220 600 L 1420 740" stroke="#f59e0b" stroke-width="3" fill="none" class="flowingData" opacity="0.8"/>
+    <polygon points="1415,738 1425,740 1415,742" fill="#f59e0b"/>
+    
+    <!-- Flaky Detection Badge -->
+    <g transform="translate(1270, 680)">
+      <rect width="140" height="35" rx="17" fill="#f59e0b" opacity="0.9"/>
+      <text x="70" y="23" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        Flaky Detection
+      </text>
+    </g>
+    
+    <!-- Pattern Recognition Badge -->
+    <g transform="translate(1270, 490)">
+      <rect width="140" height="35" rx="17" fill="#8b5cf6" opacity="0.9"/>
+      <text x="70" y="23" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">
+        Pattern Match
+      </text>
+    </g>
+  </g>
+  
+  <!-- Bottom Metrics Bar -->
+  <rect x="0" y="1000" width="1920" height="80" fill="#000000" opacity="0.3"/>
+  <text x="960" y="1050" font-family="Arial, sans-serif" font-size="20" fill="#a0aec0" text-anchor="middle">
+    Multi-Framework Support | Flaky Test Detection | Accelerated Triage | Historical Trends
+  </text>
+  
+  <!-- Decorative Elements -->
+  <g id="decorativeElements">
+    <!-- Floating particles for tech feel -->
+    <circle cx="100" cy="900" r="2" fill="#8b5cf6" opacity="0.6" class="pulsingDot"/>
+    <circle cx="500" cy="950" r="2" fill="#4a90e2" opacity="0.6" class="pulsingDot"/>
+    <circle cx="1400" cy="100" r="2" fill="#4ade80" opacity="0.6" class="pulsingDot"/>
+    <circle cx="1800" cy="980" r="2" fill="#f59e0b" opacity="0.6" class="pulsingDot"/>
+  </g>
+</svg>
+
