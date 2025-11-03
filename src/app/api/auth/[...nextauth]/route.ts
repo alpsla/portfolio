@@ -33,11 +33,15 @@ const authOptions: NextAuthOptions = {
       from: process.env.EMAIL_FROM || 'noreply@qa-portfolio.com',
       // Customize the email sent: route via /auth/verify to avoid email scanners consuming token
       sendVerificationRequest: async ({ identifier: email, url, provider }) => {
-        const { host } = new URL(url);
+        const parsed = new URL(url);
+        const host = parsed.host;
         const transport = nodemailer.createTransport(provider.server);
-
+        // Build verify URL from the callback's origin to avoid env mismatches
+        const baseOrigin = `${parsed.protocol}//${parsed.host}`;
         // Wrap the NextAuth callback URL in a human-confirm page to prevent link scanners
-        const verifyUrl = `${process.env.NEXTAUTH_URL}/auth/verify?next=${encodeURIComponent(url)}`;
+        const verifyUrl = `${baseOrigin}/auth/verify?next=${encodeURIComponent(url)}`;
+
+        console.log('[auth] sendVerificationRequest', { baseOrigin, host, verifyUrl });
         
         await transport.sendMail({
           to: email,
