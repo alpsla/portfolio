@@ -37,7 +37,7 @@ export default function ProjectDetailPage({ params }: Params) {
           <img
             src={project.heroImage}
             alt={`${project.title} - Architecture Diagram`}
-            className="w-full h-auto max-h-[85vh] object-contain"
+            className="w-full h-auto max-h-[40vh] object-contain"
           />
         </div>
       )}
@@ -165,12 +165,12 @@ export default function ProjectDetailPage({ params }: Params) {
 
       {/* Attachments Section */}
       {project.attachments && project.attachments.length > 0 && (
-        <section className="mt-10 mb-12 max-w-5xl mx-auto">
+        <section className="mt-10 mb-12 max-w-7xl mx-auto">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center justify-center gap-3">
             <span className="text-3xl">📎</span>
             <span>Resources & Documentation</span>
           </h2>
-          <ul className={`grid gap-6 ${project.attachments.length === 1 ? 'sm:grid-cols-1 max-w-md mx-auto' : 'sm:grid-cols-2 lg:grid-cols-3'}`}>
+          <ul className={`grid gap-6 ${project.attachments.length === 1 ? 'sm:grid-cols-1 max-w-md mx-auto' : 'sm:grid-cols-2 lg:grid-cols-4'}`}>
             {project.attachments.map((a) => {
               const icon = a.kind === 'pdf'
                 ? '📄'
@@ -201,17 +201,20 @@ export default function ProjectDetailPage({ params }: Params) {
                     </div>
                   </div>
                   <div className="flex gap-3 mt-auto">
+                    {/* Show View button only for PDFs and images that can be viewed in browser */}
+                    {(a.kind === 'pdf' || a.kind === 'image') && (
+                      <a
+                        className="flex-1 text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2"
+                        href={a.src}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span>👁️</span>
+                        <span>View</span>
+                      </a>
+                    )}
                     <a
-                      className="flex-1 text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2"
-                      href={a.src}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span>👁️</span>
-                      <span>View</span>
-                    </a>
-                    <a
-                      className="flex-1 text-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2"
+                      className={`${a.kind === 'pdf' || a.kind === 'image' ? 'flex-1' : 'w-full'} text-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2`}
                       href={a.src}
                       download
                     >
