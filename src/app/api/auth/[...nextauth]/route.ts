@@ -103,8 +103,6 @@ const authOptions: NextAuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
   // Enable debug mode in development for better error messages
   debug: process.env.NODE_ENV === 'development',
-  // Trust Vercel forwarded host headers for correct callback URLs
-  trustHost: true,
 };
 
 // Email HTML body
