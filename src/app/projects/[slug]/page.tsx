@@ -54,6 +54,22 @@ export default function ProjectDetailPage({ params }: Params) {
         <p className="text-gray-700 dark:text-gray-200 text-xl leading-relaxed text-center">{project.summary}</p>
       </div>
 
+      {/* Brand Image (e.g., EVA's recognizable face) */}
+      {project.brandImage && (
+        <div className="mb-10 max-w-3xl mx-auto">
+          <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-blue-900 p-8 rounded-2xl shadow-xl border-2 border-blue-200 dark:border-blue-800">
+            <img
+              src={project.brandImage}
+              alt={`${project.title} - Team's Recognizable Brand`}
+              className="w-full h-auto max-h-[400px] object-contain rounded-xl"
+            />
+            <p className="mt-4 text-center text-gray-600 dark:text-gray-400 text-sm italic">
+              The team's familiar face - recognized across the organization
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Problem Section */}
       {project.problem && (
         <section className="mt-8 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 hover:border-red-200 dark:hover:border-red-800">

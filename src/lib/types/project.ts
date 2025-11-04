@@ -40,6 +40,7 @@ export interface IProject {
   slug: string;
   title: string;
   heroImage?: string;
+  brandImage?: string; // Additional brand/mascot image to show on detail page
   owner: string;
   summary: string;
   problem: string;
