@@ -187,16 +187,6 @@ function SignInForm() {
               {loading ? 'Sending link...' : 'Send Sign-In Link'}
             </button>
           </form>
-
-          {/* Help Text */}
-          <div className="mt-6 pt-6 border-t-2 border-gray-200 dark:border-gray-700">
-            <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
-              Need access? Contact{' '}
-              <a href="mailto:rostislav.alpin@paramount.com" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">
-                QA Manager
-              </a>
-            </p>
-          </div>
         </div>
 
         {/* Security Notice */}
