@@ -1,289 +1,368 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
-  <!-- Background -->
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; max-width: 100%;">
   <defs>
+    <!-- Background gradient -->
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1e293b;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#0f172a;stop-opacity:1" />
     </linearGradient>
-    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
-    </pattern>
+    
+    <!-- Section gradients -->
+    <linearGradient id="redOrangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fb923c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a78bfa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34d399;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Platform gradients -->
+    <linearGradient id="blueGradient">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="cyanGradient">
+      <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="orangeGradient">
+      <stop offset="0%" style="stop-color:#fb923c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Filters -->
     <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+    
+    <!-- Animations -->
+    <style>
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(1.05); opacity: 1; }
+      }
+      .pulsing {
+        animation: pulse 3s ease-in-out infinite;
+        transform-origin: center;
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+      }
+      .floating {
+        animation: float 4s ease-in-out infinite;
+      }
+    </style>
   </defs>
   
+  <!-- Background -->
   <rect width="1920" height="1080" fill="url(#bgGradient)"/>
+  
+  <!-- Grid -->
+  <pattern id="grid" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.02"/>
+  </pattern>
   <rect width="1920" height="1080" fill="url(#grid)"/>
   
-  <!-- Top Title -->
-  <text x="960" y="70" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="bold" text-anchor="middle">Onboarding Automation Setup</text>
-  <text x="960" y="110" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="18" text-anchor="middle">Video Training Library for Multi-Platform Test Automation Setup</text>
-  
-  <!-- LEFT SECTION: Complex Setup Challenges -->
-  <g id="challenges">
-    <text x="280" y="180" fill="#ef4444" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" text-anchor="middle">Setup Complexity</text>
+  <!-- LEFT SECTION: Setup Complexity -->
+  <g id="complexitySection">
+    <rect x="50" y="120" width="550" height="850" rx="16" fill="#000000" opacity="0.3" filter="url(#shadow)"/>
+    <rect x="50" y="120" width="550" height="80" rx="16" fill="url(#redOrangeGradient)"/>
     
-    <!-- Platform setup requirements -->
-    <g transform="translate(100, 220)">
-      <rect x="0" y="0" width="360" height="520" rx="12" fill="#1e293b" stroke="#ef4444" stroke-width="2" opacity="0.9"/>
+    <text x="325" y="170" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      Setup Complexity
+    </text>
+    
+    <!-- Confused Team Member -->
+    <g transform="translate(325, 260)">
+      <circle cx="0" cy="0" r="45" fill="#64748b"/>
+      <text x="0" y="10" font-size="45" text-anchor="middle">🤔</text>
+      <text x="-60" y="-35" font-size="30" fill="#f59e0b">?</text>
+      <text x="60" y="-35" font-size="30" fill="#ef4444">?</text>
+      <text x="0" y="-60" font-size="30" fill="#f59e0b">?</text>
+    </g>
+    
+    <text x="325" y="340" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">
+      New Team Member
+    </text>
+    
+    <!-- Complex Requirements List -->
+    <g transform="translate(100, 380)">
+      <rect width="450" height="400" rx="8" fill="#1e293b" opacity="0.5"/>
+      <text x="225" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#f59e0b" text-anchor="middle">
+        Complex Requirements
+      </text>
       
-      <!-- Confused new member -->
-      <g transform="translate(180, 30)">
-        <circle cx="0" cy="0" r="40" fill="#ef4444" opacity="0.2"/>
-        <text x="0" y="15" fill="#ef4444" font-size="42" text-anchor="middle">🤔</text>
-        <text x="0" y="60" fill="#fca5a5" font-size="14" font-weight="600" text-anchor="middle">New Team Member</text>
+      <g transform="translate(30, 70)">
+        <text x="0" y="0" font-size="20" fill="#f59e0b">⚙️</text>
+        <text x="35" y="5" font-family="Arial, sans-serif" font-size="15" fill="#cbd5e1">Device preparation</text>
       </g>
       
-      <!-- Complex requirements list -->
-      <g transform="translate(30, 130)">
-        <text x="0" y="0" fill="#fca5a5" font-size="15" font-weight="bold">Each Platform Needs:</text>
-        
-        <g transform="translate(0, 30)">
-          <text x="0" y="0" fill="#cbd5e1" font-size="13">⚙️ Device preparation</text>
-          <text x="0" y="28" fill="#cbd5e1" font-size="13">🔌 Proxy configuration</text>
-          <text x="0" y="56" fill="#cbd5e1" font-size="13">📱 Platform-specific setup</text>
-          <text x="0" y="84" fill="#cbd5e1" font-size="13">🔐 Access permissions</text>
-          <text x="0" y="112" fill="#cbd5e1" font-size="13">🛠️ Tool installation</text>
-          <text x="0" y="140" fill="#cbd5e1" font-size="13">📋 Framework dependencies</text>
-          <text x="0" y="168" fill="#cbd5e1" font-size="13">🧪 Test environment config</text>
-          <text x="0" y="196" fill="#cbd5e1" font-size="13">❓ Tribal knowledge required</text>
-        </g>
+      <g transform="translate(30, 115)">
+        <text x="0" y="0" font-size="20" fill="#ef4444">🔌</text>
+        <text x="35" y="5" font-family="Arial, sans-serif" font-size="15" fill="#cbd5e1">Proxy configuration</text>
       </g>
       
-      <!-- Time indicator -->
-      <g transform="translate(30, 410)">
-        <rect x="0" y="0" width="300" height="70" rx="8" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2"/>
-        <text x="150" y="28" fill="#ef4444" font-size="16" font-weight="bold" text-anchor="middle">⏱️ Days/Weeks</text>
-        <text x="150" y="50" fill="#fca5a5" font-size="13" text-anchor="middle">Complex setup process</text>
-        <text x="150" y="65" fill="#fca5a5" font-size="13" text-anchor="middle">Expert help needed</text>
+      <g transform="translate(30, 160)">
+        <text x="0" y="0" font-size="20" fill="#f59e0b">📱</text>
+        <text x="35" y="5" font-family="Arial, sans-serif" font-size="15" fill="#cbd5e1">Platform-specific setup</text>
       </g>
+      
+      <g transform="translate(30, 205)">
+        <text x="0" y="0" font-size="20" fill="#ef4444">🔐</text>
+        <text x="35" y="5" font-family="Arial, sans-serif" font-size="15" fill="#cbd5e1">Access permissions</text>
+      </g>
+      
+      <g transform="translate(30, 250)">
+        <text x="0" y="0" font-size="20" fill="#f59e0b">🛠️</text>
+        <text x="35" y="5" font-family="Arial, sans-serif" font-size="15" fill="#cbd5e1">Tool installation</text>
+      </g>
+      
+      <g transform="translate(30, 295)">
+        <text x="0" y="0" font-size="20" fill="#ef4444">📋</text>
+        <text x="35" y="5" font-family="Arial, sans-serif" font-size="15" fill="#cbd5e1">Framework dependencies</text>
+      </g>
+      
+      <g transform="translate(30, 340)">
+        <text x="0" y="0" font-size="20" fill="#f59e0b">🧪</text>
+        <text x="35" y="5" font-family="Arial, sans-serif" font-size="15" fill="#cbd5e1">Test environment config</text>
+      </g>
+      
+      <g transform="translate(30, 385)">
+        <text x="0" y="0" font-size="20" fill="#ef4444">❓</text>
+        <text x="35" y="5" font-family="Arial, sans-serif" font-size="15" fill="#cbd5e1">Tribal knowledge required</text>
+      </g>
+    </g>
+    
+    <!-- Bottom Indicators -->
+    <g transform="translate(200, 820)">
+      <rect width="250" height="100" rx="16" fill="#ef4444" opacity="0.2"/>
+      <text x="125" y="35" font-size="24" fill="#ef4444" font-weight="bold" text-anchor="middle">⏱️ Days/Weeks</text>
+      <text x="125" y="60" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5" text-anchor="middle">Complex setup process</text>
+      <text x="125" y="85" font-family="Arial, sans-serif" font-size="14" fill="#fca5a5" text-anchor="middle">Expert help needed</text>
     </g>
   </g>
   
   <!-- CENTER SECTION: Video Training Library -->
-  <g id="training">
-    <text x="960" y="180" fill="#8b5cf6" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" text-anchor="middle">Video Training Library</text>
+  <g id="videoLibrarySection">
+    <rect x="650" y="120" width="620" height="850" rx="16" fill="#000000" opacity="0.3" filter="url(#shadow)"/>
+    <rect x="650" y="120" width="620" height="80" rx="16" fill="url(#purpleGradient)"/>
     
-    <!-- Training library container -->
-    <g transform="translate(680, 220)">
-      <rect x="0" y="0" width="560" height="520" rx="16" fill="#1e293b" stroke="#8b5cf6" stroke-width="3" filter="url(#glow)"/>
-      
-      <!-- Video library icon -->
-      <g transform="translate(280, 30)">
-        <circle cx="0" cy="0" r="50" fill="#8b5cf6" opacity="0.3" filter="url(#glow)"/>
-        <text x="0" y="18" fill="#a78bfa" font-size="48" text-anchor="middle">🎥</text>
+    <text x="960" y="170" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      Video Training Library
+    </text>
+    
+    <!-- Video Library Icon -->
+    <g transform="translate(960, 260)" class="pulsing">
+      <circle cx="0" cy="0" r="50" fill="url(#purpleGradient)" filter="url(#glow)"/>
+      <text x="0" y="10" font-size="45" text-anchor="middle">🎥</text>
+    </g>
+    
+    <text x="960" y="340" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#c4b5fd" text-anchor="middle">
+      Platform Setup Guides
+    </text>
+    
+    <!-- Video Thumbnail Grid -->
+    <g id="videoGrid" transform="translate(690, 380)">
+      <!-- Row 1 -->
+      <g transform="translate(0, 0)" class="floating">
+        <rect width="170" height="100" rx="8" fill="#334155" stroke="url(#blueGradient)" stroke-width="2"/>
+        <polygon points="75,40 95,50 75,60" fill="#60a5fa"/>
+        <text x="85" y="85" font-family="Arial, sans-serif" font-size="12" fill="#60a5fa" text-anchor="middle">WCTV Setup</text>
+        <text x="85" y="98" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Device + Proxy</text>
       </g>
       
-      <text x="280" y="110" fill="#a78bfa" font-size="18" font-weight="bold" text-anchor="middle">Platform Setup Guides</text>
-      
-      <!-- Video thumbnails for each platform -->
-      <g transform="translate(40, 140)">
-        <!-- Row 1 -->
-        <g>
-          <rect x="0" y="0" width="150" height="90" rx="8" fill="#374151" stroke="#8b5cf6" stroke-width="2"/>
-          <text x="75" y="35" fill="#8b5cf6" font-size="32" text-anchor="middle">▶️</text>
-          <text x="75" y="60" fill="#FFFFFF" font-size="12" font-weight="600" text-anchor="middle">WCTV Setup</text>
-          <text x="75" y="77" fill="#94a3b8" font-size="10" text-anchor="middle">Device + Proxy</text>
-        </g>
-        
-        <g transform="translate(170, 0)">
-          <rect x="0" y="0" width="150" height="90" rx="8" fill="#374151" stroke="#8b5cf6" stroke-width="2"/>
-          <text x="75" y="35" fill="#8b5cf6" font-size="32" text-anchor="middle">▶️</text>
-          <text x="75" y="60" fill="#FFFFFF" font-size="12" font-weight="600" text-anchor="middle">Roku Setup</text>
-          <text x="75" y="77" fill="#94a3b8" font-size="10" text-anchor="middle">Device + Proxy</text>
-        </g>
-        
-        <g transform="translate(340, 0)">
-          <rect x="0" y="0" width="150" height="90" rx="8" fill="#374151" stroke="#8b5cf6" stroke-width="2"/>
-          <text x="75" y="35" fill="#8b5cf6" font-size="32" text-anchor="middle">▶️</text>
-          <text x="75" y="60" fill="#FFFFFF" font-size="12" font-weight="600" text-anchor="middle">Apple TV</text>
-          <text x="75" y="77" fill="#94a3b8" font-size="10" text-anchor="middle">Device + Proxy</text>
-        </g>
-        
-        <!-- Row 2 -->
-        <g transform="translate(0, 110)">
-          <rect x="0" y="0" width="150" height="90" rx="8" fill="#374151" stroke="#8b5cf6" stroke-width="2"/>
-          <text x="75" y="35" fill="#8b5cf6" font-size="32" text-anchor="middle">▶️</text>
-          <text x="75" y="60" fill="#FFFFFF" font-size="12" font-weight="600" text-anchor="middle">iOS Setup</text>
-          <text x="75" y="77" fill="#94a3b8" font-size="10" text-anchor="middle">Device + Proxy</text>
-        </g>
-        
-        <g transform="translate(170, 110)">
-          <rect x="0" y="0" width="150" height="90" rx="8" fill="#374151" stroke="#8b5cf6" stroke-width="2"/>
-          <text x="75" y="35" fill="#8b5cf6" font-size="32" text-anchor="middle">▶️</text>
-          <text x="75" y="60" fill="#FFFFFF" font-size="12" font-weight="600" text-anchor="middle">Android</text>
-          <text x="75" y="77" fill="#94a3b8" font-size="10" text-anchor="middle">Device + Proxy</text>
-        </g>
-        
-        <g transform="translate(340, 110)">
-          <rect x="0" y="0" width="150" height="90" rx="8" fill="#374151" stroke="#8b5cf6" stroke-width="2"/>
-          <text x="75" y="35" fill="#8b5cf6" font-size="32" text-anchor="middle">▶️</text>
-          <text x="75" y="60" fill="#FFFFFF" font-size="12" font-weight="600" text-anchor="middle">Fire TV</text>
-          <text x="75" y="77" fill="#94a3b8" font-size="10" text-anchor="middle">Device + Proxy</text>
-        </g>
-        
-        <!-- Row 3 -->
-        <g transform="translate(85, 220)">
-          <rect x="0" y="0" width="150" height="90" rx="8" fill="#374151" stroke="#8b5cf6" stroke-width="2"/>
-          <text x="75" y="35" fill="#8b5cf6" font-size="32" text-anchor="middle">▶️</text>
-          <text x="75" y="60" fill="#FFFFFF" font-size="12" font-weight="600" text-anchor="middle">Web Setup</text>
-          <text x="75" y="77" fill="#94a3b8" font-size="10" text-anchor="middle">Proxy Config</text>
-        </g>
-        
-        <g transform="translate(255, 220)">
-          <rect x="0" y="0" width="150" height="90" rx="8" fill="#374151" stroke="#8b5cf6" stroke-width="2"/>
-          <text x="75" y="35" fill="#8b5cf6" font-size="32" text-anchor="middle">▶️</text>
-          <text x="75" y="60" fill="#FFFFFF" font-size="12" font-weight="600" text-anchor="middle">Framework</text>
-          <text x="75" y="77" fill="#94a3b8" font-size="10" text-anchor="middle">Dependencies</text>
-        </g>
+      <g transform="translate(185, 0)">
+        <rect width="170" height="100" rx="8" fill="#334155" stroke="url(#orangeGradient)" stroke-width="2"/>
+        <polygon points="75,40 95,50 75,60" fill="#f97316"/>
+        <text x="85" y="85" font-family="Arial, sans-serif" font-size="12" fill="#fb923c" text-anchor="middle">Roku Setup</text>
+        <text x="85" y="98" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Device + Proxy</text>
       </g>
       
-      <!-- Created by team badge -->
-      <g transform="translate(100, 470)">
-        <rect x="0" y="0" width="360" height="35" rx="8" fill="#8b5cf6" opacity="0.2" stroke="#a78bfa" stroke-width="2"/>
-        <text x="180" y="23" fill="#a78bfa" font-size="14" font-weight="600" text-anchor="middle">📹 Created by Team Experience</text>
+      <g transform="translate(370, 0)" class="floating">
+        <rect width="170" height="100" rx="8" fill="#334155" stroke="url(#cyanGradient)" stroke-width="2"/>
+        <polygon points="75,40 95,50 75,60" fill="#06b6d4"/>
+        <text x="85" y="85" font-family="Arial, sans-serif" font-size="12" fill="#22d3ee" text-anchor="middle">Apple TV</text>
+        <text x="85" y="98" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Device + Proxy</text>
       </g>
+      
+      <!-- Row 2 -->
+      <g transform="translate(0, 120)">
+        <rect width="170" height="100" rx="8" fill="#334155" stroke="url(#purpleGradient)" stroke-width="2"/>
+        <polygon points="75,40 95,50 75,60" fill="#8b5cf6"/>
+        <text x="85" y="85" font-family="Arial, sans-serif" font-size="12" fill="#a78bfa" text-anchor="middle">iOS Setup</text>
+        <text x="85" y="98" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Device + Proxy</text>
+      </g>
+      
+      <g transform="translate(185, 120)" class="floating">
+        <rect width="170" height="100" rx="8" fill="#334155" stroke="url(#greenGradient)" stroke-width="2"/>
+        <polygon points="75,40 95,50 75,60" fill="#10b981"/>
+        <text x="85" y="85" font-family="Arial, sans-serif" font-size="12" fill="#34d399" text-anchor="middle">Android Setup</text>
+        <text x="85" y="98" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Device + Proxy</text>
+      </g>
+      
+      <g transform="translate(370, 120)">
+        <rect width="170" height="100" rx="8" fill="#334155" stroke="url(#orangeGradient)" stroke-width="2"/>
+        <polygon points="75,40 95,50 75,60" fill="#f97316"/>
+        <text x="85" y="85" font-family="Arial, sans-serif" font-size="12" fill="#fb923c" text-anchor="middle">Fire TV</text>
+        <text x="85" y="98" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Device + Proxy</text>
+      </g>
+      
+      <!-- Row 3 -->
+      <g transform="translate(92, 240)" class="floating">
+        <rect width="170" height="100" rx="8" fill="#334155" stroke="url(#greenGradient)" stroke-width="2"/>
+        <polygon points="75,40 95,50 75,60" fill="#10b981"/>
+        <text x="85" y="85" font-family="Arial, sans-serif" font-size="12" fill="#34d399" text-anchor="middle">Web Setup</text>
+        <text x="85" y="98" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Environment Config</text>
+      </g>
+      
+      <g transform="translate(277, 240)">
+        <rect width="170" height="100" rx="8" fill="#334155" stroke="url(#blueGradient)" stroke-width="2"/>
+        <polygon points="75,40 95,50 75,60" fill="#3b82f6"/>
+        <text x="85" y="85" font-family="Arial, sans-serif" font-size="12" fill="#60a5fa" text-anchor="middle">Framework</text>
+        <text x="85" y="98" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Dependencies</text>
+      </g>
+    </g>
+    
+    <!-- Bottom Badge -->
+    <g transform="translate(810, 800)">
+      <rect width="300" height="50" rx="25" fill="#8b5cf6" filter="url(#shadow)"/>
+      <text x="150" y="33" font-size="18" fill="#ffffff" font-weight="bold" text-anchor="middle">📹 Created by Team Experience</text>
     </g>
   </g>
   
-  <!-- RIGHT SECTION: Successful Onboarding -->
-  <g id="results">
-    <text x="1580" y="180" fill="#10b981" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" text-anchor="middle">Fast Onboarding</text>
+  <!-- RIGHT SECTION: Fast Onboarding -->
+  <g id="fastOnboardingSection">
+    <rect x="1320" y="120" width="550" height="850" rx="16" fill="#000000" opacity="0.3" filter="url(#shadow)"/>
+    <rect x="1320" y="120" width="550" height="80" rx="16" fill="url(#greenGradient)"/>
     
-    <!-- Success story -->
-    <g transform="translate(1380, 220)">
-      <rect x="0" y="0" width="440" height="520" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2" opacity="0.9"/>
-      
-      <!-- Happy new member -->
-      <g transform="translate(220, 40)">
-        <circle cx="0" cy="0" r="50" fill="#10b981" opacity="0.2" filter="url(#glow)"/>
-        <text x="0" y="18" fill="#10b981" font-size="48" text-anchor="middle">✓</text>
+    <text x="1595" y="170" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">
+      Fast Onboarding
+    </text>
+    
+    <!-- Success Checkmark -->
+    <g transform="translate(1595, 260)">
+      <circle cx="0" cy="0" r="50" fill="url(#greenGradient)" filter="url(#glow)"/>
+      <text x="0" y="15" font-size="50" text-anchor="middle">✓</text>
+    </g>
+    
+    <text x="1595" y="340" font-family="Arial, sans-serif" font-size="18" fill="#86efac" text-anchor="middle">
+      Self-Service Setup
+    </text>
+    
+    <!-- Benefits Cards -->
+    <g transform="translate(1370, 390)">
+      <!-- Card 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="450" height="90" rx="12" fill="#065f46" opacity="0.3"/>
+        <text x="30" y="35" font-size="28">🎬</text>
+        <text x="70" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#34d399">Step-by-step videos</text>
+        <text x="70" y="55" font-family="Arial, sans-serif" font-size="14" fill="#86efac">Watch &amp; follow along</text>
       </g>
       
-      <text x="220" y="120" fill="#10b981" font-size="16" font-weight="bold" text-anchor="middle">Self-Service Setup</text>
-      
-      <!-- Benefits -->
-      <g transform="translate(40, 160)">
-        <g>
-          <rect x="0" y="0" width="360" height="60" rx="8" fill="#10b981" opacity="0.1"/>
-          <text x="30" y="20" fill="#10b981" font-size="18">🎬</text>
-          <text x="65" y="24" fill="#FFFFFF" font-size="14" font-weight="600">Step-by-step videos</text>
-          <text x="65" y="43" fill="#cbd5e1" font-size="12">Watch & follow along</text>
-        </g>
-        
-        <g transform="translate(0, 80)">
-          <rect x="0" y="0" width="360" height="60" rx="8" fill="#10b981" opacity="0.1"/>
-          <text x="30" y="20" fill="#10b981" font-size="18">📱</text>
-          <text x="65" y="24" fill="#FFFFFF" font-size="14" font-weight="600">All platforms covered</text>
-          <text x="65" y="43" fill="#cbd5e1" font-size="12">WCTV, Roku, iOS, Android, Fire TV</text>
-        </g>
-        
-        <g transform="translate(0, 160)">
-          <rect x="0" y="0" width="360" height="60" rx="8" fill="#10b981" opacity="0.1"/>
-          <text x="30" y="20" fill="#10b981" font-size="18">🔌</text>
-          <text x="65" y="24" fill="#FFFFFF" font-size="14" font-weight="600">Proxy configuration</text>
-          <text x="65" y="43" fill="#cbd5e1" font-size="12">Complete setup guides</text>
-        </g>
-        
-        <g transform="translate(0, 240)">
-          <rect x="0" y="0" width="360" height="60" rx="8" fill="#10b981" opacity="0.1"/>
-          <text x="30" y="20" fill="#10b981" font-size="18">👥</text>
-          <text x="65" y="24" fill="#FFFFFF" font-size="14" font-weight="600">Team knowledge shared</text>
-          <text x="65" y="43" fill="#cbd5e1" font-size="12">Real experience captured</text>
-        </g>
+      <!-- Card 2 -->
+      <g transform="translate(0, 110)">
+        <rect width="450" height="90" rx="12" fill="#065f46" opacity="0.3"/>
+        <text x="30" y="35" font-size="28">📱</text>
+        <text x="70" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#34d399">All platforms covered</text>
+        <text x="70" y="55" font-family="Arial, sans-serif" font-size="14" fill="#86efac">WCTV, Roku, iOS, Android, Fire TV</text>
       </g>
       
-      <!-- Time saved -->
-      <g transform="translate(70, 450)">
-        <rect x="0" y="0" width="300" height="55" rx="8" fill="#10b981" opacity="0.2" stroke="#10b981" stroke-width="2"/>
-        <text x="150" y="25" fill="#10b981" font-size="18" font-weight="bold" text-anchor="middle">⚡ Hours, Not Days</text>
-        <text x="150" y="45" fill="#10b981" font-size="13" text-anchor="middle">Independent setup</text>
+      <!-- Card 3 -->
+      <g transform="translate(0, 220)">
+        <rect width="450" height="90" rx="12" fill="#065f46" opacity="0.3"/>
+        <text x="30" y="35" font-size="28">🔌</text>
+        <text x="70" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#34d399">Proxy configuration</text>
+        <text x="70" y="55" font-family="Arial, sans-serif" font-size="14" fill="#86efac">Complete setup guides</text>
       </g>
+      
+      <!-- Card 4 -->
+      <g transform="translate(0, 330)">
+        <rect width="450" height="90" rx="12" fill="#065f46" opacity="0.3"/>
+        <text x="30" y="35" font-size="28">👥</text>
+        <text x="70" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#34d399">Team knowledge shared</text>
+        <text x="70" y="55" font-family="Arial, sans-serif" font-size="14" fill="#86efac">Real experience captured</text>
+      </g>
+    </g>
+    
+    <!-- Bottom Badge -->
+    <g transform="translate(1470, 850)">
+      <rect width="250" height="70" rx="35" fill="#10b981" filter="url(#shadow)"/>
+      <text x="125" y="35" font-size="24" fill="#ffffff" font-weight="bold" text-anchor="middle">⚡ Hours, Not Days</text>
+      <text x="125" y="55" font-family="Arial, sans-serif" font-size="14" fill="#d1fae5" text-anchor="middle">Independent setup</text>
     </g>
   </g>
   
-  <!-- Center: Arrow showing transformation -->
-  <g transform="translate(960, 450)">
-    <path d="M -400 0 L 400 0" stroke="#f59e0b" stroke-width="5" opacity="0.6" marker-end="url(#arrowOrange)"/>
-    <rect x="-100" y="-35" width="200" height="70" rx="12" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="2"/>
-    <text x="0" y="-5" fill="#f59e0b" font-size="16" font-weight="bold" text-anchor="middle">Video Guides</text>
-    <text x="0" y="18" fill="#fbbf24" font-size="13" text-anchor="middle">Simplify Setup</text>
+  <!-- Bottom Banner with Platform Icons -->
+  <rect x="0" y="1000" width="1920" height="80" fill="#000000" opacity="0.4"/>
+  
+  <text x="960" y="1025" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">
+    Supported Platforms:
+  </text>
+  
+  <!-- Platform icons in circles -->
+  <g transform="translate(680, 1040)">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#60a5fa" stroke-width="2"/>
+    <text x="0" y="5" font-size="14" text-anchor="middle">📺</text>
+    <text x="0" y="-25" font-family="Arial, sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">WCTV</text>
   </g>
   
-  <!-- Platform icons grid (center top) -->
-  <g transform="translate(700, 800)">
-    <text x="260" y="0" fill="#94a3b8" font-size="16" font-weight="600" text-anchor="middle">Supported Platforms:</text>
-    
-    <g transform="translate(0, 20)">
-      <g>
-        <circle cx="40" cy="40" r="35" fill="#374151" stroke="#3b82f6" stroke-width="2"/>
-        <text x="40" y="52" fill="#3b82f6" font-size="28" text-anchor="middle">📺</text>
-        <text x="40" y="95" fill="#cbd5e1" font-size="11" text-anchor="middle">WCTV</text>
-      </g>
-      
-      <g transform="translate(90, 0)">
-        <circle cx="40" cy="40" r="35" fill="#374151" stroke="#10b981" stroke-width="2"/>
-        <text x="40" y="52" fill="#10b981" font-size="28" text-anchor="middle">🌐</text>
-        <text x="40" y="95" fill="#cbd5e1" font-size="11" text-anchor="middle">Web</text>
-      </g>
-      
-      <g transform="translate(180, 0)">
-        <circle cx="40" cy="40" r="35" fill="#374151" stroke="#f59e0b" stroke-width="2"/>
-        <text x="40" y="52" fill="#f59e0b" font-size="28" text-anchor="middle">📺</text>
-        <text x="40" y="95" fill="#cbd5e1" font-size="11" text-anchor="middle">Roku</text>
-      </g>
-      
-      <g transform="translate(270, 0)">
-        <circle cx="40" cy="40" r="35" fill="#374151" stroke="#06b6d4" stroke-width="2"/>
-        <text x="40" y="52" fill="#06b6d4" font-size="28" text-anchor="middle">📺</text>
-        <text x="40" y="95" fill="#cbd5e1" font-size="11" text-anchor="middle">Apple TV</text>
-      </g>
-      
-      <g transform="translate(360, 0)">
-        <circle cx="40" cy="40" r="35" fill="#374151" stroke="#8b5cf6" stroke-width="2"/>
-        <text x="40" y="52" fill="#8b5cf6" font-size="28" text-anchor="middle">📱</text>
-        <text x="40" y="95" fill="#cbd5e1" font-size="11" text-anchor="middle">iOS</text>
-      </g>
-      
-      <g transform="translate(450, 0)">
-        <circle cx="40" cy="40" r="35" fill="#374151" stroke="#22c55e" stroke-width="2"/>
-        <text x="40" y="52" fill="#22c55e" font-size="28" text-anchor="middle">📱</text>
-        <text x="40" y="95" fill="#cbd5e1" font-size="11" text-anchor="middle">Android</text>
-      </g>
-    </g>
+  <g transform="translate(760, 1040)">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#10b981" stroke-width="2"/>
+    <text x="0" y="5" font-size="14" text-anchor="middle">🌐</text>
+    <text x="0" y="-25" font-family="Arial, sans-serif" font-size="10" fill="#10b981" text-anchor="middle">Web</text>
   </g>
   
-  <!-- Bottom banner -->
-  <g transform="translate(0, 1000)">
-    <rect x="0" y="0" width="1920" height="80" fill="#0f172a" opacity="0.9"/>
-    
-    <g transform="translate(320, 25)">
-      <text x="0" y="0" fill="#10b981" font-size="15" font-weight="600">✓ Self-service onboarding</text>
-    </g>
-    
-    <g transform="translate(680, 25)">
-      <text x="0" y="0" fill="#10b981" font-size="15" font-weight="600">✓ Real team experience</text>
-    </g>
-    
-    <g transform="translate(1040, 25)">
-      <text x="0" y="0" fill="#10b981" font-size="15" font-weight="600">✓ No expert dependency</text>
-    </g>
-    
-    <g transform="translate(1400, 25)">
-      <text x="0" y="0" fill="#10b981" font-size="15" font-weight="600">✓ Consistent setup</text>
-    </g>
+  <g transform="translate(840, 1040)">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#f97316" stroke-width="2"/>
+    <text x="0" y="5" font-size="14" text-anchor="middle">📺</text>
+    <text x="0" y="-25" font-family="Arial, sans-serif" font-size="10" fill="#fb923c" text-anchor="middle">Roku</text>
   </g>
   
-  <!-- Arrow marker -->
-  <defs>
-    <marker id="arrowOrange" markerWidth="14" markerHeight="14" refX="7" refY="7" orient="auto">
-      <polygon points="0,0 14,7 0,14" fill="#f59e0b"/>
-    </marker>
-  </defs>
+  <g transform="translate(920, 1040)">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#06b6d4" stroke-width="2"/>
+    <text x="0" y="5" font-size="14" text-anchor="middle">📺</text>
+    <text x="0" y="-25" font-family="Arial, sans-serif" font-size="10" fill="#22d3ee" text-anchor="middle">Apple TV</text>
+  </g>
+  
+  <g transform="translate(1000, 1040)">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="0" y="5" font-size="14" text-anchor="middle">📱</text>
+    <text x="0" y="-25" font-family="Arial, sans-serif" font-size="10" fill="#a78bfa" text-anchor="middle">iOS</text>
+  </g>
+  
+  <g transform="translate(1080, 1040)">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#10b981" stroke-width="2"/>
+    <text x="0" y="5" font-size="14" text-anchor="middle">📱</text>
+    <text x="0" y="-25" font-family="Arial, sans-serif" font-size="10" fill="#34d399" text-anchor="middle">Android</text>
+  </g>
+  
+  <g transform="translate(1160, 1040)">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#f97316" stroke-width="2"/>
+    <text x="0" y="5" font-size="14" text-anchor="middle">📺</text>
+    <text x="0" y="-25" font-family="Arial, sans-serif" font-size="10" fill="#fb923c" text-anchor="middle">Fire TV</text>
+  </g>
+  
+  <g transform="translate(1240, 1040)">
+    <circle cx="0" cy="0" r="18" fill="none" stroke="#10b981" stroke-width="2"/>
+    <text x="0" y="5" font-size="14" text-anchor="middle">📺</text>
+    <text x="0" y="-25" font-family="Arial, sans-serif" font-size="10" fill="#34d399" text-anchor="middle">Android TV</text>
+  </g>
 </svg>
-
