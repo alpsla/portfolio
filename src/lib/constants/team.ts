@@ -86,6 +86,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Robin Alex',
     email: 'robin.alex@paramount.com',
     role: 'Sr. QE / Test Automation Architect',
+    avatar: '/assets/team/rob1nalex.jpg',
     yearsOfExperience: 20,
     background: 'Robin brings extensive experience in quality assurance and test automation across multiple platforms. With a proven track record in leading complex testing initiatives, Robin has been instrumental in driving QA excellence and innovation within the team. Robin has worked on Web UI, Backend (DB & API), Multiplatform (OTT, Mobile), and Mainframe applications. Robin has also been involved in data quality analysis, data migration testing, and data validation/reporting automation. Robin has demonstrated continuous innovation and process best practices leading to effort and cost savings in almost all projects.',
     projectsParticipated: ['unified-test-case-optimization', 'unified-test-automation-framework', 'test-manager-bot-eva', 'coppa-process-technology', 'report-portal', 'config-comparison'],
