@@ -29,7 +29,7 @@ function SignInForm() {
     const allowedDomains = (process.env.NEXT_PUBLIC_ALLOWED_EMAIL_DOMAINS || 'paramount.com').split(',');
     
     if (!emailDomain || !allowedDomains.includes(emailDomain)) {
-      setError('Only @paramount.com email addresses are authorized. Please contact your manager for access.');
+      setError('Only @paramount.com email addresses are authorized. This site is for Paramount internal use only.');
       setLoading(false);
       return;
     }
