@@ -110,6 +110,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Juney Jestin',
     email: 'juney.jestin@paramount.com',
     role: 'QA Engineer',
+    avatar: '/assets/team/juneyjestin.png',
     yearsOfExperience: 8,
     background: 'Quality-focused Automation Engineer driving testing excellence in Web and OTT platform applications. Leverages 5+ years of advanced proficiency in Selenium WebDriver, Java, and TestNG to build scalable automation frameworks. Expert in full STLC implementation with hands-on experience in requirement analysis, test design, execution, and comprehensive defect management using JIRA, Rally, and TestRail. Proven track record in Financial and Media domains, combining Agile methodology expertise with strong analytical and interpersonal skills to deliver impactful results in both team and individual contributor roles.',
     projectsParticipated: ['unified-test-case-optimization', 'unified-test-automation-framework', 'new-relic-qe-okr-dashboard', 'report-portal', 'test-manager-bot-eva'],
