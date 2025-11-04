@@ -134,6 +134,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Rohit Menon',
     email: 'rohit.menon@paramount.com',
     role: 'QA Engineer',
+    avatar: '/assets/team/rohitmenonv.png',
     yearsOfExperience: 9,
     background: 'With a strong foundation in Agile methodologies and a passion for quality engineering, Rohit Menon brings extensive expertise in Roku platform testing and Roku applications. As a QE Automation Engineer, Rohit excels in both manual and automated testing across a wide range of technologies and tools, with specialized focus on OTT Testing. His track record includes leading complex testing initiatives that drive meaningful improvements in test coverage and defect reduction. Rohit has made significant contributions to data validation, migration testing, and reporting automation, while his expertise in performance optimization and test data management ensures high-quality deliverables in every engagement.',
     projectsParticipated: ['unified-test-case-optimization', 'unified-test-automation-framework', 'dart'],
