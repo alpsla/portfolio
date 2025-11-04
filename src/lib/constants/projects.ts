@@ -215,9 +215,8 @@ export const PROJECTS: IProject[] = [
     attachments: [],
     links: [],
     tags: [
+      { key: 'topic:ai', label: 'AI/ML' },
       { key: 'topic:automation', label: 'Automation' },
-      { key: 'topic:onboarding', label: 'Onboarding' },
-      { key: 'topic:devops', label: 'DevOps' },
     ],
   },
   {
