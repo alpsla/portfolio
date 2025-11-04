@@ -98,6 +98,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Bobby Anil Alex',
     email: 'bobby.anil@paramount.com',
     role: 'QE Automation Engineer',
+    avatar: '/assets/team/anilbvi.jpg',
     yearsOfExperience: 4,
     background: 'Passionate QE Automation Engineer proficient in a wide range of testing technologies and tools with focus on OTT Testing. Skilled in both manual and automated testing with a strong focus on performance optimization and test data management.',
     projectsParticipated: ['unified-test-case-optimization', 'unified-test-automation-framework', 'new-relic-qe-okr-dashboard', 'config-comparison', 'onboarding-automation-setup'],
