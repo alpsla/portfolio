@@ -64,7 +64,7 @@ export default function ProjectDetailPage({ params }: Params) {
               className="w-full h-auto max-h-[400px] object-contain rounded-xl"
             />
             <p className="mt-4 text-center text-gray-600 dark:text-gray-400 text-sm italic">
-              The team's familiar face - recognized across the organization
+              The team&apos;s familiar face - recognized across the organization
             </p>
           </div>
         </div>
