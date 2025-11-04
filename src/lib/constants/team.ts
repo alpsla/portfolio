@@ -130,7 +130,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     hobbies: ['Dance & Movement Arts', 'Movies & Music',  'Reading', 'Creative Expression'],
     avatar: '/assets/team/Dhanya Mathew.png',
     linkedIn: 'http://www.linkedin.com/in/dhanya-mathew-1997691a7',
-    github: 'https://github.com/dhanyamathew',
+    github: 'https://github.com/mathewdhanya13',
   },
   {
     id: 'rohitmenonv',
