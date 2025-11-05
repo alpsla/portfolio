@@ -13,9 +13,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Phase 2: Detect site configuration for styling and behavior
+  const mode = process.env.NEXT_PUBLIC_MODE || 'external';
+  const siteType = process.env.NEXT_PUBLIC_OWNER ? 'personal' : 'team';
+  const owner = process.env.NEXT_PUBLIC_OWNER;
+  
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body 
+        className="antialiased"
+        data-site-mode={mode}
+        data-site-type={siteType}
+        data-owner={owner}
+      >
         <SessionProvider>
           <Header />
           {children}
