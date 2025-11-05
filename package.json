@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "validate:external": "tsx scripts/validate-external.ts",
+    "init:personal": "tsx scripts/init-personal.ts",
+    "sync:template": "tsx scripts/sync-template.ts",
+    "check:ownership": "tsx scripts/check-ownership.ts",
     "postinstall": "prisma generate || true",
     "vercel-build": "(prisma generate && prisma db push --accept-data-loss || echo 'Skipping DB setup') && next build"
   },

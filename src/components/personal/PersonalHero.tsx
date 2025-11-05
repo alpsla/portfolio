@@ -15,7 +15,9 @@ export function PersonalHero() {
   
   const displayName = config.displayName || 'QA Engineer';
   const tagline = config.personal?.tagline || config.member?.role || 'Quality Assurance Professional';
-  const bio = config.bio;
+  
+  // Use customBio if available, otherwise fall back to member bio
+  const bio = config.personal?.customBio || config.bio;
   const social = config.social;
   
   return (
