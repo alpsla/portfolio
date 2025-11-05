@@ -5,8 +5,8 @@
  * Description: Manages site configuration, personal config, and effective merged config
  */
 
-import type { SiteConfig, PersonalConfig, EffectiveConfig } from '@/lib/types/config';
-import { TEAM_MEMBERS } from '@/lib/constants/team';
+import type { SiteConfig, PersonalConfig, EffectiveConfig } from '../types/config';
+import { TEAM_MEMBERS } from '../constants/team';
 
 /**
  * Get runtime site configuration from environment variables
@@ -51,7 +51,7 @@ export function getSiteConfig(): SiteConfig {
 export function getPersonalConfig(): PersonalConfig | null {
   try {
     // Dynamic import to avoid build errors when file doesn't exist
-    const config = require('@/config/personal-config');
+    const config = require('../../../config/personal-config');
     return config.PERSONAL_CONFIG || null;
   } catch (error) {
     // File doesn't exist - this is expected for team site and template

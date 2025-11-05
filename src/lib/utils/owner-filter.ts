@@ -5,7 +5,7 @@
  * Description: Filters projects based on ownership for personal portfolios
  */
 
-import type { IProject } from '@/lib/types/project';
+import type { IProject } from '../types/project';
 import { getSiteConfig } from './config';
 import { sanitizeAllProjects } from './safety';
 
@@ -27,12 +27,15 @@ export function filterByOwnership(projects: IProject[]): IProject[] {
   }
   
   // Personal site - filter to owner's projects
+  const ownerId = config.owner;
+  if (!ownerId) return projects; // Safety check
+  
   return projects.filter(project => {
     // Check if person is the primary owner
-    const isOwner = project.owner === config.owner;
+    const isOwner = project.owner === ownerId;
     
     // Check if person is a contributor
-    const isContributor = project.contributors?.includes(config.owner);
+    const isContributor = project.contributors?.includes(ownerId);
     
     return isOwner || isContributor;
   });
@@ -51,7 +54,7 @@ export function filterByOwnership(projects: IProject[]): IProject[] {
 export function getFilteredProjects(): IProject[] {
   // Import all projects (will be dynamic import in actual code)
   // For now, we'll make this function async-compatible
-  const { PROJECTS } = require('@/lib/constants/projects');
+  const { PROJECTS } = require('../constants/projects');
   
   // Step 1: Apply sensitivity filtering (respects internal/external mode)
   const sanitizedProjects = sanitizeAllProjects(PROJECTS);
