@@ -2,14 +2,14 @@
  * Page: Home
  * Author: AR
  * Created: 2025-10-08
- * Modified: 2025-11-02 by AR - Add client-side auth guard
+ * Modified: 2025-11-05 by AR - Integrate owner-based filtering for Phase 2
  * Description: Enhanced home page showcasing team achievements and major projects.
+ *              Now supports filtering by owner for personal portfolios.
  */
 
 'use client';
 
-import { PROJECTS } from '../lib/constants/projects';
-import { sanitizeAllProjects } from '../lib/utils/safety';
+import { getFilteredProjects } from '../lib/utils/owner-filter';
 import { ProjectCard } from '../components/shared/ProjectCard';
 import { SafetyBanner } from '../components/shared/SafetyBanner';
 import { AuthGuard } from '../components/shared/AuthGuard';
@@ -17,7 +17,9 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 export default function HomePage() {
-  const data = sanitizeAllProjects(PROJECTS);
+  // Phase 2: Use two-layer filtering (sensitivity + ownership)
+  // Automatically shows all projects for team sites, filtered projects for personal sites
+  const data = getFilteredProjects();
 
   // Calculate team achievements
   const totalProjects = data.length;
