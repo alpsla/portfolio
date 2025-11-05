@@ -2,7 +2,9 @@
  * Component: AuthGuard
  * Author: AR
  * Created: 2025-11-02
+ * Modified: 2025-11-05 by AR - Phase 2: Skip auth for external/personal mode
  * Description: Client-side authentication guard that redirects unauthenticated users
+ *              Only enforces authentication for internal team sites
  */
 
 'use client';
@@ -10,6 +12,7 @@
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+import { isInternal } from '../../lib/utils/config';
 
 interface AuthGuardProps {
   children: React.ReactNode;
@@ -18,15 +21,25 @@ interface AuthGuardProps {
 export function AuthGuard({ children }: AuthGuardProps) {
   const { data: session, status } = useSession();
   const router = useRouter();
+  
+  // Phase 2: Personal portfolios are PUBLIC - no auth required
+  const requiresAuth = isInternal();
+  
+  // If external mode, skip authentication entirely
+  if (!requiresAuth) {
+    return <>{children}</>;
+  }
 
+  // Internal mode: Enforce authentication
   useEffect(() => {
+    if (!requiresAuth) return;
     if (status === 'loading') return; // Still checking session
     
     if (status === 'unauthenticated') {
       // Not authenticated - redirect to sign in
       router.push('/auth/signin');
     }
-  }, [status, router]);
+  }, [status, router, requiresAuth]);
 
   // Show loading while checking authentication
   if (status === 'loading') {
