@@ -267,19 +267,39 @@ export default function HomePage() {
       {/* Call to Action */}
       <section className="container mx-auto px-6 py-20">
         <div className="max-w-4xl mx-auto text-center bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 rounded-2xl p-12 shadow-2xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Interested in Implementing These Solutions?
-          </h2>
-          <p className="text-xl text-blue-50 mb-8 max-w-2xl mx-auto">
-            Want to learn more about any of our QA innovations or discuss implementation for your organization?
-            Reach out to our team for detailed insights and collaboration opportunities.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            Contact Our Team
-          </Link>
+          {config.isPersonal ? (
+            <>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Let's Work Together
+              </h2>
+              <p className="text-xl text-blue-50 mb-8 max-w-2xl mx-auto">
+                Interested in discussing opportunities, collaboration, or learning more about these projects?
+                I'd love to hear from you!
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                Get In Touch
+              </Link>
+            </>
+          ) : (
+            <>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Interested in Implementing These Solutions?
+              </h2>
+              <p className="text-xl text-blue-50 mb-8 max-w-2xl mx-auto">
+                Want to learn more about any of our QA innovations or discuss implementation for your organization?
+                Reach out to our team for detailed insights and collaboration opportunities.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                Contact Our Team
+              </Link>
+            </>
+          )}
         </div>
       </section>
     </main>
