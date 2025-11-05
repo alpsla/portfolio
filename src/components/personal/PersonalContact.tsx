@@ -93,7 +93,7 @@ export function PersonalContact() {
               LinkedIn
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-              {contactInfo?.preferredMethod === 'linkedin' ? 'Preferred method' : 'Connect professionally'}
+              {contact?.preferredMethod?.toLowerCase().includes('linkedin') ? 'Preferred method' : 'Connect professionally'}
             </p>
             <a
               href={social.linkedin}
