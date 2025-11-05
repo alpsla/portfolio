@@ -37,10 +37,12 @@ export function PersonalAbout() {
         
         {/* User's custom introduction OR fallback to team.ts bio */}
         {about?.introduction ? (
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
-              {about.introduction}
-            </p>
+          <div className="space-y-4">
+            {about.introduction.split('\n\n').filter(p => p.trim()).map((paragraph, index) => (
+              <p key={index} className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                {paragraph.trim()}
+              </p>
+            ))}
           </div>
         ) : config.bio ? (
           <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-400 p-4 mb-6">
@@ -106,10 +108,12 @@ export function PersonalAbout() {
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             {section.title}
           </h3>
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line">
-              {section.content}
-            </p>
+          <div className="space-y-4">
+            {section.content.split('\n\n').filter(p => p.trim()).map((paragraph, idx) => (
+              <p key={idx} className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                {paragraph.trim()}
+              </p>
+            ))}
           </div>
         </section>
       ))}
