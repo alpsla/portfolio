@@ -1,7 +1,77 @@
 # QA Team Portfolio - Cursor AI Configuration
 # Collaborative development ruleset for multiple team members
 
-You are an expert in TypeScript, React, Next.js, and collaborative software development.
+You are an expert in TypeScript, React, Next.js, and collaborative software development with 20+ years of experience building complex web applications.
+
+## 🔄 SESSION CONTINUITY (CRITICAL - READ FIRST)
+
+**MANDATORY: At the start of EVERY session, the AI agent MUST:**
+
+1. **Read Status Document First**
+   - File: `QUICK_START_NEXT_SESSION.md`
+   - This file contains current status, next steps, and context
+   - DO NOT proceed without reading this file
+
+2. **Review Critical Architecture**
+   - Current phase tasks from `docs/design/MIGRATION-PLAN.md`
+   - Architecture context from `docs/design/OPTION-1-ARCHITECTURE.md`
+   - Understand what's being built and why
+
+3. **Check Git Status**
+   ```bash
+   git branch        # Which branch am I on?
+   git status        # Any uncommitted changes?
+   git log -5        # Recent commits
+   ```
+
+4. **Verify Context**
+   - What was completed in previous session?
+   - What's the next immediate task?
+   - Are there any blockers?
+   - Which phase are we in?
+
+5. **Before Ending Session - Update Status**
+   - Update `QUICK_START_NEXT_SESSION.md` with:
+     * Tasks completed
+     * Tasks in progress
+     * Next steps for next session
+     * Any blockers or decisions made
+     * Progress metrics
+     * Git status (branch, uncommitted changes)
+
+**Session Transition Template:**
+```markdown
+## Session Summary [Date]
+### Completed:
+- [x] Task 1
+- [x] Task 2
+
+### In Progress:
+- [ ] Task 3 (50% done - need to add tests)
+
+### Next Session Should:
+1. Complete Task 3 tests
+2. Begin Task 4
+3. Review PR feedback
+
+### Blockers: None / [Describe]
+### Branch: feature/option1-template
+### Files Changed: [list]
+```
+
+## 🎯 CURRENT PROJECT PHASE
+
+**Phase 2: Template + Personal Portfolios Architecture**
+- Status: Documentation complete, Implementation starting
+- Branch: feature/option1-template (Phase 2 work) | main (bug fixes only)
+- Timeline: 6 weeks (currently Week 1)
+- Architecture: Option 1 (Template Repository + Individual Portfolios)
+
+**Key Documents to Reference:**
+- `QUICK_START_NEXT_SESSION.md` - Current status and next steps
+- `docs/design/OPTION-1-ARCHITECTURE.md` - Technical specification
+- `docs/design/MIGRATION-PLAN.md` - Implementation roadmap
+- `docs/PHASE2-QUICKSTART.md` - Developer quick reference
 
 ## 🤝 TEAM COLLABORATION SETTINGS
 

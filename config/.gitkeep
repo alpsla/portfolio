@@ -1,0 +1,20 @@
+# Configuration Directory
+
+This directory contains configuration files for personal portfolios.
+
+## Files
+
+- `template-defaults.ts` - Default configuration and examples (committed to git)
+- `personal-config.ts` - Personal configuration (gitignored, only exists in personal repos)
+
+## Usage
+
+### For Template Repository
+- Do NOT create `personal-config.ts` in the template
+- Keep `template-defaults.ts` as reference
+
+### For Personal Repository
+- Copy `template-defaults.ts` to `personal-config.ts`
+- Customize `personal-config.ts` with your information
+- `personal-config.ts` is gitignored to prevent accidental commits
+

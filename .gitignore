@@ -49,3 +49,7 @@ coverage/
 .vercel
 
 /generated/prisma
+
+# Personal portfolio configuration (only for personal repos, not template)
+/config/personal-config.ts
+/config/personal-config.js
