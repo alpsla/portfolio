@@ -111,6 +111,52 @@ export interface PersonalConfig {
   /** Custom bio (overrides team.ts background) */
   customBio?: string;
   
+  /** About Page Content - User provides their own text */
+  about?: {
+    /** Main introduction/summary */
+    introduction?: string;
+    
+    /** What you're looking for */
+    lookingFor?: string;
+    
+    /** Career highlights or achievements */
+    highlights?: string[];
+    
+    /** Additional sections (flexible structure) */
+    sections?: Array<{
+      title: string;
+      content: string;
+    }>;
+  };
+  
+  /** Contact Page Content - User's personal contact info */
+  contact?: {
+    /** Headline for contact page */
+    headline?: string;
+    
+    /** Contact message/availability */
+    message?: string;
+    
+    /** Personal email (NOT company email) */
+    email?: string;
+    
+    /** Phone number */
+    phone?: string;
+    
+    /** Timezone */
+    timezone?: string;
+    
+    /** Preferred contact method */
+    preferredMethod?: string;
+    
+    /** Additional contact methods */
+    additionalMethods?: Array<{
+      name: string; // e.g., "WeChat", "Telegram", "Signal"
+      value: string;
+      icon?: string;
+    }>;
+  };
+  
   /** Featured projects in order (project IDs) */
   featuredProjects?: string[];
   

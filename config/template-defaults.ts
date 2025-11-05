@@ -28,8 +28,66 @@ export const DEFAULT_PERSONAL_CONFIG: PersonalConfig = {
     preferDarkMode: undefined,
   },
   
-  // Content (Optional)
-  customBio: undefined,
+  // Content (Optional - Users provide their own text)
+  customBio: undefined, // Short bio for hero section
+  
+  // About Page - User provides their own content
+  about: {
+    introduction: undefined,
+    /* Example:
+    "I'm a Senior QA Automation Architect with 20 years of experience building 
+    scalable testing solutions for streaming platforms. I specialize in 
+    cross-platform automation, AI-powered testing, and data observability."
+    */
+    
+    lookingFor: undefined,
+    /* Example:
+    "Seeking Senior QA Architect or Test Engineering Lead roles at innovative 
+    companies in streaming, media, or high-scale SaaS. Excited about opportunities 
+    to build testing infrastructure from the ground up or transform existing QA teams."
+    */
+    
+    highlights: undefined,
+    /* Example:
+    [
+      "Built unified test framework used across 8+ platforms",
+      "Reduced test execution time by 70% through intelligent selection",
+      "Led team of 6 QA engineers to deliver zero-defect releases",
+    ]
+    */
+    
+    sections: undefined,
+    /* Example:
+    [
+      {
+        title: "My Approach to Quality",
+        content: "I believe in shifting left with observability-driven testing..."
+      },
+      {
+        title: "Why I Love QA",
+        content: "Quality engineering is about enabling teams to move fast..."
+      }
+    ]
+    */
+  },
+  
+  // Contact Page - User's PERSONAL contact info (NOT company)
+  contact: {
+    headline: undefined, // e.g., "Let's Connect!"
+    message: undefined,  // e.g., "I'm always interested in new opportunities..."
+    email: undefined,    // YOUR personal email (not @company.com)
+    phone: undefined,    // Your phone (optional)
+    timezone: undefined, // e.g., "PST (UTC-8)"
+    preferredMethod: undefined, // e.g., "Email or LinkedIn"
+    additionalMethods: undefined,
+    /* Example:
+    [
+      { name: "WeChat", value: "YourWeChatID", icon: "💬" },
+      { name: "Telegram", value: "@yourusername", icon: "✈️" },
+    ]
+    */
+  },
+  
   featuredProjects: undefined, // e.g., ['project-1', 'project-2']
   hiddenProjects: undefined,   // e.g., ['project-3']
   
