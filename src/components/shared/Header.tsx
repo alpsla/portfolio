@@ -2,8 +2,9 @@
  * Component: Header
  * Author: AR
  * Created: 2025-10-31
- * Modified: 2025-11-02 by AR - Add logout button
+ * Modified: 2025-11-05 by AR - Phase 2: Add personal portfolio support
  * Description: Global navigation header with logo and links.
+ *              Adapts branding based on team vs personal site mode.
  */
 
 'use client';
@@ -12,10 +13,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import { signOutUser } from '../../lib/auth-utils';
+import { getSiteConfig, getEffectiveConfig } from '../../lib/utils/config';
 
 export function Header() {
   const pathname = usePathname();
   const { data: session } = useSession();
+  const siteConfig = getSiteConfig();
+  const effectiveConfig = getEffectiveConfig();
 
   const isActive = (path: string) => {
     if (path === '/') return pathname === '/';
@@ -24,22 +28,35 @@ export function Header() {
 
   // Don't show logout button on auth pages
   const isAuthPage = pathname?.startsWith('/auth');
+  
+  // Determine branding based on site type
+  const title = siteConfig.isPersonal 
+    ? effectiveConfig.displayName || 'Portfolio'
+    : 'QA Innovation Hub';
+    
+  const subtitle = siteConfig.isPersonal
+    ? effectiveConfig.member?.role || 'QA Engineer'
+    : 'Team Portfolio & Achievements';
+  
+  const logoLetter = siteConfig.isPersonal
+    ? (effectiveConfig.displayName?.[0] || 'P')
+    : 'Q';
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 shadow-sm">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo / Brand */}
+          {/* Logo / Brand - Adapts to personal vs team */}
           <Link href="/" className="group flex items-center gap-3">
             <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md">
-              <span className="text-white font-bold text-xl">Q</span>
+              <span className="text-white font-bold text-xl">{logoLetter}</span>
             </div>
             <div className="hidden sm:block">
               <div className="font-bold text-xl bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-                QA Innovation Hub
+                {title}
               </div>
               <div className="text-xs text-gray-600 dark:text-gray-400">
-                Team Portfolio & Achievements
+                {subtitle}
               </div>
             </div>
           </Link>
