@@ -37,37 +37,16 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Rostislav Alpin',
     email: 'rostislav.alpin@paramount.com',
     role: 'Manager',
-
-    // TEMPLATE - Please fill out the sections below:
-
-    yearsOfExperience: undefined, // e.g., 8
-    background: undefined,
-    /* Example:
-    "Started as a QA Engineer in 2015, progressed through automation and leadership roles.
-    Passionate about building scalable testing solutions and mentoring teams to achieve excellence."
-    */
-
-    projectsParticipated: undefined,
-    /* Example:
-    ['data-observability', 'config-comparison', 'device-farm', 'playwright-framework']
-    */
-
-    keySkills: undefined,
-    /* Example:
+    yearsOfExperience: 20,
+    background: "Started as a QA Engineer in 2015, progressed through manual tester to automation engineer and leadership roles, Passionate about building scalable testing solutions and mentoring teams to achieve excellence.",
+    projectsParticipated: ['data-observability', 'config-comparison', 'unified-test-case-optimization', 'unified-test-automation-framework', 'test-manager-bot-eva', 'coppa-process-technology', 'report-portal', 'onboarding-automation-setup', 'new-relic-qe-okr-dashboard', 'dart'],
+    keySkills: 
     ['Test Automation Architecture', 'Team Leadership', 'CI/CD Pipeline Design',
-     'Cross-platform Testing', 'Mentoring & Training']
-    */
-
-    professionalInterests: undefined,
-    /* Example:
-    ['AI-powered testing', 'Performance optimization', 'DevOps integration',
-     'Test data management']
-    */
-
-    hobbies: undefined, // Optional
-    /* Example:
-    ['Photography', 'Hiking', 'Chess', 'Reading sci-fi']
-    */
+     'Cross-platform Testing', 'Mentoring & Training', 'AI Vibing Innovator'],
+    professionalInterests: ['AI-powered testing', 'Performance optimization', 'DevOps integration', 'Data Observability', 
+     'Test data management', 'Quality Process in SDLC', 'AI Applicaitons and Tools'],
+    hobbies: 
+    ['Tennis', 'Tai Chi', 'Vibing development of AI applications and tools']
   },
   {
     id: 'krishnachaitanya',
@@ -78,7 +57,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     background: undefined,
     projectsParticipated: undefined,
     keySkills: undefined,
-    professionalInterests: undefined,
+    professionalInterests: ['Test Architecture', 'Automation Innovation', 'Generative AI', 'DevOps Practices', 'Quality Metrics', 'Quality Process in SDLC'],
     hobbies: undefined,
   },
   {

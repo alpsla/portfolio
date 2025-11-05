@@ -30,7 +30,7 @@ export function PersonalProjects() {
             No Projects Yet
           </h2>
           <p className="text-gray-600 dark:text-gray-300">
-            Projects will appear here as you contribute to the team's initiatives.
+            Projects will appear here as you contribute to the team&apos;s initiatives.
           </p>
         </div>
       </section>

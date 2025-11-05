@@ -24,13 +24,8 @@ export function AuthGuard({ children }: AuthGuardProps) {
   
   // Phase 2: Personal portfolios are PUBLIC - no auth required
   const requiresAuth = isInternal();
-  
-  // If external mode, skip authentication entirely
-  if (!requiresAuth) {
-    return <>{children}</>;
-  }
 
-  // Internal mode: Enforce authentication
+  // Internal mode: Enforce authentication (must be before any conditional returns for hooks)
   useEffect(() => {
     if (!requiresAuth) return;
     if (status === 'loading') return; // Still checking session
@@ -40,6 +35,11 @@ export function AuthGuard({ children }: AuthGuardProps) {
       router.push('/auth/signin');
     }
   }, [status, router, requiresAuth]);
+  
+  // If external mode, skip authentication entirely
+  if (!requiresAuth) {
+    return <>{children}</>;
+  }
 
   // Show loading while checking authentication
   if (status === 'loading') {

@@ -34,9 +34,9 @@ export function PersonalContact() {
 {`contact: {
   headline: "Let's Connect!",
   message: "I'm always open to discussing new opportunities...",
-  email: "your.personal@email.com", // Your PERSONAL email
-  phone: "+1 (555) 123-4567",
-  timezone: "PST (UTC-8)",
+  email: "alpsla@gmail.com", 
+  phone: "+1 (718) 290-3059",
+  timezone: "EST (UTC-5)",
   preferredMethod: "Email or LinkedIn",
   additionalMethods: [
     { name: "WeChat", value: "YourWeChatID", icon: "💬" },
@@ -65,7 +65,7 @@ export function PersonalContact() {
       <div className="grid md:grid-cols-2 gap-6">
         {/* Personal Email */}
         {contact?.email && (
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-2xl">
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-2xl text-center">
             <div className="text-5xl mb-4">📧</div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
               Email
@@ -87,7 +87,7 @@ export function PersonalContact() {
         
         {/* LinkedIn */}
         {social?.linkedin && (
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-2xl">
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-2xl text-center">
             <div className="text-5xl mb-4">💼</div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
               LinkedIn
@@ -108,7 +108,7 @@ export function PersonalContact() {
         
         {/* GitHub */}
         {social?.github && (
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-gray-200 dark:border-gray-700 hover:border-gray-800 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-2xl">
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-gray-200 dark:border-gray-700 hover:border-gray-800 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-2xl text-center">
             <div className="text-5xl mb-4">💻</div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
               GitHub
@@ -129,7 +129,7 @@ export function PersonalContact() {
         
         {/* Phone */}
         {contact?.phone && (
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-500 transition-all duration-300 hover:shadow-2xl">
+          <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-500 transition-all duration-300 hover:shadow-2xl text-center">
             <div className="text-5xl mb-4">📱</div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
               Phone
@@ -153,7 +153,7 @@ export function PersonalContact() {
         {contact?.additionalMethods && contact.additionalMethods.map((method, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-gray-200 dark:border-gray-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all duration-300 hover:shadow-2xl"
+            className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border-2 border-gray-200 dark:border-gray-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all duration-300 hover:shadow-2xl text-center"
           >
             <div className="text-5xl mb-4">{method.icon || '💬'}</div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">

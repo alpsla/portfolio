@@ -14,10 +14,10 @@ export function PersonalAbout() {
   
   const member = config.member;
   const about = config.personal?.about;
-  const skills = member?.keySkills || [];
-  const interests = member?.professionalInterests || [];
-  const hobbies = member?.hobbies || [];
-  const experience = member?.yearsOfExperience;
+  const skills = (member?.keySkills as string[]) || [];
+  const interests = (member?.professionalInterests as string[]) || [];
+  const hobbies = (member?.hobbies as string[]) || [];
+  const experience = member?.yearsOfExperience as number | undefined;
   
   return (
     <div className="space-y-12">
@@ -47,6 +47,11 @@ export function PersonalAbout() {
             <p className="text-sm text-yellow-800 dark:text-yellow-200 mb-2">
               💡 <strong>Tip:</strong> Customize your about page by adding <code>about.introduction</code> to your personal-config.ts
             </p>
+            {config.bio && (
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mt-4">
+                {config.bio}
+              </p>
+            )}
           </div>
         ) : (
           <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-dashed border-blue-300 dark:border-blue-700 rounded-xl p-8 text-center">
@@ -54,7 +59,7 @@ export function PersonalAbout() {
               📝 <strong>Add your introduction in personal-config.ts:</strong>
             </p>
             <code className="text-sm text-gray-700 dark:text-gray-300">
-              about: &#123; introduction: "Your story here..." &#125;
+              about: &#123; introduction: &quot;Your story here...&quot; &#125;
             </code>
           </div>
         )}
@@ -86,7 +91,7 @@ export function PersonalAbout() {
           <div className="p-6 bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-900/20 dark:to-blue-900/20 rounded-xl border-2 border-emerald-200 dark:border-emerald-700">
             <h3 className="text-xl font-bold text-emerald-900 dark:text-emerald-100 mb-3 flex items-center gap-2">
               <span>🎯</span>
-              <span>What I'm Looking For</span>
+              <span>What I&apos;m Looking For</span>
             </h3>
             <p className="text-emerald-800 dark:text-emerald-200 leading-relaxed">
               {about.lookingFor}
