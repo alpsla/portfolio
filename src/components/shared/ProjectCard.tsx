@@ -2,27 +2,55 @@
  * Component: ProjectCard
  * Author: AR
  * Created: 2025-10-08
- * Modified: 2025-10-31 by AR
+ * Modified: 2025-11-05 by AR - Phase 2: Add ownership badges for personal portfolios
  * Description: Enhanced card view for a project listing with animations.
+ *              Shows ownership badges in personal portfolio mode.
  */
 
+'use client';
+
 import { IProject } from '../../lib/types/project';
+import { getSiteConfig } from '../../lib/utils/config';
 
 interface ProjectCardProps {
   project: IProject; // Project to render
+  showOwnership?: boolean; // Optional: Show ownership badges (default: auto-detect)
 }
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, showOwnership }: ProjectCardProps) {
+  const config = getSiteConfig();
+  
   // Determine if project has significant content
   const hasMetrics = project.metrics && project.metrics.length > 0;
   const hasAttachments = project.attachments && project.attachments.length > 0;
   const hasLinks = project.links && project.links.length > 0;
   const isRich = hasMetrics || hasAttachments || hasLinks;
+  
+  // Determine ownership status for personal portfolios
+  const shouldShowOwnership = showOwnership !== undefined ? showOwnership : config.isPersonal;
+  const isOwner = project.owner === config.owner;
+  const isContributor = !isOwner && project.contributors?.includes(config.owner || '');
 
   return (
     <article className="h-full bg-white dark:bg-gray-800 rounded-xl border-2 border-gray-200 dark:border-gray-700 p-6 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:border-blue-400 dark:hover:border-blue-500 group relative overflow-hidden">
       {/* Gradient overlay on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 dark:from-blue-400/10 dark:to-purple-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+      {/* Ownership Badge (Personal portfolios only) */}
+      {shouldShowOwnership && (isOwner || isContributor) && (
+        <div className="absolute top-3 right-3 z-20">
+          {isOwner && (
+            <span className="px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold rounded-full shadow-lg">
+              Owner
+            </span>
+          )}
+          {isContributor && (
+            <span className="px-3 py-1 bg-emerald-600 text-white text-xs font-bold rounded-full shadow-lg">
+              Contributor
+            </span>
+          )}
+        </div>
+      )}
 
       <div className="relative z-10">
         {/* Hero image if available */}
