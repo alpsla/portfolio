@@ -18,6 +18,16 @@ export default function RootLayout({
   const siteType = process.env.NEXT_PUBLIC_OWNER ? 'personal' : 'team';
   const owner = process.env.NEXT_PUBLIC_OWNER;
   
+  // Development-only: Validate configuration
+  if (process.env.NODE_ENV === 'development') {
+    const { validateConfig } = require('../lib/utils/config');
+    const errors = validateConfig();
+    if (errors.length > 0) {
+      console.warn('[Config Validation] Issues detected:');
+      errors.forEach((error: string) => console.warn('  -', error));
+    }
+  }
+  
   return (
     <html lang="en">
       <body 
