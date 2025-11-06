@@ -2,14 +2,14 @@
  * Page: Project Detail
  * Author: AR
  * Created: 2025-10-08
- * Modified: 2025-11-02 by AR - Add client-side auth guard
+ * Modified: 2025-11-05 by AR - Integrate owner-based filtering for Phase 2
  * Description: Detail view for a project by slug with enhanced animations and icons.
+ *              Now respects ownership filtering for personal portfolios.
  */
 
 'use client';
 
-import { PROJECTS } from '../../../lib/constants/projects';
-import { sanitizeAllProjects } from '../../../lib/utils/safety';
+import { getFilteredProjects } from '../../../lib/utils/owner-filter';
 import { AuthGuard } from '../../../components/shared/AuthGuard';
 
 interface Params {
@@ -17,13 +17,31 @@ interface Params {
 }
 
 export default function ProjectDetailPage({ params }: Params) {
-  const data = sanitizeAllProjects(PROJECTS);
+  // Phase 2: Use two-layer filtering (sensitivity + ownership)
+  // If viewing a personal portfolio, only accessible projects are returned
+  const data = getFilteredProjects();
   const project = data.find((p) => p.slug === params.slug);
   
   if (!project) {
     return (
       <AuthGuard>
-        <div className="p-6">Project not found.</div>
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 flex items-center justify-center px-6">
+          <div className="max-w-md text-center">
+            <div className="text-6xl mb-4">🔍</div>
+            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Project Not Found
+            </h1>
+            <p className="text-gray-600 dark:text-gray-300 mb-8">
+              This project doesn&apos;t exist or you don&apos;t have access to it.
+            </p>
+            <a
+              href="/"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all"
+            >
+              ← Back to Home
+            </a>
+          </div>
+        </div>
       </AuthGuard>
     );
   }

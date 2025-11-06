@@ -2,7 +2,7 @@
  * Types: Project & Attachments
  * Author: AR
  * Created: 2025-10-08
- * Modified: 2025-10-08 by AR
+ * Modified: 2025-11-05 by AR
  * Description: Shared data structures for projects and sensitivity model.
  */
 
@@ -42,6 +42,7 @@ export interface IProject {
   heroImage?: string;
   brandImage?: string; // Additional brand/mascot image to show on detail page
   owner: string;
+  contributors?: string[]; // Team member IDs who contributed (not primary owner)
   summary: string;
   problem: string;
   solution: string;

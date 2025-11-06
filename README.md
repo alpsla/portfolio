@@ -7,6 +7,30 @@ This repository is designed for parallel collaboration and to produce two builds
 - Internal build: includes links to company systems (GitHub, Confluence, JIRA, NPAW) and non-public materials.
 - External build: redacts/hides sensitive materials, showing concepts, impact, and demos safe for public viewing.
 
+---
+
+## 🚀 Phase 2: Personal Portfolios (NEW!)
+
+**Status:** Documentation Complete - Ready to Begin  
+**Goal:** Enable each teammate to own an independent, portable portfolio
+
+We're evolving to a **template system** where:
+- ✅ Each teammate owns their repository
+- ✅ Personal portfolios show only their projects
+- ✅ Customizable branding per person
+- ✅ Portable (take to next job)
+- ✅ Internal team site continues to work
+
+**📖 Full Documentation:** [README-PHASE2.md](./README-PHASE2.md)
+
+**Quick Links:**
+- 📋 [Implementation Summary](./docs/PHASE2-IMPLEMENTATION-SUMMARY.md)
+- 📐 [Architecture Design](./docs/design/OPTION-1-ARCHITECTURE.md)
+- 🗺️ [Migration Plan](./docs/design/MIGRATION-PLAN.md)
+- 🚀 [Quick Start Guide](./docs/PHASE2-QUICKSTART.md)
+
+---
+
 
 ## Highlights
 

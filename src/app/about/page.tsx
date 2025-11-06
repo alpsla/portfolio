@@ -2,8 +2,9 @@
  * Page: About
  * Author: AR
  * Created: 2025-10-09
- * Modified: 2025-11-02 by AR - Add client-side auth guard
+ * Modified: 2025-11-05 by AR - Phase 2: Add personal portfolio support
  * Description: Team branding message and team member showcase.
+ *              Switches to personal bio for personal portfolios.
  */
 
 'use client';
@@ -11,8 +12,30 @@
 import { SafetyBanner } from '../../components/shared/SafetyBanner';
 import { TEAM_MEMBERS } from '../../lib/constants/team';
 import { AuthGuard } from '../../components/shared/AuthGuard';
+import { getSiteConfig } from '../../lib/utils/config';
+import { PersonalAbout } from '../../components/personal/PersonalAbout';
 
 export default function AboutPage() {
+  const config = getSiteConfig();
+  
+  // Phase 2: Show personal about for personal sites
+  if (config.isPersonal) {
+    return (
+      <AuthGuard>
+        <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 pt-8">
+          <SafetyBanner />
+          
+          <section className="container mx-auto px-6 py-16">
+            <div className="max-w-5xl mx-auto">
+              <PersonalAbout />
+            </div>
+          </section>
+        </main>
+      </AuthGuard>
+    );
+  }
+  
+  // Team about page (existing content)
   return (
     <AuthGuard>
       <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 pt-8">

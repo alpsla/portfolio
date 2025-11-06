@@ -29,7 +29,7 @@ function SignInForm() {
     const allowedDomains = (process.env.NEXT_PUBLIC_ALLOWED_EMAIL_DOMAINS || 'paramount.com').split(',');
     
     if (!emailDomain || !allowedDomains.includes(emailDomain)) {
-      setError('Only @paramount.com email addresses are authorized. Please contact your manager for access.');
+      setError('Only @paramount.com email addresses are authorized. This site is for Paramount internal use only.');
       setLoading(false);
       return;
     }
@@ -187,16 +187,6 @@ function SignInForm() {
               {loading ? 'Sending link...' : 'Send Sign-In Link'}
             </button>
           </form>
-
-          {/* Help Text */}
-          <div className="mt-6 pt-6 border-t-2 border-gray-200 dark:border-gray-700">
-            <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
-              Need access? Contact{' '}
-              <a href="mailto:rostislav.alpin@paramount.com" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">
-                QA Manager
-              </a>
-            </p>
-          </div>
         </div>
 
         {/* Security Notice */}

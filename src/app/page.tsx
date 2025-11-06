@@ -2,22 +2,27 @@
  * Page: Home
  * Author: AR
  * Created: 2025-10-08
- * Modified: 2025-11-02 by AR - Add client-side auth guard
+ * Modified: 2025-11-05 by AR - Integrate owner-based filtering for Phase 2
  * Description: Enhanced home page showcasing team achievements and major projects.
+ *              Now supports filtering by owner for personal portfolios.
  */
 
 'use client';
 
-import { PROJECTS } from '../lib/constants/projects';
-import { sanitizeAllProjects } from '../lib/utils/safety';
+import { getFilteredProjects } from '../lib/utils/owner-filter';
+import { getSiteConfig } from '../lib/utils/config';
 import { ProjectCard } from '../components/shared/ProjectCard';
 import { SafetyBanner } from '../components/shared/SafetyBanner';
 import { AuthGuard } from '../components/shared/AuthGuard';
+import { PersonalHero } from '../components/personal/PersonalHero';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 export default function HomePage() {
-  const data = sanitizeAllProjects(PROJECTS);
+  // Phase 2: Use two-layer filtering (sensitivity + ownership)
+  // Automatically shows all projects for team sites, filtered projects for personal sites
+  const data = getFilteredProjects();
+  const config = getSiteConfig();
 
   // Calculate team achievements
   const totalProjects = data.length;
@@ -59,26 +64,30 @@ export default function HomePage() {
       <main className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
         <SafetyBanner />
 
-      {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 dark:from-blue-500/20 dark:to-purple-500/20"></div>
-        <div className="container mx-auto px-6 py-20 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-              QA Innovation Hub
-            </h1>
-            <p className="text-2xl md:text-3xl text-gray-700 dark:text-gray-200 mb-8 font-light">
-              Transforming Quality Assurance Through Automation & Intelligence
-            </p>
-            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
-              Our team has pioneered cutting-edge QA solutions over the past several years,
-              delivering transformative automation frameworks, intelligent testing tools, and
-              observability platforms that have revolutionized quality assurance across
-              multiple platforms and brands.
-            </p>
+      {/* Hero Section - Personal or Team */}
+      {config.isPersonal ? (
+        <PersonalHero />
+      ) : (
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 dark:from-blue-500/20 dark:to-purple-500/20"></div>
+          <div className="container mx-auto px-6 py-20 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+                QA Innovation Hub
+              </h1>
+              <p className="text-2xl md:text-3xl text-gray-700 dark:text-gray-200 mb-8 font-light">
+                Transforming Quality Assurance Through Automation & Intelligence
+              </p>
+              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                Our team has pioneered cutting-edge QA solutions over the past several years,
+                delivering transformative automation frameworks, intelligent testing tools, and
+                observability platforms that have revolutionized quality assurance across
+                multiple platforms and brands.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Achievement Stats */}
       <section className="container mx-auto px-6 py-16">
@@ -258,19 +267,39 @@ export default function HomePage() {
       {/* Call to Action */}
       <section className="container mx-auto px-6 py-20">
         <div className="max-w-4xl mx-auto text-center bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-500 dark:to-purple-500 rounded-2xl p-12 shadow-2xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Interested in Implementing These Solutions?
-          </h2>
-          <p className="text-xl text-blue-50 mb-8 max-w-2xl mx-auto">
-            Want to learn more about any of our QA innovations or discuss implementation for your organization?
-            Reach out to our team for detailed insights and collaboration opportunities.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            Contact Our Team
-          </Link>
+          {config.isPersonal ? (
+            <>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Let's Work Together
+              </h2>
+              <p className="text-xl text-blue-50 mb-8 max-w-2xl mx-auto">
+                Interested in discussing opportunities, collaboration, or learning more about these projects?
+                I'd love to hear from you!
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                Get In Touch
+              </Link>
+            </>
+          ) : (
+            <>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Interested in Implementing These Solutions?
+              </h2>
+              <p className="text-xl text-blue-50 mb-8 max-w-2xl mx-auto">
+                Want to learn more about any of our QA innovations or discuss implementation for your organization?
+                Reach out to our team for detailed insights and collaboration opportunities.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                Contact Our Team
+              </Link>
+            </>
+          )}
         </div>
       </section>
     </main>
