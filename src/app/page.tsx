@@ -270,11 +270,11 @@ export default function HomePage() {
           {config.isPersonal ? (
             <>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Let's Work Together
+                Let&apos;s Work Together
               </h2>
               <p className="text-xl text-blue-50 mb-8 max-w-2xl mx-auto">
                 Interested in discussing opportunities, collaboration, or learning more about these projects?
-                I'd love to hear from you!
+                I&apos;d love to hear from you!
               </p>
               <Link
                 href="/contact"
