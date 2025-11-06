@@ -2,11 +2,13 @@
  * Component: PersonalAbout
  * Author: AR
  * Created: 2025-11-05
+ * Modified: 2025-11-06 by AR - Add profile photo display
  * Description: About section for personal portfolios with bio, skills, and interests
  */
 
 'use client';
 
+import Image from 'next/image';
 import { getEffectiveConfig } from '../../lib/utils/config';
 
 export function PersonalAbout() {
@@ -18,22 +20,59 @@ export function PersonalAbout() {
   const interests = (member?.professionalInterests as string[]) || [];
   const hobbies = (member?.hobbies as string[]) || [];
   const experience = member?.yearsOfExperience as number | undefined;
+  const avatar = member?.avatar as string | undefined;
+  const displayName = config.displayName || member?.name;
+  const role = member?.role as string | undefined;
   
   return (
     <div className="space-y-12">
+      {/* Profile Header with Photo */}
+      <section className="flex flex-col md:flex-row items-center gap-8 mb-8">
+        {/* Avatar */}
+        <div className="w-48 h-48 rounded-full overflow-hidden shadow-2xl ring-4 ring-blue-200 dark:ring-blue-800 flex-shrink-0">
+          {avatar ? (
+            <Image
+              src={avatar}
+              alt={displayName || 'Profile photo'}
+              width={192}
+              height={192}
+              className="object-cover w-full h-full"
+              priority
+            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 flex items-center justify-center text-white text-5xl font-bold">
+              {displayName?.split(' ').map(n => n[0]).join('') || '?'}
+            </div>
+          )}
+        </div>
+        
+        {/* Name and Role */}
+        <div className="flex-1 text-center md:text-left">
+          {displayName && (
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3">
+              {displayName}
+            </h1>
+          )}
+          {role && (
+            <p className="text-xl text-blue-600 dark:text-blue-400 font-semibold mb-4">
+              {role}
+            </p>
+          )}
+          {experience && (
+            <div className="inline-block bg-blue-100 dark:bg-blue-900/30 px-4 py-2 rounded-full">
+              <span className="text-blue-800 dark:text-blue-300 font-semibold">
+                {experience}+ Years of Experience
+              </span>
+            </div>
+          )}
+        </div>
+      </section>
+      
       {/* Main Introduction */}
       <section>
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
           About Me
         </h2>
-        
-        {experience && (
-          <div className="inline-block bg-blue-100 dark:bg-blue-900/30 px-4 py-2 rounded-full mb-6">
-            <span className="text-blue-800 dark:text-blue-300 font-semibold">
-              {experience}+ Years of Experience
-            </span>
-          </div>
-        )}
         
         {/* User's custom introduction OR fallback to team.ts bio */}
         {about?.introduction ? (
