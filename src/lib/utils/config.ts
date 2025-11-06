@@ -98,6 +98,11 @@ export function getEffectiveConfig(): EffectiveConfig {
       email: member.email,
       role: member.role,
       background: member.background,
+      avatar: member.avatar,
+      yearsOfExperience: member.yearsOfExperience,
+      keySkills: member.keySkills,
+      professionalInterests: member.professionalInterests,
+      hobbies: member.hobbies,
     } : undefined,
     
     // Effective values

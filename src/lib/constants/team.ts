@@ -37,6 +37,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Rostislav Alpin',
     email: 'rostislav.alpin@paramount.com',
     role: 'Manager',
+    avatar: '/assets/team/rostialpin.jpg',
     yearsOfExperience: 20,
     background: "Started as a QA Engineer in 2015, progressed through manual tester to automation engineer and leadership roles, Passionate about building scalable testing solutions and mentoring teams to achieve excellence.",
     projectsParticipated: ['data-observability', 'config-comparison', 'unified-test-case-optimization', 'unified-test-automation-framework', 'test-manager-bot-eva', 'coppa-process-technology', 'report-portal', 'onboarding-automation-setup', 'new-relic-qe-okr-dashboard', 'dart'],
