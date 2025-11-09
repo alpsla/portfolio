@@ -49,14 +49,21 @@ export function getSiteConfig(): SiteConfig {
  * @returns {PersonalConfig | null} Personal config or null if not found
  */
 export function getPersonalConfig(): PersonalConfig | null {
-  try {
-    // Dynamic import to avoid build errors when file doesn't exist
-    const config = require('../../../config/personal-config');
-    return config.PERSONAL_CONFIG || null;
-  } catch (error) {
-    // File doesn't exist - this is expected for team site and template
-    return null;
+  // For team site/template, personal-config doesn't exist - this is expected
+  if (typeof window === 'undefined') {
+    // Server-side: try to load, but fail gracefully
+    try {
+      // Use eval to prevent webpack from trying to resolve this at build time
+      const configPath = '../../../config/personal-config';
+      const config = eval('require')(configPath);
+      return config.PERSONAL_CONFIG || null;
+    } catch (error) {
+      // File doesn't exist - expected for team site
+      return null;
+    }
   }
+  // Client-side: config would have been injected during build if it exists
+  return null;
 }
 
 /**
