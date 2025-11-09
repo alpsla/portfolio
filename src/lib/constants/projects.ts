@@ -457,4 +457,3 @@ export const PROJECTS: IProject[] = [
 ];
 
 
-// Build timestamp: Sun Nov  9 17:21:20 EST 2025
