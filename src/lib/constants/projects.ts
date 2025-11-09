@@ -10,6 +10,31 @@ import { IProject } from '../../lib/types/project';
 
 export const PROJECTS: IProject[] = [
   {
+    id: 'onboarding-automation-setup',
+    slug: 'onboarding-automation-setup',
+    title: 'Onboarding Automation Setup',
+    heroImage: '/assets/onboarding-automation-setup/hero/onboarding_hero.svg',
+    owner: 'rob1nalex',
+    contributors: ['rostialpin', 'anilbvi'],
+    summary: 'Comprehensive video training library that simplifies complex test automation setup across all platforms. Platform-specific guides created by team members based on real experience cover device preparation, proxy configuration, framework dependencies, and test environment setup - enabling new team members to independently configure any platform (WCTV, Web, Roku, Apple TV, iOS, Android, Fire TV) in hours instead of days without requiring expert assistance.',
+    problem: 'Setting up test automation for each platform required extensive tribal knowledge and expert assistance. Each platform (WCTV, Web desktop/mobile, Roku, Apple TV/iOS, Android TV/mobile, Fire TV/Amazon mobile) has unique device preparation requirements, platform-specific proxy configurations, framework dependencies, and test environment settings. New team members faced steep learning curves trying to navigate complex setup procedures without documentation. The lack of standardized onboarding materials meant every new engineer needed hands-on help from senior teammates, creating knowledge transfer bottlenecks and delaying productivity. Without guided resources, setup could take days or weeks of trial-and-error, and inconsistent configurations led to test environment issues.',
+    solution: 'Created a comprehensive video training library with step-by-step setup guides for every platform, built from real team member experience. Each platform has dedicated video tutorials covering device preparation, proxy configuration for automation testing, framework installation and dependencies, test environment setup, and troubleshooting common issues. The guides capture tribal knowledge and best practices from experienced team members, providing new engineers with self-service learning resources. Videos show actual setup procedures with visual guidance, eliminating the need for constant expert assistance. New team members can now independently configure any platform by following the relevant video guide, reducing onboarding time from days/weeks to hours and freeing senior engineers from repetitive knowledge transfer tasks. The library ensures consistent, correct setup across the team and serves as permanent knowledge preservation even as team composition changes.',
+    techStack: ['TypeScript', 'Node.js', 'GitHub Actions', 'Confluence API', 'JIRA API', 'New Relic API'],
+    metrics: [
+      { label: 'Setup Time', value: '↓ 70%', improvement: 'From days to hours via automation', impact: 'Faster team productivity' },
+      { label: 'Policy Compliance', value: '↑ 100%', improvement: 'Guardrails auto-applied on bootstrap', impact: 'Consistent quality and safety' },
+      { label: 'Ticket Backlog', value: '↓ 50%', improvement: 'Reduced manual access/config tickets', impact: 'Lower ops overhead' }
+    ],
+    screenshots: [],
+    status: 'draft',
+    attachments: [],
+    links: [],
+    tags: [
+      { key: 'topic:ai', label: 'AI/ML' },
+      { key: 'topic:automation', label: 'Automation' },
+    ],
+  },
+  {
     id: 'unified-test-case-optimization',
     slug: 'unified-test-case-optimization',
     title: 'Unified Test Case Optimization',
@@ -72,63 +97,34 @@ export const PROJECTS: IProject[] = [
     ],
   },
   {
-    id: 'test-manager-bot-eva',
-    slug: 'test-manager-bot-eva',
-    title: 'Test Manager Bot & EVA',
-    heroImage: '/assets/test-manager-bot-eva/hero/eva_hero.svg',
-    brandImage: '/assets/test-manager-bot-eva/images/eva_face.png',
-    owner: 'JuneyJestin',
-    contributors: ['rostialpin', 'rob1nalex'],
-    summary: 'EVA (Enterprise Virtual Assistant) - The company\'s first AI-powered chatbot that unifies knowledge from internal documentation systems (Confluence, JIRA, GitHub) through automated data collection and intelligent RAG (Retrieval Augmented Generation). Built to revolutionize team productivity, EVA assists QA engineers with test creation and duplicate identification, helps clarify requirements across agile processes, and serves as an intelligent knowledge hub for Product Owners and Developers. Features extensive onboarding and training support through a comprehensive recording library, marking one of the first major AI initiatives in the company.',
-    problem: 'Development teams faced critical knowledge fragmentation and information retrieval challenges across multiple disconnected systems. QA engineers, Product Owners, and Developers spent excessive time manually searching through Confluence documentation, JIRA tickets, GitHub repositories, and various other internal sources to find answers to common questions. This manual information hunting was especially problematic in agile environments where compiled data from different sources is essential for decision-making. New team members faced steep onboarding curves without centralized access to tribal knowledge, best practices, and training materials. Test creation was inefficient as engineers had to manually verify if similar tests already existed, leading to duplicate test creation and wasted effort. Requirement ambiguities required lengthy back-and-forth conversations to clarify, slowing down sprint velocity. The lack of a unified knowledge assistant meant every team member had to become an expert in navigating multiple systems just to do their daily work.',
-    solution: 'Built EVA as an enterprise-grade AI chatbot leveraging RAG (Retrieval Augmented Generation) architecture to create a unified knowledge assistant for the entire engineering organization. EVA automatically collects and indexes data from Confluence, JIRA, GitHub, and other internal systems on a scheduled basis, ensuring the knowledge base stays current without manual intervention. The system uses vector embeddings to understand natural language queries and retrieve relevant information across all connected sources, providing compiled answers that would normally require searching multiple systems. For QA Engineers: EVA assists in creating new tests by understanding requirements and providing templates/examples, identifies duplicate tests in existing storage to prevent redundant work, and helps clarify ambiguous requirements by pulling relevant context from JIRA stories, Confluence specs, and GitHub discussions. For Product Owners and Developers: EVA serves as an intelligent documentation assistant, answering technical questions, retrieving specifications, and providing historical context on features and decisions. For Onboarding and Training: EVA provides instant access to a comprehensive library of training recordings, documentation, and best practices, dramatically accelerating new team member productivity. As one of the company\'s first AI initiatives, EVA demonstrated the transformative potential of LLM-powered tools in enterprise environments, paving the way for broader AI adoption.',
-    techStack: ['RAG (Retrieval Augmented Generation)', 'LLM', 'Vector Database', 'Python', 'Confluence API', 'JIRA API', 'TestRail API', 'GitHub API', 'Embeddings'],
+    id: 'coppa-process-technology',
+    slug: 'coppa-process-technology',
+    title: 'COPPA - Process & Technology',
+    heroImage: '/assets/coppa-process-technology/hero/coppa_hero.svg',
+    owner: 'rob1nalex',
+    contributors: ['rostialpin'],
+    summary: 'Automated COPPA compliance validation system that ensures Kids content applications meet federal law requirements by automatically scanning API calls, validating against legal-approved lists, and generating Tech-Scan compliance reports - transforming hours/days of manual legal validation into minutes of fully automated compliance checking.',
+    problem: 'Federal COPPA (Children\'s Online Privacy Protection Act) compliance for Kids content applications required extensive manual validation of every API call to ensure it was legally approved for children\'s apps. QA teams had to manually extract all application calls, compare them against legal approval lists, identify unapproved calls, coordinate with legal teams for review, wait for approvals, update tracking sheets, and generate compliance reports. This manual process took hours or days, created bottlenecks in release cycles, involved substantial PMO coordination overhead, and risked human error in identifying non-compliant calls that could result in federal law violations.',
+    solution: 'Built Tech-Scan, a fully automated COPPA compliance validation system that scans Kids content applications and validates all API calls against legal-approved lists without manual intervention. The system automatically extracts all application calls using HAR file analysis, matches them against pre-approved legal lists stored in secured Google Sheets, flags any unapproved or unknown calls, generates comprehensive Tech-Scan compliance reports, sends automated Slack notifications to legal and PMO teams for flagged calls, and maintains audit trails for federal compliance. Enhanced with RegEx pattern matching for call grouping, quarterly approval cycles for long-term permissions, improved error handling, and OneDrive integration. The automation ensures 100% compliance checking happens in minutes instead of hours, eliminates manual validation errors, and provides consistent federal law compliance across all Kids platform releases.',
+    techStack: ['Java', 'HAR Files', 'Google Cloud Platform', 'Google Sheets API', 'Slack API', 'OneDrive', 'RegEx'],
     metrics: [
-      {
-        label: 'Data Source Integration',
-        value: '4+ Systems',
-        improvement: 'Unified knowledge from Confluence, JIRA, GitHub, and TestRail',
-        impact: 'Single AI-powered interface for all internal documentation and project data'
-      },
-      {
-        label: 'User Base Expansion',
-        value: 'Multi-Role',
-        improvement: 'Adopted by QA Engineers, Product Owners, and Developers',
-        impact: 'Cross-functional knowledge assistant serving entire engineering organization'
-      },
-      {
-        label: 'Duplicate Prevention',
-        value: 'Automated',
-        improvement: 'Identifies existing tests before creation, preventing redundant work',
-        impact: 'Reduced test suite bloat and eliminated duplicate test development effort'
-      },
-      {
-        label: 'Onboarding Acceleration',
-        value: 'Training Library',
-        improvement: 'Instant access to comprehensive recording library and documentation',
-        impact: 'Faster new team member ramp-up and reduced onboarding overhead'
-      },
-      {
-        label: 'AI Innovation',
-        value: 'First in Company',
-        improvement: 'Pioneering AI chatbot demonstrating enterprise LLM capabilities',
-        impact: 'Established foundation for company-wide AI adoption and innovation'
-      },
+      { label: 'Report Generation Issues', value: '80%', improvement: 'Reduction in Tech-Scan report generation issues', impact: 'Significantly improved report reliability and reduced troubleshooting time' },
+      { label: 'Coordination Effort', value: '30-60%', improvement: 'Reduction in coordination effort', impact: 'Decreased PMO communication overhead and faster review cycles' },
+      { label: 'Report Quality', value: 'High', improvement: 'Improved report accuracy and comment quality', impact: 'Better compliance validation and audit trail' },
     ],
     screenshots: [],
     status: 'draft',
     attachments: [
-      { kind: 'pdf', title: 'EVA Tech Stack', src: '/assets/test-manager-bot-eva/pdfs/VCD-EVA Tech Stack-211025-082100.pdf', sensitivity: 'public' },
-      { kind: 'pdf', title: 'EVA Features', src: '/assets/test-manager-bot-eva/pdfs/VCD-EVA Features-211025-081321.pdf', sensitivity: 'public' },
-      { kind: 'pdf', title: 'EVA Limitations', src: '/assets/test-manager-bot-eva/pdfs/VCD-EVA Limitations-211025-082305.pdf', sensitivity: 'public' },
-      { kind: 'pdf', title: 'EVA Deck June 2024', src: '/assets/test-manager-bot-eva/pdfs/EVA Deck June 2024 v3.pdf', sensitivity: 'public' },
-      { kind: 'pdf', title: 'EVA Sample Prompts', src: '/assets/test-manager-bot-eva/pdfs/EVA+Sample+Prompts.pdf', sensitivity: 'public' },
-      { kind: 'pdf', title: 'Innovation Fest Deck 2024 - Unified', src: '/assets/test-manager-bot-eva/pdfs/Innovation Fest Deck 2024 - Unified - Extended.pdf', sensitivity: 'public' },
-      { kind: 'slide', title: 'EVA - Enterprise Virtual Assistant - AI/ML Conf 2025', src: '/assets/test-manager-bot-eva/slides/EVA - Enterprise Virtual Assistant - AI ML Conf 2025.pptx', sensitivity: 'public' },
-      { kind: 'video', title: 'EVA Presentation and Demo', src: '/assets/test-manager-bot-eva/videos/Eva - Presentation and Demo v3.mp4', sensitivity: 'public' },
-      { kind: 'video', title: 'Test Manager Bot Presentation', src: '/assets/test-manager-bot-eva/videos/Test Manager Bot Presentation v1.2.mp4', sensitivity: 'public' },
+      { kind: 'pdf', title: 'TechScan - Video Training v2', src: '/assets/coppa-process-technology/pdfs/TechScan - Video Training v2.pdf', sensitivity: 'internal' },
+      { kind: 'pdf', title: 'Tech-Scan Enhancements', src: '/assets/coppa-process-technology/pdfs/Tech-Scan Enhancements.pdf', sensitivity: 'internal' },
     ],
-    links: [],
+    links: [
+      { label: 'COPPA Compliance Documentation', url: 'https://paramount.atlassian.net/wiki/spaces/VCD/pages/49601222/COPPA+Compliance', sensitivity: 'internal' },
+    ],
+    tags: [
+      { key: 'topic:compliance', label: 'Compliance' },
+      { key: 'topic:automation', label: 'Automation' },
+    ],
   },
   {
     id: 'dart',
@@ -200,117 +196,40 @@ export const PROJECTS: IProject[] = [
     ],
   },
   {
-    id: 'onboarding-automation-setup',
-    slug: 'onboarding-automation-setup',
-    title: 'Onboarding Automation Setup',
-    heroImage: '/assets/onboarding-automation-setup/hero/onboarding_hero.svg',
-    owner: 'rob1nalex',
-    contributors: ['rostialpin', 'anilbvi'],
-    summary: 'Comprehensive video training library that simplifies complex test automation setup across all platforms. Platform-specific guides created by team members based on real experience cover device preparation, proxy configuration, framework dependencies, and test environment setup - enabling new team members to independently configure any platform (WCTV, Web, Roku, Apple TV, iOS, Android, Fire TV) in hours instead of days without requiring expert assistance.',
-    problem: 'Setting up test automation for each platform required extensive tribal knowledge and expert assistance. Each platform (WCTV, Web desktop/mobile, Roku, Apple TV/iOS, Android TV/mobile, Fire TV/Amazon mobile) has unique device preparation requirements, platform-specific proxy configurations, framework dependencies, and test environment settings. New team members faced steep learning curves trying to navigate complex setup procedures without documentation. The lack of standardized onboarding materials meant every new engineer needed hands-on help from senior teammates, creating knowledge transfer bottlenecks and delaying productivity. Without guided resources, setup could take days or weeks of trial-and-error, and inconsistent configurations led to test environment issues.',
-    solution: 'Created a comprehensive video training library with step-by-step setup guides for every platform, built from real team member experience. Each platform has dedicated video tutorials covering device preparation, proxy configuration for automation testing, framework installation and dependencies, test environment setup, and troubleshooting common issues. The guides capture tribal knowledge and best practices from experienced team members, providing new engineers with self-service learning resources. Videos show actual setup procedures with visual guidance, eliminating the need for constant expert assistance. New team members can now independently configure any platform by following the relevant video guide, reducing onboarding time from days/weeks to hours and freeing senior engineers from repetitive knowledge transfer tasks. The library ensures consistent, correct setup across the team and serves as permanent knowledge preservation even as team composition changes.',
-    techStack: ['TypeScript', 'Node.js', 'GitHub Actions', 'Confluence API', 'JIRA API', 'New Relic API'],
+    id: 'config-comparison',
+    slug: 'config-comparison',
+    title: 'Config Comparison',
+    heroImage: '/assets/config-comparison/hero/cc_hero.png',
+    owner: 'anilbvi',
+    contributors: ['rostialpin', 'rob1nalex'],
+    summary: 'Automated configuration validation system that proactively detects and prevents configuration discrepancies across multiple platforms and brands before production deployment, achieving zero configuration-related production issues through fast validation and comprehensive change detection.',
+    problem: "Configuration discrepancies were causing critical application issues in production that were never detected in QA environments due to environment-specific settings. Manual configuration validation was time-consuming, error-prone, and couldn't scale across multiple platforms (Android, iOS, Apple TV, Android TV, Fire TV, Roku, Web Connected TVs) and brands. Teams lacked visibility into configuration changes between releases, leading to unexpected production failures and lengthy incident resolution times.",
+    solution: 'Implemented comprehensive automated configuration validation using dual approaches: (1) UI-Based validation - launches applications and captures actual configuration from proxy logs during app load, then validates against expected baselines; (2) API-Based validation - directly fetches configuration from Neutron API endpoints for instant validation without device deployment. The system maintains baselined expected configurations, compares them against actual values using configurable match types (exact, regex, optional), and generates detailed comparison reports. Integrated into CI/CD pipelines for continuous validation, with automated email notifications highlighting only configuration changes (not full configs) for efficient review. Supports environment comparison (RC vs Production) with visual dashboards and historical tracking.',
+    techStack: ['Java', 'Apache HTTP Client', 'TestNG', 'New Relic', 'Synergy Platform', 'Neutron API', 'AWS S3'],
     metrics: [
-      { label: 'Setup Time', value: '↓ 70%', improvement: 'From days to hours via automation', impact: 'Faster team productivity' },
-      { label: 'Policy Compliance', value: '↑ 100%', improvement: 'Guardrails auto-applied on bootstrap', impact: 'Consistent quality and safety' },
-      { label: 'Ticket Backlog', value: '↓ 50%', improvement: 'Reduced manual access/config tickets', impact: 'Lower ops overhead' }
-    ],
-    screenshots: [],
-    status: 'draft',
-    attachments: [],
-    links: [],
-    tags: [
-      { key: 'topic:ai', label: 'AI/ML' },
-      { key: 'topic:automation', label: 'Automation' },
-    ],
-  },
-  {
-    id: 'coppa-process-technology',
-    slug: 'coppa-process-technology',
-    title: 'COPPA - Process & Technology',
-    heroImage: '/assets/coppa-process-technology/hero/coppa_hero.svg',
-    owner: 'rob1nalex',
-    contributors: ['rostialpin'],
-    summary: 'Automated COPPA compliance validation system that ensures Kids content applications meet federal law requirements by automatically scanning API calls, validating against legal-approved lists, and generating Tech-Scan compliance reports - transforming hours/days of manual legal validation into minutes of fully automated compliance checking.',
-    problem: 'Federal COPPA (Children\'s Online Privacy Protection Act) compliance for Kids content applications required extensive manual validation of every API call to ensure it was legally approved for children\'s apps. QA teams had to manually extract all application calls, compare them against legal approval lists, identify unapproved calls, coordinate with legal teams for review, wait for approvals, update tracking sheets, and generate compliance reports. This manual process took hours or days, created bottlenecks in release cycles, involved substantial PMO coordination overhead, and risked human error in identifying non-compliant calls that could result in federal law violations.',
-    solution: 'Built Tech-Scan, a fully automated COPPA compliance validation system that scans Kids content applications and validates all API calls against legal-approved lists without manual intervention. The system automatically extracts all application calls using HAR file analysis, matches them against pre-approved legal lists stored in secured Google Sheets, flags any unapproved or unknown calls, generates comprehensive Tech-Scan compliance reports, sends automated Slack notifications to legal and PMO teams for flagged calls, and maintains audit trails for federal compliance. Enhanced with RegEx pattern matching for call grouping, quarterly approval cycles for long-term permissions, improved error handling, and OneDrive integration. The automation ensures 100% compliance checking happens in minutes instead of hours, eliminates manual validation errors, and provides consistent federal law compliance across all Kids platform releases.',
-    techStack: ['Java', 'HAR Files', 'Google Cloud Platform', 'Google Sheets API', 'Slack API', 'OneDrive', 'RegEx'],
-    metrics: [
-      { label: 'Report Generation Issues', value: '80%', improvement: 'Reduction in Tech-Scan report generation issues', impact: 'Significantly improved report reliability and reduced troubleshooting time' },
-      { label: 'Coordination Effort', value: '30-60%', improvement: 'Reduction in coordination effort', impact: 'Decreased PMO communication overhead and faster review cycles' },
-      { label: 'Report Quality', value: 'High', improvement: 'Improved report accuracy and comment quality', impact: 'Better compliance validation and audit trail' },
+      { label: 'Production Config Issues', value: '0', improvement: 'Eliminated all configuration-related production issues', impact: 'Zero config-related incidents and improved release confidence' },
+      { label: 'Validation Speed', value: '20s', improvement: 'Configuration validation completed in 20 seconds vs hours of manual checks', impact: 'Faster feedback cycles and accelerated release velocity' },
+      { label: 'Change Detection', value: '100%', improvement: 'Detects all configuration changes from last release', impact: 'Complete visibility and Dev approval before deployment' },
+      { label: 'Platform Coverage', value: '12+ Platforms', improvement: 'Validates across Android, iOS, Apple TV, Android TV, Fire TV, Roku, and 6 WCTV platforms', impact: 'Consistent configuration quality across entire platform ecosystem' }
     ],
     screenshots: [],
     status: 'draft',
     attachments: [
-      { kind: 'pdf', title: 'TechScan - Video Training v2', src: '/assets/coppa-process-technology/pdfs/TechScan - Video Training v2.pdf', sensitivity: 'internal' },
-      { kind: 'pdf', title: 'Tech-Scan Enhancements', src: '/assets/coppa-process-technology/pdfs/Tech-Scan Enhancements.pdf', sensitivity: 'internal' },
+      { kind: 'pdf', title: 'Configuration Validation Automation', src: '/assets/config-comparison/pdfs/Configuration Validation Automation.pdf', sensitivity: 'internal' },
+      { kind: 'pdf', title: 'Config Comparison Internal Document', src: '/assets/config-comparison/pdfs/App Config Test - Technical Implementation Guide - Internal.pdf', sensitivity: 'internal' },
+      { kind: 'pdf', title: 'Config Comparison Public Document', src: '/assets/config-comparison/pdfs/App Config Test - User Guide - Public.pdf', sensitivity: 'public' },
+      { kind: 'doc', title: 'WCTV Config Comparison Report', src: '/assets/config-comparison/spreadsheets/WCTV-ConfigValidation-ProdVsRc-20251023.xlsx', sensitivity: 'internal' },
     ],
     links: [
-      { label: 'COPPA Compliance Documentation', url: 'https://paramount.atlassian.net/wiki/spaces/VCD/pages/49601222/COPPA+Compliance', sensitivity: 'internal' },
+      { label: 'WCTV Config Report Generation Training Video', url: 'https://viacom.sharepoint.com/:v:/r/sites/VIA-Digital-QAConnectedTV/Shared%20Documents/Unified/CTV-Training/WCTV/20240125%20WCTV%20Config%20Report%20Generation%20for%20RC.mp4?csf=1&web=1&e=qiG0Sb', sensitivity: 'internal' },
+      { label: 'Apple and Android (TV & Mobile) Config Validation and Process', url: 'https://paramount.atlassian.net/wiki/spaces/VCD/pages/49653379/Apple+and+Android+TV+Mobile+Config+Validation+and+Process', sensitivity: 'internal' },
+      { label: 'Roku Config Validation and Process', url: 'https://paramount.atlassian.net/wiki/spaces/VCD/pages/49657193/Roku+Config+Validation+and+Process', sensitivity: 'internal' },
+      { label: 'Github Application Config Test', url: 'https://github.com/viacomcbs/mqe-unified-oao-tests/blob/master/mqe-unified-platform-brand-tests/src/test/java/com/viacom/unified/tests/application/AppConfigTest.java', sensitivity: 'internal' },
     ],
     tags: [
-      { key: 'topic:compliance', label: 'Compliance' },
+      { key: 'platform:wctv', label: 'WCTV' },
       { key: 'topic:automation', label: 'Automation' },
-    ],
-  },
-  {
-    id: 'new-relic-qe-okr-dashboard',
-    slug: 'new-relic-qe-okr-dashboard',
-    title: 'New Relic QE OKR - Dashboard',
-    heroImage: '/assets/new-relic-qe-okr-dashboard/hero/qe_dashboard_hero.svg',
-    owner: 'rob1nalex',
-    contributors: ['rostialpin', 'anilbvi', 'JuneyJestin', 'dhanyamathew'],
-    summary: 'Comprehensive QA intelligence dashboards that aggregate data from multiple sources (TestRail, automated test reports, JIRA, Report Portal) into unified New Relic dashboards, providing real-time visibility into testing progress, smart bug detection, failure pattern analysis, and quality metrics across all platform teams. Two dashboard views: Management (whole team comparison) and Platform-Specific (detailed team insights with AI-powered bug matching).',
-    problem: 'QA teams lacked unified visibility into testing progress and quality metrics across multiple platforms and tools. Critical data was scattered across disconnected systems: TestRail for test management, JIRA for bug tracking, Report Portal for test execution results, and various CI/CD pipelines for automation reports. This fragmentation made it impossible to get a comprehensive view of team progress, compare performance across platforms, identify patterns in test failures, detect flaky tests, or make data-driven decisions about testing priorities. Leadership had no single source of truth for QA metrics, and teams spent significant time manually aggregating data from multiple sources to answer basic questions about test coverage and quality.',
-    solution: 'Built two comprehensive New Relic dashboards that integrate data from all QA tools and provide actionable intelligence. The system pulls data from TestRail (test management), automated test reports, JIRA (bug tracking), and Report Portal (test execution analytics) into unified visualizations. Dashboard 1 - Unified Management Dashboard: Shows whole team progress with cross-team comparisons of bugs found, automated tests developed, pending tests, manual-only tests, all presented in comparative charts for leadership visibility. Dashboard 2 - Platform-Specific User Dashboard: Provides detailed team insights based on selected platform and app, including issues per pipeline (smoke, regression), pass rates, error descriptions for failed tests with pattern detection to identify multiple tests with similar errors, smart bug detection using Report Portal AI to match new test failures against patterns from previously found bugs, regression completion tracking showing remaining tests to execute, infrastructure failure classification (network issues, Synergy platform issues vs. actual test failures), and flaky test identification. The platform-specific dashboard enables teams to quickly diagnose issues, identify known bugs automatically, and focus efforts on real problems rather than infrastructure noise.',
-    techStack: ['New Relic', 'NRQL', 'TestRail API', 'JIRA API', 'Report Portal API', 'Java', 'Apache HTTP Client'],
-    metrics: [
-      {
-        label: 'Data Source Integration',
-        value: '4 Systems',
-        improvement: 'Unified data from TestRail, JIRA, Report Portal, and automation pipelines',
-        impact: 'Single source of truth for all QA metrics and testing progress'
-      },
-      {
-        label: 'Smart Bug Detection',
-        value: 'AI-Powered',
-        improvement: 'Report Portal patterns automatically match new failures to known bugs',
-        impact: 'Eliminates duplicate bug reports and accelerates failure triage'
-      },
-      {
-        label: 'Platform Coverage',
-        value: 'All Teams',
-        improvement: 'Dashboards support all platform teams with app-specific views',
-        impact: 'Each team gets tailored insights for their platform and applications'
-      },
-      {
-        label: 'Failure Classification',
-        value: 'Automated',
-        improvement: 'Separates test failures from infrastructure issues (network, Synergy)',
-        impact: 'Teams focus on real test failures, not environmental noise'
-      },
-      {
-        label: 'Test Progress Visibility',
-        value: 'Real-Time',
-        improvement: 'Live tracking of regression completion and remaining test execution',
-        impact: 'Clear visibility into release readiness and testing bottlenecks'
-      },
-    ],
-    screenshots: [],
-    status: 'draft',
-    attachments: [
-      { kind: 'pdf', title: 'New Relic Integration Public Document', src: '/assets/new-relic-qe-okr-dashboard/pdfs/New Relic Integration Public Document.pdf', sensitivity: 'public' },
-      { kind: 'pdf', title: 'New Relic Integration - Technical Guide - Internal Document', src: '/assets/new-relic-qe-okr-dashboard/pdfs/New Relic Integration - Technical Guide - Internal Document.pdf', sensitivity: 'internal' },
-      { kind: 'pdf', title: 'QE Dashboards', src: '/assets/new-relic-qe-okr-dashboard/pdfs/QE Dashboards.pdf', sensitivity: 'internal' },
-    ],
-    links: [
-      { label: 'Unified Management Dashboard', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjI1NzQ5Mjg?state=936eaf62-c3ba-0c02-3f1e-09b7335448af', sensitivity: 'internal' },
-      { label: 'Unified User Dashboard', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjI2MDg0NTk?state=8cc5cfad-1b03-7934-ba42-8496260c9030', sensitivity: 'internal' },
-    ],
-    tags: [
-      { key: 'topic:observability', label: 'Observability' },
-      { key: 'platform:multi', label: 'Multi-Platform' },
+      { key: 'topic:validation', label: 'Validation' },
     ],
   },
   {
@@ -378,6 +297,124 @@ export const PROJECTS: IProject[] = [
     ],
   },
   {
+    id: 'new-relic-qe-okr-dashboard',
+    slug: 'new-relic-qe-okr-dashboard',
+    title: 'New Relic QE OKR - Dashboard',
+    heroImage: '/assets/new-relic-qe-okr-dashboard/hero/qe_dashboard_hero.svg',
+    owner: 'rob1nalex',
+    contributors: ['rostialpin', 'anilbvi', 'JuneyJestin', 'dhanyamathew'],
+    summary: 'Comprehensive QA intelligence dashboards that aggregate data from multiple sources (TestRail, automated test reports, JIRA, Report Portal) into unified New Relic dashboards, providing real-time visibility into testing progress, smart bug detection, failure pattern analysis, and quality metrics across all platform teams. Two dashboard views: Management (whole team comparison) and Platform-Specific (detailed team insights with AI-powered bug matching).',
+    problem: 'QA teams lacked unified visibility into testing progress and quality metrics across multiple platforms and tools. Critical data was scattered across disconnected systems: TestRail for test management, JIRA for bug tracking, Report Portal for test execution results, and various CI/CD pipelines for automation reports. This fragmentation made it impossible to get a comprehensive view of team progress, compare performance across platforms, identify patterns in test failures, detect flaky tests, or make data-driven decisions about testing priorities. Leadership had no single source of truth for QA metrics, and teams spent significant time manually aggregating data from multiple sources to answer basic questions about test coverage and quality.',
+    solution: 'Built two comprehensive New Relic dashboards that integrate data from all QA tools and provide actionable intelligence. The system pulls data from TestRail (test management), automated test reports, JIRA (bug tracking), and Report Portal (test execution analytics) into unified visualizations. Dashboard 1 - Unified Management Dashboard: Shows whole team progress with cross-team comparisons of bugs found, automated tests developed, pending tests, manual-only tests, all presented in comparative charts for leadership visibility. Dashboard 2 - Platform-Specific User Dashboard: Provides detailed team insights based on selected platform and app, including issues per pipeline (smoke, regression), pass rates, error descriptions for failed tests with pattern detection to identify multiple tests with similar errors, smart bug detection using Report Portal AI to match new test failures against patterns from previously found bugs, regression completion tracking showing remaining tests to execute, infrastructure failure classification (network issues, Synergy platform issues vs. actual test failures), and flaky test identification. The platform-specific dashboard enables teams to quickly diagnose issues, identify known bugs automatically, and focus efforts on real problems rather than infrastructure noise.',
+    techStack: ['New Relic', 'NRQL', 'TestRail API', 'JIRA API', 'Report Portal API', 'Java', 'Apache HTTP Client'],
+    metrics: [
+      {
+        label: 'Data Source Integration',
+        value: '4 Systems',
+        improvement: 'Unified data from TestRail, JIRA, Report Portal, and automation pipelines',
+        impact: 'Single source of truth for all QA metrics and testing progress'
+      },
+      {
+        label: 'Smart Bug Detection',
+        value: 'AI-Powered',
+        improvement: 'Report Portal patterns automatically match new failures to known bugs',
+        impact: 'Eliminates duplicate bug reports and accelerates failure triage'
+      },
+      {
+        label: 'Platform Coverage',
+        value: 'All Teams',
+        improvement: 'Dashboards support all platform teams with app-specific views',
+        impact: 'Each team gets tailored insights for their platform and applications'
+      },
+      {
+        label: 'Failure Classification',
+        value: 'Automated',
+        improvement: 'Separates test failures from infrastructure issues (network, Synergy)',
+        impact: 'Teams focus on real test failures, not environmental noise'
+      },
+      {
+        label: 'Test Progress Visibility',
+        value: 'Real-Time',
+        improvement: 'Live tracking of regression completion and remaining test execution',
+        impact: 'Clear visibility into release readiness and testing bottlenecks'
+      },
+    ],
+    screenshots: [],
+    status: 'draft',
+    attachments: [
+      { kind: 'pdf', title: 'New Relic Integration Public Document', src: '/assets/new-relic-qe-okr-dashboard/pdfs/New Relic Integration Public Document.pdf', sensitivity: 'public' },
+      { kind: 'pdf', title: 'New Relic Integration - Technical Guide - Internal Document', src: '/assets/new-relic-qe-okr-dashboard/pdfs/New Relic Integration - Technical Guide - Internal Document.pdf', sensitivity: 'internal' },
+      { kind: 'pdf', title: 'QE Dashboards', src: '/assets/new-relic-qe-okr-dashboard/pdfs/QE Dashboards.pdf', sensitivity: 'internal' },
+    ],
+    links: [
+      { label: 'Unified Management Dashboard', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjI1NzQ5Mjg?state=936eaf62-c3ba-0c02-3f1e-09b7335448af', sensitivity: 'internal' },
+      { label: 'Unified User Dashboard', url: 'https://one.newrelic.com/dashboards/detail/MTUxOTA5OHxWSVp8REFTSEJPQVJEfGRhOjI2MDg0NTk?state=8cc5cfad-1b03-7934-ba42-8496260c9030', sensitivity: 'internal' },
+    ],
+    tags: [
+      { key: 'topic:observability', label: 'Observability' },
+      { key: 'platform:multi', label: 'Multi-Platform' },
+    ],
+  },
+  {
+    id: 'test-manager-bot-eva',
+    slug: 'test-manager-bot-eva',
+    title: 'Test Manager Bot & EVA',
+    heroImage: '/assets/test-manager-bot-eva/hero/eva_hero.svg',
+    brandImage: '/assets/test-manager-bot-eva/images/eva_face.png',
+    owner: 'JuneyJestin',
+    contributors: ['rostialpin', 'rob1nalex'],
+    summary: 'EVA (Enterprise Virtual Assistant) - The company\'s first AI-powered chatbot that unifies knowledge from internal documentation systems (Confluence, JIRA, GitHub) through automated data collection and intelligent RAG (Retrieval Augmented Generation). Built to revolutionize team productivity, EVA assists QA engineers with test creation and duplicate identification, helps clarify requirements across agile processes, and serves as an intelligent knowledge hub for Product Owners and Developers. Features extensive onboarding and training support through a comprehensive recording library, marking one of the first major AI initiatives in the company.',
+    problem: 'Development teams faced critical knowledge fragmentation and information retrieval challenges across multiple disconnected systems. QA engineers, Product Owners, and Developers spent excessive time manually searching through Confluence documentation, JIRA tickets, GitHub repositories, and various other internal sources to find answers to common questions. This manual information hunting was especially problematic in agile environments where compiled data from different sources is essential for decision-making. New team members faced steep onboarding curves without centralized access to tribal knowledge, best practices, and training materials. Test creation was inefficient as engineers had to manually verify if similar tests already existed, leading to duplicate test creation and wasted effort. Requirement ambiguities required lengthy back-and-forth conversations to clarify, slowing down sprint velocity. The lack of a unified knowledge assistant meant every team member had to become an expert in navigating multiple systems just to do their daily work.',
+    solution: 'Built EVA as an enterprise-grade AI chatbot leveraging RAG (Retrieval Augmented Generation) architecture to create a unified knowledge assistant for the entire engineering organization. EVA automatically collects and indexes data from Confluence, JIRA, GitHub, and other internal systems on a scheduled basis, ensuring the knowledge base stays current without manual intervention. The system uses vector embeddings to understand natural language queries and retrieve relevant information across all connected sources, providing compiled answers that would normally require searching multiple systems. For QA Engineers: EVA assists in creating new tests by understanding requirements and providing templates/examples, identifies duplicate tests in existing storage to prevent redundant work, and helps clarify ambiguous requirements by pulling relevant context from JIRA stories, Confluence specs, and GitHub discussions. For Product Owners and Developers: EVA serves as an intelligent documentation assistant, answering technical questions, retrieving specifications, and providing historical context on features and decisions. For Onboarding and Training: EVA provides instant access to a comprehensive library of training recordings, documentation, and best practices, dramatically accelerating new team member productivity. As one of the company\'s first AI initiatives, EVA demonstrated the transformative potential of LLM-powered tools in enterprise environments, paving the way for broader AI adoption.',
+    techStack: ['RAG (Retrieval Augmented Generation)', 'LLM', 'Vector Database', 'Python', 'Confluence API', 'JIRA API', 'TestRail API', 'GitHub API', 'Embeddings'],
+    metrics: [
+      {
+        label: 'Data Source Integration',
+        value: '4+ Systems',
+        improvement: 'Unified knowledge from Confluence, JIRA, GitHub, and TestRail',
+        impact: 'Single AI-powered interface for all internal documentation and project data'
+      },
+      {
+        label: 'User Base Expansion',
+        value: 'Multi-Role',
+        improvement: 'Adopted by QA Engineers, Product Owners, and Developers',
+        impact: 'Cross-functional knowledge assistant serving entire engineering organization'
+      },
+      {
+        label: 'Duplicate Prevention',
+        value: 'Automated',
+        improvement: 'Identifies existing tests before creation, preventing redundant work',
+        impact: 'Reduced test suite bloat and eliminated duplicate test development effort'
+      },
+      {
+        label: 'Onboarding Acceleration',
+        value: 'Training Library',
+        improvement: 'Instant access to comprehensive recording library and documentation',
+        impact: 'Faster new team member ramp-up and reduced onboarding overhead'
+      },
+      {
+        label: 'AI Innovation',
+        value: 'First in Company',
+        improvement: 'Pioneering AI chatbot demonstrating enterprise LLM capabilities',
+        impact: 'Established foundation for company-wide AI adoption and innovation'
+      },
+    ],
+    screenshots: [],
+    status: 'draft',
+    attachments: [
+      { kind: 'pdf', title: 'EVA Tech Stack', src: '/assets/test-manager-bot-eva/pdfs/VCD-EVA Tech Stack-211025-082100.pdf', sensitivity: 'public' },
+      { kind: 'pdf', title: 'EVA Features', src: '/assets/test-manager-bot-eva/pdfs/VCD-EVA Features-211025-081321.pdf', sensitivity: 'public' },
+      { kind: 'pdf', title: 'EVA Limitations', src: '/assets/test-manager-bot-eva/pdfs/VCD-EVA Limitations-211025-082305.pdf', sensitivity: 'public' },
+      { kind: 'pdf', title: 'EVA Deck June 2024', src: '/assets/test-manager-bot-eva/pdfs/EVA Deck June 2024 v3.pdf', sensitivity: 'public' },
+      { kind: 'pdf', title: 'EVA Sample Prompts', src: '/assets/test-manager-bot-eva/pdfs/EVA+Sample+Prompts.pdf', sensitivity: 'public' },
+      { kind: 'pdf', title: 'Innovation Fest Deck 2024 - Unified', src: '/assets/test-manager-bot-eva/pdfs/Innovation Fest Deck 2024 - Unified - Extended.pdf', sensitivity: 'public' },
+      { kind: 'slide', title: 'EVA - Enterprise Virtual Assistant - AI/ML Conf 2025', src: '/assets/test-manager-bot-eva/slides/EVA - Enterprise Virtual Assistant - AI ML Conf 2025.pptx', sensitivity: 'public' },
+      { kind: 'video', title: 'EVA Presentation and Demo', src: '/assets/test-manager-bot-eva/videos/Eva - Presentation and Demo v3.mp4', sensitivity: 'public' },
+      { kind: 'video', title: 'Test Manager Bot Presentation', src: '/assets/test-manager-bot-eva/videos/Test Manager Bot Presentation v1.2.mp4', sensitivity: 'public' },
+    ],
+    links: [],
+  },
+  {
     id: 'data-observability',
     slug: 'data-observability',
     title: 'Data Observability for QA - Streaming Insights & Test Intelligence',
@@ -416,43 +453,6 @@ export const PROJECTS: IProject[] = [
       { key: 'topic:testing', label: 'Testing' },
       { key: 'topic:analytics', label: 'Analytics' }
     ]
-  },
-  {
-    id: 'config-comparison',
-    slug: 'config-comparison',
-    title: 'Config Comparison',
-    heroImage: '/assets/config-comparison/hero/cc_hero.png',
-    owner: 'anilbvi',
-    contributors: ['rostialpin', 'rob1nalex'],
-    summary: 'Automated configuration validation system that proactively detects and prevents configuration discrepancies across multiple platforms and brands before production deployment, achieving zero configuration-related production issues through fast validation and comprehensive change detection.',
-    problem: "Configuration discrepancies were causing critical application issues in production that were never detected in QA environments due to environment-specific settings. Manual configuration validation was time-consuming, error-prone, and couldn't scale across multiple platforms (Android, iOS, Apple TV, Android TV, Fire TV, Roku, Web Connected TVs) and brands. Teams lacked visibility into configuration changes between releases, leading to unexpected production failures and lengthy incident resolution times.",
-    solution: 'Implemented comprehensive automated configuration validation using dual approaches: (1) UI-Based validation - launches applications and captures actual configuration from proxy logs during app load, then validates against expected baselines; (2) API-Based validation - directly fetches configuration from Neutron API endpoints for instant validation without device deployment. The system maintains baselined expected configurations, compares them against actual values using configurable match types (exact, regex, optional), and generates detailed comparison reports. Integrated into CI/CD pipelines for continuous validation, with automated email notifications highlighting only configuration changes (not full configs) for efficient review. Supports environment comparison (RC vs Production) with visual dashboards and historical tracking.',
-    techStack: ['Java', 'Apache HTTP Client', 'TestNG', 'New Relic', 'Synergy Platform', 'Neutron API', 'AWS S3'],
-    metrics: [
-      { label: 'Production Config Issues', value: '0', improvement: 'Eliminated all configuration-related production issues', impact: 'Zero config-related incidents and improved release confidence' },
-      { label: 'Validation Speed', value: '20s', improvement: 'Configuration validation completed in 20 seconds vs hours of manual checks', impact: 'Faster feedback cycles and accelerated release velocity' },
-      { label: 'Change Detection', value: '100%', improvement: 'Detects all configuration changes from last release', impact: 'Complete visibility and Dev approval before deployment' },
-      { label: 'Platform Coverage', value: '12+ Platforms', improvement: 'Validates across Android, iOS, Apple TV, Android TV, Fire TV, Roku, and 6 WCTV platforms', impact: 'Consistent configuration quality across entire platform ecosystem' }
-    ],
-    screenshots: [],
-    status: 'draft',
-    attachments: [
-      { kind: 'pdf', title: 'Configuration Validation Automation', src: '/assets/config-comparison/pdfs/Configuration Validation Automation.pdf', sensitivity: 'internal' },
-      { kind: 'pdf', title: 'Config Comparison Internal Document', src: '/assets/config-comparison/pdfs/App Config Test - Technical Implementation Guide - Internal.pdf', sensitivity: 'internal' },
-      { kind: 'pdf', title: 'Config Comparison Public Document', src: '/assets/config-comparison/pdfs/App Config Test - User Guide - Public.pdf', sensitivity: 'public' },
-      { kind: 'doc', title: 'WCTV Config Comparison Report', src: '/assets/config-comparison/spreadsheets/WCTV-ConfigValidation-ProdVsRc-20251023.xlsx', sensitivity: 'internal' },
-    ],
-    links: [
-      { label: 'WCTV Config Report Generation Training Video', url: 'https://viacom.sharepoint.com/:v:/r/sites/VIA-Digital-QAConnectedTV/Shared%20Documents/Unified/CTV-Training/WCTV/20240125%20WCTV%20Config%20Report%20Generation%20for%20RC.mp4?csf=1&web=1&e=qiG0Sb', sensitivity: 'internal' },
-      { label: 'Apple and Android (TV & Mobile) Config Validation and Process', url: 'https://paramount.atlassian.net/wiki/spaces/VCD/pages/49653379/Apple+and+Android+TV+Mobile+Config+Validation+and+Process', sensitivity: 'internal' },
-      { label: 'Roku Config Validation and Process', url: 'https://paramount.atlassian.net/wiki/spaces/VCD/pages/49657193/Roku+Config+Validation+and+Process', sensitivity: 'internal' },
-      { label: 'Github Application Config Test', url: 'https://github.com/viacomcbs/mqe-unified-oao-tests/blob/master/mqe-unified-platform-brand-tests/src/test/java/com/viacom/unified/tests/application/AppConfigTest.java', sensitivity: 'internal' },
-    ],
-    tags: [
-      { key: 'platform:wctv', label: 'WCTV' },
-      { key: 'topic:automation', label: 'Automation' },
-      { key: 'topic:validation', label: 'Validation' },
-    ],
   },
 ];
 
