@@ -93,9 +93,7 @@ export default function AboutPage() {
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {TEAM_MEMBERS
-              .filter(member => member.id !== 'krishnachaitanya') // Hide until data is provided
-              .map((member) => (
+            {TEAM_MEMBERS.map((member) => (
               <div
                 key={member.id}
                 className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 group flex flex-col"
@@ -205,7 +203,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent mb-2">
-                {TEAM_MEMBERS.filter(m => m.id !== 'krishnachaitanya').length}
+                {TEAM_MEMBERS.length}
               </div>
               <div className="text-gray-600 dark:text-gray-400 font-medium">Team Members</div>
             </div>
