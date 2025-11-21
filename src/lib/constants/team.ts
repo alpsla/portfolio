@@ -54,7 +54,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: 'Krishna Chaitanya',
     email: 'krishna.chaitanya@paramount.com',
     role: 'Sr. QE Lead',
-    avatar: '/assets/team/ChaitanyaPic.jpeg',
+    avatar: '/assets/team/chaitank.jpeg',
     yearsOfExperience: 19,
     background: 'Chaitanya is a seasoned professional in quality assurance and test automation, with expertise spanning multiple platforms. He has a strong background in supporting functional and regression testing for Ad Platforms, as well as hands-on experience across diverse device ecosystems such as Roku, Samsung TV, Apple, and Android. Additionally, he brings deep knowledge of backend systems, including databases and APIs. Throughout his engagements, Chaitanya has consistently driven value-focused delivery, ensuring high-quality outcomes and operational excellence within his teams.',
     projectsParticipated: ['unified-test-case-optimization', 'unified-test-automation-framework', 'test-manager-bot-eva', 'coppa-process-technology', 'report-portal', 'config-comparison'],
