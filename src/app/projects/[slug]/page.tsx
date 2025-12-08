@@ -168,6 +168,58 @@ export default function ProjectDetailPage({ params }: Params) {
         </section>
       )}
 
+      {/* Video Section - Display video attachments with player */}
+      {project.attachments && project.attachments.filter(a => a.kind === 'video').length > 0 && (
+        <section className="mt-10">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+            <span className="text-3xl">🎬</span>
+            <span>Presentations & Demos</span>
+          </h2>
+          <div className="space-y-8">
+            {project.attachments
+              .filter(a => a.kind === 'video')
+              .map((video) => (
+                <div
+                  key={video.src}
+                  className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden shadow-2xl border border-gray-700"
+                >
+                  <div className="p-4 border-b border-gray-700">
+                    <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+                      <span>🎥</span>
+                      {video.title}
+                    </h3>
+                    {video.description && (
+                      <p className="text-gray-400 text-sm mt-1">{video.description}</p>
+                    )}
+                  </div>
+                  <div className="relative bg-black">
+                    <video
+                      controls
+                      className="w-full max-h-[70vh] mx-auto"
+                      preload="metadata"
+                      poster={project.heroImage}
+                    >
+                      <source src={video.src} type="video/quicktime" />
+                      <source src={video.src} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div className="p-4 flex justify-end">
+                    <a
+                      href={video.src}
+                      download
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-300 hover:scale-105"
+                    >
+                      <span>⬇️</span>
+                      <span>Download Video</span>
+                    </a>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </section>
+      )}
+
       {/* Links Section */}
       {project.links && project.links.length > 0 && (
         <section className="mt-10 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 hover:border-purple-200 dark:hover:border-purple-800">
@@ -199,15 +251,18 @@ export default function ProjectDetailPage({ params }: Params) {
         </section>
       )}
 
-      {/* Attachments Section */}
-      {project.attachments && project.attachments.length > 0 && (
+      {/* Attachments Section - Non-video resources */}
+      {project.attachments && project.attachments.filter(a => a.kind !== 'video').length > 0 && (
         <section className="mt-10 mb-12 max-w-7xl mx-auto">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6 flex items-center justify-center gap-3">
             <span className="text-3xl">📎</span>
             <span>Resources & Documentation</span>
           </h2>
-          <ul className={`grid gap-6 ${project.attachments.length === 1 ? 'sm:grid-cols-1 max-w-md mx-auto' : 'sm:grid-cols-2 lg:grid-cols-4'}`}>
-            {project.attachments.map((a) => {
+          {(() => {
+            const nonVideoAttachments = project.attachments!.filter(a => a.kind !== 'video');
+            return (
+              <ul className={`grid gap-6 ${nonVideoAttachments.length === 1 ? 'sm:grid-cols-1 max-w-md mx-auto' : 'sm:grid-cols-2 lg:grid-cols-4'}`}>
+            {nonVideoAttachments.map((a) => {
               const icon = a.kind === 'pdf'
                 ? '📄'
                 : a.kind === 'slide'
@@ -262,6 +317,8 @@ export default function ProjectDetailPage({ params }: Params) {
               );
             })}
           </ul>
+            );
+          })()}
         </section>
       )}
     </main>

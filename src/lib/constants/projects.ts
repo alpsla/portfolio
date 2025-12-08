@@ -95,6 +95,7 @@ export const PROJECTS: IProject[] = [
     status: 'draft',
     attachments: [
       { kind: 'pdf', title: 'Unified Automation Repo', src: '/assets/unified-test-automation-framework/pdfs/Unified Automation Repo.pdf', sensitivity: 'internal' },
+      { kind: 'video', title: '2024 CoP - Unified Framework Presentation', src: '/assets/unified-test-automation-framework/recordings/2024-05-CoP-Unified-Presentation.mov', sensitivity: 'public' },
     ],
     links: [],
     tags: [
