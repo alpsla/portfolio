@@ -465,6 +465,42 @@ export const PROJECTS: IProject[] = [
       { key: 'topic:analytics', label: 'Analytics' }
     ]
   },
+  {
+    id: 'qa-account-management-service',
+    slug: 'qa-account-management-service',
+    title: 'Credenza - Test Account Management',
+    heroImage: '/assets/qa-account-management-service/hero/qa_account_hero.svg',
+    owner: 'rostialpin',
+    contributors: [],
+    summary: 'Centralized test account management platform (Credenza) serving both manual testers and automation frameworks. Manual testers browse and request accounts through an intuitive web dashboard, while automation suites integrate via REST API with automatic allocation and release. Real-time visibility shows 118+ accounts across Total, Available, In Use, and Usage Capacity metrics. Features dynamic allocation by region/environment/platform, comprehensive audit trails, and Keeper integration for secure credentials - saving an estimated 30-60 minutes per tester per day.',
+    problem: 'Test account management was a major source of friction for both manual testers and automation engineers. Hard-coded credentials were scattered across multiple repositories with no visibility into who was using which accounts. Account conflicts caused frequent test failures when multiple testers or automation runs attempted to use the same credentials simultaneously. Manual testers relied on Slack messages and spreadsheets to coordinate account usage, while automation had no programmatic way to request accounts. There was no audit trail to investigate issues, and testers wasted significant time searching for available accounts before every test run. Any credential changes required PRs across multiple repos, and the lack of centralized management made it impossible to track usage patterns or scale testing efforts efficiently.',
+    solution: 'Built Credenza as a comprehensive test account management platform with dual access paths: (1) Web Dashboard for Manual Testers - intuitive interface to browse accounts, view availability (118 total, 118 available, usage capacity of 450), request and release accounts, and track personal account usage via "My Accounts"; (2) REST API for Automation - seamless integration with test suites through the quality-engineering-test framework with POJO models, automatic account request/release, test teardown cleanup, and fail-over logic; (3) Quick Actions - Browse Accounts, My Accounts, and API Tokens management; (4) Administration Features - user management, force release capabilities, region/environment/platform configuration, request error details, database browser, and full API documentation; (5) Audit Trail - detailed logging for usage analysis and issue investigation; (6) Keeper Integration - secure token management for credentials with Okta SSO. Planned enhancements include automatic account provisioning for staging, regular health checks, auto-healing of account issues, and flagging of unrecoverable accounts.',
+    techStack: ['REST API', 'Keeper', 'Okta SSO', 'Database', 'Web Dashboard', 'POJO Models'],
+    metrics: [
+      { label: 'Time Savings', value: '30-60 min/day', improvement: 'Per tester time saved from eliminating manual account coordination', impact: 'Significant productivity gains across entire QA organization' },
+      { label: 'Account Conflicts', value: 'Eliminated', improvement: 'Dynamic allocation prevents simultaneous usage conflicts', impact: 'No more test failures due to credential collisions' },
+      { label: 'Credential PRs', value: '0', improvement: 'No more repository changes needed for account maintenance', impact: 'Faster credential updates and reduced developer overhead' },
+      { label: 'Visibility', value: '100%', improvement: 'Complete tracking of who is using which accounts and when', impact: 'Full audit trail for debugging and compliance' },
+      { label: 'API Integration', value: 'Seamless', improvement: 'Direct integration with test suites via quality-engineering-test framework', impact: 'Automated account request, usage, and release within test lifecycle' }
+    ],
+    screenshots: [],
+    status: 'draft',
+    sensitivity: 'internal',
+    attachments: [
+      { kind: 'video', title: 'Credenza Dashboard Demo', src: '/assets/qa-account-management-service/videos/CredenzaDemo-20251210.mp4', sensitivity: 'internal' },
+      { kind: 'video', title: 'API Integration Demo', src: '/assets/qa-account-management-service/videos/P+_API_Demo_20251210.mp4', sensitivity: 'internal' },
+      { kind: 'pdf', title: 'Credenza Complete Presentation (Preview)', src: '/assets/qa-account-management-service/pdfs/Credenza_Complete_Presentation.pdf', sensitivity: 'internal' },
+      { kind: 'slide', title: 'Credenza Complete Presentation (Download)', src: '/assets/qa-account-management-service/slides/Credenza_Complete_Presentation.pptx', sensitivity: 'internal' },
+    ],
+    links: [
+      { label: 'GitHub Repository', url: 'https://github.com/viacomcbs/gqe-ess-test-account-mgr', sensitivity: 'internal' },
+    ],
+    tags: [
+      { key: 'topic:automation', label: 'Automation' },
+      { key: 'topic:infrastructure', label: 'Infrastructure' },
+      { key: 'platform:multi', label: 'Multi-Platform' },
+    ],
+  },
 ];
 
 
